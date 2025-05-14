@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.10)  13 MAY 2025 01:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.10)  15 MAY 2025 01:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1447,7 +1447,7 @@ LaTeX Font Info:    Font shape `LGR/mak/b/n' will be
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.32 \end{abstract}
+l.24 \end{abstract}
                     [1
 
 
@@ -1457,12 +1457,12 @@ l.32 \end{abstract}
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.36 \begin{abstracteng}
+l.27 \begin{abstracteng}
                          [2
 
 ]
 LaTeX Font Info:    Font shape `T1/mak/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 59.
+(Font)              scaled to size 12.9599pt on input line 47.
 )
 
 
@@ -1624,18 +1624,18 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 (lettrine.sty)             (for loversize=0, accent excluded),
 (lettrine.sty)             Lettrine height = 27.65382pt (\color {gray!80!green!70!black}\scalebox {1.3}{Σ});
 (lettrine.sty)             reported on input line 2.
-LaTeX Font Info:    Trying to load font information for LGR+fvm on input line 33.
-LaTeX Font Info:    No file LGRfvm.fd. on input line 33.
+LaTeX Font Info:    Trying to load font information for LGR+fvm on input line 34.
+LaTeX Font Info:    No file LGRfvm.fd. on input line 34.
 
 LaTeX Font Warning: Font shape `LGR/fvm/m/n' undefined
-(Font)              using `LGR/cmr/m/n' instead on input line 33.
+(Font)              using `LGR/cmr/m/n' instead on input line 34.
 
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 33.
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 34.
 (D:\Programs\tex/latex/bera\t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.2125pt on input line 33.
+(Font)              scaled to size 8.2125pt on input line 34.
 )
 
 [23
@@ -1687,7 +1687,7 @@ Package epstopdf Info: Source file: <figures/peerArchitecture.eps>
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/peerArchitecture-eps-converted-to.pdf figures/peerArchitecture.eps>
 (epstopdf)             \includegraphics on input line 23.
 Package epstopdf Info: Output file is already uptodate.
-<figures/peerArchitecture-eps-converted-to.pdf, id=274, 427.5975pt x 545.03625pt>
+<figures/peerArchitecture-eps-converted-to.pdf, id=278, 427.5975pt x 545.03625pt>
 File: figures/peerArchitecture-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/peerArchitecture-eps-converted-to.pdf>
 Package pdftex.def Info: figures/peerArchitecture-eps-converted-to.pdf  used on input line 23.
@@ -1875,7 +1875,7 @@ Overfull \hbox (2.0pt too wide) in paragraph at lines 106--106
 
  (back_matter/appB.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textBeta \textnumeralsigngreek }.
-<figures/2.png, id=428, 187.70125pt x 119.44624pt>
+<figures/2.png, id=432, 187.70125pt x 119.44624pt>
 File: figures/2.png Graphic file (type png)
 <use figures/2.png>
 Package pdftex.def Info: figures/2.png  used on input line 25.
@@ -1894,6 +1894,9 @@ Package pdftex.def Info: figures/2.png  used on input line 25.
 
  (back_matter/appC.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textGamma \textnumeralsigngreek }.
+
+LaTeX Warning: Citation `LaTeXProject' on page 51 undefined on input line 16.
+
 )
 
 [51
@@ -1927,7 +1930,7 @@ Package pdftex.def Info: figures/2.png  used on input line 25.
 
 ]
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textEpsilon \textnumeralsigngreek }.
-<figures/frog.jpg, id=478, 748.7975pt x 741.77126pt>
+<figures/frog.jpg, id=480, 748.7975pt x 741.77126pt>
 File: figures/frog.jpg Graphic file (type jpg)
 <use figures/frog.jpg>
 Package pdftex.def Info: figures/frog.jpg  used on input line 6.
@@ -1974,19 +1977,22 @@ L3 programming layer <2025-04-14>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 31908 strings out of 469941
- 566527 string characters out of 5485294
- 1107991 words of memory out of 5000000
- 57810 multiletter control sequences out of 15000+600000
+ 31910 strings out of 469941
+ 566562 string characters out of 5485294
+ 1108028 words of memory out of 5000000
+ 57811 multiletter control sequences out of 15000+600000
  697412 words of font info for 196 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  99i,12n,107p,1081b,1544s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Theodore\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><D:/Programs/fonts/type1/public/kerkis/Kerkis-Bold.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis-Italic.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis-SmallCaps.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis.pfb><D:/Programs/fonts/type1/bera/fvmr8a.pfb><D:/Programs/fonts/type1/public/txfonts/rtxr.pfb><D:/Programs/fonts/type1/public/txfonts/txex.pfb><D:/Programs/fonts/type1/public/txfonts/txsy.pfb><D:/Programs/fonts/type1/public/txfonts/txsyc.pfb><D:/Programs/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (68 pages, 436399 bytes).
+Output written on main.pdf (68 pages, 437968 bytes).
 PDF statistics:
- 761 PDF objects out of 1000 (max. 8388607)
- 161 named destinations out of 1000 (max. 500000)
+ 766 PDF objects out of 1000 (max. 8388607)
+ 162 named destinations out of 1000 (max. 500000)
  433 words of extra memory for PDF output out of 10000 (max. 10000000)
 

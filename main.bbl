@@ -1,5 +1,19 @@
 \begin{thebibliography}{10}
 
+\bibitem{Ubisense2023}
+{{\latintext {\color{\colouredtextcolor} {\em A Rapid Increase in IoT Adoption
+  – Manufacturing IoT in 2023}}}}.
+\newblock {{\latintext
+  \url{https://ubisense.com/a-rapid-increase-in-iot-adoption-manufacturing-iot-in-2023/}}}.
+\newblock 2025.
+
+\bibitem{DemandSage2025}
+{{\latintext {\color{\colouredtextcolor} {\em Internet of Things (IoT)
+  Statistics and Facts for 2024}}}}.
+\newblock {{\latintext
+  \url{https://www.demandsage.com/internet-of-things-statistics/}}}.
+\newblock 2025.
+
 \bibitem{elli05}
 {{\latintext { }\textgreek{Ε. Ανδρουλάκη}}}.
 \newblock {\color{\colouredtextcolor} {{\latintext {\em
@@ -37,11 +51,6 @@
   Mixers Combining Defect-Oriented and Alternate Test Strategies}}}}.
 \newblock {{\latintext  {\em 26th Conference on Design of Circuits and
   Integrated Systems (DCIS)}}}, {{\latintext San Sebastian, Spain}},   2011.
-
-\bibitem{LaTeXProject}
-{{\latintext {\color{\colouredtextcolor} {\em {LaTeX} Project}}}}.
-\newblock {{\latintext \url{http://www.latex-project.org}}}.
-\newblock \textgreek{Ημερομηνία πρόσβασης}: 13-11-2014.
 
 \bibitem{zoi04}
 {{\latintext { }\textgreek{Ζ. Καούδη}}}.
