@@ -14,6 +14,13 @@
   \url{https://www.demandsage.com/internet-of-things-statistics/}}}.
 \newblock 2025.
 
+\bibitem{ICTexpress}
+{{\latintext Frederic Chaxel{ }Kais~Mekki, Eddy~Bajic \textgreek{kai} Fernand{
+  }Meyer}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em A comparative study of
+  LPWAN technologies for large-scale IoT deployment}}}}.
+\newblock {{\latintext {\em ICT Express}}}, 5(1):11--7,   2019.
+
 \bibitem{elli05}
 {{\latintext { }\textgreek{Ε. Ανδρουλάκη}}}.
 \newblock {\color{\colouredtextcolor} {{\latintext {\em
@@ -35,14 +42,6 @@
   \textgreek{Συστήματα Υπολογιστών}}}}}.
 \newblock {{\latintext \textgreek{Κλειδάριθμος}}}, {{\latintext
   \textgreek{Αθήνα}}}, 3\textgreek{h} \textgreek{'ekdosh}, 1991.
-
-\bibitem{LiArTs13}
-{{\latintext J.{ }Liaperdos, A.{ }Arapoyanni \textgreek{kai} Y.{ }Tsiatouhas}}.
-\newblock {{\latintext {\color{\colouredtextcolor} {\em Adjustable {RF} Mixers'
-  Alternate Test Efficiency Optimization by the Reduction of Test
-  Observables}}}}.
-\newblock {{\latintext {\em {IEEE} Transactions on Computer-Aided Design of
-  Integrated Circuits and Systems}}}, 32(9):1383--1394,   2013.
 
 \bibitem{dcis2011}
 {{\latintext I.{ }Liaperdos, L.{ }Dermentzoglou, A.{ }Arapoyanni

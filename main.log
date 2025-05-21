@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.10)  15 MAY 2025 01:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.10)  22 MAY 2025 01:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Theodore/Desktop/Dissertation/Dissertation/main.tex
-(c:/Users/Theodore/Desktop/Dissertation/Dissertation/main.tex
+**c:/Users/Theodore/Desktop/Dessertation/Dessertation/main.tex
+(c:/Users/Theodore/Desktop/Dessertation/Dessertation/main.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-14>
 (ntua-thesis.cls
@@ -1217,7 +1217,7 @@ LaTeX Font Info:    Trying to load font information for T1+mak on input line 9.
  (D:\Programs\tex/latex/kerkis\t1mak.fd)
 LaTeX Font Info:    Font shape `T1/mak/m/n' will be
 (Font)              scaled to size 9.85492pt on input line 9.
- (front_matter/abstract.aux) (front_matter/acknowledgements.aux) (front_matter/preface.aux) (body_matter/intro.aux) (body_matter/chap2.aux) (body_matter/chap3.aux) (body_matter/chap4.aux) (body_matter/chap5.aux) (body_matter/chap6.aux) (body_matter/chap7.aux) (body_matter/chap8.aux) (body_matter/chap9.aux) (back_matter/appA.aux) (back_matter/appB.aux) (back_matter/appC.aux) (back_matter/appD.aux) (back_matter/appE.aux))
+ (front_matter/abstract.aux) (front_matter/acknowledgements.aux) (body_matter/intro.aux) (body_matter/chap2.aux) (body_matter/chap3.aux) (body_matter/chap4.aux) (body_matter/chap5.aux) (body_matter/chap6.aux) (body_matter/chap7.aux) (body_matter/chap8.aux) (body_matter/chap9.aux) (back_matter/appA.aux) (back_matter/appB.aux) (back_matter/appC.aux) (back_matter/appD.aux) (back_matter/appE.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 251.
@@ -1523,7 +1523,7 @@ l.8 \begin{acknowledgements}
 LaTeX Font Info:    Font shape `T1/mak/b/n' will be
 (Font)              scaled to size 9.85492pt on input line 7.
 LaTeX Font Info:    Font shape `T1/mak/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 36.
+(Font)              scaled to size 10.79993pt on input line 35.
 
 
 [9])
@@ -1567,23 +1567,11 @@ Package babel Info: 'greek' activates 'greek' shorthands.
 
 
 [15]
-\openout2 = `front_matter/preface.aux'.
-
- (front_matter/preface.tex
-
-[16
-
-
-])
-
-[17]
 \openout2 = `body_matter/intro.aux'.
 
  (body_matter/intro.tex
 
-[18
-
-
+[16
 
 
 ]
@@ -1600,53 +1588,55 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 (lettrine.sty)             reported on input line 2.
 
 
-[19])
+[17]
 
-[20]
+[18])
+
+[19]
+
+[20
+
+
+
+]
 LaTeX Font Info:    Font shape `T1/mak/b/n' will be
 (Font)              scaled to size 22.39185pt on input line 282.
 LaTeX Font Info:    Font shape `LGR/mak/b/n' will be
 (Font)              scaled to size 20.82425pt on input line 282.
 
 
-[21
-
-
-
-]
+[21]
 
 [22]
 \openout2 = `body_matter/chap2.aux'.
 
  (body_matter/chap2.tex
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \textiota \textomicron  2.
-Package lettrine.sty Info: Targeted height = 21.27205pt
-(lettrine.sty)             (for loversize=0, accent excluded),
-(lettrine.sty)             Lettrine height = 27.65382pt (\color {gray!80!green!70!black}\scalebox {1.3}{Î£});
-(lettrine.sty)             reported on input line 2.
-LaTeX Font Info:    Trying to load font information for LGR+fvm on input line 34.
-LaTeX Font Info:    No file LGRfvm.fd. on input line 34.
 
-LaTeX Font Warning: Font shape `LGR/fvm/m/n' undefined
-(Font)              using `LGR/cmr/m/n' instead on input line 34.
+Overfull \hbox (17.72156pt too wide) in paragraph at lines 1--1
+\LGR/mak/b/n/19.28804 Te-qno-lo-gÐec []\T1/mak/b/n/19.28804 LP-WAN []\LGR/mak/b/n/19.28804 kai to Prw-tìkol-lo []\T1/mak/b/n/19.28804 Lo-RaWAN
+ []
 
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 34.
-(D:\Programs\tex/latex/bera\t1fvm.fd
-File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
-)
-LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.2125pt on input line 34.
-)
+
+Overfull \hbox (15.0506pt too wide) in paragraph at lines 37--43
+[][]\T1/mak/b/n/10.95 LoRa []\LGR/mak/b/n/10.95 kai []\T1/mak/b/n/10.95 Lo-RaWAN []\LGR/mak/m/n/10.95 ^^@ prìkei-tai gia to pio dia-de-do-mèno prw-tìkol-lo se mh-adeiodothmèno
+ []
+
+
 
 [23
 
 
-{D:/Programs/fonts/enc/dvips/base/8r.enc}]
+]
+
+[24])
+
+[25]
 \openout2 = `body_matter/chap3.aux'.
 
  (body_matter/chap3.tex
 
-[24
+[26
 
 
 
@@ -1659,17 +1649,17 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 (lettrine.sty)             reported on input line 2.
 )
 
-[25]
+[27]
 
-[26
+[28
 
 
 
 ]
 
-[27]
+[29]
 
-[28]
+[30]
 \openout2 = `body_matter/chap4.aux'.
 
  (body_matter/chap4.tex
@@ -1687,7 +1677,7 @@ Package epstopdf Info: Source file: <figures/peerArchitecture.eps>
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/peerArchitecture-eps-converted-to.pdf figures/peerArchitecture.eps>
 (epstopdf)             \includegraphics on input line 23.
 Package epstopdf Info: Output file is already uptodate.
-<figures/peerArchitecture-eps-converted-to.pdf, id=278, 427.5975pt x 545.03625pt>
+<figures/peerArchitecture-eps-converted-to.pdf, id=292, 427.5975pt x 545.03625pt>
 File: figures/peerArchitecture-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/peerArchitecture-eps-converted-to.pdf>
 Package pdftex.def Info: figures/peerArchitecture-eps-converted-to.pdf  used on input line 23.
@@ -1699,12 +1689,12 @@ Overfull \hbox (0.80511pt too wide) in paragraph at lines 23--24
 
 )
 
-[29
+[31
 
 
 ]
 
-[30 <./figures/peerArchitecture-eps-converted-to.pdf>]
+[32 <./figures/peerArchitecture-eps-converted-to.pdf>]
 \openout2 = `body_matter/chap5.aux'.
 
  (body_matter/chap5.tex
@@ -1725,14 +1715,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
 
 
-[31
+[33
 
 
 
 
-])
+]
+LaTeX Font Info:    Trying to load font information for LGR+fvm on input line 35.
+LaTeX Font Info:    No file LGRfvm.fd. on input line 35.
 
-[32]
+
+LaTeX Font Warning: Font shape `LGR/fvm/m/n' undefined
+(Font)              using `LGR/cmr/m/n' instead on input line 35.
+
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 35.
+(D:\Programs\tex/latex/bera\t1fvm.fd
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 8.2125pt on input line 35.
+)
+
+[34{D:/Programs/fonts/enc/dvips/base/8r.enc}]
 \openout2 = `body_matter/chap6.aux'.
 
  (body_matter/chap6.tex
@@ -1743,7 +1747,7 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 (lettrine.sty)             reported on input line 2.
 )
 
-[33
+[35
 
 
 
@@ -1753,7 +1757,7 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 
  (body_matter/chap7.tex
 
-[34
+[36
 
 
 
@@ -1780,16 +1784,16 @@ LaTeX Font Info:    Font shape `T1/mak/b/n' will be
 (Font)              scaled to size 8.99994pt on input line 50.
 )
 
-[35]
+[37]
 
-[36]
+[38]
 \openout2 = `body_matter/chap8.aux'.
 
  (body_matter/chap8.tex
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \textiota \textomicron  8.
 
 
-[37
+[39
 
 
 
@@ -1826,80 +1830,83 @@ Overfull \hbox (2.0pt too wide) in paragraph at lines 106--106
 
 )
 
-[38]
+[40]
 
-[39]
+[41]
 
-[40
+[42
 
 
 
 ]
 
-[41]
+[43]
 
-[42]
+[44]
 \openout2 = `body_matter/chap9.aux'.
 
  (body_matter/chap9.tex
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \textiota \textomicron  9.
 
 
-[43
+[45
 
 
 ])
 
-[44]
+[46]
 
-[45
+[47
 
 
 
 ]
 
-[46]
+[48]
 \openout2 = `back_matter/appA.aux'.
 
  (back_matter/appA.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textAlpha \textnumeralsigngreek }.
 )
 
-[47
+[49
 
 
 ]
 
-[48]
+[50]
 \openout2 = `back_matter/appB.aux'.
 
  (back_matter/appB.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textBeta \textnumeralsigngreek }.
-<figures/2.png, id=432, 187.70125pt x 119.44624pt>
+<figures/2.png, id=448, 187.70125pt x 119.44624pt>
 File: figures/2.png Graphic file (type png)
 <use figures/2.png>
 Package pdftex.def Info: figures/2.png  used on input line 25.
 (pdftex.def)             Requested size: 187.70079pt x 119.44594pt.
 
 
-[49
+[51
 
 
 
 
  <./figures/2.png>])
 
-[50]
+[52]
 \openout2 = `back_matter/appC.aux'.
 
  (back_matter/appC.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textGamma \textnumeralsigngreek }.
 
-LaTeX Warning: Citation `LaTeXProject' on page 51 undefined on input line 16.
+LaTeX Warning: Citation `LiArTs13' on page 53 undefined on input line 12.
+
+
+LaTeX Warning: Citation `LaTeXProject' on page 53 undefined on input line 16.
 
 )
 
-[51
+[53
 
 
 
@@ -1909,7 +1916,7 @@ LaTeX Warning: Citation `LaTeXProject' on page 51 undefined on input line 16.
 
  (back_matter/appD.tex
 
-[52
+[54
 
 
 
@@ -1918,19 +1925,19 @@ LaTeX Warning: Citation `LaTeXProject' on page 51 undefined on input line 16.
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textDelta \textnumeralsigngreek }.
 )
 
-[53]
+[55]
 \openout2 = `back_matter/appE.aux'.
 
  (back_matter/appE.tex
 
-[54
+[56
 
 
 
 
 ]
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textEpsilon \textnumeralsigngreek }.
-<figures/frog.jpg, id=480, 748.7975pt x 741.77126pt>
+<figures/frog.jpg, id=494, 748.7975pt x 741.77126pt>
 File: figures/frog.jpg Graphic file (type jpg)
 <use figures/frog.jpg>
 Package pdftex.def Info: figures/frog.jpg  used on input line 6.
@@ -1938,37 +1945,37 @@ Package pdftex.def Info: figures/frog.jpg  used on input line 6.
 Package hyperref Info: bookmark level for unknown illustration defaults to 0 on input line 7.
 )
 
-[55 <./figures/frog.jpg>]
+[57 <./figures/frog.jpg>]
 
-[56
+[58
 
 
 
 ] (main.bbl)
 
-[57
+[59
 
 ]
 
-[58
+[60
 
 ] (back_matter/abbreviations.tex)
 
-[59]
+[61]
 
-[60
+[62
 
 ] (back_matter/glossary.tex)
 
-[61] LaTeX Warning: (ntua_thesis.cls): The "plain" option has been selected. CD label generation has been disabled.
+[63] LaTeX Warning: (ntua_thesis.cls): The "plain" option has been selected. CD label generation has been disabled.
  
 LaTeX Warning: (ntua_thesis.cls): The "plain" option has been selected. CD cover generation has been disabled.
  
 
 
-[62
+[64
 
-] (main.aux (front_matter/abstract.aux) (front_matter/acknowledgements.aux) (front_matter/preface.aux) (body_matter/intro.aux) (body_matter/chap2.aux) (body_matter/chap3.aux) (body_matter/chap4.aux) (body_matter/chap5.aux) (body_matter/chap6.aux) (body_matter/chap7.aux) (body_matter/chap8.aux) (body_matter/chap9.aux) (back_matter/appA.aux) (back_matter/appB.aux) (back_matter/appC.aux) (back_matter/appD.aux) (back_matter/appE.aux))
+] (main.aux (front_matter/abstract.aux) (front_matter/acknowledgements.aux) (body_matter/intro.aux) (body_matter/chap2.aux) (body_matter/chap3.aux) (body_matter/chap4.aux) (body_matter/chap5.aux) (body_matter/chap6.aux) (body_matter/chap7.aux) (body_matter/chap8.aux) (body_matter/chap9.aux) (back_matter/appA.aux) (back_matter/appB.aux) (back_matter/appC.aux) (back_matter/appD.aux) (back_matter/appE.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-14>
@@ -1982,17 +1989,17 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 31910 strings out of 469941
- 566562 string characters out of 5485294
- 1108028 words of memory out of 5000000
- 57811 multiletter control sequences out of 15000+600000
- 697412 words of font info for 196 fonts, out of 8000000 for 9000
+ 31895 strings out of 469941
+ 565596 string characters out of 5485294
+ 1107219 words of memory out of 5000000
+ 57796 multiletter control sequences out of 15000+600000
+ 697780 words of font info for 197 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  99i,12n,107p,1081b,1544s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Theodore\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><D:/Programs/fonts/type1/public/kerkis/Kerkis-Bold.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis-Italic.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis-SmallCaps.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis.pfb><D:/Programs/fonts/type1/bera/fvmr8a.pfb><D:/Programs/fonts/type1/public/txfonts/rtxr.pfb><D:/Programs/fonts/type1/public/txfonts/txex.pfb><D:/Programs/fonts/type1/public/txfonts/txsy.pfb><D:/Programs/fonts/type1/public/txfonts/txsyc.pfb><D:/Programs/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (68 pages, 438292 bytes).
+Output written on main.pdf (70 pages, 448152 bytes).
 PDF statistics:
- 766 PDF objects out of 1000 (max. 8388607)
- 162 named destinations out of 1000 (max. 500000)
- 433 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 789 PDF objects out of 1000 (max. 8388607)
+ 167 named destinations out of 1000 (max. 500000)
+ 457 words of extra memory for PDF output out of 10000 (max. 10000000)
 
