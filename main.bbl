@@ -5,14 +5,12 @@
   – Manufacturing IoT in 2023}}}}.
 \newblock {{\latintext
   \url{https://ubisense.com/a-rapid-increase-in-iot-adoption-manufacturing-iot-in-2023/}}}.
-\newblock 2025.
 
 \bibitem{DemandSage2025}
 {{\latintext {\color{\colouredtextcolor} {\em Internet of Things (IoT)
   Statistics and Facts for 2024}}}}.
 \newblock {{\latintext
   \url{https://www.demandsage.com/internet-of-things-statistics/}}}.
-\newblock 2025.
 
 \bibitem{ICTexpress}
 {{\latintext Frederic Chaxel{ }Kais~Mekki, Eddy~Bajic \textgreek{kai} Fernand{
@@ -20,6 +18,80 @@
 \newblock {{\latintext {\color{\colouredtextcolor} {\em A comparative study of
   LPWAN technologies for large-scale IoT deployment}}}}.
 \newblock {{\latintext {\em ICT Express}}}, 5(1):11--7,   2019.
+
+\bibitem{telit2019nbiot}
+{{\latintext Anna{ }Ukovich}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em NB-IoT Explained: What
+  Is It, and How Does It Work?}}}}
+\newblock {{\latintext
+  \url{https://www.telit.com/blog/nb-iot-new-cellular-standard-means-business/}}},
+  2019.
+
+\bibitem{zipit2023ltem}
+{{\latintext Zipit{ }Wireless}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em LTE Cat-M1 Explained:
+  Pros and Cons of LTE-M for IoT Devices}}}}.
+\newblock {{\latintext
+  \url{https://www.zipitwireless.com/blog/lte-cat-m1-explained-pros-and-cons-of-lte-m-for-iot-devices}}},
+  2023.
+
+\bibitem{hosangadi2019system}
+{{\latintext Gurudutt{ }Hosangadi, Dandan{ }Wang \textgreek{kai} Anil{ }Rao}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em System Design
+  Considerations For Internet Of Things (IoT) With Category-M Devices In LTE
+  Networks}}}}.
+\newblock {{\latintext {\em arXiv preprint arXiv:1902.00408}}}, 2019.
+
+\bibitem{semtech_lora_lorawan}
+{{\latintext Semtech{ }Corporation}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em LoRa® and LoRaWAN®: A
+  Technical Overview}}}}.
+\newblock {{\latintext
+  \url{https://www.semtech.com/uploads/technology/LoRa/lora-and-lorawan.pdf}}},
+  2021.
+
+\bibitem{saft2023iot}
+{{\latintext Saft{ }Batteries}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em The impact of
+  communication technology protocol on your IoT application’s power
+  consumption}}}}.
+\newblock {{\latintext
+  \url{https://saft.com/en/energizing-iot/impact-communication-technology-protocol-your-iot-application%E2%80%99s-power-consumption}}},
+  2023.
+
+\bibitem{adelantado2017understanding}
+{{\latintext Ferran{ }Adelantado, Xavier{ }Vilajosana, Pere{ }Tuset-Peiro,
+  Borja{ }Martinez, Joan{ }Melià-Seguí \textgreek{kai} Thomas{ }Watteyne}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em Understanding the
+  Limits of LoRaWAN}}}}.
+\newblock {{\latintext {\em IEEE Communications Magazine}}}, 55(9):34--40,
+  2017.
+
+\bibitem{gsma2022mobileiot}
+{{\latintext { }{GSMA}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em Mobile IoT Deployment
+  Guide}}}}.
+\newblock {{\latintext
+  \url{https://www.gsma.com/smartmobility/wp-content/uploads/2022/10/Mobile-IOT-Deployment-Guide-October-2022-1-1.pdf}}},
+  2022.
+
+\bibitem{loraalliance2023report}
+{{\latintext { }{LoRa Alliance}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em LoRa Alliance Issues
+  2023 Annual Report Highlighting LoRaWAN Maturity, Robust Adoption, and
+  Diversity of End-to-End Solutions}}}}.
+\newblock {{\latintext
+  \url{https://lora-alliance.org/lora-alliance-press-release/lora-alliance-issues-2023-annual-report-highlighting-lorawan-maturity-robust-adoption-and-diversity-of-end-to-end-solutions/}}},
+  2023.
+
+\bibitem{semtech2020lora}
+{{\latintext Semtech{ }Corporation}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em A Brief History of
+  LoRa®: Three Inventors Share Their Personal Story at The Things
+  Conference}}}}.
+\newblock {{\latintext
+  \url{https://blog.semtech.com/a-brief-history-of-lora-three-inventors-share-their-personal-story-at-the-things-conference}}},
+  2020.
 
 \bibitem{elli05}
 {{\latintext { }\textgreek{Ε. Ανδρουλάκη}}}.

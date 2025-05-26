@@ -625,8 +625,18 @@ OUTPUT body_matter\chap2.aux
 INPUT .\body_matter\chap2.tex
 INPUT .\body_matter\chap2.tex
 INPUT body_matter\chap2.tex
+INPUT .\figures\IoT_techs.png
+INPUT .\figures\IoT_techs.png
+INPUT .\figures\IoT_techs.png
+INPUT .\figures\IoT_techs.png
+INPUT .\figures\IoT_techs.png
+INPUT .\figures\IoT_techs.png
+INPUT .\figures\IoT_techs.png
+INPUT D:\Programs\fonts\tfm\public\kerkis\eki8a.tfm
 INPUT D:\Programs\fonts\vf\public\kerkis\ek8a.vf
 INPUT D:\Programs\fonts\tfm\public\kerkis\ek8r.tfm
+INPUT D:\Programs\fonts\vf\public\kerkis\eki8a.vf
+INPUT D:\Programs\fonts\tfm\public\kerkis\eki8r.tfm
 INPUT .\body_matter\chap3.tex
 INPUT .\body_matter\chap3.tex
 OUTPUT body_matter\chap3.aux
@@ -676,7 +686,6 @@ OUTPUT body_matter\chap7.aux
 INPUT .\body_matter\chap7.tex
 INPUT .\body_matter\chap7.tex
 INPUT body_matter\chap7.tex
-INPUT D:\Programs\fonts\tfm\public\kerkis\eki8a.tfm
 INPUT D:\Programs\fonts\tfm\public\txfonts\txr.tfm
 INPUT D:\Programs\fonts\tfm\public\txfonts\txr.tfm
 INPUT D:\Programs\fonts\tfm\public\txfonts\txr.tfm
@@ -715,8 +724,6 @@ INPUT D:\Programs\fonts\tfm\public\latex-fonts\lasy7.tfm
 INPUT D:\Programs\fonts\tfm\public\latex-fonts\lasy5.tfm
 INPUT D:\Programs\fonts\tfm\public\kerkis\gkb7t.tfm
 INPUT D:\Programs\fonts\tfm\public\kerkis\ekb8a.tfm
-INPUT D:\Programs\fonts\vf\public\kerkis\eki8a.vf
-INPUT D:\Programs\fonts\tfm\public\kerkis\eki8r.tfm
 INPUT D:\Programs\fonts\vf\public\kerkis\ekb8a.vf
 INPUT D:\Programs\fonts\tfm\public\kerkis\ekb8r.tfm
 INPUT D:\Programs\fonts\vf\public\kerkis\gk7t.vf
