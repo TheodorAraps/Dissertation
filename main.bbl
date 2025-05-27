@@ -99,6 +99,13 @@
 \newblock {{\latintext
   \url{https://www.thethingsnetwork.org/docs/lorawan/spreading-factors/}}}.
 
+\bibitem{ttn_architecture}
+{{\latintext { }{The Things Network}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em LoRaWAN
+  Architecture}}}}.
+\newblock {{\latintext
+  \url{https://www.thethingsnetwork.org/docs/lorawan/architecture/}}}.
+
 \bibitem{elli05}
 {{\latintext { }\textgreek{Ε. Ανδρουλάκη}}}.
 \newblock {\color{\colouredtextcolor} {{\latintext {\em

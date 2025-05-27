@@ -1,5 +1,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {illustration}{\numberline {2.1}{\ignorespaces Σύγκριση τεχνολογιών ασύρματης επικοινωνίας (\foreignlanguage {english}{LPWAN}) ως προς τον ρυθμό μετάδοσης, την κατανάλωση ενέργειας, την εμβέλεια και το κόστος.}}{24}{illustration.caption.9}%
+\contentsline {illustration}{\numberline {2.2}{\ignorespaces Μοντέλο OSI και σύγκριση με τα \foreignlanguage {english}{LoRa} και \foreignlanguage {english}{LoRaWAN} επίπεδα.}}{27}{illustration.caption.11}%
+\contentsline {illustration}{\numberline {2.3}{\ignorespaces Τυπική αρχιτεκτονική \foreignlanguage {english}{LoRaWAN} δικτύου.}}{28}{illustration.caption.12}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -12,4 +15,4 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{59}{illustration.caption.18}%
+\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{61}{illustration.caption.20}%
