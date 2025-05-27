@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.10)  27 MAY 2025 00:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.10)  27 MAY 2025 01:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1645,7 +1645,7 @@ Overfull \hbox (27.2372pt too wide) in paragraph at lines 75--102
 [24 <./figures/IoT_techs.png>]
 
 [25]
-Underfull \vbox (badness 6961) has occurred while \output is active []
+Underfull \vbox (badness 2469) has occurred while \output is active []
 
 
 
@@ -1697,7 +1697,7 @@ Package epstopdf Info: Source file: <figures/peerArchitecture.eps>
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/peerArchitecture-eps-converted-to.pdf figures/peerArchitecture.eps>
 (epstopdf)             \includegraphics on input line 23.
 Package epstopdf Info: Output file is already uptodate.
-<figures/peerArchitecture-eps-converted-to.pdf, id=331, 427.5975pt x 545.03625pt>
+<figures/peerArchitecture-eps-converted-to.pdf, id=334, 427.5975pt x 545.03625pt>
 File: figures/peerArchitecture-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/peerArchitecture-eps-converted-to.pdf>
 Package pdftex.def Info: figures/peerArchitecture-eps-converted-to.pdf  used on input line 23.
@@ -1897,7 +1897,7 @@ Overfull \hbox (2.0pt too wide) in paragraph at lines 106--106
 
  (back_matter/appB.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textBeta \textnumeralsigngreek }.
-<figures/2.png, id=485, 187.70125pt x 119.44624pt>
+<figures/2.png, id=488, 187.70125pt x 119.44624pt>
 File: figures/2.png Graphic file (type png)
 <use figures/2.png>
 Package pdftex.def Info: figures/2.png  used on input line 25.
@@ -1955,7 +1955,7 @@ LaTeX Warning: Citation `LaTeXProject' on page 55 undefined on input line 16.
 
 ]
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textEpsilon \textnumeralsigngreek }.
-<figures/frog.jpg, id=530, 748.7975pt x 741.77126pt>
+<figures/frog.jpg, id=533, 748.7975pt x 741.77126pt>
 File: figures/frog.jpg Graphic file (type jpg)
 <use figures/frog.jpg>
 Package pdftex.def Info: figures/frog.jpg  used on input line 6.
@@ -2027,17 +2027,17 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 31929 strings out of 469941
- 566306 string characters out of 5485294
- 1108139 words of memory out of 5000000
- 57817 multiletter control sequences out of 15000+600000
+ 31931 strings out of 469941
+ 566355 string characters out of 5485294
+ 1108184 words of memory out of 5000000
+ 57818 multiletter control sequences out of 15000+600000
  697780 words of font info for 197 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  99i,12n,107p,1081b,1544s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Theodore\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><D:/Programs/fonts/type1/public/kerkis/Kerkis-Bold.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis-Italic.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis-SmallCaps.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis.pfb><D:/Programs/fonts/type1/bera/fvmr8a.pfb><D:/Programs/fonts/type1/public/txfonts/rtxr.pfb><D:/Programs/fonts/type1/public/txfonts/txex.pfb><D:/Programs/fonts/type1/public/txfonts/txsy.pfb><D:/Programs/fonts/type1/public/txfonts/txsyc.pfb><D:/Programs/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (72 pages, 736548 bytes).
+Output written on main.pdf (72 pages, 737861 bytes).
 PDF statistics:
- 843 PDF objects out of 1000 (max. 8388607)
- 180 named destinations out of 1000 (max. 500000)
+ 850 PDF objects out of 1000 (max. 8388607)
+ 181 named destinations out of 1000 (max. 500000)
  462 words of extra memory for PDF output out of 10000 (max. 10000000)
 

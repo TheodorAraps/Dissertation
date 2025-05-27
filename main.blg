@@ -41,45 +41,45 @@ Warning--I didn't find a database entry for "LiArTs13"
 Warning--I didn't find a database entry for "LaTeXProject"
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Warning--empty institution in viswanathan2014convenient
-You've used 21 entries,
+You've used 22 entries,
             3122 wiz_defined-function locations,
-            711 strings with 9076 characters,
-and the built_in function-call counts, 3799 in all, are:
-= -- 262
-> -- 126
+            715 strings with 9204 characters,
+and the built_in function-call counts, 3957 in all, are:
+= -- 272
+> -- 130
 < -- 2
-+ -- 56
-- -- 35
-* -- 337
-:= -- 528
-add.period$ -- 61
-call.type$ -- 21
++ -- 58
+- -- 36
+* -- 347
+:= -- 547
+add.period$ -- 64
+call.type$ -- 22
 change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 262
-empty$ -- 478
-format.name$ -- 35
-if$ -- 833
+cite$ -- 23
+duplicate$ -- 272
+empty$ -- 502
+format.name$ -- 36
+if$ -- 870
 int.to.chr$ -- 0
-int.to.str$ -- 21
+int.to.str$ -- 22
 missing$ -- 8
-newline$ -- 106
-num.names$ -- 19
-pop$ -- 110
+newline$ -- 111
+num.names$ -- 20
+pop$ -- 116
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 56
+skip$ -- 61
 stack$ -- 0
 substring$ -- 27
-swap$ -- 125
+swap$ -- 131
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 21
-width$ -- 23
-write$ -- 219
+while$ -- 22
+width$ -- 24
+write$ -- 228
 (There were 3 warnings)
