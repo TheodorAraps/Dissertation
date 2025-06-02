@@ -93,18 +93,16 @@
   \url{https://blog.semtech.com/a-brief-history-of-lora-three-inventors-share-their-personal-story-at-the-things-conference}}},
   2020.
 
-\bibitem{ttn_spreading_factors}
+\bibitem{ttn_lorawan}
 {{\latintext { }{The Things Network}}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em Spreading Factors}}}}.
-\newblock {{\latintext
-  \url{https://www.thethingsnetwork.org/docs/lorawan/spreading-factors/}}}.
+\newblock {{\latintext \url{https://www.thethingsnetwork.org/docs/lorawan/}}}.
 
-\bibitem{ttn_architecture}
-{{\latintext { }{The Things Network}}}.
-\newblock {{\latintext {\color{\colouredtextcolor} {\em LoRaWAN
-  Architecture}}}}.
-\newblock {{\latintext
-  \url{https://www.thethingsnetwork.org/docs/lorawan/architecture/}}}.
+\bibitem{tti_homepage}
+{{\latintext { }{The Things Industries}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em The Things Industries
+  – Empowering Global IoT Connectivity}}}}.
+\newblock {{\latintext \url{https://www.thethingsindustries.com/}}}, 2025.
 
 \bibitem{elli05}
 {{\latintext { }\textgreek{Ε. Ανδρουλάκη}}}.

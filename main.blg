@@ -43,15 +43,15 @@ Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Warning--empty institution in viswanathan2014convenient
 You've used 23 entries,
             3122 wiz_defined-function locations,
-            718 strings with 9305 characters,
-and the built_in function-call counts, 4115 in all, are:
-= -- 282
+            720 strings with 9317 characters,
+and the built_in function-call counts, 4119 in all, are:
+= -- 283
 > -- 134
 < -- 2
 + -- 60
 - -- 37
-* -- 357
-:= -- 566
+* -- 358
+:= -- 567
 add.period$ -- 67
 call.type$ -- 23
 change.case$ -- 2
@@ -60,17 +60,17 @@ cite$ -- 24
 duplicate$ -- 282
 empty$ -- 526
 format.name$ -- 37
-if$ -- 907
+if$ -- 908
 int.to.chr$ -- 0
 int.to.str$ -- 23
 missing$ -- 8
 newline$ -- 116
 num.names$ -- 21
-pop$ -- 122
+pop$ -- 123
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 66
+skip$ -- 64
 stack$ -- 0
 substring$ -- 27
 swap$ -- 137
@@ -81,5 +81,5 @@ type$ -- 0
 warning$ -- 1
 while$ -- 23
 width$ -- 25
-write$ -- 237
+write$ -- 238
 (There were 3 warnings)

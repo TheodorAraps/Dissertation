@@ -48,26 +48,26 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {section}{\numberline {2.3}\foreignlanguage {english}{LoRa} και \foreignlanguage {english}{LoRaWAN}}{26}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Τεχνολογία \foreignlanguage {english}{LoRa}}{26}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Γενική Επισκόπηση της Τεχνολογίας \foreignlanguage {english}{LoRa}}{26}{subsection.2.3.1}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {subsection}{\numberline {2.3.2}Το Πρωτόκολλο \foreignlanguage {english}{LoRaWAN}}{27}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Το Πρωτόκολλο \foreignlanguage {english}{LoRaWAN}}{27}{section.2.4}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {section}{\numberline {2.4}Ηλεκτρικοί Υποσταθμοί και Ανάγκες Εποπτείας}{28}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Ηλεκτρικοί Υποσταθμοί και Ανάγκες Εποπτείας}{28}{section.2.5}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {section}{\numberline {2.5}Συμπεράσματα}{29}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Συμπεράσματα}{29}{section.2.6}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \contentsline {chapter}{\numberline {3}Περιγραφή θέματος}{31}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Σχετικές εργασίες}{31}{section.3.1}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {part}{\EnsureStandardFontEncoding {II}\hspace {1em}Πρακτικό Μέρος}{33}{section*.13}%
+\contentsline {part}{\EnsureStandardFontEncoding {II}\hspace {1em}Πρακτικό Μέρος}{33}{section*.15}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \contentsline {chapter}{\numberline {4}Ανάλυση και σχεδίαση}{35}{chapter.4}%
@@ -122,7 +122,7 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {part}{\EnsureStandardFontEncoding {III}\hspace {1em}Επίλογος}{47}{section*.16}%
+\contentsline {part}{\EnsureStandardFontEncoding {III}\hspace {1em}Επίλογος}{47}{section*.18}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \contentsline {chapter}{\numberline {9}Επίλογος}{49}{chapter.9}%
@@ -134,7 +134,7 @@
 \contentsline {section}{\numberline {9.2}Μελλοντικές Επεκτάσεις}{50}{section.9.2}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {part}{Παραρτήματα}{51}{section*.17}%
+\contentsline {part}{Παραρτήματα}{51}{section*.19}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \contentsline {chapter}{\numberline {{\greekscript \textAlpha \textnumeralsigngreek }}Παράδειγμα Παραρτήματος}{53}{appendix.Alph1}%
@@ -169,13 +169,13 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \vspace \bigskipamount 
-\contentsline {chapter}{Βιβλιογραφία}{64}{appendix*.21}%
+\contentsline {chapter}{Βιβλιογραφία}{64}{appendix*.23}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {chapter}{Συντομογραφίες - Αρκτικόλεξα - Ακρωνύμια}{65}{appendix*.22}%
+\contentsline {chapter}{Συντομογραφίες - Αρκτικόλεξα - Ακρωνύμια}{65}{appendix*.24}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {chapter}{Απόδοση ξενόγλωσσων όρων}{67}{appendix*.23}%
+\contentsline {chapter}{Απόδοση ξενόγλωσσων όρων}{67}{appendix*.25}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {subparagraph}{}{68}{appendix*.23}%
+\contentsline {subparagraph}{}{68}{appendix*.25}%
