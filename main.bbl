@@ -98,6 +98,23 @@
 \newblock {{\latintext {\color{\colouredtextcolor} {\em Spreading Factors}}}}.
 \newblock {{\latintext \url{https://www.thethingsnetwork.org/docs/lorawan/}}}.
 
+\bibitem{SemtechModulationBasics}
+{{\latintext { }{Semtech Corporation}}}.
+\newblock {\color{\colouredtextcolor} {{\latintext {\em AN1200.22 LoRa
+  Modulation Basics}}}}.
+\newblock \textgreek{Teqnik'h Anafor'a me arijm'o}, {{\latintext Semtech
+  Corporation}}, 2015.
+\newblock Application Note.
+
+\bibitem{TTNRecord}
+{{\latintext { }{The Things Network}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em New LoRa World Record:
+  1336 km! (830 mi)}}}}.
+\newblock {{\latintext
+  \url{https://www.thethingsnetwork.org/article/new-lora-world-record-1336-km-830-mi}}},
+  2017.
+\newblock Online Article.
+
 \bibitem{tti_homepage}
 {{\latintext { }{The Things Industries}}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em The Things Industries
@@ -164,13 +181,5 @@
   of Embedded Devices with WiFi Capability}}}}.
 \newblock \textgreek{D'iplwma Euresiteqn'iac } \textlatin{US Patent 8,665,744},
   2014.
-
-\bibitem{MSU-CSE-05-29}
-{{\latintext H. Cheng{ }J.~Gao \textgreek{kai} P. N.{ }Tan}}.
-\newblock {\color{\colouredtextcolor} {{\latintext {\em A Framework for
-  Incorporating Labeled Examples into Anomaly Detection}}}}.
-\newblock \textgreek{Teqnik'h Anafor'a me arijm'o} \textlatin{MSU-CSE-05-29},
-  {{\latintext Department of Computer Science, Michigan State University}},
-  {{\latintext East Lansing, Michigan}}, 2005.
 
 \end{thebibliography}

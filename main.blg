@@ -37,49 +37,51 @@ Reallocating 'name_of_file' (item size: 1) to 21 items.
 A level-1 auxiliary file: back_matter/appE.aux
 Reallocating 'name_of_file' (item size: 1) to 11 items.
 Database file #1: references.bib
+Warning--I didn't find a database entry for "goldsmith2005wireless"
 Warning--I didn't find a database entry for "LiArTs13"
 Warning--I didn't find a database entry for "LaTeXProject"
+Warning--I didn't find a database entry for "MSU-CSE-05-29"
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Warning--empty institution in viswanathan2014convenient
-You've used 23 entries,
+You've used 24 entries,
             3122 wiz_defined-function locations,
-            720 strings with 9317 characters,
-and the built_in function-call counts, 4119 in all, are:
-= -- 283
-> -- 134
-< -- 2
-+ -- 60
+            728 strings with 9487 characters,
+and the built_in function-call counts, 4272 in all, are:
+= -- 296
+> -- 135
+< -- 1
++ -- 61
 - -- 37
-* -- 358
-:= -- 567
-add.period$ -- 67
-call.type$ -- 23
-change.case$ -- 2
+* -- 362
+:= -- 587
+add.period$ -- 72
+call.type$ -- 24
+change.case$ -- 3
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 282
-empty$ -- 526
+cite$ -- 25
+duplicate$ -- 291
+empty$ -- 550
 format.name$ -- 37
-if$ -- 908
+if$ -- 945
 int.to.chr$ -- 0
-int.to.str$ -- 23
+int.to.str$ -- 24
 missing$ -- 8
-newline$ -- 116
-num.names$ -- 21
-pop$ -- 123
+newline$ -- 123
+num.names$ -- 22
+pop$ -- 131
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 64
+skip$ -- 66
 stack$ -- 0
 substring$ -- 27
-swap$ -- 137
-text.length$ -- 2
+swap$ -- 141
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 23
-width$ -- 25
-write$ -- 238
-(There were 3 warnings)
+while$ -- 24
+width$ -- 26
+write$ -- 251
+(There were 5 warnings)
