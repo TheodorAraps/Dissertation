@@ -104,7 +104,6 @@
   Modulation Basics}}}}.
 \newblock \textgreek{Teqnik'h Anafor'a me arijm'o}, {{\latintext Semtech
   Corporation}}, 2015.
-\newblock Application Note.
 
 \bibitem{TTNRecord}
 {{\latintext { }{The Things Network}}}.
@@ -112,8 +111,14 @@
   1336 km! (830 mi)}}}}.
 \newblock {{\latintext
   \url{https://www.thethingsnetwork.org/article/new-lora-world-record-1336-km-830-mi}}},
-  2017.
-\newblock Online Article.
+  2023.
+
+\bibitem{Staniec2018}
+{{\latintext Kamil{ }Staniec \textgreek{kai} Michał{ }Kowal}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em LoRa Performance under
+  Variable Interference and Heavy-Multipath Conditions}}}}.
+\newblock {{\latintext {\em Wireless Communications and Mobile Computing}}},
+  \textgreek{sel'ides} 1--10, 2018.
 
 \bibitem{tti_homepage}
 {{\latintext { }{The Things Industries}}}.
