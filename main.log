@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.10)  5 JUN 2025 02:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.10)  5 JUN 2025 02:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1680,48 +1680,43 @@ LaTeX Font Info:    Font shape `LGR/mak/m/n' will be
 LaTeX Warning: Citation `goldsmith2005wireless' on page 30 undefined on input line 334.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 473--477
-
- []
-
-
 Underfull \vbox (badness 7451) has occurred while \output is active []
 
 
 
 [30]
-<figures/LoRa-LoRaWAN_layers.png, id=366, 1143.52219pt x 365.86688pt>
+Underfull \hbox (badness 10000) in paragraph at lines 426--430
+
+ []
+
+
+
+[31]
+<figures/LoRa-LoRaWAN_layers.png, id=374, 1143.52219pt x 365.86688pt>
 File: figures/LoRa-LoRaWAN_layers.png Graphic file (type png)
 <use figures/LoRa-LoRaWAN_layers.png>
-Package pdftex.def Info: figures/LoRa-LoRaWAN_layers.png  used on input line 481.
+Package pdftex.def Info: figures/LoRa-LoRaWAN_layers.png  used on input line 434.
 (pdftex.def)             Requested size: 341.43436pt x 109.24171pt.
-<figures/LoRaWAN_architecture.png, id=369, 3306.3525pt x 2095.83pt>
+<figures/LoRaWAN_architecture.png, id=377, 3306.3525pt x 2095.83pt>
 File: figures/LoRaWAN_architecture.png Graphic file (type png)
 <use figures/LoRaWAN_architecture.png>
-Package pdftex.def Info: figures/LoRaWAN_architecture.png  used on input line 509.
+Package pdftex.def Info: figures/LoRaWAN_architecture.png  used on input line 462.
 (pdftex.def)             Requested size: 426.79134pt x 270.5167pt.
-<figures/LoRaWAN_Network_Server_architecture.png, id=371, 1012.78375pt x 581.17125pt>
+<figures/LoRaWAN_Network_Server_architecture.png, id=379, 1012.78375pt x 581.17125pt>
 File: figures/LoRaWAN_Network_Server_architecture.png Graphic file (type png)
 <use figures/LoRaWAN_Network_Server_architecture.png>
-Package pdftex.def Info: figures/LoRaWAN_Network_Server_architecture.png  used on input line 517.
+Package pdftex.def Info: figures/LoRaWAN_Network_Server_architecture.png  used on input line 470.
 (pdftex.def)             Requested size: 426.79134pt x 244.90611pt.
 
 
-[31 <./figures/LoRa-LoRaWAN_layers.png>]
+[32 <./figures/LoRa-LoRaWAN_layers.png>]
 
-[32 <./figures/LoRaWAN_architecture.png> <./figures/LoRaWAN_Network_Server_architecture.png (PNG copy)>])
+[33 <./figures/LoRaWAN_architecture.png> <./figures/LoRaWAN_Network_Server_architecture.png (PNG copy)>])
 
-[33]
+[34]
 \openout2 = `body_matter/chap3.aux'.
 
  (body_matter/chap3.tex
-
-[34
-
-
-
-
-]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \textiota \textomicron  3.
 Package lettrine.sty Info: Targeted height = 21.27205pt
 (lettrine.sty)             (for loversize=0, accent excluded),
@@ -1729,7 +1724,12 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 (lettrine.sty)             reported on input line 2.
 )
 
-[35]
+[35
+
+
+
+
+]
 
 [36
 
@@ -1757,7 +1757,7 @@ Package epstopdf Info: Source file: <figures/peerArchitecture.eps>
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/peerArchitecture-eps-converted-to.pdf figures/peerArchitecture.eps>
 (epstopdf)             \includegraphics on input line 23.
 Package epstopdf Info: Output file is already uptodate.
-<figures/peerArchitecture-eps-converted-to.pdf, id=413, 427.5975pt x 545.03625pt>
+<figures/peerArchitecture-eps-converted-to.pdf, id=416, 427.5975pt x 545.03625pt>
 File: figures/peerArchitecture-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/peerArchitecture-eps-converted-to.pdf>
 Package pdftex.def Info: figures/peerArchitecture-eps-converted-to.pdf  used on input line 23.
@@ -1957,7 +1957,7 @@ Overfull \hbox (2.0pt too wide) in paragraph at lines 106--106
 
  (back_matter/appB.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textBeta \textnumeralsigngreek }.
-<figures/2.png, id=562, 187.70125pt x 119.44624pt>
+<figures/2.png, id=565, 187.70125pt x 119.44624pt>
 File: figures/2.png Graphic file (type png)
 <use figures/2.png>
 Package pdftex.def Info: figures/2.png  used on input line 25.
@@ -2018,7 +2018,7 @@ LaTeX Warning: Citation `MSU-CSE-05-29' on page 61 undefined on input line 28.
 
 ]
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textEpsilon \textnumeralsigngreek }.
-<figures/frog.jpg, id=605, 748.7975pt x 741.77126pt>
+<figures/frog.jpg, id=608, 748.7975pt x 741.77126pt>
 File: figures/frog.jpg Graphic file (type jpg)
 <use figures/frog.jpg>
 Package pdftex.def Info: figures/frog.jpg  used on input line 6.
@@ -2092,17 +2092,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 31999 strings out of 469941
- 568088 string characters out of 5485294
+ 32002 strings out of 469941
+ 568162 string characters out of 5485294
  1109121 words of memory out of 5000000
- 57863 multiletter control sequences out of 15000+600000
+ 57865 multiletter control sequences out of 15000+600000
  699141 words of font info for 199 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 99i,12n,107p,1192b,1544s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,107p,1081b,1544s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Theodore\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><D:/Programs/fonts/type1/public/kerkis/Kerkis-Bold.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis-Italic.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis-SmallCaps.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis.pfb><D:/Programs/fonts/type1/bera/fvmr8a.pfb><D:/Programs/fonts/type1/public/txfonts/rtxr.pfb><D:/Programs/fonts/type1/public/txfonts/txex.pfb><D:/Programs/fonts/type1/public/txfonts/txsy.pfb><D:/Programs/fonts/type1/public/txfonts/txsyb.pfb><D:/Programs/fonts/type1/public/txfonts/txsyc.pfb><D:/Programs/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (78 pages, 1550111 bytes).
+Output written on main.pdf (78 pages, 1554408 bytes).
 PDF statistics:
- 939 PDF objects out of 1000 (max. 8388607)
- 203 named destinations out of 1000 (max. 500000)
+ 942 PDF objects out of 1000 (max. 8388607)
+ 204 named destinations out of 1000 (max. 500000)
  503 words of extra memory for PDF output out of 10000 (max. 10000000)
 

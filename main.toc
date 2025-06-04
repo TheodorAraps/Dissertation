@@ -68,15 +68,22 @@
 \contentsline {subsubsection}{Ζώνη \foreignlanguage {english}{Fresnel}}{30}{equation.2.4}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {section}{\numberline {2.4}Το Πρωτόκολλο \foreignlanguage {english}{LoRaWAN}}{31}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Ηλεκτρικοί Υποσταθμοί και Ανάγκες Εποπτείας}{31}{section.2.5}%
+\contentsline {subsubsection}{Πολλαπλές διαδρομές (\foreignlanguage {english}{Multipath Propagation})}{31}{equation.2.6}%
+\contentsline {subsubsection}{Φαινόμενο Doppler (\foreignlanguage {english}{Doppler Effect})}{31}{equation.2.6}%
+\contentsline {subsubsection}{Ατμοσφαιρικά και περιβαλλοντικά φαινόμενα}{31}{equation.2.7}%
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\contentsline {section}{\numberline {2.4}Το Πρωτόκολλο \foreignlanguage {english}{LoRaWAN}}{32}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Ηλεκτρικοί Υποσταθμοί και Ανάγκες Εποπτείας}{32}{section.2.5}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {section}{\numberline {2.6}Συμπεράσματα}{33}{section.2.6}%
+\contentsline {section}{\numberline {2.6}Συμπεράσματα}{34}{section.2.6}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \contentsline {chapter}{\numberline {3}Περιγραφή θέματος}{35}{chapter.3}%
