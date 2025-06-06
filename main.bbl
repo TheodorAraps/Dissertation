@@ -105,15 +105,20 @@
 \newblock \textgreek{Teqnik'h Anafor'a me arijm'o}, {{\latintext Semtech
   Corporation}}, 2015.
 
-\bibitem{TTNRecord}
-{{\latintext { }{The Things Network}}}.
-\newblock {{\latintext {\color{\colouredtextcolor} {\em New LoRa World Record:
-  1336 km! (830 mi)}}}}.
-\newblock {{\latintext
-  \url{https://www.thethingsnetwork.org/article/new-lora-world-record-1336-km-830-mi}}},
-  2023.
+\bibitem{IJASRE2018}
+{{\latintext T.{ }Rademacher \textgreek{kai} { }others}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em Analysis of Urban Path
+  Loss Models for LoRaWAN Network Planning}}}}.
+\newblock {{\latintext {\em International Journal of Advanced Scientific
+  Research and Engineering (IJASRE)}}}, 4(7):12--21, 2018.
 
-\bibitem{Staniec2018}
+\bibitem{loradocs}
+{{\latintext { }{LoRa Documentation}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em LoRa - The Things
+  Network Documentation}}}}.
+\newblock {{\latintext \url{https://lora.readthedocs.io/en/latest/}}}, 2024.
+
+\bibitem{staniec2018}
 {{\latintext Kamil{ }Staniec \textgreek{kai} Michał{ }Kowal}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em LoRa Performance under
   Variable Interference and Heavy-Multipath Conditions}}}}.
