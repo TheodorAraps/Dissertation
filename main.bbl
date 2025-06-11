@@ -125,6 +125,14 @@
 \newblock {{\latintext {\em Wireless Communications and Mobile Computing}}},
   \textgreek{sel'ides} 1--10, 2018.
 
+\bibitem{LansitecLoRaRange2024}
+{{\latintext { }Lansitec}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em What are the factors
+  affecting LoRaWAN range in IoT}}}}.
+\newblock {{\latintext
+  \url{https://www.lansitec.com/blogs/what-are-the-factors-affecting-lorawan-range-in-iot/}}},
+  2024.
+
 \bibitem{tti_homepage}
 {{\latintext { }{The Things Industries}}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em The Things Industries

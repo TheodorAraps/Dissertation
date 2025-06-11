@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.27)  6 JUN 2025 17:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.27)  11 JUN 2025 17:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1655,8 +1655,6 @@ Package pdftex.def Info: figures/OSI_LoRa.png  used on input line 202.
 
 
 [27{C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/kerkis/kmath.enc}{C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./figures/OSI_LoRa.png>]
-LaTeX Font Info:    Font shape `LGR/mak/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 537.
 <figures/Fresnel_zone.png, id=333, 500.46976pt x 193.9245pt>
 File: figures/Fresnel_zone.png Graphic file (type png)
 <use figures/Fresnel_zone.png>
@@ -1670,48 +1668,52 @@ Underfull \vbox (badness 3907) has occurred while \output is active []
 [28]
 
 [29 <./figures/Fresnel_zone.png>]
-Underfull \vbox (badness 2277) has occurred while \output is active []
-
-
 
 [30]
-Missing character: There is no v in font gk7t!
-
-Underfull \vbox (badness 3503) has occurred while \output is active []
-
-
 
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 695--699
+Underfull \hbox (badness 10000) in paragraph at lines 699--703
 
  []
 
-<figures/LoRa-LoRaWAN_layers.png, id=362, 1143.52219pt x 365.86688pt>
+<figures/LoRa-LoRaWAN_layers.png, id=369, 1143.52219pt x 365.86688pt>
 File: figures/LoRa-LoRaWAN_layers.png Graphic file (type png)
 <use figures/LoRa-LoRaWAN_layers.png>
-Package pdftex.def Info: figures/LoRa-LoRaWAN_layers.png  used on input line 703.
+Package pdftex.def Info: figures/LoRa-LoRaWAN_layers.png  used on input line 707.
 (pdftex.def)             Requested size: 341.43436pt x 109.24171pt.
 
 
-[32 <./figures/LoRa-LoRaWAN_layers.png>]
-<figures/LoRaWAN_architecture.png, id=370, 3306.3525pt x 2095.83pt>
+[32]
+<figures/LoRaWAN_architecture.png, id=376, 3306.3525pt x 2095.83pt>
 File: figures/LoRaWAN_architecture.png Graphic file (type png)
 <use figures/LoRaWAN_architecture.png>
-Package pdftex.def Info: figures/LoRaWAN_architecture.png  used on input line 731.
+Package pdftex.def Info: figures/LoRaWAN_architecture.png  used on input line 735.
 (pdftex.def)             Requested size: 426.79134pt x 270.5167pt.
-<figures/LoRaWAN_Network_Server_architecture.png, id=372, 1012.78375pt x 581.17125pt>
+<figures/LoRaWAN_Network_Server_architecture.png, id=378, 1012.78375pt x 581.17125pt>
 File: figures/LoRaWAN_Network_Server_architecture.png Graphic file (type png)
 <use figures/LoRaWAN_Network_Server_architecture.png>
-Package pdftex.def Info: figures/LoRaWAN_Network_Server_architecture.png  used on input line 739.
+Package pdftex.def Info: figures/LoRaWAN_Network_Server_architecture.png  used on input line 743.
 (pdftex.def)             Requested size: 426.79134pt x 244.90611pt.
 
+Underfull \vbox (badness 2080) has occurred while \output is active []
 
-[33 <./figures/LoRaWAN_architecture.png>])
+
+
+[33 <./figures/LoRa-LoRaWAN_layers.png> <./figures/LoRaWAN_architecture.png>])
 
 [34 <./figures/LoRaWAN_Network_Server_architecture.png (PNG copy)>]
+
+[35]
 \openout2 = `body_matter/chap3.aux'.
 
  (body_matter/chap3.tex
+
+[36
+
+
+
+
+]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \textiota \textomicron  3.
 Package lettrine.sty Info: Targeted height = 21.27205pt
 (lettrine.sty)             (for loversize=0, accent excluded),
@@ -1719,22 +1721,17 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 (lettrine.sty)             reported on input line 2.
 )
 
-[35
-
-
-
-
-]
-
-[36
-
-
-
-]
-
 [37]
 
-[38]
+[38
+
+
+
+]
+
+[39]
+
+[40]
 \openout2 = `body_matter/chap4.aux'.
 
  (body_matter/chap4.tex
@@ -1752,7 +1749,7 @@ Package epstopdf Info: Source file: <figures/peerArchitecture.eps>
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/peerArchitecture-eps-converted-to.pdf figures/peerArchitecture.eps>
 (epstopdf)             \includegraphics on input line 23.
 Package epstopdf Info: Output file is already uptodate.
-<figures/peerArchitecture-eps-converted-to.pdf, id=404, 427.5975pt x 545.03625pt>
+<figures/peerArchitecture-eps-converted-to.pdf, id=419, 427.5975pt x 545.03625pt>
 File: figures/peerArchitecture-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/peerArchitecture-eps-converted-to.pdf>
 Package pdftex.def Info: figures/peerArchitecture-eps-converted-to.pdf  used on input line 23.
@@ -1764,12 +1761,12 @@ Overfull \hbox (0.80511pt too wide) in paragraph at lines 23--24
 
 )
 
-[39
+[41
 
 
 ]
 
-[40 <./figures/peerArchitecture-eps-converted-to.pdf>]
+[42 <./figures/peerArchitecture-eps-converted-to.pdf>]
 \openout2 = `body_matter/chap5.aux'.
 
  (body_matter/chap5.tex
@@ -1790,7 +1787,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
 
 
-[41
+[43
 
 
 
@@ -1811,7 +1808,7 @@ LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 8.2125pt on input line 35.
 )
 
-[42]
+[44]
 \openout2 = `body_matter/chap6.aux'.
 
  (body_matter/chap6.tex
@@ -1822,7 +1819,7 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 (lettrine.sty)             reported on input line 2.
 )
 
-[43
+[45
 
 
 
@@ -1832,7 +1829,7 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 
  (body_matter/chap7.tex
 
-[44
+[46
 
 
 
@@ -1857,16 +1854,16 @@ LaTeX Font Info:    Font shape `T1/mak/b/n' will be
 (Font)              scaled to size 8.99994pt on input line 50.
 )
 
-[45]
+[47]
 
-[46]
+[48]
 \openout2 = `body_matter/chap8.aux'.
 
  (body_matter/chap8.tex
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \textiota \textomicron  8.
 
 
-[47
+[49
 
 
 
@@ -1903,86 +1900,86 @@ Overfull \hbox (2.0pt too wide) in paragraph at lines 106--106
 
 )
 
-[48]
+[50]
 
-[49]
+[51]
 
-[50
+[52
 
 
 
 ]
 
-[51]
+[53]
 
-[52]
+[54]
 \openout2 = `body_matter/chap9.aux'.
 
  (body_matter/chap9.tex
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \textiota \textomicron  9.
 
 
-[53
+[55
 
 
 ])
 
-[54]
+[56]
 
-[55
+[57
 
 
 
 ]
 
-[56]
+[58]
 \openout2 = `back_matter/appA.aux'.
 
  (back_matter/appA.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textAlpha \textnumeralsigngreek }.
 )
 
-[57
+[59
 
 
 ]
 
-[58]
+[60]
 \openout2 = `back_matter/appB.aux'.
 
  (back_matter/appB.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textBeta \textnumeralsigngreek }.
-<figures/2.png, id=553, 187.70125pt x 119.44624pt>
+<figures/2.png, id=568, 187.70125pt x 119.44624pt>
 File: figures/2.png Graphic file (type png)
 <use figures/2.png>
 Package pdftex.def Info: figures/2.png  used on input line 25.
 (pdftex.def)             Requested size: 187.70079pt x 119.44594pt.
 
 
-[59
+[61
 
 
 
 
  <./figures/2.png>])
 
-[60]
+[62]
 \openout2 = `back_matter/appC.aux'.
 
  (back_matter/appC.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textGamma \textnumeralsigngreek }.
 
-LaTeX Warning: Citation `LiArTs13' on page 61 undefined on input line 12.
+LaTeX Warning: Citation `LiArTs13' on page 63 undefined on input line 12.
 
 
-LaTeX Warning: Citation `LaTeXProject' on page 61 undefined on input line 16.
+LaTeX Warning: Citation `LaTeXProject' on page 63 undefined on input line 16.
 
 
-LaTeX Warning: Citation `MSU-CSE-05-29' on page 61 undefined on input line 28.
+LaTeX Warning: Citation `MSU-CSE-05-29' on page 63 undefined on input line 28.
 
 )
 
-[61
+[63
 
 
 
@@ -1992,7 +1989,7 @@ LaTeX Warning: Citation `MSU-CSE-05-29' on page 61 undefined on input line 28.
 
  (back_matter/appD.tex
 
-[62
+[64
 
 
 
@@ -2001,28 +1998,28 @@ LaTeX Warning: Citation `MSU-CSE-05-29' on page 61 undefined on input line 28.
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textDelta \textnumeralsigngreek }.
 )
 
-[63]
+[65]
 \openout2 = `back_matter/appE.aux'.
 
  (back_matter/appE.tex
 
-[64
+[66
 
 
 
 
 ]
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textEpsilon \textnumeralsigngreek }.
-<figures/frog.jpg, id=596, 748.7975pt x 741.77126pt>
+<figures/frog.jpg, id=611, 748.7975pt x 741.77126pt>
 File: figures/frog.jpg Graphic file (type jpg)
 <use figures/frog.jpg>
 Package pdftex.def Info: figures/frog.jpg  used on input line 6.
 (pdftex.def)             Requested size: 213.39566pt x 211.39569pt.
 )
 
-[65 <./figures/frog.jpg>]
+[67 <./figures/frog.jpg>]
 
-[66
+[68
 
 
 
@@ -2048,27 +2045,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--86
 
 
 
-[67
+[69
 
 ])
 
-[68] (back_matter/abbreviations.tex)
+[70] (back_matter/abbreviations.tex)
 
-[69
+[71
 
 ]
 
-[70
+[72
 
 ] (back_matter/glossary.tex)
 
-[71] LaTeX Warning: (ntua_thesis.cls): The "plain" option has been selected. CD label generation has been disabled.
+[73] LaTeX Warning: (ntua_thesis.cls): The "plain" option has been selected. CD label generation has been disabled.
  
 LaTeX Warning: (ntua_thesis.cls): The "plain" option has been selected. CD cover generation has been disabled.
  
 
 
-[72
+[74
 
 ] (main.aux (front_matter/abstract.aux) (front_matter/acknowledgements.aux) (body_matter/intro.aux) (body_matter/chap2.aux) (body_matter/chap3.aux) (body_matter/chap4.aux) (body_matter/chap5.aux) (body_matter/chap6.aux) (body_matter/chap7.aux) (body_matter/chap8.aux) (body_matter/chap9.aux) (back_matter/appA.aux) (back_matter/appB.aux) (back_matter/appC.aux) (back_matter/appD.aux) (back_matter/appE.aux))
  ***********
@@ -2084,17 +2081,17 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 32008 strings out of 469923
- 585364 string characters out of 5468202
- 1109603 words of memory out of 5000000
+ 32010 strings out of 469923
+ 585410 string characters out of 5468202
+ 1109647 words of memory out of 5000000
  57895 multiletter control sequences out of 15000+600000
- 699141 words of font info for 199 fonts, out of 8000000 for 9000
+ 697780 words of font info for 197 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 99i,13n,107p,1104b,1544s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,107p,1104b,1544s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\tarapis\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-Bold.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-Italic.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-SmallCaps.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fvmr8a.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txex.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsy.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsyb.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsyc.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (78 pages, 1571263 bytes).
+Output written on main.pdf (80 pages, 1575588 bytes).
 PDF statistics:
- 929 PDF objects out of 1000 (max. 8388607)
- 198 named destinations out of 1000 (max. 500000)
+ 948 PDF objects out of 1000 (max. 8388607)
+ 201 named destinations out of 1000 (max. 500000)
  503 words of extra memory for PDF output out of 10000 (max. 10000000)
 

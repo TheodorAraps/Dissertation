@@ -655,7 +655,6 @@ INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\tfm\public\txfonts\rt
 INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\base\8r.enc
 INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\vf\public\kerkis\ek8a.vf
 INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kerkis\ek8r.tfm
-INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kerkis\gk7t.tfm
 INPUT .\figures\Fresnel_zone.png
 INPUT .\figures\Fresnel_zone.png
 INPUT .\figures\Fresnel_zone.png
@@ -663,8 +662,6 @@ INPUT .\figures\Fresnel_zone.png
 INPUT .\figures\Fresnel_zone.png
 INPUT .\figures\Fresnel_zone.png
 INPUT .\figures\Fresnel_zone.png
-INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\vf\public\kerkis\gk7t.vf
-INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kerkis\gk7a.tfm
 INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\vf\public\txfonts\txr.vf
 INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\tfm\public\txfonts\rtxptmr.tfm
 INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\tfm\public\txfonts\rtxr.tfm
