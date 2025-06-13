@@ -3,9 +3,11 @@
 \contentsline {illustration}{\numberline {2.1}{\ignorespaces Σύγκριση τεχνολογιών ασύρματης επικοινωνίας (\foreignlanguage {english}{LPWAN}) ως προς τον ρυθμό μετάδοσης, την κατανάλωση ενέργειας, την εμβέλεια και το κόστος.}}{24}{illustration.caption.9}%
 \contentsline {illustration}{\numberline {2.2}{\ignorespaces Μοντέλο \foreignlanguage {english}{OSI} σε αντιστοίχιση με τα \foreignlanguage {english}{LoRa} και \foreignlanguage {english}{LoRaWAN} επίπεδα.}}{27}{illustration.caption.11}%
 \contentsline {illustration}{\numberline {2.3}{\ignorespaces Ζώνη \foreignlanguage {english}{Fresnel}.}}{29}{illustration.caption.12}%
-\contentsline {illustration}{\numberline {2.4}{\ignorespaces Τεχνολογική στοίβα των \foreignlanguage {english}{LoRa} και \foreignlanguage {english}{LoRaWAN}.}}{33}{illustration.caption.13}%
-\contentsline {illustration}{\numberline {2.5}{\ignorespaces Τυπική αρχιτεκτονική \foreignlanguage {english}{LoRaWAN} δικτύου.}}{33}{illustration.caption.14}%
-\contentsline {illustration}{\numberline {2.6}{\ignorespaces Αρχιτεκτονική \foreignlanguage {english}{LoRaWAN Network Server}.}}{34}{illustration.caption.15}%
+\contentsline {illustration}{\numberline {2.4}{\ignorespaces Σύγκριση ευαισθησίας \foreignlanguage {english}{LoRa} και \foreignlanguage {english}{FSK}, υπογραμμίζοντας την υπεροχή της τεχνολογίας \foreignlanguage {english}{LoRa} σε συνθήκες χαμηλού λόγου σήματος προς θόρυβο (\foreignlanguage {english}{SNR}).}}{31}{illustration.caption.13}%
+\contentsline {illustration}{\numberline {2.5}{\ignorespaces Φασματογράφημα σήματος \foreignlanguage {english}{LoRa} που παρουσιάζει 8 αρχικά \foreignlanguage {english}{up-chirps} προοιμίου, 2 \foreignlanguage {english}{down-chirps} συγχρονισμού, και ακολουθία 5 \foreignlanguage {english}{chirp} με κωδικοποιημένα δεδομένα (διαφορετική κυκλική μετατόπιση σε κάθε σύμβολο). Το σήμα σαρώνει πλήρως ένα εύρος ζώνης 125 \foreignlanguage {english}{kHz} με γραμμικά αυξανόμενη ή μειούμενη συχνότητα σε κάθε \foreignlanguage {english}{chirp}.}}{35}{illustration.caption.14}%
+\contentsline {illustration}{\numberline {2.6}{\ignorespaces Τεχνολογική στοίβα των \foreignlanguage {english}{LoRa} και \foreignlanguage {english}{LoRaWAN}.}}{37}{illustration.caption.15}%
+\contentsline {illustration}{\numberline {2.7}{\ignorespaces Τυπική αρχιτεκτονική \foreignlanguage {english}{LoRaWAN} δικτύου.}}{38}{illustration.caption.16}%
+\contentsline {illustration}{\numberline {2.8}{\ignorespaces Αρχιτεκτονική \foreignlanguage {english}{LoRaWAN Network Server}.}}{39}{illustration.caption.17}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -18,4 +20,4 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{67}{illustration.caption.23}%
+\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{71}{illustration.caption.25}%
