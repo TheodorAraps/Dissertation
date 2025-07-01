@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.27)  13 JUN 2025 10:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.27)  1 JUL 2025 17:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1197,9 +1197,28 @@ Package babel Info: 'greek' activates 'greek' shorthands.
 LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 1793.
  (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/cbfonts-fd\lgrcmr.fd
 File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
-))
-Package hyperref Info: Option `colorlinks' set `true' on input line 251.
-Package hyperref Info: Option `unicode' set `true' on input line 251.
+)) (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen316
+\lightrulewidth=\dimen317
+\cmidrulewidth=\dimen318
+\belowrulesep=\dimen319
+\belowbottomsep=\dimen320
+\aboverulesep=\dimen321
+\abovetopsep=\dimen322
+\cmidrulesep=\dimen323
+\cmidrulekern=\dimen324
+\defaultaddspace=\dimen325
+\@cmidla=\count375
+\@cmidlb=\count376
+\@aboverulesep=\dimen326
+\@belowrulesep=\dimen327
+\@thisruleclass=\count377
+\@lastruleclass=\count378
+\@thisrulewidth=\dimen328
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 253.
+Package hyperref Info: Option `unicode' set `true' on input line 253.
  (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 ) (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/hypcap\hypcap.sty
@@ -1207,10 +1226,10 @@ Package: hypcap 2024-07-26 v1.13 Adjusting the anchors of captions (HO)
  (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 ))
-LaTeX Font Info:    Trying to load font information for LGR+mak on input line 251.
+LaTeX Font Info:    Trying to load font information for LGR+mak on input line 253.
  (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/kerkis\lgrmak.fd)
 LaTeX Font Info:    Font shape `LGR/mak/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 251.
+(Font)              scaled to size 9.85492pt on input line 253.
  (main.aux
 LaTeX Font Info:    Trying to load font information for T1+mak on input line 9.
  (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/kerkis\t1mak.fd)
@@ -1219,95 +1238,95 @@ LaTeX Font Info:    Font shape `T1/mak/m/n' will be
  (front_matter/abstract.aux) (front_matter/acknowledgements.aux) (body_matter/intro.aux) (body_matter/chap2.aux) (body_matter/chap3.aux) (body_matter/chap4.aux) (body_matter/chap5.aux) (body_matter/chap6.aux) (body_matter/chap7.aux) (body_matter/chap8.aux) (body_matter/chap9.aux) (back_matter/appA.aux) (back_matter/appB.aux) (back_matter/appC.aux) (back_matter/appD.aux) (back_matter/appE.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 251.
-LaTeX Font Info:    Trying to load font information for OML+txmi on input line 251.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 253.
+LaTeX Font Info:    Trying to load font information for OML+txmi on input line 253.
  (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 251.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 251.
-LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 251.
+LaTeX Font Info:    ... okay on input line 253.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 253.
+LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 253.
  (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 251.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 251.
-LaTeX Font Info:    ... okay on input line 251.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 251.
-LaTeX Font Info:    ... okay on input line 251.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 251.
-LaTeX Font Info:    ... okay on input line 251.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 251.
-LaTeX Font Info:    Trying to load font information for OMX+txex on input line 251.
+LaTeX Font Info:    ... okay on input line 253.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 253.
+LaTeX Font Info:    ... okay on input line 253.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 253.
+LaTeX Font Info:    ... okay on input line 253.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 253.
+LaTeX Font Info:    ... okay on input line 253.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 253.
+LaTeX Font Info:    Trying to load font information for OMX+txex on input line 253.
  (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 251.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 251.
-LaTeX Font Info:    Trying to load font information for U+txexa on input line 251.
+LaTeX Font Info:    ... okay on input line 253.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 253.
+LaTeX Font Info:    Trying to load font information for U+txexa on input line 253.
  (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 251.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 251.
-LaTeX Font Info:    ... okay on input line 251.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 251.
-LaTeX Font Info:    ... okay on input line 251.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 251.
-LaTeX Font Info:    ... okay on input line 251.
+LaTeX Font Info:    ... okay on input line 253.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 253.
+LaTeX Font Info:    ... okay on input line 253.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 253.
+LaTeX Font Info:    ... okay on input line 253.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 253.
+LaTeX Font Info:    ... okay on input line 253.
  (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count375
-\scratchdimen=\dimen316
+\scratchcounter=\count379
+\scratchdimen=\dimen329
 \scratchbox=\box77
-\nofMPsegments=\count376
-\nofMParguments=\count377
+\nofMPsegments=\count380
+\nofMParguments=\count381
 \everyMPshowfont=\toks54
-\MPscratchCnt=\count378
-\MPscratchDim=\dimen317
-\MPnumerator=\count379
-\makeMPintoPDFobject=\count380
+\MPscratchCnt=\count382
+\MPscratchDim=\dimen330
+\MPnumerator=\count383
+\makeMPintoPDFobject=\count384
 \everyMPtoPDFconversion=\toks55
 )
 Package newfloat Info: `float' package detected.
-Package hyperref Info: Link coloring ON on input line 251.
-\c@lstlisting=\count381
+Package hyperref Info: Link coloring ON on input line 253.
+\c@lstlisting=\count385
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hypcap package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 254.
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 256.
  (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for OML+mak on input line 254.
+LaTeX Font Info:    Trying to load font information for OML+mak on input line 256.
  (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/kerkis\omlmak.fd)
 LaTeX Font Info:    Font shape `OML/mak/m/it' will be
-(Font)              scaled to size 9.85492pt on input line 254.
+(Font)              scaled to size 9.85492pt on input line 256.
 LaTeX Font Info:    Font shape `OML/mak/m/it' will be
-(Font)              scaled to size 7.19995pt on input line 254.
+(Font)              scaled to size 7.19995pt on input line 256.
 LaTeX Font Info:    Font shape `OML/mak/m/it' will be
-(Font)              scaled to size 5.39996pt on input line 254.
-LaTeX Font Info:    Trying to load font information for U+txsya on input line 254.
+(Font)              scaled to size 5.39996pt on input line 256.
+LaTeX Font Info:    Trying to load font information for U+txsya on input line 256.
  (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyb on input line 254.
+LaTeX Font Info:    Trying to load font information for U+txsyb on input line 256.
  (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 254.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 256.
  (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 254.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 256.
  (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `T1/mak/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 254.
+(Font)              scaled to size 7.19995pt on input line 256.
 LaTeX Font Info:    Font shape `T1/mak/m/n' will be
-(Font)              scaled to size 5.39996pt on input line 254.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 254.
+(Font)              scaled to size 5.39996pt on input line 256.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 256.
  (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
@@ -1318,48 +1337,48 @@ Package epstopdf Info: Source file: <logo/pyrforos.eps>
 (epstopdf)                    date: 2025-05-20 10:33:11
 (epstopdf)                    size: 58320 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=logo/pyrforos-eps-converted-to.pdf logo/pyrforos.eps>
-(epstopdf)             \includegraphics on input line 254.
+(epstopdf)             \includegraphics on input line 256.
 Package epstopdf Info: Output file is already uptodate.
 <logo/pyrforos-eps-converted-to.pdf, id=6, 557.08125pt x 557.08125pt>
 File: logo/pyrforos-eps-converted-to.pdf Graphic file (type pdf)
 <use logo/pyrforos-eps-converted-to.pdf>
-Package pdftex.def Info: logo/pyrforos-eps-converted-to.pdf  used on input line 254.
+Package pdftex.def Info: logo/pyrforos-eps-converted-to.pdf  used on input line 256.
 (pdftex.def)             Requested size: 71.13188pt x 71.13104pt.
 LaTeX Font Info:    Font shape `LGR/mak/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 254.
+(Font)              scaled to size 10.79993pt on input line 256.
 LaTeX Font Info:    Font shape `LGR/mak/m/sc' will be
-(Font)              scaled to size 10.79993pt on input line 254.
+(Font)              scaled to size 10.79993pt on input line 256.
 LaTeX Font Info:    Font shape `LGR/mak/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 254.
+(Font)              scaled to size 8.99994pt on input line 256.
 LaTeX Font Info:    Font shape `LGR/mak/m/sc' will be
-(Font)              scaled to size 8.99994pt on input line 254.
+(Font)              scaled to size 8.99994pt on input line 256.
 
-Overfull \hbox (95.13191pt too wide) in paragraph at lines 254--254
+Overfull \hbox (95.13191pt too wide) in paragraph at lines 256--256
  [][] 
  []
 
 LaTeX Font Info:    Font shape `LGR/mak/m/n' will be
-(Font)              scaled to size 18.66588pt on input line 254.
+(Font)              scaled to size 18.66588pt on input line 256.
 LaTeX Font Info:    Font shape `LGR/mak/m/n' will be
-(Font)              scaled to size 17.35912pt on input line 254.
+(Font)              scaled to size 17.35912pt on input line 256.
 LaTeX Font Info:    Font shape `LGR/mak/b/n' will be
-(Font)              scaled to size 17.35912pt on input line 254.
+(Font)              scaled to size 17.35912pt on input line 256.
 LaTeX Font Info:    Font shape `T1/mak/b/n' will be
-(Font)              scaled to size 17.35912pt on input line 254.
+(Font)              scaled to size 17.35912pt on input line 256.
 LaTeX Font Info:    Font shape `LGR/mak/m/n' will be
-(Font)              scaled to size 12.9599pt on input line 254.
+(Font)              scaled to size 12.9599pt on input line 256.
 LaTeX Font Info:    Font shape `LGR/mak/m/it' will be
-(Font)              scaled to size 12.9599pt on input line 254.
+(Font)              scaled to size 12.9599pt on input line 256.
 LaTeX Font Info:    Font shape `LGR/mak/m/sc' will be
-(Font)              scaled to size 18.66588pt on input line 254.
+(Font)              scaled to size 18.66588pt on input line 256.
 LaTeX Font Info:    Font shape `LGR/mak/m/sc' will be
-(Font)              scaled to size 17.35912pt on input line 254.
+(Font)              scaled to size 17.35912pt on input line 256.
 LaTeX Font Info:    Font shape `LGR/mak/m/n' will be
-(Font)              scaled to size 12.0526pt on input line 254.
+(Font)              scaled to size 12.0526pt on input line 256.
 LaTeX Font Info:    Font shape `LGR/mak/b/n' will be
-(Font)              scaled to size 12.0526pt on input line 254.
+(Font)              scaled to size 12.0526pt on input line 256.
 LaTeX Font Info:    Font shape `LGR/mak/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 254.
+(Font)              scaled to size 10.79993pt on input line 256.
 
 
 [1
@@ -1367,7 +1386,7 @@ LaTeX Font Info:    Font shape `LGR/mak/b/n' will be
 
 {C:/Users/tarapis/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/kerkis/gpkerkis.enc}{C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/kerkis/kerkisec.enc} <./logo/pyrforos-eps-converted-to.pdf>]
 LaTeX Font Info:    Font shape `LGR/mak/m/n' will be
-(Font)              scaled to size 5.39996pt on input line 254.
+(Font)              scaled to size 5.39996pt on input line 256.
 
 
 [2
@@ -1380,24 +1399,24 @@ Package epstopdf Info: Source file: <logo/pyrforos.eps>
 (epstopdf)                    date: 2025-05-20 10:33:11
 (epstopdf)                    size: 58320 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=logo/pyrforos-eps-converted-to.pdf logo/pyrforos.eps>
-(epstopdf)             \includegraphics on input line 254.
+(epstopdf)             \includegraphics on input line 256.
 Package epstopdf Info: Output file is already uptodate.
 File: logo/pyrforos-eps-converted-to.pdf Graphic file (type pdf)
 <use logo/pyrforos-eps-converted-to.pdf>
-Package pdftex.def Info: logo/pyrforos-eps-converted-to.pdf  used on input line 254.
+Package pdftex.def Info: logo/pyrforos-eps-converted-to.pdf  used on input line 256.
 (pdftex.def)             Requested size: 45.52458pt x 45.51944pt.
 LaTeX Font Info:    Font shape `LGR/mak/m/sc' will be
-(Font)              scaled to size 9.85492pt on input line 254.
+(Font)              scaled to size 9.85492pt on input line 256.
 LaTeX Font Info:    Font shape `LGR/mak/m/n' will be
-(Font)              scaled to size 15.55188pt on input line 254.
+(Font)              scaled to size 15.55188pt on input line 256.
 LaTeX Font Info:    Font shape `LGR/mak/b/n' will be
-(Font)              scaled to size 15.55188pt on input line 254.
+(Font)              scaled to size 15.55188pt on input line 256.
 LaTeX Font Info:    Font shape `T1/mak/b/n' will be
-(Font)              scaled to size 15.55188pt on input line 254.
+(Font)              scaled to size 15.55188pt on input line 256.
 LaTeX Font Info:    Font shape `LGR/mak/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 254.
+(Font)              scaled to size 12.9599pt on input line 256.
 LaTeX Font Info:    Font shape `LGR/mak/m/it' will be
-(Font)              scaled to size 9.85492pt on input line 254.
+(Font)              scaled to size 9.85492pt on input line 256.
 
 
 [3]
@@ -1410,22 +1429,22 @@ Package epstopdf Info: Source file: <logo/pyrforos.eps>
 (epstopdf)                    date: 2025-05-20 10:33:11
 (epstopdf)                    size: 58320 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=logo/pyrforos-eps-converted-to.pdf logo/pyrforos.eps>
-(epstopdf)             \includegraphics on input line 254.
+(epstopdf)             \includegraphics on input line 256.
 Package epstopdf Info: Output file is already uptodate.
 File: logo/pyrforos-eps-converted-to.pdf Graphic file (type pdf)
 <use logo/pyrforos-eps-converted-to.pdf>
-Package pdftex.def Info: logo/pyrforos-eps-converted-to.pdf  used on input line 254.
+Package pdftex.def Info: logo/pyrforos-eps-converted-to.pdf  used on input line 256.
 (pdftex.def)             Requested size: 45.52458pt x 45.51944pt.
-LaTeX Font Info:    Trying to load font information for TS1+mak on input line 254.
-LaTeX Font Info:    No file TS1mak.fd. on input line 254.
+LaTeX Font Info:    Trying to load font information for TS1+mak on input line 256.
+LaTeX Font Info:    No file TS1mak.fd. on input line 256.
 
 
 LaTeX Font Warning: Font shape `TS1/mak/m/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
-(Font)              for symbol `textcopyright' on input line 254.
+(Font)              for symbol `textcopyright' on input line 256.
 
 LaTeX Font Info:    Font shape `LGR/mak/b/n' will be
-(Font)              scaled to size 9.85492pt on input line 254.
+(Font)              scaled to size 9.85492pt on input line 256.
 
 
 [5
@@ -1468,25 +1487,25 @@ LaTeX Font Info:    Font shape `T1/mak/b/n' will be
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.258 	\include{front_matter/abstract}
+l.260 	\include{front_matter/abstract}
                                        [3]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.260 ...edication{στους γονείς μου}
+l.262 ...edication{στους γονείς μου}
                                                    [4
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 260--260
+Underfull \hbox (badness 10000) in paragraph at lines 262--262
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 260--260
+Underfull \hbox (badness 10000) in paragraph at lines 262--262
 
  []
 
@@ -1496,7 +1515,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 260--260
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.262 	\include
+l.264 	\include
                {front_matter/acknowledgements} [5]
 \openout2 = `front_matter/acknowledgements.aux'.
 
@@ -1532,11 +1551,11 @@ LaTeX Font Info:    Font shape `T1/mak/b/n' will be
 
 
 LaTeX Font Info:    Font shape `LGR/mak/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 266.
+(Font)              scaled to size 8.09995pt on input line 268.
 LaTeX Font Info:    Font shape `T1/mak/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 266.
+(Font)              scaled to size 8.09995pt on input line 268.
 Package babel Info: 'greek' activates 'greek' shorthands.
-(babel)             Reported  on input line 266.
+(babel)             Reported  on input line 268.
 [10] (main.lof)
 \tf@lof=\write5
 \openout5 = `main.lof'.
@@ -1549,13 +1568,17 @@ Package babel Info: 'greek' activates 'greek' shorthands.
 
 [12
 
-] (main.loi)
+] (main.loi
+LaTeX Font Info:    Trying to load font information for T1+txr on input line 9.
+ (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txr.fd
+File: t1txr.fd 2000/12/15 v3.1
+))
 \tf@loi=\write6
 \openout6 = `main.loi'.
 
 
 
-[13]
+[13{C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/kerkis/kmath.enc}{C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
 
 [14
 
@@ -1599,9 +1622,9 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 
 ]
 LaTeX Font Info:    Font shape `T1/mak/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 282.
+(Font)              scaled to size 22.39185pt on input line 284.
 LaTeX Font Info:    Font shape `LGR/mak/b/n' will be
-(Font)              scaled to size 20.82425pt on input line 282.
+(Font)              scaled to size 20.82425pt on input line 284.
 
 
 [21]
@@ -1612,7 +1635,7 @@ LaTeX Font Info:    Font shape `LGR/mak/b/n' will be
  (body_matter/chap2.tex
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \textiota \textomicron  2.
 
-Overfull \hbox (17.72156pt too wide) in paragraph at lines 6--6
+Overfull \hbox (17.72156pt too wide) in paragraph at lines 5--5
 \LGR/mak/b/n/19.28804 Te-qno-lo-g�ec []\T1/mak/b/n/19.28804 LP-WAN []\LGR/mak/b/n/19.28804 kai to Prw-t�kol-lo []\T1/mak/b/n/19.28804 Lo-RaWAN
  []
 
@@ -1622,21 +1645,21 @@ Overfull \hbox (17.72156pt too wide) in paragraph at lines 6--6
 
 
 ]
-<figures/IoT_techs.png, id=295, 1202.99437pt x 704.6325pt>
+<figures/IoT_techs.png, id=325, 1202.99437pt x 704.6325pt>
 File: figures/IoT_techs.png Graphic file (type png)
 <use figures/IoT_techs.png>
-Package pdftex.def Info: figures/IoT_techs.png  used on input line 76.
+Package pdftex.def Info: figures/IoT_techs.png  used on input line 75.
 (pdftex.def)             Requested size: 405.45045pt x 237.48604pt.
-Package hyperref Info: bookmark level for unknown illustration defaults to 0 on input line 78.
+Package hyperref Info: bookmark level for unknown illustration defaults to 0 on input line 77.
 LaTeX Font Info:    Font shape `T1/mak/m/it' will be
-(Font)              scaled to size 9.85492pt on input line 78.
+(Font)              scaled to size 9.85492pt on input line 77.
 
-Underfull \hbox (badness 1009) in paragraph at lines 105--105
+Underfull \hbox (badness 1009) in paragraph at lines 104--104
 []|\LGR/mak/b/n/10.95 Di�rkeia Zw-�c Mpa-
  []
 
 
-Overfull \hbox (27.2372pt too wide) in paragraph at lines 91--118
+Overfull \hbox (27.2372pt too wide) in paragraph at lines 90--117
  [][] 
  []
 
@@ -1646,20 +1669,28 @@ Overfull \hbox (27.2372pt too wide) in paragraph at lines 91--118
 
 [25]
 
+LaTeX Warning: Command \ensuregreek invalid in math mode on input line 193.
+
+
+LaTeX Warning: Command \acctonos invalid in math mode on input line 193.
+
+Missing character: There is no � in font txr!
+
+
 [26]
-<figures/OSI_LoRa.png, id=330, 599.23875pt x 442.65375pt>
+<figures/OSI_LoRa.png, id=360, 599.23875pt x 442.65375pt>
 File: figures/OSI_LoRa.png Graphic file (type png)
 <use figures/OSI_LoRa.png>
-Package pdftex.def Info: figures/OSI_LoRa.png  used on input line 202.
+Package pdftex.def Info: figures/OSI_LoRa.png  used on input line 201.
 (pdftex.def)             Requested size: 298.75262pt x 220.6914pt.
 
 
-[27{C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/kerkis/kmath.enc}{C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./figures/OSI_LoRa.png>]
-<figures/Fresnel_zone.png, id=345, 500.46976pt x 193.9245pt>
+[27 <./figures/OSI_LoRa.png>]
+<figures/Fresnel_zone.png, id=372, 495.0495pt x 161.403pt>
 File: figures/Fresnel_zone.png Graphic file (type png)
 <use figures/Fresnel_zone.png>
-Package pdftex.def Info: figures/Fresnel_zone.png  used on input line 275.
-(pdftex.def)             Requested size: 426.79134pt x 165.384pt.
+Package pdftex.def Info: figures/Fresnel_zone.png  used on input line 274.
+(pdftex.def)             Requested size: 426.79134pt x 139.15112pt.
 
 Underfull \vbox (badness 3449) has occurred while \output is active []
 
@@ -1670,10 +1701,10 @@ Underfull \vbox (badness 3449) has occurred while \output is active []
 [29 <./figures/Fresnel_zone.png>]
 
 [30]
-<figures/LoRa_vs_FSK.png, id=373, 924.45375pt x 651.18282pt>
+<figures/LoRa_vs_FSK.png, id=400, 924.45375pt x 651.18282pt>
 File: figures/LoRa_vs_FSK.png Graphic file (type png)
 <use figures/LoRa_vs_FSK.png>
-Package pdftex.def Info: figures/LoRa_vs_FSK.png  used on input line 375.
+Package pdftex.def Info: figures/LoRa_vs_FSK.png  used on input line 374.
 (pdftex.def)             Requested size: 426.79134pt x 300.63078pt.
 
 
@@ -1682,59 +1713,103 @@ Package pdftex.def Info: figures/LoRa_vs_FSK.png  used on input line 375.
 [32]
 
 [33]
-<figures/LoRa_Symbols_chirps.png, id=400, 1305.87875pt x 691.58376pt>
-File: figures/LoRa_Symbols_chirps.png Graphic file (type png)
-<use figures/LoRa_Symbols_chirps.png>
-Package pdftex.def Info: figures/LoRa_Symbols_chirps.png  used on input line 505.
-(pdftex.def)             Requested size: 426.79134pt x 226.01782pt.
-
 
 [34]
+<figures/CSS_up_chrip_down_chirp.png, id=437, 516.12825pt x 271.0125pt>
+File: figures/CSS_up_chrip_down_chirp.png Graphic file (type png)
+<use figures/CSS_up_chrip_down_chirp.png>
+Package pdftex.def Info: figures/CSS_up_chrip_down_chirp.png  used on input line 537.
+(pdftex.def)             Requested size: 298.75262pt x 156.86893pt.
 
-[35 <./figures/LoRa_Symbols_chirps.png>]
+
+[35 <./figures/CSS_up_chrip_down_chirp.png>]
+<figures/LoRa_Symbols_chirps.png, id=447, 1305.87875pt x 691.58376pt>
+File: figures/LoRa_Symbols_chirps.png Graphic file (type png)
+<use figures/LoRa_Symbols_chirps.png>
+Package pdftex.def Info: figures/LoRa_Symbols_chirps.png  used on input line 556.
+(pdftex.def)             Requested size: 426.79134pt x 226.01782pt.
+<figures/LoRa_waveform_parameters.png, id=449, 1142.2675pt x 921.4425pt>
+File: figures/LoRa_waveform_parameters.png Graphic file (type png)
+<use figures/LoRa_waveform_parameters.png>
+Package pdftex.def Info: figures/LoRa_waveform_parameters.png  used on input line 578.
+(pdftex.def)             Requested size: 384.10959pt x 309.85565pt.
 LaTeX Font Info:    Font shape `LGR/mak/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 560.
+(Font)              scaled to size 7.19995pt on input line 588.
+LaTeX Font Info:    Font shape `OML/mak/m/it' will be
+(Font)              scaled to size 8.09995pt on input line 589.
+LaTeX Font Info:    Font shape `OML/mak/m/it' will be
+(Font)              scaled to size 4.49997pt on input line 589.
+LaTeX Font Info:    Font shape `T1/mak/m/n' will be
+(Font)              scaled to size 4.49997pt on input line 589.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[36 <./figures/LoRa_Symbols_chirps.png>]
+
+[37 <./figures/LoRa_waveform_parameters.png>]
+
+[38]
+<figures/LoRa_waveform_values.png, id=478, 1143.27126pt x 906.38625pt>
+File: figures/LoRa_waveform_values.png Graphic file (type png)
+<use figures/LoRa_waveform_values.png>
+Package pdftex.def Info: figures/LoRa_waveform_values.png  used on input line 697.
+(pdftex.def)             Requested size: 426.79134pt x 338.35884pt.
+
+
+[39 <./figures/LoRa_waveform_values.png>]
+
+[40]
+
+LaTeX Warning: Citation `Hanif2021Slope' on page 41 undefined on input line 791.
+
+
+LaTeX Warning: Citation `Hanif2021Index' on page 41 undefined on input line 796.
+
+
+LaTeX Warning: Citation `Tutorial2022CSS' on page 41 undefined on input line 799.
+
+
+LaTeX Warning: Citation `Tutorial2022CSS' on page 41 undefined on input line 801.
 
 
 
-[36]
-Missing character: There is no v in font gk7t!
-Missing character: There is no v in font gk7t!
+[41]
+Underfull \vbox (badness 2189) has occurred while \output is active []
 
-Underfull \hbox (badness 10000) in paragraph at lines 622--626
+
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 946--950
 
  []
 
-<figures/LoRa-LoRaWAN_layers.png, id=419, 1143.52219pt x 365.86688pt>
+<figures/LoRa-LoRaWAN_layers.png, id=519, 1143.52219pt x 365.86688pt>
 File: figures/LoRa-LoRaWAN_layers.png Graphic file (type png)
 <use figures/LoRa-LoRaWAN_layers.png>
-Package pdftex.def Info: figures/LoRa-LoRaWAN_layers.png  used on input line 630.
+Package pdftex.def Info: figures/LoRa-LoRaWAN_layers.png  used on input line 954.
 (pdftex.def)             Requested size: 341.43436pt x 109.24171pt.
 
 
-[37 <./figures/LoRa-LoRaWAN_layers.png>]
-<figures/LoRaWAN_architecture.png, id=429, 3306.3525pt x 2095.83pt>
+[43 <./figures/LoRa-LoRaWAN_layers.png>]
+<figures/LoRaWAN_architecture.png, id=529, 3306.3525pt x 2095.83pt>
 File: figures/LoRaWAN_architecture.png Graphic file (type png)
 <use figures/LoRaWAN_architecture.png>
-Package pdftex.def Info: figures/LoRaWAN_architecture.png  used on input line 658.
+Package pdftex.def Info: figures/LoRaWAN_architecture.png  used on input line 982.
 (pdftex.def)             Requested size: 426.79134pt x 270.5167pt.
-<figures/LoRaWAN_Network_Server_architecture.png, id=431, 1012.78375pt x 581.17125pt>
+<figures/LoRaWAN_Network_Server_architecture.png, id=531, 1012.78375pt x 581.17125pt>
 File: figures/LoRaWAN_Network_Server_architecture.png Graphic file (type png)
 <use figures/LoRaWAN_Network_Server_architecture.png>
-Package pdftex.def Info: figures/LoRaWAN_Network_Server_architecture.png  used on input line 666.
+Package pdftex.def Info: figures/LoRaWAN_Network_Server_architecture.png  used on input line 990.
 (pdftex.def)             Requested size: 426.79134pt x 244.90611pt.
 
 
-[38 <./figures/LoRaWAN_architecture.png>])
+[44 <./figures/LoRaWAN_architecture.png> <./figures/LoRaWAN_Network_Server_architecture.png (PNG copy)>])
 
-[39 <./figures/LoRaWAN_Network_Server_architecture.png (PNG copy)>]
+[45]
 \openout2 = `body_matter/chap3.aux'.
 
  (body_matter/chap3.tex
 
-[40
+[46
 
 
 
@@ -1747,17 +1822,17 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 (lettrine.sty)             reported on input line 2.
 )
 
-[41]
+[47]
 
-[42
+[48
 
 
 
 ]
 
-[43]
+[49]
 
-[44]
+[50]
 \openout2 = `body_matter/chap4.aux'.
 
  (body_matter/chap4.tex
@@ -1775,7 +1850,7 @@ Package epstopdf Info: Source file: <figures/peerArchitecture.eps>
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/peerArchitecture-eps-converted-to.pdf figures/peerArchitecture.eps>
 (epstopdf)             \includegraphics on input line 23.
 Package epstopdf Info: Output file is already uptodate.
-<figures/peerArchitecture-eps-converted-to.pdf, id=467, 427.5975pt x 545.03625pt>
+<figures/peerArchitecture-eps-converted-to.pdf, id=567, 427.5975pt x 545.03625pt>
 File: figures/peerArchitecture-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/peerArchitecture-eps-converted-to.pdf>
 Package pdftex.def Info: figures/peerArchitecture-eps-converted-to.pdf  used on input line 23.
@@ -1787,12 +1862,12 @@ Overfull \hbox (0.80511pt too wide) in paragraph at lines 23--24
 
 )
 
-[45
+[51
 
 
 ]
 
-[46 <./figures/peerArchitecture-eps-converted-to.pdf>]
+[52 <./figures/peerArchitecture-eps-converted-to.pdf>]
 \openout2 = `body_matter/chap5.aux'.
 
  (body_matter/chap5.tex
@@ -1813,7 +1888,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
 
 
-[47
+[53
 
 
 
@@ -1834,7 +1909,7 @@ LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 8.2125pt on input line 35.
 )
 
-[48]
+[54]
 \openout2 = `body_matter/chap6.aux'.
 
  (body_matter/chap6.tex
@@ -1845,7 +1920,7 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 (lettrine.sty)             reported on input line 2.
 )
 
-[49
+[55
 
 
 
@@ -1855,7 +1930,7 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 
  (body_matter/chap7.tex
 
-[50
+[56
 
 
 
@@ -1866,30 +1941,26 @@ LaTeX Font Info:    Font shape `OML/mak/m/it' will be
 (Font)              scaled to size 8.99994pt on input line 48.
 LaTeX Font Info:    Font shape `OML/mak/m/it' will be
 (Font)              scaled to size 6.29996pt on input line 48.
-LaTeX Font Info:    Font shape `OML/mak/m/it' will be
-(Font)              scaled to size 4.49997pt on input line 48.
 LaTeX Font Info:    Font shape `T1/mak/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 48.
 LaTeX Font Info:    Font shape `T1/mak/m/n' will be
 (Font)              scaled to size 6.29996pt on input line 48.
-LaTeX Font Info:    Font shape `T1/mak/m/n' will be
-(Font)              scaled to size 4.49997pt on input line 48.
 LaTeX Font Info:    Font shape `LGR/mak/b/n' will be
 (Font)              scaled to size 8.99994pt on input line 50.
 LaTeX Font Info:    Font shape `T1/mak/b/n' will be
 (Font)              scaled to size 8.99994pt on input line 50.
 )
 
-[51]
+[57]
 
-[52]
+[58]
 \openout2 = `body_matter/chap8.aux'.
 
  (body_matter/chap8.tex
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \textiota \textomicron  8.
 
 
-[53
+[59
 
 
 
@@ -1926,86 +1997,86 @@ Overfull \hbox (2.0pt too wide) in paragraph at lines 106--106
 
 )
 
-[54]
+[60]
 
-[55]
+[61]
 
-[56
+[62
 
 
 
 ]
 
-[57]
+[63]
 
-[58]
+[64]
 \openout2 = `body_matter/chap9.aux'.
 
  (body_matter/chap9.tex
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \textiota \textomicron  9.
 
 
-[59
+[65
 
 
 ])
 
-[60]
+[66]
 
-[61
+[67
 
 
 
 ]
 
-[62]
+[68]
 \openout2 = `back_matter/appA.aux'.
 
  (back_matter/appA.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textAlpha \textnumeralsigngreek }.
 )
 
-[63
+[69
 
 
 ]
 
-[64]
+[70]
 \openout2 = `back_matter/appB.aux'.
 
  (back_matter/appB.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textBeta \textnumeralsigngreek }.
-<figures/2.png, id=616, 187.70125pt x 119.44624pt>
+<figures/2.png, id=716, 187.70125pt x 119.44624pt>
 File: figures/2.png Graphic file (type png)
 <use figures/2.png>
 Package pdftex.def Info: figures/2.png  used on input line 25.
 (pdftex.def)             Requested size: 187.70079pt x 119.44594pt.
 
 
-[65
+[71
 
 
 
 
  <./figures/2.png>])
 
-[66]
+[72]
 \openout2 = `back_matter/appC.aux'.
 
  (back_matter/appC.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textGamma \textnumeralsigngreek }.
 
-LaTeX Warning: Citation `LiArTs13' on page 67 undefined on input line 12.
+LaTeX Warning: Citation `LiArTs13' on page 73 undefined on input line 12.
 
 
-LaTeX Warning: Citation `LaTeXProject' on page 67 undefined on input line 16.
+LaTeX Warning: Citation `LaTeXProject' on page 73 undefined on input line 16.
 
 
-LaTeX Warning: Citation `MSU-CSE-05-29' on page 67 undefined on input line 28.
+LaTeX Warning: Citation `MSU-CSE-05-29' on page 73 undefined on input line 28.
 
 )
 
-[67
+[73
 
 
 
@@ -2015,7 +2086,7 @@ LaTeX Warning: Citation `MSU-CSE-05-29' on page 67 undefined on input line 28.
 
  (back_matter/appD.tex
 
-[68
+[74
 
 
 
@@ -2024,28 +2095,28 @@ LaTeX Warning: Citation `MSU-CSE-05-29' on page 67 undefined on input line 28.
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textDelta \textnumeralsigngreek }.
 )
 
-[69]
+[75]
 \openout2 = `back_matter/appE.aux'.
 
  (back_matter/appE.tex
 
-[70
+[76
 
 
 
 
 ]
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textEpsilon \textnumeralsigngreek }.
-<figures/frog.jpg, id=659, 748.7975pt x 741.77126pt>
+<figures/frog.jpg, id=759, 748.7975pt x 741.77126pt>
 File: figures/frog.jpg Graphic file (type jpg)
 <use figures/frog.jpg>
 Package pdftex.def Info: figures/frog.jpg  used on input line 6.
 (pdftex.def)             Requested size: 213.39566pt x 211.39569pt.
 )
 
-[71 <./figures/frog.jpg>]
+[77 <./figures/frog.jpg>]
 
-[72
+[78
 
 
 
@@ -2071,31 +2142,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--86
 
 
 
-[73
+[79
 
 ]
+Underfull \hbox (badness 4353) in paragraph at lines 144--151
+[]\T1/mak/m/n/10.95 Arghya Ba-ral\LGR/mak/m/n/10.95 .  []\T1/mak/m/it/10.95 Un-der-stan-ding of Lo-Ra[]\LGR/mak/m/n/10.95 .  [][]$\T1/fvm/m/n/10.95 https : / / medium . com / @arghyabaral /
+ []
 
-[74])
 
-[75]
+Underfull \hbox (badness 10000) in paragraph at lines 168--174
+\T1/fvm/m/n/10.95 org / wp -[] content / uploads / 2020 / 11 / lorawan _ regional _ parameters _ v1 . 0 . 3reva _ 0 . pdf$[][]\LGR/mak/m/n/10.95 ,
+ []
 
-[76
+
+
+[80])
+
+[81]
+
+[82
 
 ] (back_matter/abbreviations.tex)
 
-[77]
+[83]
 
-[78
+[84
 
 ] (back_matter/glossary.tex)
 
-[79] LaTeX Warning: (ntua_thesis.cls): The "plain" option has been selected. CD label generation has been disabled.
+[85] LaTeX Warning: (ntua_thesis.cls): The "plain" option has been selected. CD label generation has been disabled.
  
 LaTeX Warning: (ntua_thesis.cls): The "plain" option has been selected. CD cover generation has been disabled.
  
 
 
-[80
+[86
 
 ] (main.aux (front_matter/abstract.aux) (front_matter/acknowledgements.aux) (body_matter/intro.aux) (body_matter/chap2.aux) (body_matter/chap3.aux) (body_matter/chap4.aux) (body_matter/chap5.aux) (body_matter/chap6.aux) (body_matter/chap7.aux) (body_matter/chap8.aux) (body_matter/chap9.aux) (back_matter/appA.aux) (back_matter/appB.aux) (back_matter/appC.aux) (back_matter/appD.aux) (back_matter/appE.aux))
  ***********
@@ -2111,17 +2192,20 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 32049 strings out of 469923
- 586175 string characters out of 5468202
- 1112070 words of memory out of 5000000
- 57914 multiletter control sequences out of 15000+600000
- 699141 words of font info for 199 fonts, out of 8000000 for 9000
+ 32239 strings out of 469923
+ 589570 string characters out of 5468202
+ 1117267 words of memory out of 5000000
+ 58058 multiletter control sequences out of 15000+600000
+ 716304 words of font info for 222 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  99i,13n,107p,1104b,1544s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
  <C:\Users\tarapis\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-Bold.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-Italic.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-SmallCaps.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fvmr8a.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txex.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsy.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsyb.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsyc.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (86 pages, 1882806 bytes).
+Output written on main.pdf (92 pages, 2131429 bytes).
 PDF statistics:
- 1015 PDF objects out of 1200 (max. 8388607)
- 220 named destinations out of 1000 (max. 500000)
- 521 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1135 PDF objects out of 1200 (max. 8388607)
+ 252 named destinations out of 1000 (max. 500000)
+ 560 words of extra memory for PDF output out of 10000 (max. 10000000)
 

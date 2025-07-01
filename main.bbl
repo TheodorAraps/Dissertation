@@ -133,12 +133,52 @@
   \url{https://www.lansitec.com/blogs/what-are-the-factors-affecting-lorawan-range-in-iot/}}},
   2024.
 
+\bibitem{RohdeSchwarz2018}
+{{\latintext { }{Rohde and Schwarz}}}.
+\newblock {\color{\colouredtextcolor} {{\latintext {\em Characterization of
+  LoRa Devices}}}}.
+\newblock \textgreek{Teqnik'h Anafor'a me arijm'o}, {{\latintext Rohde and
+  Schwarz}}, 2018.
+
+\bibitem{Baral2020UnderstandingLoRa}
+{{\latintext Arghya{ }Baral}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em Understanding of
+  LoRa}}}}.
+\newblock {{\latintext
+  \url{https://medium.com/@arghyabaral/understanding-of-lora-066d89ed7bf4}}},
+  2020.
+\newblock Medium blog post.
+
 \bibitem{GhoslyaCSS2024}
 {{\latintext Sakshama{ }Ghoslya}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em LoRa: Symbol
   Generation}}}}.
 \newblock {{\latintext
   \url{https://www.sghoslya.com/p/lora-is-chirp-spread-spectrum.html}}}, 2017.
+
+\bibitem{SiiLoraM2M}
+{{\latintext { }{Maciej Janc}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em Communication over LoRa
+  M2M case using RA-01}}}}.
+\newblock {{\latintext
+  \url{https://sii.pl/blog/en/communication-over-lora-m2m-case-using-ra-01/}}},
+  2021.
+
+\bibitem{LoRaWANSpec}
+{{\latintext { }{LoRa Alliance}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em LoRaWAN Regional
+  Parameters v1.0.3revA}}}}.
+\newblock {{\latintext
+  \url{https://lora-alliance.org/wp-content/uploads/2020/11/lorawan_regional_parameters_v1.0.3reva_0.pdf}}},
+  2020.
+
+\bibitem{OlssonFinnsson2017}
+{{\latintext Kristoffer{ }Olsson \textgreek{kai} Sveinn{ }Finnsson}}.
+\newblock {\color{\colouredtextcolor} {{\latintext {\em Exploring \en{LoRa} and
+  \en{LoRaWAN}: A Suitable Protocol for \en{IoT} Weather Stations?}}}}
+\newblock {{\latintext \textgreek{Metaptuqiak'h diplwmatik'h ergas'ia}}},
+  {{\latintext Chalmers University of Technology}}, {{\latintext Gothenburg,
+  Sweden}}, 2017.
 
 \bibitem{tti_homepage}
 {{\latintext { }{The Things Industries}}}.
