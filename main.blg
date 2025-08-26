@@ -37,53 +37,50 @@ Reallocating 'name_of_file' (item size: 1) to 21 items.
 A level-1 auxiliary file: back_matter/appE.aux
 Reallocating 'name_of_file' (item size: 1) to 11 items.
 Database file #1: references.bib
-Warning--I didn't find a database entry for "Hanif2021Slope"
-Warning--I didn't find a database entry for "Hanif2021Index"
-Warning--I didn't find a database entry for "Tutorial2022CSS"
 Warning--I didn't find a database entry for "LiArTs13"
 Warning--I didn't find a database entry for "LaTeXProject"
 Warning--I didn't find a database entry for "MSU-CSE-05-29"
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Warning--empty institution in viswanathan2014convenient
-You've used 33 entries,
+You've used 40 entries,
             3122 wiz_defined-function locations,
-            783 strings with 11105 characters,
-and the built_in function-call counts, 5924 in all, are:
-= -- 418
-> -- 180
+            819 strings with 12246 characters,
+and the built_in function-call counts, 7476 in all, are:
+= -- 539
+> -- 226
 < -- 2
-+ -- 82
-- -- 49
-* -- 496
-:= -- 810
-add.period$ -- 98
-call.type$ -- 33
-change.case$ -- 4
++ -- 102
+- -- 62
+* -- 645
+:= -- 1029
+add.period$ -- 120
+call.type$ -- 40
+change.case$ -- 5
 chr.to.int$ -- 0
-cite$ -- 34
-duplicate$ -- 399
-empty$ -- 762
-format.name$ -- 49
-if$ -- 1320
+cite$ -- 41
+duplicate$ -- 487
+empty$ -- 946
+format.name$ -- 62
+if$ -- 1660
 int.to.chr$ -- 0
-int.to.str$ -- 33
-missing$ -- 10
-newline$ -- 167
-num.names$ -- 31
-pop$ -- 175
+int.to.str$ -- 40
+missing$ -- 14
+newline$ -- 203
+num.names$ -- 38
+pop$ -- 194
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 96
+skip$ -- 117
 stack$ -- 0
-substring$ -- 57
-swap$ -- 200
+substring$ -- 150
+swap$ -- 241
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 36
-width$ -- 35
-write$ -- 344
-(There were 7 warnings)
+while$ -- 47
+width$ -- 42
+write$ -- 420
+(There were 4 warnings)

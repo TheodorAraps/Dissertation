@@ -67,6 +67,21 @@
 \newblock {{\latintext {\em IEEE Communications Magazine}}}, 55(9):34--40,
   2017.
 
+\bibitem{SemtechModulationBasics}
+{{\latintext { }{Semtech Corporation}}}.
+\newblock {\color{\colouredtextcolor} {{\latintext {\em AN1200.22 LoRa
+  Modulation Basics}}}}.
+\newblock \textgreek{Teqnik'h Anafor'a me arijm'o}, {{\latintext Semtech
+  Corporation}}, 2015.
+
+\bibitem{LoRaWANSpec}
+{{\latintext { }{LoRa Alliance}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em LoRaWAN Regional
+  Parameters v1.0.3revA}}}}.
+\newblock {{\latintext
+  \url{https://lora-alliance.org/wp-content/uploads/2020/11/lorawan_regional_parameters_v1.0.3reva_0.pdf}}},
+  2020.
+
 \bibitem{gsma2022mobileiot}
 {{\latintext { }{GSMA}}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em Mobile IoT Deployment
@@ -97,13 +112,6 @@
 {{\latintext { }{The Things Network}}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em Spreading Factors}}}}.
 \newblock {{\latintext \url{https://www.thethingsnetwork.org/docs/lorawan/}}}.
-
-\bibitem{SemtechModulationBasics}
-{{\latintext { }{Semtech Corporation}}}.
-\newblock {\color{\colouredtextcolor} {{\latintext {\em AN1200.22 LoRa
-  Modulation Basics}}}}.
-\newblock \textgreek{Teqnik'h Anafor'a me arijm'o}, {{\latintext Semtech
-  Corporation}}, 2015.
 
 \bibitem{IJASRE2018}
 {{\latintext T.{ }Rademacher \textgreek{kai} { }others}}.
@@ -164,14 +172,6 @@
   \url{https://sii.pl/blog/en/communication-over-lora-m2m-case-using-ra-01/}}},
   2021.
 
-\bibitem{LoRaWANSpec}
-{{\latintext { }{LoRa Alliance}}}.
-\newblock {{\latintext {\color{\colouredtextcolor} {\em LoRaWAN Regional
-  Parameters v1.0.3revA}}}}.
-\newblock {{\latintext
-  \url{https://lora-alliance.org/wp-content/uploads/2020/11/lorawan_regional_parameters_v1.0.3reva_0.pdf}}},
-  2020.
-
 \bibitem{OlssonFinnsson2017}
 {{\latintext Kristoffer{ }Olsson \textgreek{kai} Sveinn{ }Finnsson}}.
 \newblock {\color{\colouredtextcolor} {{\latintext {\em Exploring \en{LoRa} and
@@ -180,11 +180,61 @@
   {{\latintext Chalmers University of Technology}}, {{\latintext Gothenburg,
   Sweden}}, 2017.
 
+\bibitem{Hanif2021Slope}
+{{\latintext Muhammad{ }Hanif \textgreek{kai} Ha H.{ }Nguyen}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em Slope-Shift Keying
+  LoRa-Based Modulation}}}}.
+\newblock {{\latintext {\em IEEE Internet of Things Journal}}}, 8(1):211--221,
+  2021.
+
+\bibitem{Hanif2021Index}
+{{\latintext Muhammad{ }Hanif \textgreek{kai} Ha H.{ }Nguyen}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em Frequency-Shift Chirp
+  Spread Spectrum Communications With Index Modulation}}}}.
+\newblock {{\latintext {\em IEEE Internet of Things Journal}}},
+  8(24):17611--17621, 2021.
+
+\bibitem{Tutorial2022CSS}
+{{\latintext E. Bedeer{ }A.~Maleki, Ha H.~Nguyen \textgreek{kai} R.{ }Barton}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em A Tutorial on Chirp
+  Spread Spectrum Modulation for LoRaWAN: Basics and Key Advances}}}}.
+\newblock {{\latintext {\em IEEE Open Journal of the Communications Society}}},
+  5:4578--4612, 2024.
+
+\bibitem{RFWirelessLoRaAirtimeCalc}
+{{\latintext { }{RF Wireless World}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em LoRaWAN Airtime
+  Calculator}}}}.
+\newblock {{\latintext
+  \url{https://www.rfwireless-world.com/calculators/lorawan-airtime-calculator}}}.
+
+\bibitem{loraalliance_about_lorawan}
+{{\latintext { }{LoRa Alliance}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em What is LoRaWAN®
+  Specification}}}}.
+\newblock {{\latintext \url{https://lora-alliance.org/about-lorawan-old/}}},
+  2025.
+
 \bibitem{tti_homepage}
 {{\latintext { }{The Things Industries}}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em The Things Industries
   – Empowering Global IoT Connectivity}}}}.
 \newblock {{\latintext \url{https://www.thethingsindustries.com/}}}, 2025.
+
+\bibitem{TrendMicro2021LoRaWANSecurity}
+{{\latintext { }{Trend Micro Research}}}.
+\newblock {\color{\colouredtextcolor} {{\latintext {\em The Current State of
+  LoRaWAN Security}}}}.
+\newblock \textgreek{Teqnik'h Anafor'a me arijm'o}, {{\latintext Trend Micro}},
+  2021.
+\newblock Technical Brief.
+
+\bibitem{Loukil2022AnalysisLoRaWAN}
+{{\latintext Slim{ }Loukil, Lamia{ }Chaari~Fourati, Anand{ }Nayyar
+  \textgreek{kai} K. W. A.{ }Chee}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em Analysis of LoRaWAN 1.0
+  and 1.1 Protocols Security Mechanisms}}}}.
+\newblock {{\latintext {\em Sensors}}}, 22(10):3717, 2022.
 
 \bibitem{elli05}
 {{\latintext { }\textgreek{Ε. Ανδρουλάκη}}}.
