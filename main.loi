@@ -11,6 +11,15 @@
 \contentsline {illustration}{\numberline {2.9}{\ignorespaces Τεχνολογική στοίβα των \foreignlanguage {english}{LoRa} και \foreignlanguage {english}{LoRaWAN}.}}{48}{illustration.caption.21}%
 \contentsline {illustration}{\numberline {2.10}{\ignorespaces Τυπική αρχιτεκτονική \foreignlanguage {english}{LoRaWAN} δικτύου.}}{48}{illustration.caption.22}%
 \contentsline {illustration}{\numberline {2.11}{\ignorespaces Αρχιτεκτονική \foreignlanguage {english}{LoRaWAN Network Server}.}}{50}{illustration.caption.23}%
+\contentsline {illustration}{\numberline {2.12}{\ignorespaces Ροή \foreignlanguage {english}{Uplink} και \foreignlanguage {english}{Downlink} μηνυμάτων στο Πρωτόκολλο \foreignlanguage {english}{LoRaWAN}.}}{51}{illustration.caption.24}%
+\contentsline {illustration}{\numberline {2.13}{\ignorespaces Ροή επικοινωνίας κλάσης \foreignlanguage {english}{A}.}}{52}{illustration.caption.25}%
+\contentsline {illustration}{\numberline {2.14}{\ignorespaces Ροή επικοινωνίας κλάσης \foreignlanguage {english}{B}.}}{53}{illustration.caption.26}%
+\contentsline {illustration}{\numberline {2.15}{\ignorespaces Ροή επικοινωνίας κλάσης \foreignlanguage {english}{C}.}}{54}{illustration.caption.27}%
+\contentsline {illustration}{\numberline {2.16}{\ignorespaces Δομή πακέτου \foreignlanguage {english}{LoRaWAN}.}}{55}{illustration.caption.28}%
+\contentsline {illustration}{\numberline {2.17}{\ignorespaces Ροή μηνυμάτων για ενεργοποίηση \foreignlanguage {english}{OTAA} στο \foreignlanguage {english}{LoRaWAN 1.0}.}}{60}{illustration.caption.34}%
+\contentsline {illustration}{\numberline {2.18}{\ignorespaces Ροή μηνυμάτων για ενεργοποίηση \foreignlanguage {english}{OTAA} στο \foreignlanguage {english}{LoRaWAN 1.1}.}}{61}{illustration.caption.35}%
+\contentsline {illustration}{\numberline {2.19}{\ignorespaces Προ-διαμοιρασμός του \foreignlanguage {english}{DevAddr} και των \foreignlanguage {english}{session keys} για ενεργοποίηση \foreignlanguage {english}{ABP} στο \foreignlanguage {english}{LoRaWAN 1.0}.}}{63}{illustration.caption.36}%
+\contentsline {illustration}{\numberline {2.20}{\ignorespaces Προ-διαμοιρασμός του \foreignlanguage {english}{DevAddr} και των \foreignlanguage {english}{session keys} για ενεργοποίηση \foreignlanguage {english}{ABP} στο \foreignlanguage {english}{LoRaWAN 1.1}.}}{63}{illustration.caption.37}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -23,4 +32,4 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{83}{illustration.caption.31}%
+\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{97}{illustration.caption.44}%

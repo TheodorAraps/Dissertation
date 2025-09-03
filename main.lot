@@ -19,6 +19,8 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
 \addvspace {10\p@ }
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
@@ -115,7 +117,53 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\addvspace {10\p@ }
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\contentsline {table}{\numberline {2.5}{\ignorespaces Συνοπτικός πίνακας βασικών \foreignlanguage {english}{MAC} εντολών \foreignlanguage {english}{LoRaWAN}.}}{58}{table.caption.29}%
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\contentsline {table}{\numberline {2.6}{\ignorespaces Πεδία \foreignlanguage {english}{Join-Request} στο \foreignlanguage {english}{LoRaWAN} 1.0.}}{59}{table.caption.30}%
+\contentsline {table}{\numberline {2.7}{\ignorespaces Πεδία \foreignlanguage {english}{Join-Request} στο \foreignlanguage {english}{LoRaWAN} 1.1.}}{59}{table.caption.31}%
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\contentsline {table}{\numberline {2.8}{\ignorespaces Πεδία \foreignlanguage {english}{Join-Accept} στο \foreignlanguage {english}{LoRaWAN} 1.0.}}{60}{table.caption.32}%
+\contentsline {table}{\numberline {2.9}{\ignorespaces Πεδία \foreignlanguage {english}{Join-Accept} στο \foreignlanguage {english}{LoRaWAN} 1.1.}}{60}{table.caption.33}%
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
@@ -125,15 +173,6 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\babel@toc {greek}{}\relax 
-\babel@toc {greek}{}\relax 
-\addvspace {10\p@ }
-\babel@toc {greek}{}\relax 
-\babel@toc {greek}{}\relax 
-\babel@toc {greek}{}\relax 
-\babel@toc {greek}{}\relax 
-\babel@toc {greek}{}\relax 
-\babel@toc {greek}{}\relax 
 \addvspace {10\p@ }
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
@@ -142,7 +181,17 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {table}{\numberline {7.1}{\ignorespaces Πίνακας αλήθειας της λογικής συνάρτησης \foreignlanguage {english}{F}}}{64}{table.caption.26}%
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\addvspace {10\p@ }
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\addvspace {10\p@ }
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\contentsline {table}{\numberline {7.1}{\ignorespaces Πίνακας αλήθειας της λογικής συνάρτησης \foreignlanguage {english}{F}}}{78}{table.caption.39}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \addvspace {10\p@ }
@@ -174,7 +223,7 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {table}{\numberline {{\greekscript \textAlpha \textnumeralsigngreek }.1}{\ignorespaces Πίνακας αλήθειας της λογικής συνάρτησης \foreignlanguage {english}{F}}}{76}{table.caption.29}%
+\contentsline {table}{\numberline {{\greekscript \textAlpha \textnumeralsigngreek }.1}{\ignorespaces Πίνακας αλήθειας της λογικής συνάρτησης \foreignlanguage {english}{F}}}{90}{table.caption.42}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \addvspace {10\p@ }
@@ -191,6 +240,8 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \addvspace {10\p@ }
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
