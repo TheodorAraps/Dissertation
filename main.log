@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.27)  3 SEP 2025 01:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.27)  16 SEP 2025 23:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1524,7 +1524,7 @@ l.267 	\include{front_matter/abstract}
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.269 ...edication{στους γονείς μου}
+l.269 ...edication{Στους γονείς μου}
                                                    [4
 
 
@@ -1679,24 +1679,24 @@ Overfull \hbox (17.72156pt too wide) in paragraph at lines 5--5
 
 
 ]
-<figures/IoT_techs.png, id=375, 1202.99437pt x 704.6325pt>
+LaTeX Font Info:    Font shape `LGR/mak/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 61.
+LaTeX Font Info:    Font shape `OML/mak/m/it' will be
+(Font)              scaled to size 8.09995pt on input line 64.
+LaTeX Font Info:    Font shape `OML/mak/m/it' will be
+(Font)              scaled to size 4.49997pt on input line 64.
+LaTeX Font Info:    Font shape `T1/mak/m/n' will be
+(Font)              scaled to size 4.49997pt on input line 64.
+LaTeX Font Info:    Font shape `LGR/mak/b/n' will be
+(Font)              scaled to size 8.09995pt on input line 64.
+<figures/IoT_techs.png, id=377, 1202.99437pt x 704.6325pt>
 File: figures/IoT_techs.png Graphic file (type png)
 <use figures/IoT_techs.png>
-Package pdftex.def Info: figures/IoT_techs.png  used on input line 74.
+Package pdftex.def Info: figures/IoT_techs.png  used on input line 77.
 (pdftex.def)             Requested size: 405.45045pt x 237.48604pt.
-Package hyperref Info: bookmark level for unknown illustration defaults to 0 on input line 76.
+Package hyperref Info: bookmark level for unknown illustration defaults to 0 on input line 79.
 LaTeX Font Info:    Font shape `T1/mak/m/it' will be
-(Font)              scaled to size 9.85492pt on input line 76.
-
-Underfull \hbox (badness 1009) in paragraph at lines 103--103
-[]|\LGR/mak/b/n/10.95 Di�rkeia Zw-�c Mpa-
- []
-
-
-Overfull \hbox (27.2372pt too wide) in paragraph at lines 89--116
- [][] 
- []
-
+(Font)              scaled to size 9.85492pt on input line 79.
 
 
 [26 <./figures/IoT_techs.png>]
@@ -1704,35 +1704,38 @@ Overfull \hbox (27.2372pt too wide) in paragraph at lines 89--116
 [27]
 
 [28]
-<figures/OSI_LoRa.png, id=414, 599.23875pt x 442.65375pt>
+<figures/OSI_LoRa.png, id=417, 599.23875pt x 442.65375pt>
 File: figures/OSI_LoRa.png Graphic file (type png)
 <use figures/OSI_LoRa.png>
-Package pdftex.def Info: figures/OSI_LoRa.png  used on input line 212.
+Package pdftex.def Info: figures/OSI_LoRa.png  used on input line 253.
 (pdftex.def)             Requested size: 298.75262pt x 220.6914pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 [29 <./figures/OSI_LoRa.png>]
 
 [30]
-<figures/Fresnel_zone.png, id=432, 495.0495pt x 161.403pt>
+<figures/Fresnel_zone.png, id=436, 495.0495pt x 161.403pt>
 File: figures/Fresnel_zone.png Graphic file (type png)
 <use figures/Fresnel_zone.png>
-Package pdftex.def Info: figures/Fresnel_zone.png  used on input line 285.
+Package pdftex.def Info: figures/Fresnel_zone.png  used on input line 326.
 (pdftex.def)             Requested size: 426.79134pt x 139.15112pt.
 
 
 [31 <./figures/Fresnel_zone.png>]
 
 [32]
-<figures/LoRa_vs_FSK.png, id=453, 924.45375pt x 651.18282pt>
+<figures/LoRa_vs_FSK.png, id=460, 924.45375pt x 651.18282pt>
 File: figures/LoRa_vs_FSK.png Graphic file (type png)
 <use figures/LoRa_vs_FSK.png>
-Package pdftex.def Info: figures/LoRa_vs_FSK.png  used on input line 385.
+Package pdftex.def Info: figures/LoRa_vs_FSK.png  used on input line 426.
 (pdftex.def)             Requested size: 426.79134pt x 300.63078pt.
 
 
 [33]
-Underfull \vbox (badness 7047) has occurred while \output is active []
+Underfull \vbox (badness 3942) has occurred while \output is active []
 
 
 
@@ -1741,179 +1744,212 @@ Underfull \vbox (badness 7047) has occurred while \output is active []
 [35]
 
 [36]
-<figures/CSS_up_chrip_down_chirp.png, id=489, 516.12825pt x 271.0125pt>
+<figures/CSS_up_chrip_down_chirp.png, id=495, 516.12825pt x 271.0125pt>
 File: figures/CSS_up_chrip_down_chirp.png Graphic file (type png)
 <use figures/CSS_up_chrip_down_chirp.png>
-Package pdftex.def Info: figures/CSS_up_chrip_down_chirp.png  used on input line 548.
+Package pdftex.def Info: figures/CSS_up_chrip_down_chirp.png  used on input line 589.
 (pdftex.def)             Requested size: 298.75262pt x 156.86893pt.
-<figures/LoRa_Symbols_chirps.png, id=492, 1305.87875pt x 691.58376pt>
+
+
+[37]
+<figures/LoRa_Symbols_chirps.png, id=505, 1305.87875pt x 691.58376pt>
 File: figures/LoRa_Symbols_chirps.png Graphic file (type png)
 <use figures/LoRa_Symbols_chirps.png>
-Package pdftex.def Info: figures/LoRa_Symbols_chirps.png  used on input line 567.
+Package pdftex.def Info: figures/LoRa_Symbols_chirps.png  used on input line 608.
 (pdftex.def)             Requested size: 426.79134pt x 226.01782pt.
 
+
+[38 <./figures/CSS_up_chrip_down_chirp.png> <./figures/LoRa_Symbols_chirps.png>]
+<figures/LoRa_waveform_parameters.png, id=514, 1142.2675pt x 921.4425pt>
+File: figures/LoRa_waveform_parameters.png Graphic file (type png)
+<use figures/LoRa_waveform_parameters.png>
+Package pdftex.def Info: figures/LoRa_waveform_parameters.png  used on input line 630.
+(pdftex.def)             Requested size: 384.10959pt x 309.85565pt.
+
+
+[39 <./figures/LoRa_waveform_parameters.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[37]
-<figures/LoRa_waveform_parameters.png, id=501, 1142.2675pt x 921.4425pt>
-File: figures/LoRa_waveform_parameters.png Graphic file (type png)
-<use figures/LoRa_waveform_parameters.png>
-Package pdftex.def Info: figures/LoRa_waveform_parameters.png  used on input line 589.
-(pdftex.def)             Requested size: 384.10959pt x 309.85565pt.
-LaTeX Font Info:    Font shape `LGR/mak/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 599.
-LaTeX Font Info:    Font shape `OML/mak/m/it' will be
-(Font)              scaled to size 8.09995pt on input line 600.
-LaTeX Font Info:    Font shape `OML/mak/m/it' will be
-(Font)              scaled to size 4.49997pt on input line 600.
-LaTeX Font Info:    Font shape `T1/mak/m/n' will be
-(Font)              scaled to size 4.49997pt on input line 600.
-
-
-[38 <./figures/CSS_up_chrip_down_chirp.png> <./figures/LoRa_Symbols_chirps.png>]
-
-[39 <./figures/LoRa_waveform_parameters.png>]
-
 [40]
-<figures/LoRa_waveform_values.png, id=529, 1143.27126pt x 906.38625pt>
+<figures/LoRa_waveform_values.png, id=535, 1143.27126pt x 906.38625pt>
 File: figures/LoRa_waveform_values.png Graphic file (type png)
 <use figures/LoRa_waveform_values.png>
-Package pdftex.def Info: figures/LoRa_waveform_values.png  used on input line 708.
+Package pdftex.def Info: figures/LoRa_waveform_values.png  used on input line 749.
 (pdftex.def)             Requested size: 426.79134pt x 338.35884pt.
 
 
 [41]
-Underfull \vbox (badness 4156) has occurred while \output is active []
-
-
 
 [42 <./figures/LoRa_waveform_values.png>]
 
 [43]
-Underfull \vbox (badness 2828) has occurred while \output is active []
-
-
 
 [44]
+Overfull \hbox (2.62611pt too wide) in paragraph at lines 911--912
+[]$\OML/mak/m/it/10.95 LDRO \OT1/txr/m/n/10.95 = \T1/mak/m/n/10.95 1$ \LGR/mak/m/n/10.95 an �qei e-ner-go-poi-h-je-� []\T1/mak/m/n/10.95 Low Data Rate Op-ti-miza-tion []\LGR/mak/m/n/10.95 (se $\OML/mak/m/it/10.95 SF \OT1/txr/m/n/10.95 = \T1/mak/m/n/10.95 11\OML/mak/m/it/10.95 ; \T1/mak/m/n/10.95 12\OML/mak/m/it/10.95 ; \T1/mak/m/n/10.95 125\OML/mak/m/it/10.95 kHz$\LGR/mak/m/n/10.95 ,
+ []
+
+
 
 [45]
 
 [46]
-<figures/LoRa-LoRaWAN_layers.png, id=590, 1143.52219pt x 365.86688pt>
-File: figures/LoRa-LoRaWAN_layers.png Graphic file (type png)
-<use figures/LoRa-LoRaWAN_layers.png>
-Package pdftex.def Info: figures/LoRa-LoRaWAN_layers.png  used on input line 1006.
-(pdftex.def)             Requested size: 341.43436pt x 109.24171pt.
-
-Underfull \vbox (badness 5696) has occurred while \output is active []
-
-
 
 [47]
-<figures/LoRaWAN_architecture.png, id=598, 3306.3525pt x 2095.83pt>
+<figures/LoRa-LoRaWAN_layers.png, id=602, 1143.52219pt x 365.86688pt>
+File: figures/LoRa-LoRaWAN_layers.png Graphic file (type png)
+<use figures/LoRa-LoRaWAN_layers.png>
+Package pdftex.def Info: figures/LoRa-LoRaWAN_layers.png  used on input line 1049.
+(pdftex.def)             Requested size: 341.43436pt x 109.24171pt.
+<figures/LoRaWAN_architecture.png, id=606, 3306.3525pt x 2095.83pt>
 File: figures/LoRaWAN_architecture.png Graphic file (type png)
 <use figures/LoRaWAN_architecture.png>
-Package pdftex.def Info: figures/LoRaWAN_architecture.png  used on input line 1033.
+Package pdftex.def Info: figures/LoRaWAN_architecture.png  used on input line 1076.
 (pdftex.def)             Requested size: 426.79134pt x 270.5167pt.
 
-Underfull \vbox (badness 1824) has occurred while \output is active []
 
+[48 <./figures/LoRa-LoRaWAN_layers.png>]
 
-
-[48 <./figures/LoRa-LoRaWAN_layers.png> <./figures/LoRaWAN_architecture.png>]
-<figures/LoRaWAN_Network_Server_architecture.png, id=610, 1012.78375pt x 581.17125pt>
+[49 <./figures/LoRaWAN_architecture.png>]
+<figures/LoRaWAN_Network_Server_architecture.png, id=623, 1012.78375pt x 581.17125pt>
 File: figures/LoRaWAN_Network_Server_architecture.png Graphic file (type png)
 <use figures/LoRaWAN_Network_Server_architecture.png>
-Package pdftex.def Info: figures/LoRaWAN_Network_Server_architecture.png  used on input line 1089.
+Package pdftex.def Info: figures/LoRaWAN_Network_Server_architecture.png  used on input line 1132.
 (pdftex.def)             Requested size: 426.79134pt x 244.90611pt.
 
 
-[49]
-
 [50 <./figures/LoRaWAN_Network_Server_architecture.png (PNG copy)>]
-<figures/LoRaWan_Uplink_Downlink.png, id=627, 643.203pt x 434.22224pt>
+<figures/LoRaWan_Uplink_Downlink.png, id=634, 643.203pt x 434.22224pt>
 File: figures/LoRaWan_Uplink_Downlink.png Graphic file (type png)
 <use figures/LoRaWan_Uplink_Downlink.png>
-Package pdftex.def Info: figures/LoRaWan_Uplink_Downlink.png  used on input line 1152.
+Package pdftex.def Info: figures/LoRaWan_Uplink_Downlink.png  used on input line 1195.
 (pdftex.def)             Requested size: 320.09349pt x 216.09685pt.
-LaTeX Font Info:    Font shape `LGR/mak/b/n' will be
-(Font)              scaled to size 8.09995pt on input line 1166.
 LaTeX Font Info:    Font shape `T1/mak/b/n' will be
-(Font)              scaled to size 8.09995pt on input line 1166.
+(Font)              scaled to size 8.09995pt on input line 1209.
 
 
-[51 <./figures/LoRaWan_Uplink_Downlink.png>]
-<figures/LoRaWAN_Class_A_Flow.png, id=637, 516.7305pt x 172.84575pt>
+[51]
+<figures/LoRaWAN_Class_A_Flow.png, id=644, 516.7305pt x 172.84575pt>
 File: figures/LoRaWAN_Class_A_Flow.png Graphic file (type png)
 <use figures/LoRaWAN_Class_A_Flow.png>
-Package pdftex.def Info: figures/LoRaWAN_Class_A_Flow.png  used on input line 1192.
+Package pdftex.def Info: figures/LoRaWAN_Class_A_Flow.png  used on input line 1235.
 (pdftex.def)             Requested size: 426.79134pt x 142.763pt.
 
 
-[52 <./figures/LoRaWAN_Class_A_Flow.png>]
-<figures/LoRaWAN_Class_B_Flow.png, id=644, 687.7695pt x 181.27725pt>
+[52 <./figures/LoRaWan_Uplink_Downlink.png>]
+<figures/LoRaWAN_Class_B_Flow.png, id=651, 687.7695pt x 181.27725pt>
 File: figures/LoRaWAN_Class_B_Flow.png Graphic file (type png)
 <use figures/LoRaWAN_Class_B_Flow.png>
-Package pdftex.def Info: figures/LoRaWAN_Class_B_Flow.png  used on input line 1231.
+Package pdftex.def Info: figures/LoRaWAN_Class_B_Flow.png  used on input line 1274.
 (pdftex.def)             Requested size: 384.10959pt x 101.24072pt.
 
 
-[53 <./figures/LoRaWAN_Class_B_Flow.png>]
-<figures/LoRaWAN_Class_C_Flow.png, id=649, 602.25pt x 201.1515pt>
+[53 <./figures/LoRaWAN_Class_A_Flow.png> <./figures/LoRaWAN_Class_B_Flow.png>]
+<figures/LoRaWAN_Class_C_Flow.png, id=657, 602.25pt x 201.1515pt>
 File: figures/LoRaWAN_Class_C_Flow.png Graphic file (type png)
 <use figures/LoRaWAN_Class_C_Flow.png>
-Package pdftex.def Info: figures/LoRaWAN_Class_C_Flow.png  used on input line 1266.
+Package pdftex.def Info: figures/LoRaWAN_Class_C_Flow.png  used on input line 1309.
 (pdftex.def)             Requested size: 384.10959pt x 128.29759pt.
 
 
 [54 <./figures/LoRaWAN_Class_C_Flow.png>]
-<figures/LoRaWAN_Packet_structure.png, id=657, 1085.26462pt x 581.19655pt>
+<figures/LoRaWAN_Packet_structure.png, id=665, 1085.26462pt x 581.19655pt>
 File: figures/LoRaWAN_Packet_structure.png Graphic file (type png)
 <use figures/LoRaWAN_Packet_structure.png>
-Package pdftex.def Info: figures/LoRaWAN_Packet_structure.png  used on input line 1302.
+Package pdftex.def Info: figures/LoRaWAN_Packet_structure.png  used on input line 1345.
 (pdftex.def)             Requested size: 384.10959pt x 205.70099pt.
 
 
 [55 <./figures/LoRaWAN_Packet_structure.png>]
 
 [56]
+Overfull \hbox (1.76758pt too wide) in paragraph at lines 1546--1546
+|[][]
+ []
+
+
+Overfull \hbox (0.88911pt too wide) in paragraph at lines 1546--1546
+|[][]
+ []
+
+
+Overfull \hbox (1.76758pt too wide) in paragraph at lines 1546--1546
+|[][]
+ []
+
+
+Overfull \hbox (1.76758pt too wide) in paragraph at lines 1546--1546
+|[][]
+ []
+
+
+Overfull \hbox (1.76758pt too wide) in paragraph at lines 1546--1546
+|[][]
+ []
+
+
+Overfull \hbox (1.76758pt too wide) in paragraph at lines 1546--1546
+|[][]
+ []
+
+
+Overfull \hbox (1.76758pt too wide) in paragraph at lines 1546--1546
+|[][]
+ []
+
+
+Overfull \hbox (1.76758pt too wide) in paragraph at lines 1546--1546
+|[][]
+ []
+
+
+Overfull \hbox (1.76758pt too wide) in paragraph at lines 1546--1546
+|[][]
+ []
+
+
+Overfull \hbox (2.19807pt too wide) in paragraph at lines 1546--1546
+|[][]
+ []
+
+
+Overfull \hbox (1.76758pt too wide) in paragraph at lines 1546--1546
+|[][]
+ []
+
+
+Overfull \hbox (1.76758pt too wide) in paragraph at lines 1546--1546
+|[][]
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 1546--1546
+[][][][] 
+ []
+
+
 
 [57]
-Overfull \hbox (0.84148pt too wide) in paragraph at lines 1491--1491
-[]\T1/mak/m/n/10 DR[]\LGR/mak/m/n/10 /[]\T1/mak/m/n/10 TXPower[]\LGR/mak/m/n/10 /[]\T1/mak/m/n/10 NbTrans[]\LGR/mak/m/n/10 , 
- []
-
-
-Overfull \hbox (2.9475pt too wide) in paragraph at lines 1491--1491
-[]|\LGR/mak/m/n/10 Prosj�kh/tropopo�hsh 
- []
-
-
-Overfull \hbox (1.9305pt too wide) in paragraph at lines 1491--1491
-|[][] 
- []
-
-
 
 [58]
 LaTeX Font Info:    Font shape `LGR/mak/b/n' will be
-(Font)              scaled to size 7.19995pt on input line 1588.
+(Font)              scaled to size 7.19995pt on input line 1644.
 LaTeX Font Info:    Font shape `T1/mak/b/n' will be
-(Font)              scaled to size 7.19995pt on input line 1588.
+(Font)              scaled to size 7.19995pt on input line 1644.
 
 
 [59]
-<figures/LoRaWAN_OTAA_v1_0.png, id=689, 720.44156pt x 449.42906pt>
+<figures/LoRaWAN_OTAA_v1_0.png, id=697, 720.44156pt x 449.42906pt>
 File: figures/LoRaWAN_OTAA_v1_0.png Graphic file (type png)
 <use figures/LoRaWAN_OTAA_v1_0.png>
-Package pdftex.def Info: figures/LoRaWAN_OTAA_v1_0.png  used on input line 1633.
+Package pdftex.def Info: figures/LoRaWAN_OTAA_v1_0.png  used on input line 1689.
 (pdftex.def)             Requested size: 362.77524pt x 226.30496pt.
-<figures/LoRaWAN_OTAA_v1_1.png, id=691, 713.66624pt x 404.26031pt>
+<figures/LoRaWAN_OTAA_v1_1.png, id=699, 713.66624pt x 404.26031pt>
 File: figures/LoRaWAN_OTAA_v1_1.png Graphic file (type png)
 <use figures/LoRaWAN_OTAA_v1_1.png>
-Package pdftex.def Info: figures/LoRaWAN_OTAA_v1_1.png  used on input line 1641.
+Package pdftex.def Info: figures/LoRaWAN_OTAA_v1_1.png  used on input line 1697.
 (pdftex.def)             Requested size: 362.77524pt x 205.49767pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1925,33 +1961,33 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [61 <./figures/LoRaWAN_OTAA_v1_1.png>]
 
 [62]
-<figures/LoRaWAN_ABP_v1_0.png, id=710, 701.62125pt x 252.19218pt>
+<figures/LoRaWAN_ABP_v1_0.png, id=718, 701.62125pt x 252.19218pt>
 File: figures/LoRaWAN_ABP_v1_0.png Graphic file (type png)
 <use figures/LoRaWAN_ABP_v1_0.png>
-Package pdftex.def Info: figures/LoRaWAN_ABP_v1_0.png  used on input line 1733.
+Package pdftex.def Info: figures/LoRaWAN_ABP_v1_0.png  used on input line 1788.
 (pdftex.def)             Requested size: 362.77524pt x 130.398pt.
-<figures/LoRaWAN_ABP_v1_1.png, id=712, 702.37407pt x 472.76625pt>
+<figures/LoRaWAN_ABP_v1_1.png, id=720, 702.37407pt x 472.76625pt>
 File: figures/LoRaWAN_ABP_v1_1.png Graphic file (type png)
 <use figures/LoRaWAN_ABP_v1_1.png>
-Package pdftex.def Info: figures/LoRaWAN_ABP_v1_1.png  used on input line 1741.
+Package pdftex.def Info: figures/LoRaWAN_ABP_v1_1.png  used on input line 1796.
 (pdftex.def)             Requested size: 362.77524pt x 244.1879pt.
 
 
 [63 <./figures/LoRaWAN_ABP_v1_0.png> <./figures/LoRaWAN_ABP_v1_1.png>]
-LaTeX Font Info:    Trying to load font information for OT1+mak on input line 1763.
- (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/kerkis\ot1mak.fd)
-LaTeX Font Info:    Font shape `OT1/mak/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 1763.
-
 Underfull \vbox (badness 2005) has occurred while \output is active []
 
 
 
-[64{C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/kerkis/kerkis.enc}]
+[64]
 
-[65])
+[65]
+LaTeX Font Info:    Trying to load font information for OT1+mak on input line 1950.
+ (C:\Users\tarapis\AppData\Local\Programs\MiKTeX\tex/latex/kerkis\ot1mak.fd)
+LaTeX Font Info:    Font shape `OT1/mak/m/n' will be
+(Font)              scaled to size 9.85492pt on input line 1950.
+)
 
-[66]
+[66{C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/kerkis/kerkis.enc}]
 \openout2 = `body_matter/chap3.aux'.
 
  (body_matter/chap3.tex
@@ -2160,7 +2196,7 @@ Overfull \hbox (2.0pt too wide) in paragraph at lines 106--106
 
  (back_matter/appB.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textBeta \textnumeralsigngreek }.
-<figures/2.png, id=871, 187.70125pt x 119.44624pt>
+<figures/2.png, id=880, 187.70125pt x 119.44624pt>
 File: figures/2.png Graphic file (type png)
 <use figures/2.png>
 Package pdftex.def Info: figures/2.png  used on input line 25.
@@ -2212,7 +2248,7 @@ Package pdftex.def Info: figures/2.png  used on input line 25.
 
 ]
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textEpsilon \textnumeralsigngreek }.
-<figures/frog.jpg, id=914, 748.7975pt x 741.77126pt>
+<figures/frog.jpg, id=923, 748.7975pt x 741.77126pt>
 File: figures/frog.jpg Graphic file (type jpg)
 <use figures/frog.jpg>
 Package pdftex.def Info: figures/frog.jpg  used on input line 6.
@@ -2226,28 +2262,10 @@ Package pdftex.def Info: figures/frog.jpg  used on input line 6.
 
 
 ] (main.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 78--84
+Missing character: There is no v in font gk7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--95
 \T1/fvm/m/n/10.95 org / wp -[] content / uploads / 2020 / 11 / lorawan _ regional _ parameters _ v1 . 0 . 3reva _ 0 . pdf$[][]\LGR/mak/m/n/10.95 ,
- []
-
-
-Underfull \hbox (badness 1924) in paragraph at lines 94--101
-[]\T1/mak/m/n/10.95 LoRa Al-lia-nce\LGR/mak/m/n/10.95 .  []\T1/mak/m/it/10.95 Lo-Ra Al-lia-nce Is-su-es 2023 An-nual Re-port H-i-gh-li-gh-ting Lo-
- []
-
-
-Underfull \hbox (badness 3148) in paragraph at lines 94--101
-\T1/mak/m/it/10.95 Ra-W-AN Ma-tu-rity, Ro-bust A-do-ption, and Di-ver-sity of End-to-End So-lu-tions[]\LGR/mak/m/n/10.95 .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--101
-[][]$\T1/fvm/m/n/10.95 https : / / lora -[] alliance . org / lora -[] alliance -[] press -[] release / lora -[] alliance -[] issues -[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--101
-\T1/fvm/m/n/10.95 2023 -[] annual -[] report -[] highlighting -[] lorawan -[] maturity -[] robust -[] adoption -[] and -[] diversity -[]
  []
 
 
@@ -2255,7 +2273,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--101
 [99
 
 ]
-Underfull \hbox (badness 4353) in paragraph at lines 153--160
+Underfull \hbox (badness 1924) in paragraph at lines 105--112
+[]\T1/mak/m/n/10.95 LoRa Al-lia-nce\LGR/mak/m/n/10.95 .  []\T1/mak/m/it/10.95 Lo-Ra Al-lia-nce Is-su-es 2023 An-nual Re-port H-i-gh-li-gh-ting Lo-
+ []
+
+
+Underfull \hbox (badness 3148) in paragraph at lines 105--112
+\T1/mak/m/it/10.95 Ra-W-AN Ma-tu-rity, Ro-bust A-do-ption, and Di-ver-sity of End-to-End So-lu-tions[]\LGR/mak/m/n/10.95 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--112
+[][]$\T1/fvm/m/n/10.95 https : / / lora -[] alliance . org / lora -[] alliance -[] press -[] release / lora -[] alliance -[] issues -[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--112
+\T1/fvm/m/n/10.95 2023 -[] annual -[] report -[] highlighting -[] lorawan -[] maturity -[] robust -[] adoption -[] and -[] diversity -[]
+ []
+
+
+Underfull \hbox (badness 4353) in paragraph at lines 164--171
 []\T1/mak/m/n/10.95 Arghya Ba-ral\LGR/mak/m/n/10.95 .  []\T1/mak/m/it/10.95 Un-der-stan-ding of Lo-Ra[]\LGR/mak/m/n/10.95 .  [][]$\T1/fvm/m/n/10.95 https : / / medium . com / @arghyabaral /
  []
 
@@ -2294,23 +2332,26 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 32745 strings out of 469923
- 598864 string characters out of 5468202
- 1129270 words of memory out of 5000000
+ 32748 strings out of 469923
+ 598908 string characters out of 5468202
+ 1138311 words of memory out of 5000000
  58492 multiletter control sequences out of 15000+600000
- 722771 words of font info for 235 fonts, out of 8000000 for 9000
+ 723152 words of font info for 236 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 99i,17n,107p,3236b,1544s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,18n,107p,2184b,1544s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
+
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
- <C:\Users\tarapis\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-Bold.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-Italic.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-SmallCaps.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fvmr8a.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txex.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsy.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsyb.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsyc.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (112 pages, 2849167 bytes).
+ <C:\Users\tarapis\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-Bold.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-Italic.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-SmallCaps.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fvmr8a.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/cbgreek/grmn1095.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txex.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsy.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsyb.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsyc.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
+Output written on main.pdf (112 pages, 2865679 bytes).
 PDF statistics:
- 1322 PDF objects out of 1440 (max. 8388607)
- 300 named destinations out of 1000 (max. 500000)
+ 1338 PDF objects out of 1440 (max. 8388607)
+ 302 named destinations out of 1000 (max. 500000)
  632 words of extra memory for PDF output out of 10000 (max. 10000000)
 

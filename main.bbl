@@ -2,9 +2,11 @@
 
 \bibitem{Ubisense2023}
 {{\latintext {\color{\colouredtextcolor} {\em A Rapid Increase in IoT Adoption
-  – Manufacturing IoT in 2023}}}}.
-\newblock {{\latintext
-  \url{https://ubisense.com/a-rapid-increase-in-iot-adoption-manufacturing-iot-in-2023/}}}.
+  - Manufacturing IoT in 2023}}}}.
+\newblock {{\latintext [Online]. Available:
+  \url{https://ubisense.com/a-rapid-increase-in-iot-adoption-manufacturing-iot-in-2023/}}},
+  2023.
+\newblock \en{Accessed: Aug. 10, 2025}.
 
 \bibitem{DemandSage2025}
 {{\latintext {\color{\colouredtextcolor} {\em Internet of Things (IoT)
@@ -13,11 +15,10 @@
   \url{https://www.demandsage.com/internet-of-things-statistics/}}}.
 
 \bibitem{ICTexpress}
-{{\latintext Frederic Chaxel{ }Kais~Mekki, Eddy~Bajic \textgreek{kai} Fernand{
-  }Meyer}}.
-\newblock {{\latintext {\color{\colouredtextcolor} {\em A comparative study of
-  LPWAN technologies for large-scale IoT deployment}}}}.
-\newblock {{\latintext {\em ICT Express}}}, 5(1):11--7,   2019.
+{{\latintext F. Chaxel{ }K.~Mekki, E.~Bajic \textgreek{kai} F.{ }Meyer}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em A Comparative Study of
+  {LPWAN} Technologies for Large-Scale {IoT} Deployment}}}}.
+\newblock {{\latintext {\em ICT Express}}}, 5(1):11--17, 2019.
 
 \bibitem{telit2019nbiot}
 {{\latintext Anna{ }Ukovich}}.
@@ -36,11 +37,13 @@
   2023.
 
 \bibitem{hosangadi2019system}
-{{\latintext Gurudutt{ }Hosangadi, Dandan{ }Wang \textgreek{kai} Anil{ }Rao}}.
+{{\latintext D. Wang{ }G.~Hosangadi \textgreek{kai} A.{ }Rao}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em System Design
-  Considerations For Internet Of Things (IoT) With Category-M Devices In LTE
-  Networks}}}}.
+  Considerations for Internet of Things ({IoT}) with Category-{M} Devices in
+  {LTE} Networks}}}}.
 \newblock {{\latintext {\em arXiv preprint arXiv:1902.00408}}}, 2019.
+\newblock [Online]. Available: \url{https://arxiv.org/abs/1902.00408}.
+  Accessed: Sep. 10, 2025.
 
 \bibitem{semtech_lora_lorawan}
 {{\latintext Semtech{ }Corporation}}.
@@ -49,6 +52,14 @@
 \newblock {{\latintext
   \url{https://www.semtech.com/uploads/technology/LoRa/lora-and-lorawan.pdf}}},
   2021.
+
+\bibitem{Mansoor2025PrecisionAg}
+{{\latintext Sheikh{ }Mansoor, Shahzad{ }Iqbal, Simona M.{ }Popescu, Song Lim{
+  }Kim, Yong Suk{ }Chung \textgreek{kai} Jeong Ho{ }Baek}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em Integration of smart
+  sensors and IoT in precision agriculture: trends, challenges and future
+  prospectives}}}}.
+\newblock {{\latintext {\em Frontiers in Plant Science}}}, 16:1587869, 2025.
 
 \bibitem{saft2023iot}
 {{\latintext Saft{ }Batteries}}.
@@ -218,8 +229,8 @@
 
 \bibitem{tti_homepage}
 {{\latintext { }{The Things Industries}}}.
-\newblock {{\latintext {\color{\colouredtextcolor} {\em The Things Industries
-  – Empowering Global IoT Connectivity}}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em The Things Industries -
+  Empowering Global IoT Connectivity}}}}.
 \newblock {{\latintext \url{https://www.thethingsindustries.com/}}}, 2025.
 
 \bibitem{TrendMicro2021LoRaWANSecurity}

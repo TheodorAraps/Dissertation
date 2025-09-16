@@ -39,7 +39,7 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {table}{\numberline {2.1}{\ignorespaces \lgrfont {Συγκριτικός πίνακας τεχνολογιών} \foreignlanguage {english}{NB-IoT}, \foreignlanguage {english}{LTE-M} \lgrfont {και} \foreignlanguage {english}{LoRa}}}{27}{table.caption.10}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Συγκριτικός πίνακας τεχνολογιών \foreignlanguage {english}{NB-IoT}, \foreignlanguage {english}{LTE-M} και \foreignlanguage {english}{LoRa}.}}{27}{table.caption.10}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
@@ -100,7 +100,7 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {table}{\numberline {2.4}{\ignorespaces Διάρκεια συμβόλου \foreignlanguage {english}{LoRa} σε \foreignlanguage {english}{BW}=125 \foreignlanguage {english}{kHz} για διάφορα \foreignlanguage {english}{Spreading Factors}, με ενεργοποιημένη \foreignlanguage {english}{Low Data Rate Optimization (DE)} όπου απαιτείται.}}{46}{table.caption.20}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Διάρκεια συμβόλου \foreignlanguage {english}{LoRa} σε $BW$=125 $kHz$ για διάφορα \foreignlanguage {english}{Spreading Factors}, με ενεργοποιημένη \foreignlanguage {english}{Low Data Rate Optimization (LDRO)} όπου απαιτείται.}}{46}{table.caption.20}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
