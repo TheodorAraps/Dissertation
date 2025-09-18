@@ -1006,6 +1006,10 @@ INPUT .\figures\frog.jpg
 INPUT .\main.bbl
 INPUT .\main.bbl
 INPUT main.bbl
+INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kerkis\eki8a.tfm
+INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm0800.tfm
+INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\vf\public\kerkis\eki8a.vf
+INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kerkis\eki8r.tfm
 INPUT .\back_matter\abbreviations.tex
 INPUT .\back_matter\abbreviations.tex
 INPUT .\back_matter\abbreviations.tex
@@ -1065,6 +1069,8 @@ INPUT back_matter\appD.aux
 INPUT .\back_matter\appE.aux
 INPUT .\back_matter\appE.aux
 INPUT back_matter\appE.aux
+INPUT C:\Users\tarapis\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm0800.pk
+INPUT C:\Users\tarapis\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm0800.pk
 INPUT C:\Users\tarapis\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
 INPUT C:\Users\tarapis\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
 INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\type1\public\kerkis\Kerkis-Bold.pfb
@@ -1077,8 +1083,6 @@ INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\type1\public\kerkis\K
 INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\type1\public\kerkis\Kerkis.pfb
 INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\type1\bera\fvmr8a.pfb
 INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\type1\bera\fvmr8a.pfb
-INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\type1\public\cbgreek\grmn1095.pfb
-INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\type1\public\cbgreek\grmn1095.pfb
 INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\type1\public\txfonts\rtxr.pfb
 INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\type1\public\txfonts\rtxr.pfb
 INPUT C:\Users\tarapis\AppData\Local\Programs\MiKTeX\fonts\type1\public\txfonts\txex.pfb

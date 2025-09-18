@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.27)  16 SEP 2025 23:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.27)  18 SEP 2025 03:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2262,10 +2262,11 @@ Package pdftex.def Info: figures/frog.jpg  used on input line 6.
 
 
 ] (main.bbl
-Missing character: There is no v in font gk7t!
+LaTeX Font Info:    Font shape `T1/mak/m/it' will be
+(Font)              scaled to size 7.19995pt on input line 53.
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--95
-\T1/fvm/m/n/10.95 org / wp -[] content / uploads / 2020 / 11 / lorawan _ regional _ parameters _ v1 . 0 . 3reva _ 0 . pdf$[][]\LGR/mak/m/n/10.95 ,
+Underfull \hbox (badness 10000) in paragraph at lines 70--78
+\T1/fvm/m/n/10.95 iot / impact -[] communication -[] technology -[] protocol -[] your -[] iot -[] application % E2 % 80 % 99s -[]
  []
 
 
@@ -2273,28 +2274,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--95
 [99
 
 ]
-Underfull \hbox (badness 1924) in paragraph at lines 105--112
-[]\T1/mak/m/n/10.95 LoRa Al-lia-nce\LGR/mak/m/n/10.95 .  []\T1/mak/m/it/10.95 Lo-Ra Al-lia-nce Is-su-es 2023 An-nual Re-port H-i-gh-li-gh-ting Lo-
+Underfull \hbox (badness 10000) in paragraph at lines 103--110
+\T1/fvm/m/n/10.95 smartmobility / wp -[] content / uploads / 2022 / 10 / Mobile -[] IOT -[] Deployment -[] Guide -[] October -[]
  []
 
 
-Underfull \hbox (badness 3148) in paragraph at lines 105--112
-\T1/mak/m/it/10.95 Ra-W-AN Ma-tu-rity, Ro-bust A-do-ption, and Di-ver-sity of End-to-End So-lu-tions[]\LGR/mak/m/n/10.95 .
+Underfull \hbox (badness 4582) in paragraph at lines 112--119
+\T1/mak/m/n/10.95 Avail-able: [][]$\T1/fvm/m/n/10.95 https : / / lora -[] alliance . org / lora -[] alliance -[] press -[] release / lora -[] alliance -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--112
-[][]$\T1/fvm/m/n/10.95 https : / / lora -[] alliance . org / lora -[] alliance -[] press -[] release / lora -[] alliance -[] issues -[]
+Underfull \hbox (badness 10000) in paragraph at lines 112--119
+\T1/fvm/m/n/10.95 issues -[] 2023 -[] annual -[] report -[] highlighting -[] lorawan -[] maturity -[] robust -[] adoption -[] and -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--112
-\T1/fvm/m/n/10.95 2023 -[] annual -[] report -[] highlighting -[] lorawan -[] maturity -[] robust -[] adoption -[] and -[] diversity -[]
+Underfull \hbox (badness 4634) in paragraph at lines 174--182
+[]\T1/mak/m/n/10.95 Rohde & Schw-arz\LGR/mak/m/n/10.95 .  []\T1/mak/m/it/10.95 Cha-ra-cte-ri-za-tion of Lo-Ra De-vi-ces (Re-v. 2e)[]\LGR/mak/m/n/10.95 .  []\T1/mak/m/n/10.95 Ap-
  []
 
 
-Underfull \hbox (badness 4353) in paragraph at lines 164--171
-[]\T1/mak/m/n/10.95 Arghya Ba-ral\LGR/mak/m/n/10.95 .  []\T1/mak/m/it/10.95 Un-der-stan-ding of Lo-Ra[]\LGR/mak/m/n/10.95 .  [][]$\T1/fvm/m/n/10.95 https : / / medium . com / @arghyabaral /
+Underfull \hbox (badness 5077) in paragraph at lines 174--182
+\T1/mak/m/n/10.95 pli-ca-tion Note 1MA295[]\LGR/mak/m/n/10.95 , []\T1/mak/m/n/10.95 Ro-hde & Schwarz[]\LGR/mak/m/n/10.95 , 2019.  []\T1/mak/m/n/10.95 [On-line]. Avail-able:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--182
+[][]$\T1/fvm/m/n/10.95 https : / / www . rohde -[] schwarz . com / gr / applications / characterization -[] of -[] lora -[] devices -[]
  []
 
 
@@ -2332,11 +2338,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 32748 strings out of 469923
- 598908 string characters out of 5468202
- 1138311 words of memory out of 5000000
- 58492 multiletter control sequences out of 15000+600000
- 723152 words of font info for 236 fonts, out of 8000000 for 9000
+ 32752 strings out of 469923
+ 598946 string characters out of 5468202
+ 1138310 words of memory out of 5000000
+ 58494 multiletter control sequences out of 15000+600000
+ 724326 words of font info for 239 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  99i,18n,107p,2184b,1544s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -2348,10 +2354,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
- <C:\Users\tarapis\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-Bold.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-Italic.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-SmallCaps.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fvmr8a.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/cbgreek/grmn1095.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txex.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsy.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsyb.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsyc.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (112 pages, 2865679 bytes).
+ <C:\Users\tarapis\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\tarapis\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-Bold.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-Italic.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-SmallCaps.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fvmr8a.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txex.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsy.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsyb.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsyc.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
+Output written on main.pdf (112 pages, 2853303 bytes).
 PDF statistics:
- 1338 PDF objects out of 1440 (max. 8388607)
+ 1336 PDF objects out of 1440 (max. 8388607)
  302 named destinations out of 1000 (max. 500000)
  632 words of extra memory for PDF output out of 10000 (max. 10000000)
 

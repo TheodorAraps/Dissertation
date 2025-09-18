@@ -6,127 +6,138 @@
 \newblock {{\latintext [Online]. Available:
   \url{https://ubisense.com/a-rapid-increase-in-iot-adoption-manufacturing-iot-in-2023/}}},
   2023.
-\newblock \en{Accessed: Aug. 10, 2025}.
+\newblock \en{Accessed: Sep. 16, 2025}.
 
 \bibitem{DemandSage2025}
 {{\latintext {\color{\colouredtextcolor} {\em Internet of Things (IoT)
   Statistics and Facts for 2024}}}}.
-\newblock {{\latintext
+\newblock {{\latintext [Online]. Available:
   \url{https://www.demandsage.com/internet-of-things-statistics/}}}.
+\newblock \en{Accessed: Sep. 16, 2025}.
 
 \bibitem{ICTexpress}
-{{\latintext F. Chaxel{ }K.~Mekki, E.~Bajic \textgreek{kai} F.{ }Meyer}}.
-\newblock {{\latintext {\color{\colouredtextcolor} {\em A Comparative Study of
-  {LPWAN} Technologies for Large-Scale {IoT} Deployment}}}}.
+{{\latintext K.{ }Mekki, E.{ }Bajic, F.{ }Chaxel \textgreek{kai} F.{ }Meyer}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em System Design
+  Considerations For Internet Of Things (IoT) With Category-{M} Devices In
+  {LTE} Networks}}}}.
 \newblock {{\latintext {\em ICT Express}}}, 5(1):11--17, 2019.
 
 \bibitem{telit2019nbiot}
-{{\latintext Anna{ }Ukovich}}.
+{{\latintext A.{ }Ukovich}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em NB-IoT Explained: What
   Is It, and How Does It Work?}}}}
-\newblock {{\latintext
+\newblock {{\latintext [Online]. Available:
   \url{https://www.telit.com/blog/nb-iot-new-cellular-standard-means-business/}}},
   2019.
+\newblock \en{Accessed: Sep. 16, 2025}.
 
 \bibitem{zipit2023ltem}
 {{\latintext Zipit{ }Wireless}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em LTE Cat-M1 Explained:
   Pros and Cons of LTE-M for IoT Devices}}}}.
-\newblock {{\latintext
+\newblock {{\latintext [Online]. Available:
   \url{https://www.zipitwireless.com/blog/lte-cat-m1-explained-pros-and-cons-of-lte-m-for-iot-devices}}},
   2023.
+\newblock \en{Accessed: Sep. 16, 2025}.
 
 \bibitem{hosangadi2019system}
-{{\latintext D. Wang{ }G.~Hosangadi \textgreek{kai} A.{ }Rao}}.
+{{\latintext G.{ }Hosangadi, D.{ }Wang \textgreek{kai} A.{ }Rao}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em System Design
   Considerations for Internet of Things ({IoT}) with Category-{M} Devices in
   {LTE} Networks}}}}.
 \newblock {{\latintext {\em arXiv preprint arXiv:1902.00408}}}, 2019.
-\newblock [Online]. Available: \url{https://arxiv.org/abs/1902.00408}.
-  Accessed: Sep. 10, 2025.
 
 \bibitem{semtech_lora_lorawan}
 {{\latintext Semtech{ }Corporation}}.
-\newblock {{\latintext {\color{\colouredtextcolor} {\em LoRa® and LoRaWAN®: A
-  Technical Overview}}}}.
-\newblock {{\latintext
+\newblock {{\latintext {\color{\colouredtextcolor} {\em
+  LoRa\textsuperscript{®} and LoRaWAN\textsuperscript{®}: A Technical
+  Overview}}}}.
+\newblock {{\latintext [Online]. Available:
   \url{https://www.semtech.com/uploads/technology/LoRa/lora-and-lorawan.pdf}}},
   2021.
+\newblock \en{Accessed: Sep. 16, 2025}.
 
 \bibitem{Mansoor2025PrecisionAg}
-{{\latintext Sheikh{ }Mansoor, Shahzad{ }Iqbal, Simona M.{ }Popescu, Song Lim{
-  }Kim, Yong Suk{ }Chung \textgreek{kai} Jeong Ho{ }Baek}}.
+{{\latintext S.{ }Mansoor, S.{ }Iqbal, S. M.{ }Popescu, S. L.{ }Kim, Y. S.{
+  }Chung \textgreek{kai} J. H.{ }Baek}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em Integration of smart
   sensors and IoT in precision agriculture: trends, challenges and future
   prospectives}}}}.
-\newblock {{\latintext {\em Frontiers in Plant Science}}}, 16:1587869, 2025.
+\newblock {{\latintext {\em Frontiers in Plant Science}}}, 16, 2025.
+\newblock \en{Accessed: Sep. 16, 2025}.
 
 \bibitem{saft2023iot}
 {{\latintext Saft{ }Batteries}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em The impact of
   communication technology protocol on your IoT application’s power
   consumption}}}}.
-\newblock {{\latintext
+\newblock {{\latintext [Online]. Available:
   \url{https://saft.com/en/energizing-iot/impact-communication-technology-protocol-your-iot-application%E2%80%99s-power-consumption}}},
   2023.
+\newblock \en{Accessed: Sep. 16, 2025}.
 
 \bibitem{adelantado2017understanding}
-{{\latintext Ferran{ }Adelantado, Xavier{ }Vilajosana, Pere{ }Tuset-Peiro,
-  Borja{ }Martinez, Joan{ }Melià-Seguí \textgreek{kai} Thomas{ }Watteyne}}.
+{{\latintext F.{ }Adelantado, X.{ }Vilajosana, P.{ }Tuset-Peiro, B.{ }Martinez,
+  J.{ }Melià-Seguí \textgreek{kai} T.{ }Watteyne}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em Understanding the
   Limits of LoRaWAN}}}}.
 \newblock {{\latintext {\em IEEE Communications Magazine}}}, 55(9):34--40,
   2017.
 
 \bibitem{SemtechModulationBasics}
-{{\latintext { }{Semtech Corporation}}}.
-\newblock {\color{\colouredtextcolor} {{\latintext {\em AN1200.22 LoRa
-  Modulation Basics}}}}.
-\newblock \textgreek{Teqnik'h Anafor'a me arijm'o}, {{\latintext Semtech
-  Corporation}}, 2015.
+{{\latintext Semtech{ }Corporation}}.
+\newblock {\color{\colouredtextcolor} {{\latintext {\em
+  LoRa\textsuperscript{TM} Modulation Basics}}}}.
+\newblock \en{Application Note} \en{AN1200.22}, {{\latintext Semtech
+  Corporation}},   2015.
 
 \bibitem{LoRaWANSpec}
-{{\latintext { }{LoRa Alliance}}}.
-\newblock {{\latintext {\color{\colouredtextcolor} {\em LoRaWAN Regional
-  Parameters v1.0.3revA}}}}.
-\newblock {{\latintext
-  \url{https://lora-alliance.org/wp-content/uploads/2020/11/lorawan_regional_parameters_v1.0.3reva_0.pdf}}},
-  2020.
+{{\latintext { }{LoRa Alliance Technical Committee, Regional Parameters
+  Workgroup}}}.
+\newblock {\color{\colouredtextcolor} {{\latintext {\em
+  LoRaWAN\textsuperscript{®} Regional Parameters v1.0.3revA}}}}.
+\newblock \en{Technical Specification} \en{RP002-1.0.3revA}, {{\latintext LoRa
+  Alliance, Inc.}},   2018.
 
 \bibitem{gsma2022mobileiot}
 {{\latintext { }{GSMA}}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em Mobile IoT Deployment
   Guide}}}}.
-\newblock {{\latintext
+\newblock {{\latintext [Online]. Available:
   \url{https://www.gsma.com/smartmobility/wp-content/uploads/2022/10/Mobile-IOT-Deployment-Guide-October-2022-1-1.pdf}}},
-  2022.
+    2022.
+\newblock \en{Accessed: Sep. 16, 2025}.
 
 \bibitem{loraalliance2023report}
 {{\latintext { }{LoRa Alliance}}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em LoRa Alliance Issues
   2023 Annual Report Highlighting LoRaWAN Maturity, Robust Adoption, and
-  Diversity of End-to-End Solutions}}}}.
-\newblock {{\latintext
-  \url{https://lora-alliance.org/lora-alliance-press-release/lora-alliance-issues-2023-annual-report-highlighting-lorawan-maturity-robust-adoption-and-diversity-of-end-to-end-solutions/}}},
-  2023.
+  Diversity of End-to-End Solutions}}}},   2024.
+\newblock \en{[Online]. Available:
+  \url{https://lora-alliance.org/lora-alliance-press-release/lora-alliance-issues-2023-annual-report-highlighting-lorawan-maturity-robust-adoption-and-diversity-of-end-to-end-solutions/}.
+  Accessed: Sep. 16, 2025}.
 
 \bibitem{semtech2020lora}
-{{\latintext Semtech{ }Corporation}}.
+{{\latintext L.{ }Slats \textgreek{kai} Semtech{ }Corporation}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em A Brief History of
-  LoRa®: Three Inventors Share Their Personal Story at The Things
-  Conference}}}}.
-\newblock {{\latintext
-  \url{https://blog.semtech.com/a-brief-history-of-lora-three-inventors-share-their-personal-story-at-the-things-conference}}},
-  2020.
+  LoRa\textsuperscript{®}: Three Inventors Share Their Personal Story at The
+  Things Conference}}}}.
+\newblock {{\latintext Semtech Corporate Blog}},   2020.
+\newblock \en{[Online]. Available:
+  \url{https://blog.semtech.com/a-brief-history-of-lora-three-inventors-share-their-personal-story-at-the-things-conference}.
+  Accessed: Sep. 16, 2025}.
 
 \bibitem{ttn_lorawan}
 {{\latintext { }{The Things Network}}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em LoRaWAN
   Documentation}}}}.
-\newblock {{\latintext \url{https://www.thethingsnetwork.org/docs/lorawan/}}}.
+\newblock {{\latintext The Things Network, online documentation}}.
+\newblock \en{[Online]. Available:
+  \url{https://www.thethingsnetwork.org/docs/lorawan/}. Accessed: Sep. 16,
+  2025}.
 
 \bibitem{IJASRE2018}
-{{\latintext T.{ }Rademacher \textgreek{kai} { }others}}.
+{{\latintext T. Rademacheret{ }al.}}
 \newblock {{\latintext {\color{\colouredtextcolor} {\em Analysis of Urban Path
   Loss Models for LoRaWAN Network Planning}}}}.
 \newblock {{\latintext {\em International Journal of Advanced Scientific
@@ -136,53 +147,65 @@
 {{\latintext { }{LoRa Documentation}}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em LoRa - The Things
   Network Documentation}}}}.
-\newblock {{\latintext \url{https://lora.readthedocs.io/en/latest/}}}, 2024.
+\newblock {{\latintext Online documentation}}, 2024.
+\newblock \en{[Online]. Available:
+  \url{https://lora.readthedocs.io/en/latest/}. Accessed: Sep. 16, 2025}.
 
 \bibitem{staniec2018}
-{{\latintext Kamil{ }Staniec \textgreek{kai} Michał{ }Kowal}}.
+{{\latintext K.{ }Staniec \textgreek{kai} M.{ }Kowal}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em LoRa Performance under
   Variable Interference and Heavy-Multipath Conditions}}}}.
 \newblock {{\latintext {\em Wireless Communications and Mobile Computing}}},
-  \textgreek{sel'ides} 1--10, 2018.
+  2018.
+\newblock \en{[Online]. Available:
+  \url{https://onlinelibrary.wiley.com/doi/full/10.1155/2018/6931083}.
+  Accessed: Sep. 16, 2025}.
 
 \bibitem{LansitecLoRaRange2024}
 {{\latintext { }Lansitec}}.
-\newblock {{\latintext {\color{\colouredtextcolor} {\em What are the factors
-  affecting LoRaWAN range in IoT}}}}.
-\newblock {{\latintext
-  \url{https://www.lansitec.com/blogs/what-are-the-factors-affecting-lorawan-range-in-iot/}}},
-  2024.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em What Are the Factors
+  Affecting LoRaWAN Range in IoT}}}}.
+\newblock {{\latintext Lansitec Blog}},   2023.
+\newblock \en{[Online]. Available:
+  \url{https://www.lansitec.com/blogs/what-are-the-factors-affecting-lorawan-range-in-iot/}.
+  Accessed: Sep. 16, 2025}.
 
 \bibitem{RohdeSchwarz2018}
-{{\latintext { }{Rohde and Schwarz}}}.
+{{\latintext { }{Rohde \& Schwarz}}}.
 \newblock {\color{\colouredtextcolor} {{\latintext {\em Characterization of
-  LoRa Devices}}}}.
-\newblock \textgreek{Teqnik'h Anafor'a me arijm'o}, {{\latintext Rohde and
-  Schwarz}}, 2018.
+  LoRa Devices (Rev. 2e)}}}}.
+\newblock \en{Application Note} \en{1MA295}, {{\latintext \en{Rohde \&
+  Schwarz}}},   2019.
+\newblock \en{[Online]. Available:
+  \url{https://www.rohde-schwarz.com/gr/applications/characterization-of-lora-devices-application-note_56280-507458.html}.
+  Accessed: Sep. 16, 2025}.
 
 \bibitem{Baral2020UnderstandingLoRa}
-{{\latintext Arghya{ }Baral}}.
+{{\latintext A.{ }Baral}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em Understanding of
   LoRa}}}}.
-\newblock {{\latintext
-  \url{https://medium.com/@arghyabaral/understanding-of-lora-066d89ed7bf4}}},
-  2020.
-\newblock Medium blog post.
+\newblock {{\latintext \em{Medium blog post}}},   2020.
+\newblock \en{[Online]. Available:
+  \url{https://medium.com/@arghyabaral/understanding-of-lora-066d89ed7bf4}.
+  Accessed: Sep. 16, 2025}.
 
 \bibitem{GhoslyaCSS2024}
-{{\latintext Sakshama{ }Ghoslya}}.
-\newblock {{\latintext {\color{\colouredtextcolor} {\em LoRa: Symbol
-  Generation}}}}.
-\newblock {{\latintext
-  \url{https://www.sghoslya.com/p/lora-is-chirp-spread-spectrum.html}}}, 2017.
+{{\latintext S.{ }Ghoslya}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em LoRa: Symbol Generation
+  (All About LoRa and LoRaWAN)}}}}.
+\newblock {{\latintext Blog post All About LoRa and LoRaWAN}},   2017.
+\newblock \en{[Online]. Available:
+  \url{https://www.sghoslya.com/p/lora-is-chirp-spread-spectrum.html}.
+  Accessed: Sep. 16, 2025}.
 
 \bibitem{SiiLoraM2M}
-{{\latintext { }{Maciej Janc}}}.
+{{\latintext M.{ }Janc}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em Communication over LoRa
-  M2M case using RA-01}}}}.
-\newblock {{\latintext
-  \url{https://sii.pl/blog/en/communication-over-lora-m2m-case-using-ra-01/}}},
-  2021.
+  - M2M Case Using RA-01}}}}.
+\newblock {{\latintext Sii Blog}},   2023.
+\newblock \en{[Online]. Available:
+  \url{https://sii.pl/blog/en/communication-over-lora-m2m-case-using-ra-01/}.
+  Accessed: Sep. 16, 2025}.
 
 \bibitem{OlssonFinnsson2017}
 {{\latintext Kristoffer{ }Olsson \textgreek{kai} Sveinn{ }Finnsson}}.
@@ -219,6 +242,7 @@
   Calculator}}}}.
 \newblock {{\latintext
   \url{https://www.rfwireless-world.com/calculators/lorawan-airtime-calculator}}}.
+\newblock \en{Accessed: Sep. 16, 2025}.
 
 \bibitem{loraalliance_about_lorawan}
 {{\latintext { }{LoRa Alliance}}}.
@@ -226,12 +250,14 @@
   Specification}}}}.
 \newblock {{\latintext \url{https://lora-alliance.org/about-lorawan-old/}}},
   2025.
+\newblock \en{Accessed: Sep. 16, 2025}.
 
 \bibitem{tti_homepage}
 {{\latintext { }{The Things Industries}}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em The Things Industries -
   Empowering Global IoT Connectivity}}}}.
 \newblock {{\latintext \url{https://www.thethingsindustries.com/}}}, 2025.
+\newblock \en{Accessed: Sep. 16, 2025}.
 
 \bibitem{TrendMicro2021LoRaWANSecurity}
 {{\latintext { }{Trend Micro Research}}}.
@@ -262,6 +288,7 @@
 \newblock {{\latintext
   \url{https://medium.com/@shiva.cdachyd/understanding-lorawan-the-mac-layer-behind-lora-48c512e2180a}}},
   2025.
+\newblock \en{Accessed: Sep. 16, 2025}.
 
 \bibitem{semtech-learn-sending-messages-metadata}
 {{\latintext { }Semtech}}.
@@ -273,12 +300,14 @@
 {{\latintext { }{LoRa Alliance}}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em LoRaWAN 1.1
   Specification}}}}, 2017.
+\newblock \en{Accessed: Sep. 16, 2025}.
 
 \bibitem{rfc9011}
 {{\latintext { }{IETF LPWAN Working Group}}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em Static Context Header
   Compression (SCHC) over LoRaWAN (RFC 9011)}}}}.
 \newblock {{\latintext RFC 9011}}, 2021.
+\newblock \en{Accessed: Sep. 16, 2025}.
 
 \bibitem{elli05}
 {{\latintext { }\textgreek{Ε. Ανδρουλάκη}}}.

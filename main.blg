@@ -38,48 +38,48 @@ A level-1 auxiliary file: back_matter/appE.aux
 Reallocating 'name_of_file' (item size: 1) to 11 items.
 Database file #1: references.bib
 Warning--entry type for "semtech-learn-sending-messages-metadata" isn't style-file defined
---line 343 of file references.bib
+--line 345 of file references.bib
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Warning--empty institution in viswanathan2014convenient
 You've used 46 entries,
             3122 wiz_defined-function locations,
-            845 strings with 13309 characters,
-and the built_in function-call counts, 8591 in all, are:
-= -- 619
-> -- 262
-< -- 3
-+ -- 118
-- -- 72
-* -- 732
-:= -- 1181
-add.period$ -- 139
+            856 strings with 14183 characters,
+and the built_in function-call counts, 8658 in all, are:
+= -- 640
+> -- 271
+< -- 5
++ -- 121
+- -- 75
+* -- 747
+:= -- 1216
+add.period$ -- 159
 call.type$ -- 46
-change.case$ -- 5
+change.case$ -- 3
 chr.to.int$ -- 0
 cite$ -- 47
-duplicate$ -- 554
-empty$ -- 1089
-format.name$ -- 72
-if$ -- 1906
+duplicate$ -- 552
+empty$ -- 1064
+format.name$ -- 75
+if$ -- 1901
 int.to.chr$ -- 0
 int.to.str$ -- 46
 missing$ -- 15
-newline$ -- 234
+newline$ -- 254
 num.names$ -- 44
-pop$ -- 231
+pop$ -- 233
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 131
+skip$ -- 100
 stack$ -- 0
-substring$ -- 178
-swap$ -- 275
-text.length$ -- 3
+substring$ -- 142
+swap$ -- 271
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 55
+while$ -- 52
 width$ -- 48
-write$ -- 484
+write$ -- 524
 (There were 2 warnings)
