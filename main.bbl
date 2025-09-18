@@ -137,7 +137,7 @@
   2025}.
 
 \bibitem{IJASRE2018}
-{{\latintext T. Rademacheret{ }al.}}
+{{\latintext T. Rademacher{ }\en{ et al.}}}
 \newblock {{\latintext {\color{\colouredtextcolor} {\em Analysis of Urban Path
   Loss Models for LoRaWAN Network Planning}}}}.
 \newblock {{\latintext {\em International Journal of Advanced Scientific
@@ -176,9 +176,6 @@
   LoRa Devices (Rev. 2e)}}}}.
 \newblock \en{Application Note} \en{1MA295}, {{\latintext \en{Rohde \&
   Schwarz}}},   2019.
-\newblock \en{[Online]. Available:
-  \url{https://www.rohde-schwarz.com/gr/applications/characterization-of-lora-devices-application-note_56280-507458.html}.
-  Accessed: Sep. 16, 2025}.
 
 \bibitem{Baral2020UnderstandingLoRa}
 {{\latintext A.{ }Baral}}.
@@ -208,106 +205,114 @@
   Accessed: Sep. 16, 2025}.
 
 \bibitem{OlssonFinnsson2017}
-{{\latintext Kristoffer{ }Olsson \textgreek{kai} Sveinn{ }Finnsson}}.
-\newblock {\color{\colouredtextcolor} {{\latintext {\em Exploring \en{LoRa} and
-  \en{LoRaWAN}: A Suitable Protocol for \en{IoT} Weather Stations?}}}}
-\newblock {{\latintext \textgreek{Metaptuqiak'h diplwmatik'h ergas'ia}}},
-  {{\latintext Chalmers University of Technology}}, {{\latintext Gothenburg,
-  Sweden}}, 2017.
+{{\latintext K.{ }Olsson \textgreek{kai} S.{ }Finnsson}}.
+\newblock {\color{\colouredtextcolor} {{\latintext {\em Exploring LoRa and
+  LoRaWAN: A Suitable Protocol for IoT Weather Stations?}}}}
+\newblock {{\latintext \en{Master’s Thesis}}}, {{\latintext \en{Chalmers
+  University of Technology}}}, {{\latintext \en{Gothenburg, Sweden}}},   2017.
+\newblock \en{[Online]. Available:
+  \url{https://publications.lib.chalmers.se/records/fulltext/252610/252610.pdf}.
+  Accessed: Sep. 16, 2025}.
 
 \bibitem{Hanif2021Slope}
-{{\latintext Muhammad{ }Hanif \textgreek{kai} Ha H.{ }Nguyen}}.
+{{\latintext M.{ }Hanif \textgreek{kai} H. H.{ }Nguyen}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em Slope-Shift Keying
   LoRa-Based Modulation}}}}.
 \newblock {{\latintext {\em IEEE Internet of Things Journal}}}, 8(1):211--221,
-  2021.
+   2021.
 
 \bibitem{Hanif2021Index}
-{{\latintext Muhammad{ }Hanif \textgreek{kai} Ha H.{ }Nguyen}}.
+{{\latintext M.{ }Hanif \textgreek{kai} H. H.{ }Nguyen}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em Frequency-Shift Chirp
   Spread Spectrum Communications With Index Modulation}}}}.
 \newblock {{\latintext {\em IEEE Internet of Things Journal}}},
-  8(24):17611--17621, 2021.
+  8(24):17611--17621,   2021.
 
 \bibitem{Tutorial2022CSS}
-{{\latintext E. Bedeer{ }A.~Maleki, Ha H.~Nguyen \textgreek{kai} R.{ }Barton}}.
+{{\latintext A.{ }Maleki, H. H.{ }Nguyen, E.{ }Bedeer \textgreek{kai} R.{
+  }Barton}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em A Tutorial on Chirp
   Spread Spectrum Modulation for LoRaWAN: Basics and Key Advances}}}}.
 \newblock {{\latintext {\em IEEE Open Journal of the Communications Society}}},
-  5:4578--4612, 2024.
+  5(99):4578--4612,   2024.
 
 \bibitem{RFWirelessLoRaAirtimeCalc}
 {{\latintext { }{RF Wireless World}}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em LoRaWAN Airtime
-  Calculator}}}}.
-\newblock {{\latintext
-  \url{https://www.rfwireless-world.com/calculators/lorawan-airtime-calculator}}}.
-\newblock \en{Accessed: Sep. 16, 2025}.
+  Calculator and LoRa Packet Duration Calculation}}}}.
+\newblock {{\latintext Online Calculator, RF Wireless World}}, 2025.
+\newblock \en{[Online]. Available:
+  \url{https://www.rfwireless-world.com/calculators/lorawan-airtime-calculator}.
+  Accessed: Sep. 16, 2025}.
 
 \bibitem{loraalliance_about_lorawan}
 {{\latintext { }{LoRa Alliance}}}.
-\newblock {{\latintext {\color{\colouredtextcolor} {\em What is LoRaWAN®
-  Specification}}}}.
-\newblock {{\latintext \url{https://lora-alliance.org/about-lorawan-old/}}},
-  2025.
-\newblock \en{Accessed: Sep. 16, 2025}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em What is
+  LoRaWAN\textsuperscript{®} Specification}}}}.
+\newblock {{\latintext LoRa Alliance, online “About LoRaWAN” page}}, 2025.
+\newblock \en{[Online]. Available:
+  \url{https://lora-alliance.org/about-lorawan-old/}. Accessed: Sep. 16, 2025}.
 
 \bibitem{tti_homepage}
 {{\latintext { }{The Things Industries}}}.
-\newblock {{\latintext {\color{\colouredtextcolor} {\em The Things Industries -
-  Empowering Global IoT Connectivity}}}}.
-\newblock {{\latintext \url{https://www.thethingsindustries.com/}}}, 2025.
-\newblock \en{Accessed: Sep. 16, 2025}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em The Things Industries
+  – Empowering Global IoT Connectivity}}}}.
+\newblock {{\latintext Company homepage}}, 2025.
+\newblock \en{[Online]. Available: \url{https://www.thethingsindustries.com/}.
+  Accessed: Sep. 16, 2025}.
 
 \bibitem{TrendMicro2021LoRaWANSecurity}
 {{\latintext { }{Trend Micro Research}}}.
 \newblock {\color{\colouredtextcolor} {{\latintext {\em The Current State of
   LoRaWAN Security}}}}.
-\newblock \textgreek{Teqnik'h Anafor'a me arijm'o}, {{\latintext Trend Micro}},
-  2021.
-\newblock Technical Brief.
+\newblock \en{Technical Brief}, {{\latintext \en{Trend Micro}}},   2021.
 
 \bibitem{Loukil2022AnalysisLoRaWAN}
-{{\latintext Slim{ }Loukil, Lamia{ }Chaari~Fourati, Anand{ }Nayyar
-  \textgreek{kai} K. W. A.{ }Chee}}.
+{{\latintext S.{ }Loukil, L. C. Chaari{ }Fourati, A.{ }Nayyar \textgreek{kai}
+  K. W. A.{ }Chee}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em Analysis of LoRaWAN 1.0
   and 1.1 Protocols Security Mechanisms}}}}.
-\newblock {{\latintext {\em Sensors}}}, 22(10):3717, 2022.
+\newblock {{\latintext {\em Sensors}}}, 22(10):3717,   2022.
 
 \bibitem{SemtechLoRaWANDeviceClasses2024}
 {{\latintext { }{Semtech Corporation}}}.
 \newblock {\color{\colouredtextcolor} {{\latintext {\em
-  LoRaWAN\textregistered{} Device Classes}}}}.
-\newblock \textgreek{Teqnik'h Anafor'a me arijm'o} AN1200.87, {{\latintext
-  Semtech Corporation}},   2024.
+  LoRaWAN\textsuperscript{®} Device Classes Version 2.0}}}}.
+\newblock \en{Application Note} \en{AN1200.87}, {{\latintext \en{Semtech
+  Corporation}}},   2024.
 
 \bibitem{Gatla2025LoRaWANMAC}
-{{\latintext Saishiva Reddy{ }Gatla}}.
+{{\latintext S. R.{ }Gatla}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em Understanding LoRaWAN:
-  The {MAC} Layer Behind LoRa}}}}.
-\newblock {{\latintext
-  \url{https://medium.com/@shiva.cdachyd/understanding-lorawan-the-mac-layer-behind-lora-48c512e2180a}}},
-  2025.
-\newblock \en{Accessed: Sep. 16, 2025}.
+  The MAC Layer Behind LoRa}}}}.
+\newblock {{\latintext Medium blog post}},   2025.
+\newblock \en{[Online]. Available:
+  \url{https://medium.com/@shiva.cdachyd/understanding-lorawan-the-mac-layer-behind-lora-48c512e2180a}.
+  Accessed: Sep. 16, 2025}.
 
 \bibitem{semtech-learn-sending-messages-metadata}
 {{\latintext { }Semtech}}.
-\newblock {{\latintext {\color{\colouredtextcolor} {\em 2 - Sending Messages:
-  Metadata}}}}.
-\newblock Course chapter.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em “2 – Sending
+  Messages: Metadata”, LoRaWAN\textsuperscript{®} 1.0.4 Specification in
+  Depth for End Device Developers}}}}.
+\newblock {{\latintext Semtech Learning Center, online course chapter}}, 2025.
+\newblock \en{[Online]. Available:
+  \url{https://learn.semtech.com/mod/book/view.php?id=172\&chapterid=104}.
+  Accessed: Aug. 28, 2025}.
 
 \bibitem{lorawan11}
 {{\latintext { }{LoRa Alliance}}}.
-\newblock {{\latintext {\color{\colouredtextcolor} {\em LoRaWAN 1.1
-  Specification}}}}, 2017.
-\newblock \en{Accessed: Sep. 16, 2025}.
+\newblock {\color{\colouredtextcolor} {{\latintext {\em
+  LoRaWAN\textsuperscript{®} Specification v1.1}}}}.
+\newblock \en{Technical Specification} \en{TS-001-1.1.0}, {{\latintext \en{LoRa
+  Alliance}}},   2017.
 
 \bibitem{rfc9011}
-{{\latintext { }{IETF LPWAN Working Group}}}.
-\newblock {{\latintext {\color{\colouredtextcolor} {\em Static Context Header
-  Compression (SCHC) over LoRaWAN (RFC 9011)}}}}.
-\newblock {{\latintext RFC 9011}}, 2021.
-\newblock \en{Accessed: Sep. 16, 2025}.
+{{\latintext O.{ }Gimenez \textgreek{kai} I.{ }Petrov}}.
+\newblock {\color{\colouredtextcolor} {{\latintext {\em Static Context Header
+  Compression and Fragmentation (SCHC) over LoRaWAN (RFC 9011)}}}}.
+\newblock \en{Proposed Standard} \en{RFC 9011}, {{\latintext \en{Internet
+  Engineering Task Force}}},   2021.
 
 \bibitem{elli05}
 {{\latintext { }\textgreek{Ε. Ανδρουλάκη}}}.

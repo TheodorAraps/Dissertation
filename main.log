@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.27)  18 SEP 2025 03:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.27)  18 SEP 2025 15:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2289,21 +2289,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--119
  []
 
 
-Underfull \hbox (badness 4634) in paragraph at lines 174--182
-[]\T1/mak/m/n/10.95 Rohde & Schw-arz\LGR/mak/m/n/10.95 .  []\T1/mak/m/it/10.95 Cha-ra-cte-ri-za-tion of Lo-Ra De-vi-ces (Re-v. 2e)[]\LGR/mak/m/n/10.95 .  []\T1/mak/m/n/10.95 Ap-
- []
-
-
-Underfull \hbox (badness 5077) in paragraph at lines 174--182
-\T1/mak/m/n/10.95 pli-ca-tion Note 1MA295[]\LGR/mak/m/n/10.95 , []\T1/mak/m/n/10.95 Ro-hde & Schwarz[]\LGR/mak/m/n/10.95 , 2019.  []\T1/mak/m/n/10.95 [On-line]. Avail-able:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 174--182
-[][]$\T1/fvm/m/n/10.95 https : / / www . rohde -[] schwarz . com / gr / applications / characterization -[] of -[] lora -[] devices -[]
- []
-
-
 
 [100]
 
@@ -2340,7 +2325,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  32752 strings out of 469923
  598946 string characters out of 5468202
- 1138310 words of memory out of 5000000
+ 1138311 words of memory out of 5000000
  58494 multiletter control sequences out of 15000+600000
  724326 words of font info for 239 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
@@ -2355,9 +2340,9 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
  <C:\Users\tarapis\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\tarapis\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-Bold.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-Italic.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-SmallCaps.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fvmr8a.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txex.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsy.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsyb.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsyc.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (112 pages, 2853303 bytes).
+Output written on main.pdf (112 pages, 2854577 bytes).
 PDF statistics:
- 1336 PDF objects out of 1440 (max. 8388607)
+ 1337 PDF objects out of 1440 (max. 8388607)
  302 named destinations out of 1000 (max. 500000)
  632 words of extra memory for PDF output out of 10000 (max. 10000000)
 
