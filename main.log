@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.27)  18 SEP 2025 15:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.27)  19 SEP 2025 17:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1758,6 +1758,9 @@ File: figures/LoRa_Symbols_chirps.png Graphic file (type png)
 Package pdftex.def Info: figures/LoRa_Symbols_chirps.png  used on input line 608.
 (pdftex.def)             Requested size: 426.79134pt x 226.01782pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [38 <./figures/CSS_up_chrip_down_chirp.png> <./figures/LoRa_Symbols_chirps.png>]
 <figures/LoRa_waveform_parameters.png, id=514, 1142.2675pt x 921.4425pt>
@@ -1768,9 +1771,6 @@ Package pdftex.def Info: figures/LoRa_waveform_parameters.png  used on input lin
 
 
 [39 <./figures/LoRa_waveform_parameters.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [40]
 <figures/LoRa_waveform_values.png, id=535, 1143.27126pt x 906.38625pt>
@@ -2340,7 +2340,7 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
  <C:\Users\tarapis\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\tarapis\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-Bold.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-Italic.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis-SmallCaps.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/kerkis/Kerkis.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fvmr8a.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txex.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsy.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsyb.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsyc.pfb><C:/Users/tarapis/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (112 pages, 2854577 bytes).
+Output written on main.pdf (112 pages, 2854617 bytes).
 PDF statistics:
  1337 PDF objects out of 1440 (max. 8388607)
  302 named destinations out of 1000 (max. 500000)
