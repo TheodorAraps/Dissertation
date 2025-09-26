@@ -21,6 +21,12 @@
 \contentsline {illustration}{\numberline {2.19}{\ignorespaces Προ-διαμοιρασμός του \foreignlanguage {english}{DevAddr} και των \foreignlanguage {english}{session keys} για ενεργοποίηση \foreignlanguage {english}{ABP} στο \foreignlanguage {english}{LoRaWAN 1.0}.}}{63}{illustration.caption.36}%
 \contentsline {illustration}{\numberline {2.20}{\ignorespaces Προ-διαμοιρασμός του \foreignlanguage {english}{DevAddr} και των \foreignlanguage {english}{session keys} για ενεργοποίηση \foreignlanguage {english}{ABP} στο \foreignlanguage {english}{LoRaWAN 1.1}.}}{63}{illustration.caption.37}%
 \addvspace {10\p@ }
+\contentsline {illustration}{\numberline {3.1}{\ignorespaces Αρχιτεκτονική του \foreignlanguage {english}{The Things Stack} με τα βασικά του δομικά στοιχεία.}}{68}{illustration.caption.38}%
+\contentsline {illustration}{\numberline {3.2}{\ignorespaces Αρχιτεκτονική του \foreignlanguage {english}{LoRa Basics\textsuperscript {TM} Station}}}{72}{illustration.caption.39}%
+\contentsline {illustration}{\numberline {3.3}{\ignorespaces Αρχιτεκτονική \foreignlanguage {english}{Docker}: ο \foreignlanguage {english}{Docker Client} εκτελεί εντολές \foreignlanguage {english}{(build, pull, run)} προς τον \foreignlanguage {english}{Docker daemon}, που δημιουργεί/χειρίζεται \foreignlanguage {english}{images} και \foreignlanguage {english}{containers} και επικοινωνεί με τον \foreignlanguage {english}{Docker Registry}.}}{75}{illustration.caption.40}%
+\contentsline {illustration}{\numberline {3.4}{\ignorespaces Αρχιτεκτονική ενός \foreignlanguage {english}{Web Application}, αποτελούμενο από ένα \foreignlanguage {english}{React Frontend App} που επικοινωνεί μέσω \foreignlanguage {english}{Axios/REST APIs} με ένα \foreignlanguage {english}{Spring Boot Backend App}, μετατρέπει δεδομένα \foreignlanguage {english}{DTOs (Data Transfer Objects)} σε οντότητες \foreignlanguage {english}{(Entities)} και εκτελεί διεργασίες αποθήκευσης/ανάκτησης αυτών των δεδομένων από μία \foreignlanguage {english}{PostgreSQL} βάση δεδομένων.}}{80}{illustration.caption.41}%
+\addvspace {10\p@ }
+\contentsline {illustration}{\numberline {4.1}{\ignorespaces Τοπολογία του συστήματος.}}{83}{illustration.caption.42}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -31,5 +37,4 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{97}{illustration.caption.44}%
+\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{111}{illustration.caption.49}%

@@ -39,45 +39,45 @@ Reallocating 'name_of_file' (item size: 1) to 11 items.
 Database file #1: references.bib
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Warning--empty institution in viswanathan2014convenient
-You've used 46 entries,
+You've used 56 entries,
             3122 wiz_defined-function locations,
-            862 strings with 14630 characters,
-and the built_in function-call counts, 8726 in all, are:
-= -- 645
-> -- 280
+            915 strings with 16618 characters,
+and the built_in function-call counts, 10446 in all, are:
+= -- 775
+> -- 320
 < -- 7
-+ -- 124
-- -- 78
-* -- 786
-:= -- 1237
-add.period$ -- 158
-call.type$ -- 46
++ -- 144
+- -- 88
+* -- 906
+:= -- 1457
+add.period$ -- 198
+call.type$ -- 56
 change.case$ -- 4
 chr.to.int$ -- 0
-cite$ -- 47
-duplicate$ -- 558
-empty$ -- 1053
-format.name$ -- 78
-if$ -- 1901
+cite$ -- 57
+duplicate$ -- 658
+empty$ -- 1293
+format.name$ -- 88
+if$ -- 2301
 int.to.chr$ -- 0
-int.to.str$ -- 46
+int.to.str$ -- 56
 missing$ -- 15
-newline$ -- 253
-num.names$ -- 44
-pop$ -- 221
+newline$ -- 313
+num.names$ -- 54
+pop$ -- 291
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 95
+skip$ -- 115
 stack$ -- 0
 substring$ -- 142
-swap$ -- 273
+swap$ -- 333
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 52
-width$ -- 48
-write$ -- 526
+while$ -- 62
+width$ -- 58
+write$ -- 646
 (There was 1 warning)

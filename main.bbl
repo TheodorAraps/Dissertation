@@ -314,13 +314,90 @@
 \newblock \en{Proposed Standard} \en{RFC 9011}, {{\latintext \en{Internet
   Engineering Task Force}}},   2021.
 
-\bibitem{elli05}
-{{\latintext { }\textgreek{Ε. Ανδρουλάκη}}}.
-\newblock {\color{\colouredtextcolor} {{\latintext {\em
-  \textgreek{Υλοποίηση Ενεργού Μηχανισμού σε
-  Σύστημα Ομότιμων Βάσεων}}}}}.
-\newblock {{\latintext \textgreek{Ptuqiak'h ergas'ia}}}, {{\latintext KDBS Lab,
-  \textgreek{Εθνικό Μετσόβιο Πολυτεχνείο}}},   2005.
+\bibitem{TTI_TheThingsStackDocs}
+{{\latintext { }{The Things Industries}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em The Things Stack
+  Documentation}}}}.
+\newblock {{\latintext The Things Industries, online documentation}}, 2025.
+\newblock \en{[Online]. Available:
+  \url{https://www.thethingsindustries.com/docs/}. Accessed: Sep. 16, 2025}.
+
+\bibitem{LoRaBasicsStationDocs}
+{{\latintext { }Semtech}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em LoRa Basics Station
+  2.0.6 Documentation}}}}.
+\newblock {{\latintext Online documentation, Semtech}},   2022.
+\newblock \en{[Online]. Available: \url{https://doc.sm.tc/station/}. Accessed:
+  Sep. 16, 2025}.
+
+\bibitem{TTI_GettingToKnowLBS2020}
+{{\latintext { }{The Things Industries}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em Getting to Know LoRa
+  Basics\textsuperscript{™} Station}}}}.
+\newblock {{\latintext News article, The Things Industries}},   2020.
+\newblock \en{[Online]. Available:
+  \url{https://www.thethingsindustries.com/news/getting-to-know-lora-basics-station/}.
+  Accessed: Sep. 16, 2025}.
+
+\bibitem{Singh2023LearnDocker}
+{{\latintext S.{ }Singh}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em Let’s Learn Docker
+  from Scratch in 2023}}}}.
+\newblock {{\latintext Blog post, DevOps.dev}},   2023.
+\newblock \en{[Online]. Available:
+  \url{https://blog.devops.dev/lets-learn-docker-from-scratch-in-2023-d831629c5497}.
+  Accessed: Sep. 16, 2025}.
+
+\bibitem{DockerDocs}
+{{\latintext { }{Docker, Inc.}}}
+\newblock {{\latintext {\color{\colouredtextcolor} {\em Docker
+  Documentation}}}}.
+\newblock {{\latintext Online documentation}}, 2025.
+\newblock \en{[Online]. Available: \url{https://docs.docker.com/}. Accessed:
+  Sep. 16, 2025}.
+
+\bibitem{ByteByteGo_HowDoesDockerWork}
+{{\latintext { }{ByteByteGo}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em How Does Docker
+  Work?}}}}
+\newblock {{\latintext Online guide}},   2024.
+\newblock \en{[Online]. Available:
+  \url{https://bytebytego.com/guides/how-does-docker-work/}. Accessed: Sep. 16,
+  2025}.
+
+\bibitem{SpringBootDocs}
+{{\latintext { }{Pivotal / VMware / Spring Team}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em Spring Boot
+  Documentation}}}}.
+\newblock {{\latintext Online documentation}}, 2025.
+\newblock \en{[Online]. Available:
+  \url{https://docs.spring.io/spring-boot/index.html}. Accessed: Sep. 16,
+  2025}.
+
+\bibitem{IBM_WhatIsSpringBoot}
+{{\latintext { }{IBM}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em What Is Java Spring
+  Boot?}}}}
+\newblock {{\latintext Technical article, IBM Think}},   2024.
+\newblock \en{[Online]. Available:
+  \url{https://www.ibm.com/think/topics/java-spring-boot}. Accessed: Sep. 16,
+  2025}.
+
+\bibitem{ReactDocs}
+{{\latintext { }{Meta / React Team}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em React Documentation —
+  Learn React}}}}.
+\newblock {{\latintext Online documentation}}, 2025.
+\newblock \en{[Online]. Available: \url{https://react.dev/learn}. Accessed:
+  Sep. 16, 2025}.
+
+\bibitem{PostgreSQLDocs}
+{{\latintext { }{PostgreSQL Global Development Group}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em PostgreSQL
+  Documentation}}}}.
+\newblock {{\latintext Online documentation}}, 2025.
+\newblock \en{[Online]. Available: \url{https://www.postgresql.org/docs/}.
+  Accessed: Sep. 16, 2025}.
 
 \bibitem{goossens93}
 {{\latintext M.{ }Goossens, F.{ }Mittelbach \textgreek{kai} A.{ }Samarin}}.
@@ -351,6 +428,14 @@
   Διαχείρισης Σχημάτων \en{RDFS}}}}}}.
 \newblock {{\latintext \textgreek{Diplwmatik'h ergas'ia}}}, {{\latintext
   \textgreek{Εθνικό Μετσόβιο Πολυτεχνείο}}},   2004.
+
+\bibitem{elli05}
+{{\latintext { }\textgreek{Ε. Ανδρουλάκη}}}.
+\newblock {\color{\colouredtextcolor} {{\latintext {\em
+  \textgreek{Υλοποίηση Ενεργού Μηχανισμού σε
+  Σύστημα Ομότιμων Βάσεων}}}}}.
+\newblock {{\latintext \textgreek{Ptuqiak'h ergas'ia}}}, {{\latintext KDBS Lab,
+  \textgreek{Εθνικό Μετσόβιο Πολυτεχνείο}}},   2005.
 
 \bibitem{master04}
 {{\latintext { }\textgreek{Ζ. Λάσκαρη}}}.
