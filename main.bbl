@@ -399,6 +399,53 @@
 \newblock \en{[Online]. Available: \url{https://www.postgresql.org/docs/}.
   Accessed: Sep. 16, 2025}.
 
+\bibitem{TTI_RPiGatewayDocs}
+{{\latintext { }{The Things Industries}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em Raspberry Pi LoRaWAN
+  Gateway Documentation}}}}.
+\newblock {{\latintext Online documentation, The Things Industries}}, 2025.
+\newblock \en{[Online]. Available:
+  \url{https://www.thethingsindustries.com/docs/hardware/gateways/models/raspberry-pi/}.
+  Accessed: Sep. 16, 2025}.
+
+\bibitem{RaspberryPi4ProductBrief2025}
+{{\latintext { }{Raspberry Pi Ltd.}}}
+\newblock {\color{\colouredtextcolor} {{\latintext {\em Raspberry Pi 4 Model B
+  Product Brief}}}}.
+\newblock \textgreek{Teqnik'h Anafor'a me arijm'o}, {{\latintext Raspberry Pi
+  Ltd.}},   2025.
+\newblock \en{[Online]. Available:
+  \url{https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-product-brief.pdf}.
+  Accessed: Sep. 16, 2025}.
+
+\bibitem{iC880A_Datasheet_V0_50}
+{{\latintext { }{IMST GmbH / Wireless Solutions}}}.
+\newblock {\color{\colouredtextcolor} {{\latintext {\em WiMOD iC880A Datasheet
+  Version 0.50}}}}.
+\newblock \textgreek{Teqnik'h Anafor'a me arijm'o}, {{\latintext IMST GmbH}},
+  2015.
+\newblock \en{[Online]. Available:
+  \url{https://shop.imst.de/media/pdf/22/67/a8/iC880A_Datasheet_V0_50.pdf}.
+  Accessed: Sep. 16, 2025}.
+
+\bibitem{PZEM004T_Datasheet}
+{{\latintext { }{Peacefair Electronics}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em PZEM-004T V3.0
+  Datasheet and User Manual}}}}.
+\newblock {{\latintext Technical datasheet / user manual}}, 2019.
+\newblock \en{[Online]. Available:
+  \url{https://innovatorsguru.com/wp-content/uploads/2019/06/PZEM-004T-V3.0-Datasheet-User-Manual.pdf}.
+  Accessed: Sep. 16, 2025}.
+
+\bibitem{TTN_Uno_Docs}
+{{\latintext { }{The Things Network}}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em The Things Uno
+  Documentation}}}}.
+\newblock {{\latintext Online documentation}}, 2025.
+\newblock \en{[Online]. Available:
+  \url{https://www.thethingsnetwork.org/docs/devices/uno/}. Accessed: Sep. 16,
+  2025}.
+
 \bibitem{goossens93}
 {{\latintext M.{ }Goossens, F.{ }Mittelbach \textgreek{kai} A.{ }Samarin}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em The LaTeX

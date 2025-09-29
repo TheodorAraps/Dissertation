@@ -27,6 +27,8 @@
 \contentsline {illustration}{\numberline {3.4}{\ignorespaces Αρχιτεκτονική ενός \foreignlanguage {english}{Web Application}, αποτελούμενο από ένα \foreignlanguage {english}{React Frontend App} που επικοινωνεί μέσω \foreignlanguage {english}{Axios/REST APIs} με ένα \foreignlanguage {english}{Spring Boot Backend App}, μετατρέπει δεδομένα \foreignlanguage {english}{DTOs (Data Transfer Objects)} σε οντότητες \foreignlanguage {english}{(Entities)} και εκτελεί διεργασίες αποθήκευσης/ανάκτησης αυτών των δεδομένων από μία \foreignlanguage {english}{PostgreSQL} βάση δεδομένων.}}{80}{illustration.caption.41}%
 \addvspace {10\p@ }
 \contentsline {illustration}{\numberline {4.1}{\ignorespaces Τοπολογία του συστήματος.}}{83}{illustration.caption.42}%
+\contentsline {illustration}{\numberline {4.2}{\ignorespaces Υλοποίηση \foreignlanguage {english}{LoRaWAN Gateway} και σύνδεσμολογία εξαρτημάτων.}}{86}{illustration.caption.46}%
+\contentsline {illustration}{\numberline {4.3}{\ignorespaces Υλοποίηση τριφασικού μετρητή - σύνδεση \foreignlanguage {english}{The Things Uno} με 3 \foreignlanguage {english}{PZEM-004T V3.0}}}{89}{illustration.caption.51}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -37,4 +39,4 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{111}{illustration.caption.49}%
+\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{117}{illustration.caption.58}%

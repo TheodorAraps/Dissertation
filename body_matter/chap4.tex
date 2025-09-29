@@ -4,7 +4,14 @@
 και οι δύο \textbf{τριφασικοί μετρητές}. Δίνεται έμφαση στο σχεδιασμό, στα υλικά και τα 
 χαρακτηριστικά τους, καθώς και στη διασύνδεση και στις τεχνικές επιλογές.
 
-\section{Γενική Αρχιτεκτονική Συσκευών}
+
+% ---------------------------------------------
+% Ενότητα 4.1: Γενική Αρχιτεκτονική Συστήματος
+% ---------------------------------------------
+
+
+
+\section{Γενική Αρχιτεκτονική Συστήματος}
 
 Πριν από την περιγραφή κάθε συσκευής, αξίζει να παρουσιαστεί συνοπτικά η τοπολογία: 
 οι αισθητήρες (μετρητές) επικοινωνούν ασύρματα μέσω \en{LoRaWAN} με το \en{gateway}, το 
@@ -19,4 +26,357 @@
   \label{figure4.1}
 \end{Illustration} 
 
+
+
+% -----------------------------
+% Ενότητα 4.2: LoRaWAN Gateway
+% -----------------------------
+
+
+
 \section{\en{LoRaWAN Gateway}}
+
+
+%%%%   Υποενότητα 4.2.1: Υλικά και κατασκευή   %%%%
+
+
+\subsection{Υλικά και κατασκευή}
+
+Για την κατασκευή του \en{gateway} χρησιμοποιήθηκε ένα \textbf{\en{Raspberry Pi 4 Model B}}, σε συνδυασμό με τη μονάδα συγκεντρωτή
+(\en{concentrator board}) \textbf{\en{iC880A-SPI}} της \en{IMST}. Σύμφωνα με τον οδηγό της \en{The Things Industries} \cite{TTI_RPiGatewayDocs}, 
+αυτές οι συνθέσεις υποστηρίζονται ώστε να κατασκευάζει κανείς ένα προσωπικό \en{gateway} χρησιμοποιώντας τα προαναφερθέντα εξαρτήματα.
+
+Ο ακόλουθος πίνακας συνοψίζει τα βασικά υλικά που χρησιμοποιήθηκαν:
+
+\begin{table}[ht]
+\centering
+\setlength{\tabcolsep}{10pt}        
+\renewcommand{\arraystretch}{1.5}   
+\begin{tabular}{| >{\raggedright\arraybackslash}p{0.38\linewidth}
+                | >{\raggedright\arraybackslash}p{0.52\linewidth} |}
+\hline
+\textbf{Συσκευή / Στοιχείο} & \textbf{Σκοπός / Σχόλιο} \\
+\hline
+1$\times$ \en{Raspberry Pi 4 Model B} & Κεντρικός υπολογιστής και \en{host} λογισμικού \\
+\hline
+1$\times$ \en{Concentrator board iC880A-SPI} & Διαχείριση πακέτων \en{LoRa} σε πολλαπλά κανάλια \\
+\hline
+1$\times$ Κεραία 868$MHz$ 2$dBi$ & Εκπομπή / λήψη ραδιοσημάτων \\
+\hline
+1$\times$ \en{Pigtail} καλώδιο & Σύνδεση κεραίας με \en{iC880A-SPI} \\
+\hline
+7$\times$ \en{Jumper wires, dual female} & Σύνδεση \en{SPI, reset, power lines} \\
+\hline
+1$\times$ Κάρτα \en{microSD, 64GB} & Λειτουργικό σύστημα και λογισμικό \\
+\hline
+1$\times$ Τροφοδοσία (5$V$, $\geq$ 3$A$) & Παροχή, αναγκαία για σταθερή λειτουργία \\
+\hline
+\end{tabular}
+\caption{Βασικά υλικά για το \en{LoRaWAN Gateway}}
+\label{tab:gateway_components}
+\end{table}
+
+
+%%%%   Raspberry Pi 4 Model B   %%%%
+
+
+\subsubsection{\en{Raspberry Pi 4 Model B}}
+
+Το \en{Raspberry Pi 4 Model B} (βλπ Εικόνα \ref{figure4.2}) αποτελεί μια ευέλικτη και ευρύτατα διαδεδομένη πλατφόρμα μικροϋπολογιστή 
+(\en{single-board computer}) που χρησιμοποιείται ευρέως σε έργα \en{IoT}, αυτοματισμού και πρωτότυπης ανάπτυξης. Στηρίζεται σε 
+ανοικτό λογισμικό και κοινοτικά πρότυπα, επιτρέποντας τη χρήση του σε πειραματικά ή παραγωγικά έργα με 
+ευελιξία και χαμηλό κόστος. Υποστηρίζει πλήρες \en{Linux} οικοσύστημα και συνοδεύεται από μια πολύ ενεργή κοινότητα, γεγονός που το καθιστά 
+ιδιαίτερα ελκυστικό για μαθητές και επαγγελματίες που θέλουν να υλοποιήσουν έργα \en{IoT}, 
+αυτοματισμού ή γρήγορου \en{prototyping} \cite{RaspberryPi4ProductBrief2025}. Στο πλαίσιο της 
+παρούσας υλοποίησης, το \en{Raspberry Pi} 4 χρησιμεύει ως κόμβος που «υποδέχεται» και διαχειρίζεται το λογισμικό 
+του \en{gateway}, συμβάλλοντας καθοριστικά στην αξιοπιστία και επεκτασιμότητα του συστήματος. Επιπλέον, αποτελεί και το \en{host} μηχάνημα
+όπου θα φιλοξενηθούν τόσο το λογισμικό του \en{LoRaWAN network server} όσο και η τελική εφαρμογή του χρήστη.
+
+
+
+%%%%   LoRaWAN Concentrator board iC880A-SPI   %%%%
+
+
+\subsubsection{\en{LoRaWAN Concentrator board iC880A-SPI}}
+
+Το \en{iC880A-SPI} (βλπ Εικόνα \ref{figure4.2}) είναι συγκεντρωτής \en{LoRaWAN} που χρησιμοποιείται ως το κύριο στοιχείο ενός \en{gateway}, 
+δηλαδή ως πλήρες \en{RF front-end} που δέχεται ταυτόχρονα πολλαπλά \en{LoRa} πακέτα σε διαφορετικά κανάλια 
+και προωθεί την κίνηση προς τον \en{network server}. Τοποθετείται συνήθως πάνω σε \en{single-board} πλακέτες 
+όπως το \en{Raspberry Pi} και έχει καθιερωθεί σε \en{DIY} και εργαστηριακές υλοποιήσεις λόγω της ευρείας 
+τεκμηρίωσης και της συμβατότητάς του με σύγχρονα λογισμικά \en{gateway} όπως το \en{LoRa Basics Station}. 
+Με αυτό τον τρόπο επιτρέπει την κατασκευή οικονομικών αλλά αξιόπιστων \en{LoRaWAN gateways} που εντάσσονται 
+εύκολα σε δίκτυα όπως το \en{The Things Stack} \cite{iC880A_Datasheet_V0_50}.
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|l|p{0.72\linewidth}|}
+\hline
+\textbf{Τεχνικά Δεδομένα} & \textbf{Περιγραφή} \\
+\hline
+Επεξεργαστής &
+\en{Broadcom BCM2711 quad-core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz} \\
+\hline
+Μνήμη & \en{2}$GB$ \\
+\hline
+Συνδεσιμότητα &
+\en{2.4}$GHz$ \en{and 5.0}$GHz$ \en{IEEE 802.11b/g/n/ac wireless LAN, Bluetooth 5.0, BLE} \\
+& \en{Gigabit Ethernet} \\
+& \en{2} $\times$ \en{USB 3.0 ports, 2}$\times$ \en{USB 2.0 ports} \\
+\hline
+Είσοδοι/ Έξοδοι &
+\en{Standard 40-pin GPIO header} \\
+\hline
+Ήχος και Εικόνα &
+\en{2} $\times$ \en{micro HDMI ports (up to 4Kp60 supported)} \\
+& \en{2-lane MIPI DSI display port} \\
+& \en{2-lane MIPI CSI camera port} \\
+& \en{4-pole stereo audio and composite video port} \\
+\hline
+Πολυμέσα &
+\en{H.265 (4Kp60 decode)} \\
+& \en{H.264 (1080p60 decode, 1080p30 encode)} \\
+& \en{OpenGL ES, 3.0 graphics} \\
+\hline
+Υποστήριξη κάρτας \en{SD} &
+\en{Micro SD card slot for loading operating system and data storage} \\
+\hline
+Ισχύς Εισόδου &
+\en{5}$V$ \en{DC via USB-C connector} (\en{minimum} 3$A$) \\
+& \en{5}$V$ \en{DC via GPIO header} (\en{minimum} 3$A$) \\
+& \en{Power over Ethernet (PoE)-enabled (requires separate PoE HAT)} \\
+\hline
+Περιβάλλον λειτουργίας &
+\en{Operating temperature 0-50\textdegree C} \\
+\hline
+\end{tabular}
+\caption{Τεχνικά χαρακτηριστικά \en{Raspberry Pi 4 Model B}}
+\cite{RaspberryPi4ProductBrief2025}
+\end{table}
+
+
+\begin{table}[ht]
+\centering
+\setlength{\tabcolsep}{10pt}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{| >{\raggedright\arraybackslash}p{0.3\linewidth}
+                | >{\raggedright\arraybackslash}p{0.65\linewidth} |}
+\hline
+\textbf{Τεχνικά Δεδομένα} & \textbf{Περιγραφή} \\
+\hline
+Βασικό \en{Chipset} & \en{Semtech SX1301 baseband processor} + 2$\times$ \en{SX1257 RF transceivers} \\
+\hline
+Συχνότητες & \en{EU868} (διαθέσιμη έκδοση και για \en{US915}) \\
+\hline
+Κανάλια & 8$\times$ \en{LoRa channels} ταυτόχρονα + 1$\times$ \en{FSK channel} \\
+\hline
+Διεπαφή προς \en{Host} & \en{SPI} (3.3$V$ \en{logic level}) \\
+\hline
+Χρονισμός & Είσοδος \en{PPS} από \en{GPS} για συγχρονισμό \\
+\hline
+Σύνδεση Κεραίας & Υποδοχή \en{SMA} 50Ω \\
+\hline
+Τάση / Ισχύς & 5$V$ μέσω ακροδεκτών (κατανάλωση $\thicksim$ 700$mW$) \\
+\hline
+Εφαρμογή & Συγκεντρωτής (\en{concentrator}) για \en{LoRaWAN gateways} \\
+\hline
+Διαστάσεις & 80$mm$ $\times$ 50$mm$ περίπου \\
+\hline
+\end{tabular}
+\caption{Τεχνικά χαρακτηριστικά του \en{iC880A-SPI LoRaWAN Concentrator}}
+\label{tab:ic880a_specs}
+\cite{iC880A_Datasheet_V0_50}
+\end{table}
+
+
+%%%%   Υποενότητα 4.2.2: Συνδεσμολογία και λειτουργία   %%%%
+
+\subsection{Συνδεσμολογία και λειτουργία}
+
+Η συνδεσμολογία μεταξύ \en{Raspberry Pi} και συγκεντρωτή \en{IC880A-SPI} ακολουθεί τις οδηγίες που παρέχει η 
+\en{The Things Industries}: το \en{board} συνδέεται μέσω \en{SPI pins (MOSI, MISO, SCLK, NSS)}, καθώς και 
+\en{reset}, 5$V$ και γείωσης (\en{GND}). Η συνδεσμολογία φαίνεται στην Εικόνα \ref{figure4.2} και περιγράφεται 
+σε επίπεδο ακίδων (\en{pins}) στον Πίνακα \ref{tab:ic880a_rpi_pins}.
+
+Πριν την ενεργοποίηση, είναι απαραίτητο να συνδεθεί η κεραία στο \en{concentrator}, προκειμένου να αποφευχθεί η 
+ανάκλαση ισχύος που θα μπορούσε να βλάψει το \en{hardware}.
+
+Το λογισμικό του \en{gateway} (\en{LoRa Basics Station}) εκτελείται στο 
+\en{Raspberry Pi} και επικοινωνεί με τον συγκεντρωτή, στέλνοντας \en{uplink} μηνύματα προς τον 
+\en{TTS} και λαμβάνοντας τυχόν \en{downlink}. Στην συνέχεια τα δεδομένα αυτά στέλνονται και παρουσιάζονται στην εφαρμογή μας. 
+Οι υπηρεσίες αυτές θα μπορούσαν κάλλιστα να φιλοξενούνται σε διαφορετικές συσκευές (\en{servers}), εντούτοις, στην δική μας 
+υλοποίηση επιλέχθηκε να φιλοξενηθούν με χρήση του \en{Docker} (βλπ Ενότητα \ref{section3.3}) όλες στο ίδιο μηχάνημα 
+(\en{LoRaWAN gateway}) για λόγους απλοποίησης και εξοικονόμησης υλικού. \\
+
+
+\begin{Illustration}[!ht] 
+  \centering
+	\includegraphics[width=1\textwidth]{figures/1st_Implementation_gateway.png} 
+  \caption{Υλοποίηση \en{LoRaWAN Gateway} και σύνδεσμολογία εξαρτημάτων.}
+  \label{figure4.2}
+\end{Illustration} 
+
+\begin{table}[ht]
+\centering
+\setlength{\tabcolsep}{6pt}        
+\renewcommand{\arraystretch}{1.4}   
+\begin{tabular}{| >{\centering\arraybackslash}m{0.22\linewidth}
+                | >{\centering\arraybackslash}m{0.22\linewidth}
+                | >{\centering\arraybackslash}m{0.22\linewidth} |}
+\hline
+\textbf{\en{iC880A pin}} & \textbf{\en{Raspberry Pi pin}} & \textbf{\en{Description}} \\
+\hline
+21 & 2  & 5$V$ \en{power supply} \\
+\hline
+22 & 6  & \en{GND} \\
+\hline
+13 & 22 & \en{Reset} \\
+\hline
+14 & 23 & \en{SPI Clock} \\
+\hline
+15 & 21 & \en{MISO} \\
+\hline
+16 & 19 & \en{MOSI} \\
+\hline
+17 & 24 & \en{NSS} \\
+\hline
+\end{tabular}
+\caption{Συνδεσομολογία ακίδων (\en{pins}) \en{iC880A-SPI} με \en{Raspberry Pi 4 Model B}}
+\label{tab:ic880a_rpi_pins}
+\end{table}
+
+
+
+% --------------------------------
+% Ενότητα 4.3 Τριφασικοί Μετρητές
+% --------------------------------
+
+
+
+
+\newpage
+\section{Τριφασικοί Μετρητές}
+
+\subsection{Υλικά και αρχιτεκτονική}
+
+Οι τριφασικοί μετρητές που κατασκευάστηκαν έχουν ως στόχο την καταγραφή ηλεκτρικών 
+μεγεθών ανά φάση και τη μετάδοση των μετρήσεων μέσω \en{LoRaWAN} προς το \en{gateway}. 
+Κάθε μετρητής αποτελείται από μία πλακέτα \textbf{\en{The Things Uno}} ως κεντρικό 
+μικροελεγκτή και \en{LoRaWAN} πομπό, καθώς και από \textbf{τρεις} αισθητήρες \textbf{\en{PZEM-004T V3.0}} 
+(έναν για κάθε φάση). Οι \en{PZEM-004T} μετρούν τάση, ρεύμα, ενεργό ισχύ, ενέργεια, συντελεστή ισχύος 
+και συχνότητα, εκθέτοντας τις τιμές μέσω σειριακής διεπαφής \en{TTL/Modbus-RTU}. Οι μετρήσεις συλλέγονται 
+από την \en{The Things Uno} και αποστέλλονται ασύρματα μέσω \en{LoRaWAN} στο δίκτυο.
+
+Ο ακόλουθος πίνακας συνοψίζει τα βασικά υλικά που χρησιμοποιήθηκαν για την κατασκευή \textbf{ενός} τριφασικού μετρητή. 
+Για την παρούσα υλοποίηση κατασκευάστηκαν δύο όμοιες μονάδες.
+
+\begin{table}[ht]
+\centering
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{0.35\linewidth}|>{\raggedright\arraybackslash}p{0.55\linewidth}|}
+\hline
+\textbf{Συσκευή / Στοιχείο} & \textbf{Σκοπός / Σχόλιο} \\
+\hline
+1 $\times$ \en{The Things Uno} & Κεντρικός μικροελεγκτής \en{ATmega32U4} με \en{LoRaWAN} μονάδα \en{Microchip RN2483/RN2903}. \\
+\hline
+3 $\times$ \en{PZEM-004T V3.0} & Μετρητική μονάδα \en{AC} ανά φάση με έξοδο \en{TTL/Modbus-RTU}. \\
+\hline
+3 $\times$ \en{Current Transformers (CT)} & Δακτύλιοι ρεύματος κατάλληλοι για τη σειρά \en{PZEM-004T V3.0} (π.χ. 100$A$). \\
+\hline
+3 $\times$ Καλωδιώσεις \en{TTL} και ισχύος & Σύνδεση \en{TX/RX/GND/5}$V$ προς τους \en{PZEM} και τροφοδοσία πλακετών. \\
+\hline
+% Κέλυφος και απομόνωση & Μηχανική προστασία και ασφαλής διέλευση αγωγών φάσεων και \en{CT}. \\
+% \hline
+\end{tabular}
+\caption{Κατάλογος υλικών για έναν τριφασικό μετρητή}
+\label{tab:meter_bom}
+\end{table}
+
+
+\subsubsection{\en{PZEM-004T V3.0}}
+
+Ο \en{PZEM-004T V3.0} (βλπ Εικόνα \ref{figure4.3}) είναι ένας πολυλειτουργικός ψηφιακός μετρητής εναλλασσόμενης ενέργειας \en{(Alternating Current, AC)}, σχεδιασμένος για 
+τη μέτρηση τάσης, ρεύματος, ενεργού ισχύος, συχνότητας, συντελεστή ισχύος και της συσσωρευμένης κατανάλωσης 
+ενέργειας σε μονοφασικά συστήματα εναλλασσόμενου ρεύματος. Εκθέτει τις τιμές μέσω \en{TTL} με 
+\en{Modbus-RTU} σε 9600$bps$ εξ ορισμού. Υπάρχουν παραλλαγές για 10$A$ (με εσωτερικό \en{shunt}) και 100$A$ 
+(με εξωτερικό \en{CT}) \cite{PZEM004T_Datasheet}. 
+
+\begin{table}[ht]
+\centering
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{0.36\linewidth}|>{\raggedright\arraybackslash}p{0.54\linewidth}|}
+\hline
+\textbf{Παράμετρος} & \textbf{Ενδεικτικές προδιαγραφές \en{V3.0}} \\
+\hline
+Εύρος τάσης & 80-260$VAC$ \\
+\hline
+Εύρος ρεύματος & 0-100$A$ με εξωτερικό \en{CT} \\
+\hline
+Μετρούμενες ποσότητες & Τάση, ρεύμα, ενεργός ισχύς, ενέργεια, συχνότητα, \en{power factor} \\
+\hline
+Διεπαφή επικοινωνίας & \en{TTL/Modbus-RTU}, 9600$bps$ προεπιλογή \\
+\hline
+Τροφοδοσία & Από την πλευρά της τάσης \en{AC} εισόδου \\
+\hline
+Τυπική ακρίβεια & $\pm$0.5-1\% για βασικές μετρήσεις (ενδεικτικό, ανά τεκμηρίωση \en{V3.0}) \\
+\hline
+\end{tabular}
+\caption{Τεχνικά χαρακτηριστικά \en{PZEM-004T V3.0}}
+\label{tab:pzem_specs}
+\cite{PZEM004T_Datasheet}
+\end{table}
+
+\subsubsection{\en{The Things Uno}}
+
+Η \en{The Things Uno} (βλπ Εικόνα \ref{figure4.3}) της εταιρείας \en{The Things Industries} βασίζεται στο \en{Arduino Leonardo} με μικροελεγκτή \en{ATmega32U4} και ενσωματωμένη μονάδα 
+\en{LoRaWAN} \en{Microchip RN2483} (για \en{EU868}) ή \en{RN2903} (για \en{US915}). Είναι πλήρως συμβατή με το 
+\en{Arduino IDE} και τις υπάρχουσες \en{Arduino shields}, ενώ στο επίπεδο λογισμικού η επικοινωνία με τη μονάδα 
+\en{LoRa} γίνεται μέσω της \en{Serial1}. Η πλατφόρμα προσφέρεται για γρήγορο \en{prototyping} και εύκολη ένταξη 
+με το λογισμικό \en{The Things Stack} \cite{TTN_Uno_Docs}.
+
+\begin{table}[ht]
+\centering
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{0.36\linewidth}|>{\raggedright\arraybackslash}p{0.54\linewidth}|}
+\hline
+\textbf{Στοιχείο} & \textbf{Περιγραφή} \\
+\hline
+Κεντρικός \en{MCU} & \en{ATmega32U4} (\en{Arduino Leonardo}-compatible) \\
+\hline
+\en{LoRaWAN} μονάδα & \en{Microchip RN2483} (\en{EU868}) ή \en{RN2903} (\en{US915}) \\
+\hline
+Προγραμματισμός & \en{Arduino IDE}, \en{TheThingsNetwork} βιβλιοθήκη, \en{Serial1} προς \en{RN2483/RN2903} \\
+\hline
+Διεπαφές & Ψηφιακές \en{I/O}, \en{UART}, \en{SPI}, \en{I2C}, \en{USB} \\
+\hline
+Τροφοδοσία & 7-9$V$ \en{DC power adapter} με 2.1$mm$ \en{jack plug} ή 5$V$ \en{micro USB} \\
+\hline
+Ενδεικτική εμβέλεια & Έως τάξης χιλιομέτρων σε \en{LoRaWAN}, ανάλογα με περιβάλλον και κεραία \\
+\hline
+\end{tabular}
+\caption{Τεχνικά χαρακτηριστικά του \en{The Things Uno}}
+\label{tab:things_uno_specs}
+\end{table}
+
+
+
+
+\subsection{Συνδεσμολογία και λειτουργία}
+
+Η \en{The Things Uno} συλλέγει τις τιμές από τις τρεις μονάδες \en{PZEM}, δημιουργεί ένα συνολικό πακέτο δεδομένων (τρεις φάσεις) 
+και στέλνει ασύρματα μέσω \en{LoRaWAN} στο \en{gateway}. Κατά την ένταξη, η συσκευή πραγματοποιεί \en{join procedure} με τον 
+\en{Join Server} του \en{TTS} και λαμβάνει τα κλειδιά συνεδρίας για ασφαλή διαδρομή δεδομένων. Οι μετρήσεις αποστέλλονται 
+περιοδικά με προκαθορισμένο διάστημα.
+
+Η εικόνα παρακάτω δείχνει τη συνδεσμολογία μεταξύ της πλακέτας \en{The Things Uno} και των τριών \en{PZEM modules}:
+
+\begin{Illustration}[ht]
+\centering
+\includegraphics[width=1\textwidth]{figures/1st_implementation_el_meter.png}
+\caption{Υλοποίηση τριφασικού μετρητή - σύνδεση \en{The Things Uno} με 3 \en{PZEM-004T V3.0}}
+\label{figure4.3}
+\end{Illustration}
+
