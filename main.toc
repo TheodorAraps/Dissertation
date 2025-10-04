@@ -222,25 +222,25 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \contentsline {subsubsection}{\textbf {Συμβατότητα με \foreignlanguage {english}{The Things Stack}}}{73}{illustration.caption.39}%
-\contentsline {subsubsection}{\textbf {Πλεονεκτήματα}}{73}{illustration.caption.39}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
+\contentsline {subsubsection}{\textbf {Πλεονεκτήματα}}{74}{illustration.caption.39}%
 \contentsline {subsubsection}{\textbf {Προκλήσεις}}{74}{illustration.caption.39}%
-\contentsline {section}{\numberline {3.3}\foreignlanguage {english}{Docker} και \foreignlanguage {english}{Docker Compose}}{74}{section.3.3}%
-\contentsline {subsubsection}{\textbf {Αρχιτεκτονική \foreignlanguage {english}{Docker (Client-Server)}}}{74}{section.3.3}%
+\contentsline {section}{\numberline {3.3}\foreignlanguage {english}{Docker}}{74}{section.3.3}%
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\contentsline {subsubsection}{\textbf {Αρχιτεκτονική \foreignlanguage {english}{Docker (Client-Server)}}}{75}{section.3.3}%
+\contentsline {subsubsection}{\textbf {\foreignlanguage {english}{Docker container}}}{75}{illustration.caption.40}%
+\contentsline {subsubsection}{\textbf {\foreignlanguage {english}{Docker compose}}}{75}{illustration.caption.40}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {subsubsection}{\textbf {\foreignlanguage {english}{Docker Container}}}{76}{illustration.caption.40}%
-\contentsline {subsubsection}{\textbf {\foreignlanguage {english}{Docker Compose}}}{76}{illustration.caption.40}%
-\contentsline {subsubsection}{\textbf {Πλεονεκτήματα}}{76}{illustration.caption.40}%
-\babel@toc {greek}{}\relax 
-\babel@toc {greek}{}\relax 
+\contentsline {subsubsection}{\textbf {Πλεονεκτήματα}}{77}{illustration.caption.40}%
 \contentsline {subsubsection}{\textbf {Προκλήσεις}}{77}{illustration.caption.40}%
 \contentsline {section}{\numberline {3.4}\foreignlanguage {english}{Spring Boot}}{77}{section.3.4}%
 \babel@toc {greek}{}\relax 
@@ -249,9 +249,9 @@
 \babel@toc {greek}{}\relax 
 \contentsline {subsubsection}{\textbf {Πλεονεκτήματα}}{78}{section.3.4}%
 \contentsline {subsubsection}{\textbf {Προκλήσεις}}{78}{section.3.4}%
-\contentsline {section}{\numberline {3.5}\foreignlanguage {english}{ReactJS}}{78}{section.3.5}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
+\contentsline {section}{\numberline {3.5}\foreignlanguage {english}{ReactJS}}{79}{section.3.5}%
 \contentsline {subsubsection}{\textbf {Πλεονεκτήματα}}{79}{section.3.5}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
