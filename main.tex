@@ -42,8 +42,57 @@
 %
 \documentclass[modern,hyperref,watermark,histinit,noindex,plain,newlogo]{ntua-thesis}
 \usepackage{booktabs}
+\usepackage{listings}
+\usepackage{xcolor}
 \usepackage{tabularx,ragged2e,makecell}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+% --- Code listings setup ---
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Colors
+\definecolor{codebg}{HTML}{F8F9FB}
+\definecolor{codetext}{HTML}{1F2937}
+\definecolor{codekw}{HTML}{0B6E99}     % keywords
+\definecolor{codestr}{HTML}{2C7A7B}    % strings
+\definecolor{codecm}{HTML}{6B7280}     % comments
+\definecolor{codenums}{HTML}{9CA3AF}   % line numbers
+\definecolor{codeframe}{HTML}{E5E7EB}  % frame border
+
+% Monospace font (optional but nice)
+% For pdfLaTeX:
+\usepackage[scaled=0.92]{inconsolata}
+% For Xe/LuaLaTeX comment the line above and use:
+% \usepackage{fontspec}
+% \setmonofont{JetBrains Mono} % or Fira Code / Inconsolata, etc.
+
+\lstdefinestyle{bashstyle}{
+  language=bash,
+  backgroundcolor=\color{codebg},
+  basicstyle=\linespread{1.05}\ttfamily\small\color{codetext},
+  keywordstyle=\bfseries\color{codekw},
+  stringstyle=\color{codestr},
+  commentstyle=\itshape\color{codecm},
+  numberstyle=\scriptsize\color{codenums},
+  numbers=left,
+  numbersep=10pt,
+  frame=single,
+  rulecolor=\color{codeframe},
+  frameround=tttt,
+  framesep=8pt,
+  xleftmargin=1.5em,
+  xrightmargin=0.5em,
+  showstringspaces=false,
+  tabsize=2,
+  upquote=true,
+  columns=fullflexible,
+  keepspaces=true,
+  breaklines=true,
+  breakatwhitespace=true,
+  captionpos=b
+}
+
 
 % \usepackage{tabularx}
 % \usepackage[LGR,T1]{fontenc}   % enable Greek (LGR) and Latin (T1) encodings

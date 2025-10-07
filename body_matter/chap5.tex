@@ -1,50 +1,173 @@
-\chapter{Υλοποίηση}
-\InitialCharacter{Σ}το κεφάλαιο αυτό περιγράφεται η υλοποίηση του συστήματος, με βάση τη μελέτη που παρουσιάστηκε στο προηγούμενο κεφάλαιο. Αρχικά παρουσιάζεται η πλατφόρμα και τα προγραμματιστικά εργαλεία που χρησιμοποιήθηκαν. Στη συνέχεια δίνονται οι λεπτομέρειες υλοποίησης για τους βασικούς αλγορίθμους του συστήματος καθώς και η δομή του κώδικα.
+\chapter{Πρακτική Υλοποίηση του Συστήματος}
+\InitialCharacter{Σ}το κεφάλαιο αυτό παρουσιάζεται βήμα προς βήμα η πρακτική υλοποίηση 
+του συστήματος, από την αρχική εγκατάσταση μέχρι την πλήρη ολοκλήρωση (\en{integration}) 
+των υποσυστημάτων. Αφετηρία αποτελεί η προετοιμασία του \en{LoRaWAN gateway}, το οποίο 
+φιλοξενεί με χρήση \en{Docker} τις υπηρεσίες \en{The Things Stack} και 
+\en{LoRa Basics Station}, με αναλυτικές ρυθμίσεις, εντολές και επιλογές παραμετροποίησης 
+ώστε να συνδεθεί με ασφάλεια και να λειτουργεί αξιόπιστα. Στη συνέχεια τεκμηριώνεται ο 
+προγραμματισμός των τριφασικών μετρητών και η σύνδεσή τους με το \en{gateway}, με 
+έμφαση στη ροή των δεδομένων και τον τρόπο διαμόρφωσης των \en{uplinks}. Τέλος, 
+περιγράφεται η υλοποίηση της τελικής \en{web} εφαρμογής και η ανάπτυξή της στο ίδιο 
+\en{gateway}, ολοκληρώνοντας μια ενιαία υποδομή από το πεδίο μέχρι το περιβάλλον χρήστη.
 
-\section{Λεπτομέρειες υλοποίησης}
-Στην ενότητα αυτή παρουσιάζονται οι βασικοί αλγόριθμοι που
-αναπτύχθηκαν καθώς και λεπτομέρειες σχετικά με την υλοποίηση της
-επικοινωνίας των κόμβων.
 
-\subsection{Αλγόριθμοι}
 
-\subsubsection{Αλγόριθμος εισαγωγής δεδομένων}
-Όταν ένας κόμβος εισέρχεται για πρώτη φορά στο σύστημα, αρχικά
-δημιουργεί το σχήμα που θέλει χρησιμοποιώντας το \en{RDFSculpt}.
-Στη συνέχεια................
 
-\noindent\textbf{Παράδειγμα} \\
+% ----------------------------------------
+% Ενότητα 5.1 Προετοιμασία LoRaWAN gateway
+% ----------------------------------------
 
-Έστω ότι ο κόμβος έχει επιλέξει να συμμετέχει στο σύστημα με το \en{RDF} σχήμα που φαίνεται
-στο Σχήμα. Έστω επίσης ότι από το \en{SQL} ερώτημα που έχει κάνει στη σχεσιακη
-βάση, έχει προκύψει η όψη που φαίνεται στον Πίνακα. Για τις ανάγκες του παραδείγματος θεωρούμε
-ότι η όψη αυτή περιέχει μόνο μία εγγραφή.
 
-...........................
 
-\section{Περιγραφή κλάσεων}
-Στην ενότητα αυτή δίνεται μια σύντομη περιγραφή των κλάσεων,
-των πεδίων και των μεθόδων που τις απαρτίζουν.
 
-\subsection{\en{public class FirstUi}}
-\noindent Η κλάση αυτή κατασκευάζει την οθόνη εισαγωγής του χρήστη στο σύστημα.\\
+\section{Προετοιμασία \en{LoRaWAN gateway}}
 
-\noindent\textbf{Πεδία}
+
+%%%%   Υποενότητα 5.1.1: Διασύνδεση Hardware   %%%%
+
+\subsection{Διασύνδεση \en{Hardware}}
+Αρχικά ξεκινάμε με την σύνδεση των επιμέρους εξαρτημάτων όπως περιγράφηκε στην Ενότητα \ref{sec:4.2}, 
+σύμφωνα με την Εικόνα \ref{figure4.2} και τον Πίνακα \ref{tab:ic880a_rpi_pins}:
+
+\begin{Illustration}[!ht] 
+  \centering
+	\includegraphics[width=0.85\textwidth]{figures/LoRaWAN_gateway_setup.jpg} 
+  \caption{Τελική συνδεσμολογία των εξαρτημάτων.}
+  \label{figure5.1}
+\end{Illustration} 
+
+%%%%   Υποενότητα 5.1.2: Εγκατάσταση λειτουργικού συστήματος   %%%%
+
+\subsection{Εγκατάσταση λειτουργικού συστήματος}
+Για την αρχική προετοιμασία του \en{Raspberry Pi} απαιτείται η εγκατάσταση του 
+λειτουργικού συστήματος στην κάρτα \en{microSD}. Η διαδικασία μπορεί να γίνει πλήρως 
+\en{headless} χωρίς οθόνη ή πληκτρολόγιο, αξιοποιώντας το εργαλείο 
+\en{Raspberry Pi Imager}. Ακολουθούν τα απαραίτητα βήματα, με πρόσθετες ρυθμίσεις 
+ώστε το σύστημα να ξεκινήσει έτοιμο για δικτυακή πρόσβαση και παραμετροποίηση.
+
+\begin{enumerate}
+\item Συνδέουμε την κάρτα \en{microSD} στον υπολογιστή μέσω \en{card reader} και ανοίγουμε το \en{Raspberry Pi Imager}.
+\begin{Illustration}[!ht] 
+  \centering
+	\includegraphics[width=0.7\textwidth]{figures/Raspberry_Pi_imager_1.png} 
+  \caption{\en{Raspberry Pi Imager.}}
+  \label{figure5.2}
+\end{Illustration} 
+
+\item Επιλέγουμε \textbf{\en{Choose Device}} και από τη λίστα διαλέγουμε \textbf{\en{Raspberry Pi 4}}, που είναι το μοντέλο της συσκευής Raspberry Pi που χρησιμοποιύμε.
+\item Επιλέγουμε \textbf{\en{Choose OS}} και από τη λίστα διαλέγουμε \textbf{\en{Raspberry Pi OS Lite (64-bit)}}, που είναι η έκδοση χωρίς γραφικό περιβάλλον και ενδείκνυται για \en{servers}.
+\item Πατάμε \textbf{\en{Choose Storage}} και επιλέγουμε τη σωστή \en{microSD}.
+\item Πατάμε \textbf{\en{Next}} και στο αναδυόμενο παράθυρο επιλέγουμε \textbf{\en{Edit Settings}} και ρυθμίζουμε:
+
+\begin{Illustration}[!ht] 
+  \centering
+	\includegraphics[width=0.7\textwidth]{figures/Raspberry_Pi_imager_2.png} 
+  \caption{\en{Apply OS Customisation settings Option}.}
+  \label{figure5.3}
+\end{Illustration} 
+
+Στην καρτέλα \textbf{\en{General}}:
+\begin{itemize}
+\item \textbf{\en{set Hostname}}: Θέτουμε \en{loragateway} ώστε η συσκευή να είναι προσβάσιμη στο δίκτυο ως \en{loragateway.local}.
+\item \textbf{\en{Set username and password}}: ορίζουμε μη προεπιλεγμένα διαπιστευτήρια για λόγους ασφάλειας.
+\item \textbf{\en{Configure wireless LAN (optional)}}: εφόσον γίνει αρχικά σύνδεση μέσω \en{Wi-Fi}, συμπληρώνουμε \en{SSID}, \en{password} και \en{country} \en{GR}. Έτσι η συσκευή μπορεί να συνδεθεί στο δίκτυό μας απευθείας, χωρίς περαιτέρω ρυθμίσεις. 
+\end{itemize}
+\begin{Illustration}[!ht] 
+  \centering
+	\includegraphics[width=0.7\textwidth]{figures/Raspberry_Pi_imager_3.png} 
+  \caption{\en{General OS Customisation settings}.}
+  \label{figure5.4}
+\end{Illustration} 
+
+Στην καρτέλα \textbf{\en{Services}}:
+\begin{itemize}
+\item \textbf{\en{Enable SSH}}: ενεργοποιούμε \en{SSH} για απομακρυσμένη πρόσβαση με \en{password}.
+\end{itemize}
+\begin{Illustration}[!ht] 
+  \centering
+	\includegraphics[width=0.7\textwidth]{figures/Raspberry_Pi_imager_4.png} 
+  \caption{\en{Services OS Customisation settings}.}
+  \label{figure5.5}
+\end{Illustration} 
+
+Τέλος, πατάμε \textbf{\en{Save}} και ύστερα \textbf{\en{Yes}} στο προηγούμενο αναδυόμενο 
+παράθυρο ώστε να εφαρμόσουμε τις ρυθμίσεις που κάναμε και να ξεκινήσει η εγγραφή της εικόνας του 
+λειτουργικού συστήματος στην κάρτα \en{microSD}. Επιβεβαιώνουμε την επαλήθευση και αφαιρούμε με ασφάλεια το μέσο.
+
+\item Τοποθετούμε την \en{microSD} στο \en{Raspberry Pi} και συνδέουμε την τροφοδοσία. Το σύστημα εκκινεί σε λίγα δευτερόλεπτα.
+\item Από τον υπολογιστή μας συνδεόμαστε απομακρυσμένα με \en{SSH}:
+
 
 \begin{itemize}
-\item\src{private GridBagLayout blayout} \\
-Το \en{layout} για όλα τα \en{Panel}.
-\item\src{private GridBagConstraints con} \\
-Τα \en{constraints} για το \en{layout}.
-\item\src{private Icon arrowR} \\
-Εικονίδιο για το κουμπί \en{Next}.
+\item Εντοπίζουμε τη διεύθυνση \en{IP} από το \en{router} μας (στην περίπτωσή μας έχουμε 192.168.0.100) και εκτελούμε: 
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle, label={lst:apt-upgrade}]
+ssh loragw@192.168.0.100
+\end{lstlisting}
+\end{otherlanguage*}
+\item Βάζουμε τον κωδικό που θέσαμε προηγουμένως για τον χρήστη \en{loragw} και συνδεόμαστε επιτυχώς.
 \end{itemize}
+\item Μετά την πρώτη σύνδεση, εκτελούμε βασικές ενημερώσεις συστήματος και εργαλείων συντήρησης:
 
-\noindent\textbf{Μέθοδοι}
 
-\begin{itemize}
-\item\src{public FirstUi()}\\
-Ο κατασκευαστής της κλάσης ο οποίος καλεί την \en{createEntryFrame()}.
-\item\src{private void createEntryFrame()}\\
-Μέθοδος που κατασκευάζει το en{frame}.
-\end{itemize}
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle, label={lst:apt-upgrade}]
+sudo apt update && sudo apt full-upgrade -y
+sudo reboot
+\end{lstlisting}
+\end{otherlanguage*}
+
+
+
+\medskip
+
+\item Μόλις ολοκληρωθεί η εγκατάσταση, για να εξασφαλιστεί ο συγχρονισμός και η σωστή 
+επικοινωνία των δύο συσκευών, χρειάζεται να ενεργοποιηθεί η διεπαφή \en{SPI} από τις 
+ρυθμίσεις του \en{Raspberry Pi}. Αυτό γίνεται ανοίγοντας το εργαλείο παραμετροποίησης 
+\en{Raspberry Pi Software Configuration Tool} με την εντολή:
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle, label={lst:apt-upgrade}]
++sudo raspi-config
+\end{lstlisting}
+\end{otherlanguage*}
+
+Από το μενού που εμφανίζεται επιλέγουμε \textbf{\en{Interface options}}.
+
+\begin{Illustration}[!ht] 
+  \centering
+	\includegraphics[width=0.9\textwidth]{figures/Raspi_config.jpg} 
+  \caption{Εργαλείο παραµετροποίησης λογισµικού του \en{Raspberry Pi}}
+  \label{figure5.6}
+\end{Illustration} 
+
+\newpage
+Έπειτα, επιλέγουµε το \textbf{\en{I4 SPI}} και απαντάµε µε \en{yes} στο αναδυόµενο παράθυρο που µας
+ρωτάει αν θέλουμε να ενεργοποιήσουμε την προαναφερθείσα διεπαφή:
+
+\begin{Illustration}[!ht] 
+  \centering
+	\includegraphics[width=0.9\textwidth]{figures/Raspi_config_2.jpg} 
+  \caption{Επιλογή ενεργοποιήσης διεπαφής \en{SPI}}
+  \label{figure5.7}
+\end{Illustration} 
+
+Τέλος, πατάμε \en{Esc} στο πληκτρολόγιο ώστε να βγούμε από το εργαλείο \en{raspi-config}.
+
+\item Ολοκληρώνουμε την διαδικασία εγκατάστασης και παραμετροποίησης του λειτουργικού συστήματος εγκαθιστώντας ορισμένα απαραίτητα εργαλεία για το στήσιμο των υπηρεσιών, τρέχοντας την εντολή:
+\newpage
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle, label={lst:apt-upgrade}]
+sudo apt-get install git gcc make
+\end{lstlisting}
+\end{otherlanguage*}
+
+Με αυτά τα βήματα, το \en{Raspberry Pi OS Lite} είναι έτοιμο για την εγκατάσταση των υπηρεσιών που 
+θα φιλοξενηθούν αργότερα με \en{Docker} (\en{The Things Stack, LoRa Basics Station, web} 
+εφαρμογή).
+\end{enumerate}
+
+
+%%%%   Υποενότητα 5.1.3: Εγκατάσταση του The Things Stack   %%%%
+
+\subsection{Εγκατάσταση του \en{The Things Stack}}
+
