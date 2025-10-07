@@ -160,14 +160,113 @@ sudo reboot
 sudo apt-get install git gcc make
 \end{lstlisting}
 \end{otherlanguage*}
-
-Με αυτά τα βήματα, το \en{Raspberry Pi OS Lite} είναι έτοιμο για την εγκατάσταση των υπηρεσιών που 
-θα φιλοξενηθούν αργότερα με \en{Docker} (\en{The Things Stack, LoRa Basics Station, web} 
-εφαρμογή).
 \end{enumerate}
 
+Με αυτά τα βήματα, το \en{Raspberry Pi OS Lite} είναι έτοιμο για την εγκατάσταση των εργαλείων και 
+των υπηρεσιών που που θα χρειαστούν για την λειτουργία του συστήματός μας.
 
-%%%%   Υποενότητα 5.1.3: Εγκατάσταση του The Things Stack   %%%%
+
+%%%%   Υποενότητα 5.1.3: Εγκατάσταση Docker και Docker Compose   %%%%
+
+
+\subsection{Εγκατάσταση \en{Docker} και \en{Docker Compose}}
+Για την ομαλή φιλοξενία των υπηρεσιών (\en{The Things Stack}, \en{LoRa Basics Station} και αργότερα της 
+\en{web} εφαρμογής) στο \en{Raspberry Pi}, εγκαθίσταται το \en{Docker Engine} μαζί με το 
+\en{container runtime} \en{containerd} και το πρόσθετο \en{Docker Compose} (νέας γενιάς ως 
+\en{docker compose} \en{plugin}). Παρακάτω παρατίθενται τα βήματα που εκτελέστηκαν, με σύντομη επεξήγηση 
+για κάθε εντολή.
+
+\begin{itemize}
+\item Κατεβάζουμε με ασφάλεια το \en{script} (εκτελέσιμο αρχείο εντολών) εγκατάστασης του 
+\en{Docker} από τον επίσημο ιστότοπο και το αποθηκεύουμε ως \en{get-docker.sh}.
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+curl -fsSL https://get.docker.com -o get-docker.sh
+\end{lstlisting}
+\end{otherlanguage*}
+
+\item Τρέχουμε το \en{script} ως \en{root} χρήστης και εγκαθιστούμε το \en{Docker Engine}, 
+τον \en{containerd} και τα απαιτούμενα πακέτα (\en{packages}) για να λειτουργήσει ομαλά το \en{Docker}.
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+sudo sh get-docker.sh
+\end{lstlisting}
+\end{otherlanguage*}
+
+\item Δημιουργούμε ένα \en{Unix group} με όνομα \en{docker}, ώστε οι χρήστες-μέλη του 
+να μπορούν να εκτελούν εντολές \en{docker} χωρίς το πρόθεμα \en{sudo} (παρέχει προνόμοια 
+\en{root} χρήστη). Αν υπάρχει ήδη, η εντολή απλά αποτυγχάνει χωρίς κίνδυνο.
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+sudo groupadd docker
+\end{lstlisting}
+\end{otherlanguage*}
+
+\item Εντάσσουμε τον τωρινό χρήστη του περιβάλλοντος (\en{\$USER}, στην περίπτωση μας τον 
+loragw που έχουμε συνδεθεί) στο \en{group} \en{docker} για \en{non-root} χρήση του \en{Docker}.
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+sudo usermod -aG docker $USER
+\end{lstlisting}
+\end{otherlanguage*}
+
+\item Δημιουργούμε ένα καινούριο \en{shell session} και θέτουμε τον χρήστη μας ως μέλος του \en{docker group} 
+χωρίς να απαιτείται πλήρης αποσύνδεση/επανασύνδεση (\en{re-login}). Εναλλακτικά, μπορούμε να κάνουμε \en{logout/login}.
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+newgrp docker
+\end{lstlisting}
+\end{otherlanguage*}
+
+% \paragraph{Ενεργοποίηση \en{Docker} στην εκκίνηση.}
+\item Θέτουμε την υπηρεσία \en{docker.service} να εκκινεί αυτόματα σε κάθε εκκίνηση (\en{boot}) του 
+συστήματος (\en{systemd enable}).
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+sudo systemctl enable docker.service
+\end{lstlisting}
+\end{otherlanguage*}
+
+\pagebreak
+
+\item Αντίστοιχα, ενεργοποιούμε και το \en{containerd.service} (το \en{runtime} που χρησιμοποιεί 
+το \en{Docker Engine}).
+
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+sudo systemctl enable containerd.service
+\end{lstlisting}
+\end{otherlanguage*}
+\end{itemize}
+
+\subsubsection{(Προαιρετικό) Επαλήθευση εγκατάστασης}
+
+\noindent Ελέγχούμε ότι το \en{Docker Engine} κι το \en{Compose} \en{plugin} είναι διαθέσιμα. 
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+docker --version
+docker compose version
+\end{lstlisting}
+\end{otherlanguage*}
+
+\noindent Αν η δεύτερη εντολή δεν επιστρέψει έκδοση, εγκαθιστούμε το \en{plugin}. 
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+sudo apt-get install docker-compose-plugin
+\end{lstlisting}
+\end{otherlanguage*}
+
+\subsubsection{(Προαιρετικό) Δοκιμαστικό \en{run}.}
+\noindent Με την ακόλουθη εντολή τραβάμε και εκτελούμε ένα ελαφρύ δοκιμαστικό \en{container} για να 
+επαληθεύσουμε ότι ο \en{Docker} λειτουργεί σωστά χωρίς \en{sudo}.
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+docker run --rm hello-world
+\end{lstlisting}
+\end{otherlanguage*}
+
+
+%%%%   Υποενότητα 5.1.4: Εγκατάσταση του The Things Stack   %%%%
 
 \subsection{Εγκατάσταση του \en{The Things Stack}}
 
