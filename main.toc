@@ -330,6 +330,12 @@
 \contentsline {subsubsection}{(Προαιρετικό) Επαλήθευση εγκατάστασης}{99}{lstnumber.-11.1}%
 \contentsline {subsubsection}{(Προαιρετικό) Δοκιμαστικό \foreignlanguage {english}{run}.}{99}{lstnumber.-13.1}%
 \contentsline {subsection}{\numberline {5.1.4}Εγκατάσταση του \foreignlanguage {english}{The Things Stack}}{99}{subsection.5.1.4}%
+\contentsline {subsubsection}{Λήψη πηγαίου κώδικα}{99}{subsection.5.1.4}%
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\contentsline {paragraph}{Παραμετροποίηση \foreignlanguage {english}{docker-compose}.}{100}{lstnumber.-15.4}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \contentsline {chapter}{\numberline {6}Έλεγχος}{101}{chapter.6}%
@@ -413,8 +419,10 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
 \vspace \bigskipamount 
-\contentsline {chapter}{Βιβλιογραφία}{129}{appendix*.66}%
+\contentsline {chapter}{Βιβλιογραφία}{130}{appendix*.66}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \contentsline {chapter}{Συντομογραφίες - Αρκτικόλεξα - Ακρωνύμια}{131}{appendix*.67}%

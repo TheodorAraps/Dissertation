@@ -270,3 +270,35 @@ docker run --rm hello-world
 
 \subsection{Εγκατάσταση του \en{The Things Stack}}
 
+Για την εγκατάσταση του \en{The Things Stack} αξιοποιήθηκε η έτοιμη διάταξη \en{Docker} 
+από το ανοιχτού κώδικα αποθετήριο (\en{repsitory}) του \en{GitHub} \en{xoseperez/the-things-stack-docker} \cite{XosePerez_TheThingsStackDocker}, η οποία προσφέρει 
+ένα πλήρως παραμετροποιήσιμο \en{compose} περιβάλλον (υπηρεσίες \en{stack}, \en{PostgreSQL}, 
+\en{Redis}, \en{MQTT} προαιρετικά, \en{reverse proxy}/\en{TLS} κ.ά.) και βασίζεται στο \en{official image} του \en{The Things Stack} της \en{The Things Industries}. Η ίδια λογική 
+χρησιμοποιήθηκε και αργότερα για το \en{LoRa Basics Station} με το αντίστοιχο αποθετήριο 
+του ίδιου δημιουργού. Η επιλογή των συγκεκριμένων αποθετηρίων έγινε επείδη απλοποιούν τη διαδικασία εγκατάστασης και 
+παραμετροποίησης των υπηρεσιών αυτών και εξασφαλίζουν την εύρυθμη λειτουργία και επικοικωνία τους λόγω της συμβατότητάς τους. 
+Παρακάτω καταγράφονται αναλυτικά οι ενέργειες που ακολουθήθηκαν στο 
+\en{Raspberry Pi} (\en{host} \en{loragw}) για να στηθεί το \en{TTS}.
+
+\subsubsection{Λήψη πηγαίου κώδικα}
+ 
+\noindent Εκτελούμε τις ακόλουθες εντολές ώστε να κλωνοποιήσουμε το αποθετήριο και να το τοποθετήσουμε σε φάκελο με όνομα \en{TheThingsStack}:
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+cd ~
+git clone https://github.com/xoseperez/the-things-stack-docker
+mv the-things-stack-docker TheThingsStack
+cd TheThingsStack/
+\end{lstlisting}
+\end{otherlanguage*}
+
+\paragraph{Παραμετροποίηση \en{docker-compose}.} Με τον κειμενογράφο της επιλογής μας (\en{nano}, \en{vim} κ.λπ.) επεξεργαζόμαστε το \en{docker-compose.yml} ώστε να ταιριάζει στο περιβάλλον μας. Ενδεικτικά σημεία προσαρμογής:
+\begin{itemize}
+\item \textbf{\en{Volumes}}: μόνιμη αποθήκευση για \en{PostgreSQL}, \en{Redis} και αρχεία \en{TTS} (\en{secrets}, διαμορφώσεις). Π.χ. \en{./data/postgres}, \en{./data/redis}, \en{./config}.
+\item \textbf{\en{Ports}}: χαρτογράφηση του \en{host}-\en{container} για \en{Console}/\en{API} (\en{HTTP}/\en{HTTPS}) και \en{LNS} (\en{WebSocket} για \en{LoRa Basics Station}). Συνήθως εκθέτουμε τις 80/443 (ή εναλλακτικά 8080/8443 για \en{non-root} εκτέλεση) και τη θύρα 8887 για \en{LNS}. Αν χρησιμοποιηθεί \en{MQTT}, α\-νοί\-γου\-με και 1883/8883 (ανάλογα με \en{TLS}).
+\item \textbf{\en{Environment}}: μεταβλητές \en{TTN}\_\en{LW}\_* (\en{cluster ID}, \en{hostname}/\en{public address}, \en{email}, \en{console.base-url}, \en{is.oauth.ui.enabled} κ.ά.), καθώς και οι παράμετροι σύνδεσης με \en{PostgreSQL}/\en{Redis}. Συνήθως υπάρχει .\en{env} ή \en{env} τμήμα στο \en{compose} που τροποποιούμε.
+\item \textbf{\en{Reverse proxy}/\en{TLS}} (προαιρετικό): χρήση \en{Caddy}/\en{Traefik}/\en{nginx} \en{service} για \en{Let}’\en{s Encrypt} πιστοποιητικά. Για ανάπτυξη σε \en{LAN}, μπορούμε να μείνουμε σε \en{HTTP} και να ενεργοποιήσουμε \en{insecure} επιλογές \en{(development mode)} στο \en{TTS} μέχρι να αποκτήσουμε \en{FQDN}.
+\end{itemize}
+
+% \begin{otherlanguage*}{english}
+% \begin{lstlisting}[style=bashstyle]

@@ -446,6 +446,16 @@
   \url{https://www.thethingsnetwork.org/docs/devices/uno/}. Accessed: Sep. 16,
   2025}.
 
+\bibitem{XosePerez_TheThingsStackDocker}
+{{\latintext X.{ }Pérez}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em
+  the-things-stack-docker: The Things Stack LoRaWAN Network Server on
+  Docker}}}}.
+\newblock {{\latintext GitHub repository}}, 2025.
+\newblock \en{[Online]. Available:
+  \url{https://github.com/xoseperez/the-things-stack-docker}. Accessed: Sep.
+  16, 2025}.
+
 \bibitem{goossens93}
 {{\latintext M.{ }Goossens, F.{ }Mittelbach \textgreek{kai} A.{ }Samarin}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em The LaTeX
