@@ -1,4 +1,4 @@
-§\prompt§ docker run --rm hello-world
-
-Hello from Docker!
-This message shows that your installation appears to be working correctly.
+§\promptintts§ ls
+assets      CHANGELOG.md        Dockerfile       LICENSE.md
+balena.yml  docker-bake.hcl     Dockerfile.lite  README.md
+build.sh    docker-compose.yml  runner
