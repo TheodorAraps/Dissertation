@@ -106,7 +106,19 @@ ssh loragw@192.168.0.100
 \end{lstlisting}
 \end{otherlanguage*}
 \item Βάζουμε τον κωδικό που θέσαμε προηγουμένως για τον χρήστη \en{loragw} και συνδεόμαστε επιτυχώς.
+
 \end{itemize}
+\textbf{Σημείωση:} Επιλέξαμε να αποδώσουμε σταθερή \en{IP} στο \en{Raspberry Pi} με \en{DHCP reservation} 
+(ανάθεση \en{IP} με βάση την \en{MAC} διεύθυνση) από το \en{router} μας ώστε η συσκευή να είναι 
+πάντα προσβάσιμη στην ίδια διεύθυνση, κάτι κρίσιμο για σταθερά \en{endpoints} (π.χ. \en{TTS Console}, 
+\en{LNS}/\en{Webhook callbacks}) και για κανόνες \en{firewall}/\en{port forwarding}. Έτσι αποφεύγονται 
+διακοπές από αλλαγές \en{IP} λόγω ανανέωσης \en{DHCP lease} και απλουστεύεται η απομακρυσμένη διαχείριση 
+(\en{SSH}), τα \en{scripts} και οι υπηρεσίες που «δείχνουν» στο \en{gateway}. Εναλλακτικά θα μπορούσαμε να 
+χρησιμοποιήσουμε και \en{domain}, είτε τοπικά μέσω \en{mDNS} είτε δημόσια με καταχώριση ενός \en{DNS A record} 
+που «δείχνει» στη διεύθυνση του \en{gateway} (ιδανικά σε συνδυασμό με \en{Dynamic DNS} ώστε να ενημερώνεται 
+αυτόματα αν αλλάζει η \en{IP}), ώστε οι υπηρεσίες να είναι προσβάσιμες με πλήρες όνομα χώρου (\en{FQDN}).
+
+
 \item Μετά την πρώτη σύνδεση, εκτελούμε βασικές ενημερώσεις συστήματος και εργαλείων συντήρησης:
 
 
@@ -118,16 +130,13 @@ sudo reboot
 \end{otherlanguage*}
 
 
-
-\medskip
-
 \item Μόλις ολοκληρωθεί η εγκατάσταση, για να εξασφαλιστεί ο συγχρονισμός και η σωστή 
 επικοινωνία των δύο συσκευών, χρειάζεται να ενεργοποιηθεί η διεπαφή \en{SPI} από τις 
 ρυθμίσεις του \en{Raspberry Pi}. Αυτό γίνεται ανοίγοντας το εργαλείο παραμετροποίησης 
 \en{Raspberry Pi Software Configuration Tool} με την εντολή:
 \begin{otherlanguage*}{english}
 \begin{lstlisting}[style=bashstyle, label={lst:apt-upgrade}]
-+sudo raspi-config
+sudo raspi-config
 \end{lstlisting}
 \end{otherlanguage*}
 
@@ -140,7 +149,7 @@ sudo reboot
   \label{figure5.6}
 \end{Illustration} 
 
-\newpage
+
 Έπειτα, επιλέγουµε το \textbf{\en{I4 SPI}} και απαντάµε µε \en{yes} στο αναδυόµενο παράθυρο που µας
 ρωτάει αν θέλουμε να ενεργοποιήσουμε την προαναφερθείσα διεπαφή:
 
@@ -154,7 +163,7 @@ sudo reboot
 Τέλος, πατάμε \en{Esc} στο πληκτρολόγιο ώστε να βγούμε από το εργαλείο \en{raspi-config}.
 
 \item Ολοκληρώνουμε την διαδικασία εγκατάστασης και παραμετροποίησης του λειτουργικού συστήματος εγκαθιστώντας ορισμένα απαραίτητα εργαλεία για το στήσιμο των υπηρεσιών, τρέχοντας την εντολή:
-\newpage
+
 \begin{otherlanguage*}{english}
 \begin{lstlisting}[style=bashstyle, label={lst:apt-upgrade}]
 sudo apt-get install git gcc make
@@ -179,6 +188,7 @@ sudo apt-get install git gcc make
 \begin{itemize}
 \item Κατεβάζουμε με ασφάλεια το \en{script} (εκτελέσιμο αρχείο εντολών) εγκατάστασης του 
 \en{Docker} από τον επίσημο ιστότοπο και το αποθηκεύουμε ως \en{get-docker.sh}.
+
 \begin{otherlanguage*}{english}
 \begin{lstlisting}[style=bashstyle]
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -187,6 +197,7 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 
 \item Τρέχουμε το \en{script} ως \en{root} χρήστης και εγκαθιστούμε το \en{Docker Engine}, 
 τον \en{containerd} και τα απαιτούμενα πακέτα (\en{packages}) για να λειτουργήσει ομαλά το \en{Docker}.
+
 \begin{otherlanguage*}{english}
 \begin{lstlisting}[style=bashstyle]
 sudo sh get-docker.sh
@@ -196,6 +207,7 @@ sudo sh get-docker.sh
 \item Δημιουργούμε ένα \en{Unix group} με όνομα \en{docker}, ώστε οι χρήστες-μέλη του 
 να μπορούν να εκτελούν εντολές \en{docker} χωρίς το πρόθεμα \en{sudo} (παρέχει προνόμοια 
 \en{root} χρήστη). Αν υπάρχει ήδη, η εντολή απλά αποτυγχάνει χωρίς κίνδυνο.
+
 \begin{otherlanguage*}{english}
 \begin{lstlisting}[style=bashstyle]
 sudo groupadd docker
@@ -204,6 +216,7 @@ sudo groupadd docker
 
 \item Εντάσσουμε τον τωρινό χρήστη του περιβάλλοντος (\en{\$USER}, στην περίπτωση μας τον 
 loragw που έχουμε συνδεθεί) στο \en{group} \en{docker} για \en{non-root} χρήση του \en{Docker}.
+
 \begin{otherlanguage*}{english}
 \begin{lstlisting}[style=bashstyle]
 sudo usermod -aG docker $USER
@@ -212,22 +225,22 @@ sudo usermod -aG docker $USER
 
 \item Δημιουργούμε ένα καινούριο \en{shell session} και θέτουμε τον χρήστη μας ως μέλος του \en{docker group} 
 χωρίς να απαιτείται πλήρης αποσύνδεση/επανασύνδεση (\en{re-login}). Εναλλακτικά, μπορούμε να κάνουμε \en{logout/login}.
+
 \begin{otherlanguage*}{english}
 \begin{lstlisting}[style=bashstyle]
 newgrp docker
 \end{lstlisting}
 \end{otherlanguage*}
 
-% \paragraph{Ενεργοποίηση \en{Docker} στην εκκίνηση.}
 \item Θέτουμε την υπηρεσία \en{docker.service} να εκκινεί αυτόματα σε κάθε εκκίνηση (\en{boot}) του 
 συστήματος (\en{systemd enable}).
+
 \begin{otherlanguage*}{english}
 \begin{lstlisting}[style=bashstyle]
 sudo systemctl enable docker.service
 \end{lstlisting}
 \end{otherlanguage*}
 
-\pagebreak
 
 \item Αντίστοιχα, ενεργοποιούμε και το \en{containerd.service} (το \en{runtime} που χρησιμοποιεί 
 το \en{Docker Engine}).
@@ -239,9 +252,11 @@ sudo systemctl enable containerd.service
 \end{otherlanguage*}
 \end{itemize}
 
+
 \subsubsection{(Προαιρετικό) Επαλήθευση εγκατάστασης}
 
-\noindent Ελέγχούμε ότι το \en{Docker Engine} κι το \en{Compose} \en{plugin} είναι διαθέσιμα. 
+\noindent Ελέγχούμε ότι το \en{Docker Engine} και το \en{Compose} \en{plugin} είναι διαθέσιμα. 
+
 \begin{otherlanguage*}{english}
 \begin{lstlisting}[style=bashstyle]
 docker --version
@@ -249,27 +264,53 @@ docker compose version
 \end{lstlisting}
 \end{otherlanguage*}
 
+\begin{otherlanguage*}{english}
+\begin{Terminal}
+§\prompt§ docker --version
+Docker version 28.5.0, build 887030f
+§\prompt§ docker compose version
+Docker Compose version v2.40.0
+\end{Terminal}
+\end{otherlanguage*}
+
 \noindent Αν η δεύτερη εντολή δεν επιστρέψει έκδοση, εγκαθιστούμε το \en{plugin}. 
+
 \begin{otherlanguage*}{english}
 \begin{lstlisting}[style=bashstyle]
 sudo apt-get install docker-compose-plugin
 \end{lstlisting}
 \end{otherlanguage*}
 
+
 \subsubsection{(Προαιρετικό) Δοκιμαστικό \en{run}.}
+
 \noindent Με την ακόλουθη εντολή τραβάμε και εκτελούμε ένα ελαφρύ δοκιμαστικό \en{container} για να 
-επαληθεύσουμε ότι ο \en{Docker} λειτουργεί σωστά και χωρίς \en{sudo}.
+επαληθεύσουμε ότι το \en{Docker} λειτουργεί σωστά και χωρίς \en{sudo}.
+
 \begin{otherlanguage*}{english}
 \begin{lstlisting}[style=bashstyle]
 docker run --rm hello-world
 \end{lstlisting}
 \end{otherlanguage*}
 
+\begin{otherlanguage*}{english}
+\begin{Terminal}
+§\prompt§ docker run --rm hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+\end{Terminal}
+\end{otherlanguage*}
+
+\par\medskip
+\newpage
+
 
 %%%%   Υποενότητα 5.1.4: Εγκατάσταση του The Things Stack   %%%%
 
-\subsection{Εγκατάσταση του \en{The Things Stack}}
 
+\subsection{Εγκατάσταση του \en{The Things Stack}}
+    
 Για την εγκατάσταση του \en{The Things Stack} αξιοποιήθηκε η έτοιμη διάταξη \en{Docker} 
 από το ανοιχτού κώδικα αποθετήριο (\en{repsitory}) του \en{GitHub} \en{xoseperez/the-things-stack-docker} \cite{XosePerez_TheThingsStackDocker}, η οποία προσφέρει 
 ένα πλήρως παραμετροποιήσιμο \en{compose} περιβάλλον (υπηρεσίες \en{stack}, \en{PostgreSQL}, 
@@ -277,22 +318,35 @@ docker run --rm hello-world
 χρησιμοποιήθηκε και αργότερα για το \en{LoRa Basics Station} με το αντίστοιχο αποθετήριο 
 του ίδιου δημιουργού. Η επιλογή των συγκεκριμένων αποθετηρίων έγινε επείδη απλοποιούν τη διαδικασία εγκατάστασης και 
 παραμετροποίησης των υπηρεσιών αυτών και εξασφαλίζουν την εύρυθμη λειτουργία και επικοικωνία τους λόγω της συμβατότητάς τους. 
-Παρακάτω καταγράφονται αναλυτικά οι ενέργειες που ακολουθήθηκαν στο 
-\en{Raspberry Pi} (\en{host} \en{loragw}) για να στηθεί το \en{TTS}.
+Παρακάτω καταγράφονται αναλυτικά οι ενέργειες που ακολουθήθηκαν στο \en{Raspberry Pi} (\en{host} \en{loragw}) 
+για να στηθεί το \en{TTS}.
+
+
 
 \subsubsection{Λήψη πηγαίου κώδικα}
  
-\noindent Εκτελούμε τις ακόλουθες εντολές ώστε να κλωνοποιήσουμε το αποθετήριο και να το τοποθετήσουμε σε φάκελο με όνομα \en{TheThingsStack}:
+\noindent Εκτελούμε τις ακόλουθες εντολές ώστε να κλωνοποιήσουμε το αποθετήριο και να το τοποθετήσουμε σε φάκελο με 
+όνομα \en{TheThingsStack}:
+
 \begin{otherlanguage*}{english}
 \begin{lstlisting}[style=bashstyle]
-cd ~
 git clone https://github.com/xoseperez/the-things-stack-docker
 mv the-things-stack-docker TheThingsStack
 cd TheThingsStack/
 \end{lstlisting}
 \end{otherlanguage*}
 
-\paragraph{Παραμετροποίηση \en{docker-compose}.} Με τον κειμενογράφο της επιλογής μας (\en{nano}, \en{vim} κ.λπ.) επεξεργαζόμαστε το \en{docker-compose.yml} ώστε να ταιριάζει στο περιβάλλον μας. Ενδεικτικά σημεία προσαρμογής:
+\subsubsection{Παραμετροποίηση \en{docker-compose}} 
+
+Με τον κειμενογράφο της επιλογής μας (\en{nano}, \en{vim} κ.λπ.) επεξεργαζόμαστε το \en{docker-compose.yml} ώστε να 
+ταιριάζει στο περιβάλλον μας. Ενδεικτικά σημεία προσαρμογής:
+
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+sudo nano docker-compose.yml
+\end{lstlisting}
+\end{otherlanguage*}
+
 \begin{itemize}
 \item \textbf{\en{Volumes}}: μόνιμη αποθήκευση για \en{PostgreSQL}, \en{Redis} και αρχεία \en{TTS} (\en{secrets}, διαμορφώσεις). Π.χ. \en{./data/postgres}, \en{./data/redis}, \en{./config}.
 \item \textbf{\en{Ports}}: χαρτογράφηση του \en{host}-\en{container} για \en{Console}/\en{API} (\en{HTTP}/\en{HTTPS}) και \en{LNS} (\en{WebSocket} για \en{LoRa Basics Station}). Συνήθως εκθέτουμε τις 80/443 (ή εναλλακτικά 8080/8443 για \en{non-root} εκτέλεση) και τη θύρα 8887 για \en{LNS}. Αν χρησιμοποιηθεί \en{MQTT}, α\-νοί\-γου\-με και 1883/8883 (ανάλογα με \en{TLS}).
@@ -300,5 +354,100 @@ cd TheThingsStack/
 \item \textbf{\en{Reverse proxy}/\en{TLS}} (προαιρετικό): χρήση \en{Caddy}/\en{Traefik}/\en{nginx} \en{service} για \en{Let}’\en{s Encrypt} πιστοποιητικά. Για ανάπτυξη σε \en{LAN}, μπορούμε να μείνουμε σε \en{HTTP} και να ενεργοποιήσουμε \en{insecure} επιλογές \en{(development mode)} στο \en{TTS} μέχρι να αποκτήσουμε \en{FQDN}.
 \end{itemize}
 
-% \begin{otherlanguage*}{english}
-% \begin{lstlisting}[style=bashstyle]
+
+
+
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=dockercomposestyle]
+volumes:
+  redis:
+  postgres:
+  stack-blob:
+  stack-data:
+
+services:
+
+  postgres:
+    image: postgres:14.3-alpine3.15
+    container_name: postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=root
+      - POSTGRES_DB=ttn_lorawan
+    volumes:
+      - 'postgres:/var/lib/postgresql/data'
+    ports:
+      - "127.0.0.1:5432:5432"
+
+  redis:
+    image: redis:7.0.0-alpine3.15
+    container_name: redis
+    command: redis-server --appendonly yes
+    restart: unless-stopped
+    volumes:
+      - 'redis:/data'
+    ports:
+      - "127.0.0.1:6379:6379"
+
+  stack:
+    #image: xoseperez/the-things-stack:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        ARCH: amd64
+        REMOTE_TAG: 3.32.0
+    container_name: stack
+    restart: unless-stopped
+    depends_on:
+      - redis
+      - postgres
+    volumes:
+      - 'stack-blob:/srv/ttn-lorawan/public/blob'
+      - 'stack-data:/srv/data'
+    environment:
+      TTS_DOMAIN: 192.168.0.100
+      TTN_LW_BLOB_LOCAL_DIRECTORY: /srv/ttn-lorawan/public/blob
+      TTN_LW_REDIS_ADDRESS: redis:6379
+      TTN_LW_IS_DATABASE_URI: postgres://root:root@postgres:5432/ttn_lorawan?sslmode=disable
+      CLI_AUTO_LOGIN: "false"
+    labels:
+      io.balena.features.balena-api: '1'
+
+   # secrets:
+   #   - ca.pem
+   #   - cert.pem
+   #   - key.pem
+
+    ports:
+
+      - "80:1885"
+      - "443:8885"
+
+      - "1881:1881"
+      - "1882:1882"
+      - "1883:1883"
+      - "1884:1884"
+      - "1885:1885"
+      - "1887:1887"
+
+      - "8881:8881"
+      - "8882:8882"
+      - "8883:8883"
+      - "8884:8884"
+      - "8885:8885"
+      - "8887:8887"
+
+      - "1700:1700/udp"
+
+#secrets:
+#  ca.pem:
+#    file: ./ca.pem
+#  cert.pem:
+#    file: ./cert.pem
+#  key.pem:
+#    file: ./key.pem
+
+\end{lstlisting}
+\end{otherlanguage*}

@@ -50,6 +50,24 @@
 % --- Code listings setup ---
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\tcbset{listing engine=listings}
+
+% \newtcblisting{CodeBlock}{
+%   listing only,
+%   colback=codebg,           % your background
+%   colframe=codeframe,       % your frame color
+%   arc=8pt,                  % rounded corners
+%   boxrule=0.5pt,
+%   left=0.2em,right=0.5em,   % match your xleft/xright margins
+%   top=8pt,bottom=8pt,       % match framesep
+%   listing options={style=bashstyle, frame=none, numbers=none, numbersep=10pt}
+% }
+% % usage:
+% % \begin{CodeBlock}
+% %   your code...
+% % \end{CodeBlock}
+
 
 % Colors
 \definecolor{codebg}{HTML}{F8F9FB}
@@ -71,8 +89,63 @@
   language=bash,
   deletekeywords={newgrp,enable,cd},
   backgroundcolor=\color{codebg},
-  basicstyle=\linespread{1.05}\ttfamily\small\color{codetext},
+  basicstyle=\linespread{1.05}\ttfamily\normalsize\color{codetext},
   keywordstyle=\bfseries\color{codekw},
+  stringstyle=\color{codestr},
+  commentstyle=\itshape\color{codecm},
+  numberstyle=\scriptsize\color{codenums},
+  numbers=none,
+  numbersep=10pt,
+  frame=single,
+  rulecolor=\color{codeframe},
+  frameround=tttt,
+  framesep=8pt,
+  xleftmargin=1.5em,
+  xrightmargin=1.5em,
+  showstringspaces=false,
+  tabsize=2,
+  upquote=true,
+  columns=fullflexible,
+  keepspaces=true,
+  breaklines=true,
+  breakatwhitespace=true,
+  captionpos=b
+}
+
+
+% --- YAML / docker-compose language + style ---
+
+
+\lstdefinelanguage{dockercompose}{
+  sensitive=true,
+  alsoletter={-},                % allow hyphen in keywords like 'x-...'
+  morecomment=[l]{\#},           % YAML comments
+  morestring=[b]',               % single-quoted strings
+  morestring=[b]",               % double-quoted strings
+  % Common Compose keys as "keywords"
+  morekeywords={
+    version,services,volumes,networks,configs,secrets,
+    image,build,context,dockerfile,args,platform,container_name,
+    command,entrypoint,environment,env_file,depends_on,links,
+    ports,expose,volumes_from,tmpfs,devices,configs,secrets,
+    restart,deploy,replicas,resources,limits,reservations,logging,
+    healthcheck,profiles,working_dir,user,privileged,cap_add,cap_drop,
+    networks,ipv4_address,ipv6_address,labels,extends
+  },
+  % Treat common literals as keywords too (true/false/null)
+  morekeywords=[2]{true,false,on,off,yes,no,null,NULL},
+  % Make numbers look nice (optional)
+  literate=
+    {---}{{\textemdash\textemdash\textemdash}}3
+    {>}{{>}}1
+}
+
+\lstdefinestyle{dockercomposestyle}{
+  language=dockercompose,
+  backgroundcolor=\color{codebg},
+  basicstyle=\linespread{1.05}\ttfamily\normalsize\color{codetext},
+  keywordstyle=\bfseries\color{codekw},      % keys
+  keywordstyle={[2]\bfseries\color{codekw}}, % literals (true/false/null)
   stringstyle=\color{codestr},
   commentstyle=\itshape\color{codecm},
   numberstyle=\scriptsize\color{codenums},
@@ -92,6 +165,80 @@
   breaklines=true,
   breakatwhitespace=true,
   captionpos=b
+}
+
+
+% -------- Terminal look & feel (listings + tcolorbox) --------
+
+
+
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage[most]{tcolorbox}
+
+\tcbset{listing engine=listings}
+
+% Dark palette (tweak to taste)
+\definecolor{term.bg}{HTML}{0B0E14}
+\definecolor{term.frame}{HTML}{243040}
+\definecolor{term.fg}{HTML}{E6EAF0}
+\definecolor{term.kw}{HTML}{7AD9F5}
+\definecolor{term.str}{HTML}{F7C56D}
+\definecolor{term.cm}{HTML}{9AA4B2}
+\definecolor{term.dim}{HTML}{8A95A6}
+\definecolor{term.user}{HTML}{A9D07E}
+\definecolor{term.host}{HTML}{9FC5FF}
+\definecolor{term.path}{HTML}{E0A3FF}
+\definecolor{term.symbol}{HTML}{7AD9F5}
+
+% Shell prompt macro (user@host:~$ )
+\newcommand{\prompt}{%
+  \textbf{\textcolor{term.user}{loragw}%
+  \textcolor{term.dim}{@}%
+  \textcolor{term.host}{loragateway}}%
+  \textcolor{term.dim}{:}%
+  \textbf{\textcolor{term.path}{\textasciitilde}}%
+  \textcolor{term.symbol}{\$}\,%
+}
+
+% Optional: a root prompt if you need it sometime
+\newcommand{\rootprompt}{%
+  \textbf{\textcolor{term.user}{root}%
+  \textcolor{term.dim}{@}%
+  \textcolor{term.host}{loragateway}}%
+  \textcolor{term.dim}{:}%
+  \textbf{\textcolor{term.path}{\textasciitilde}}%
+  \textcolor{term.symbol}{\#}\,%
+}
+
+% Listings style (no frame/bg here; the box will paint them)
+\lstdefinestyle{terminalstyle}{
+  language=bash,
+  basicstyle=\ttfamily\normalsize\color{term.fg},
+  keywordstyle=\bfseries\color{term.kw},
+  stringstyle=\color{term.str},
+  commentstyle=\itshape\color{term.cm},
+  showstringspaces=false,
+  upquote=true,
+  columns=fullflexible,
+  keepspaces=true,
+  breaklines=true,
+  breakatwhitespace=true,
+  numbers=none,
+  frame=none,
+  escapechar=§,                % so you can write §\prompt§
+}
+
+% The elegant terminal box
+\newtcblisting{Terminal}{
+  listing only,
+  enhanced,
+  colback=term.bg,
+  colframe=term.frame,
+  arc=4pt,
+  boxrule=0.5pt,
+  left=10pt, right=10pt, top=8pt, bottom=8pt,
+  listing options={style=terminalstyle},
 }
 
 
