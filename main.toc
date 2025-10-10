@@ -344,6 +344,7 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {english}{}\relax 
+\contentsline {subsubsection}{Εκκίνηση \foreignlanguage {english}{stack container}}{103}{lstnumber.-20.71}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \contentsline {chapter}{\numberline {6}Έλεγχος}{105}{chapter.6}%
