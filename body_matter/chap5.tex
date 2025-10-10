@@ -315,18 +315,17 @@ This message shows that your installation appears to be working correctly.
 Για την εγκατάσταση του \en{The Things Stack} αξιοποιήθηκε η έτοιμη διάταξη \en{Docker} 
 από το ανοιχτού κώδικα αποθετήριο (\en{repsitory}) του \en{GitHub} \en{xoseperez/the-things-stack-docker} \cite{XosePerez_TheThingsStackDocker}, η οποία προσφέρει 
 ένα πλήρως παραμετροποιήσιμο \en{compose} περιβάλλον (υπηρεσίες \en{stack}, \en{PostgreSQL}, 
-\en{Redis}, \en{MQTT} προαιρετικά, \en{reverse proxy}/\en{TLS} κ.ά.) και βασίζεται στο \en{official image} του \en{The Things Stack} της \en{The Things Industries}. Η ίδια λογική 
-χρησιμοποιήθηκε και αργότερα για το \en{LoRa Basics Station} με το αντίστοιχο αποθετήριο 
-του ίδιου δημιουργού. Η επιλογή των συγκεκριμένων αποθετηρίων έγινε επείδη απλοποιούν τη διαδικασία εγκατάστασης και 
+\en{Redis}, \en{MQTT} κ.ά.) και βασίζεται στο στην επίσημε εικόνα του \en{TTS} της \en{The Things Industries}. Όμοια 
+χρησιμοποιήθηκε και αργότερα για το \en{LoRa Basics Station} το αντίστοιχο αποθετήριο 
+του ίδιου δημιουργού. Τα συγκεκριμένα αποθετήρια απλοποιούν τη διαδικασία εγκατάστασης και 
 παραμετροποίησης των υπηρεσιών αυτών και εξασφαλίζουν την εύρυθμη λειτουργία και επικοικωνία τους λόγω της συμβατότητάς τους. 
-Παρακάτω καταγράφονται αναλυτικά οι ενέργειες που ακολουθήθηκαν στο \en{Raspberry Pi} (\en{host} \en{loragw}) 
-για να στηθεί το \en{TTS}.
+Παρακάτω καταγράφονται αναλυτικά οι ενέργειες που ακολουθήθηκαν για να στηθεί το \en{TTS}.
 
 
 
 \subsubsection{Λήψη πηγαίου κώδικα}
  
-\noindent Εκτελούμε τις ακόλουθες εντολές ώστε να κλωνοποιήσουμε το αποθετήριο και να το τοποθετήσουμε σε φάκελο με 
+\noindent Εκτελούμε τις ακόλουθες εντολές στο \en{Raspberry Pi} ώστε να κλωνοποιήσουμε το αποθετήριο και να το τοποθετήσουμε σε φάκελο με 
 όνομα \en{TheThingsStack}:
 
 \begin{otherlanguage*}{english}
@@ -337,77 +336,87 @@ cd TheThingsStack/
 \end{lstlisting}
 \end{otherlanguage*}
 
+
 \begin{otherlanguage*}{english}
 \begin{Terminal}
 §\promptintts§ ls
-assets      CHANGELOG.md        Dockerfile       LICENSE.md
-balena.yml  docker-bake.hcl     Dockerfile.lite  README.md
-build.sh    docker-compose.yml  runner
+§\assets§      CHANGELOG.md        Dockerfile       LICENSE.md
+§\balena§  docker-bake.hcl     Dockerfile.lite  README.md
+§\build§    docker-compose.yml  §\runner§
 \end{Terminal}
 \end{otherlanguage*}
 
-Στο εσωτερικό του φακέλου, όπως βλέπουμε παραπάνω, υπάρχουν δύο σημαντικά αρχεία που χρειάζεται να δώσουμε βάση, 
-το \textbf{\en{docker-compose.yml}} και το \textbf{\en{Dockerfile}}. 
+Στον ριζικό κατάλογο (\en{directory}) του αποθετηρίου εντοπίζουμε το \en{Dockerfile}
+που καθορίζει τη βάση της εικόνας, την ενσωμάτωση των \en{scripts} του \en{runner} και τις εντολές 
+εκκίνησης. Το \en{docker-compose.yml} ορίζει πώς συναρμολογούνται οι υπηρεσίες \en{(TTS, Redis, Postgres)}, 
+τα \en{volumes} και οι μεταβλητές περιβάλλοντος. Το \en{docker-bake.hcl} και το \en{build.sh} υποστηρίζουν 
+τις \en{multi-platform builds} (π.χ. \en{arm}/\en{amd64}) και απλοποιούν τη διαδικασία κατασκευής της 
+εικόνας. Τα αρχεία \en{.ttn-lw-stack-docker.yml.template} και \en{.ttn-lw-cli.yml.template} (μέσα στο φάκελο 
+\en{runner}) χρησιμοποιούνται ως πρότυπα για τη διαμόρφωση του \en{TTS} και του \en{CLI}, με το \en{script} 
+\en{start} να τα επεξεργάζεται. Αυτά τα στοιχεία συνεργάζονται ώστε η τελική εικόνα να «τρέχει» το 
+επίσημο \en{TTS image} με αυτόματη διαμόρφωση, ανέλιξη πιστοποιητικών, αρχικοποίηση βάσης και δημιουργία διαχειριστών 
+χωρίς να χρειάζεται χειροκίνητη παρέμβαση από τον χρήστη.
+
 
 \subsubsection{Παραμετροποίηση \en{docker-compose}} 
 
-Με τον κειμενογράφο της επιλογής μας (\en{nano}, \en{vim} κ.λπ.) επεξεργαζόμαστε το \en{docker-compose.yml} ώστε να 
-ταιριάζει στο περιβάλλον μας. 
+Επεξεργαζόμαστε το \en{docker-compose.yml} ώστε να ταιριάζει στο περιβάλλον μας. 
 
 \begin{otherlanguage*}{english}
 \begin{lstlisting}[style=bashstyle]
 sudo nano docker-compose.yml
 \end{lstlisting}
 \end{otherlanguage*}
+\pagebreak
 
 Αφότου ανοίξουμε το αρχείο, βλέπουμε τα εξής:
 \begin{itemize}
-  \item \textbf{\en{volumes}}: Τα \en{redis, postgres, stack-blob, stack-data} είναι επίμονοι χώροι αποθήκευσης (\en{named volumes}) ώστε τα 
-  δεδομένα να επιβιώνουν ακόμη κι αν τα \en{container} ξαναεκκινήσουν/αναδημιουργηθούν. Αυτό είναι η τυπική πρακτική 
-  με \en{Compose} για να μην χάνονται δεδομένα βάσης και αρχεία του \en{Stack}.
-  \item \textbf{Υπηρεσία \en{postgres}}: Τρέχει την εικόνα \en{postgres:14.3-alpine3.15} με μεταβλητές περιβάλλοντος \textit{\en{POSTGRES\_USER}}, \textit{\en{POSTGRES\_PASSWORD}}, 
-  \textit{\en{POSTGRES\_DB}} για αρχικοποίηση βάσης/χρήστη/κωδικού. Τα \en{volumes} και το \en{port} 127.0.0.1:5432:5432 
-  εξασφαλίζουν μόνιμη αποθήκευση και τοπική (μόνο \en{localhost}) πρόσβαση στη θύρα \en{PostgreSQL}. Οι 
-  μεταβλητές είναι σύμφωνα με τα επίσημα \en{images} στα \en{Docker docs}.
-  \item \textbf{Υπηρεσία \en{redis}}: Χρησιμοποιεί \en{redis:7.0.0-alpine3.15} και δίνει την εντολή \en{redis-server --appendonly yes} για \en{AOF} επιμονή 
-  (καταγραφή εντολών). Το \en{volume redis:/data} κρατάει τα δεδομένα, και το \en{port} δένεται μόνο σε 
-  \en{localhost}.
+  \item \textbf{\en{volumes}}: Τα \en{redis}, \en{postgres}, \en{stack-blob}, \en{stack-data} ορίζονται ως \en{named volumes} για επίμονη αποθήκευση, 
+  ώστε τα δεδομένα να διατηρούνται ανεξάρτητα από επανεκκινήσεις των \en{containers}.
+  \item \textbf{Υπηρεσία \en{postgres}}: Εκκινεί την εικόνα της βάσης \en{PostgreSQL} με αρχικοποίηση χρηστών/βάσης μέσω 
+  \en{POSTGRES\_*} μεταβλητών. Το \en{volume} που έχει οριστεί εξασφαλίζει μόνιμη 
+  αποθήκευση, ενώ το \en{port} δένεται τοπικά (\en{127.0.0.1:5432}) για περιορισμένη πρόσβαση (μόνο \en{localhost}).
+  \item \textbf{Υπηρεσία \en{redis}}: Εκκινεί την εικόνα της βάσης \en{Redis} με \en{AOF} (\en{--appendonly yes}) για ανθεκτικότητα. 
+  Το \en{volume} \en{redis:/data} διατηρεί την κατάσταση και η θύρα εκτίθεται μόνο σε \en{localhost}.
   \item \textbf{Υπηρεσία \en{stack} (\en{The Things Stack})}:
   Εξαρτάται από \en{redis} και \en{postgres}, προσαρτά δύο \en{volumes} για αρχεία \en{blob} και εφαρμοστικά δεδομένα, και ορίζει κρίσιμες μεταβλητές περιβάλλοντος:
   
-  \textit{\en{TTS\_DOMAIN}}: ορίζει το \en{public host/domain} που θα χρησιμοποιεί το \en{TTS} εξωτερικά για τα \en{URLs} του και τα \en{callbacks}.
+  \textit{\en{TTS\_DOMAIN}}: \en{public host/domain} για \en{Console}, \en{APIs} και \en{callbacks}.
 
-  \textit{\en{TTN\_LW\_REDIS\_ADDRESS}}: δείχνει στον \en{Redis} της σύνθεσης.
+  \textit{\en{TTN\_LW\_REDIS\_ADDRESS}}: Διεύθυνση της βάσης \en{Redis} της σύνθεσης.
 
-  \textit{\en{TTN\_LW\_IS\_DATABASE\_URI}}: \en{URI} προς τη βάση του \en{Identity Server}.
+  \textit{\en{TTN\_LW\_IS\_DATABASE\_URI}}: Διεύθυνση της βάσης \en{PostgreSQL} του \en{Identity Server}.
 
   \textit{\en{TTN\_LW\_BLOB\_LOCAL\_DIRECTORY}}: τοπική αποθήκη για \en{blobs}.
-  Αυτή η φιλοσοφία παραμετροποίησης μέσω μεταβλητών \textit{\en{TTN\_LW\_*}} είναι αυτή που προβλέπει το 
-  \en{Configuration Reference} του \en{The Things Stack}.
 
   \item \textbf{\en{Ports} της υπηρεσίας \en{stack}}: 
-  Έχει εκτενή \en{port mappings} (π.χ. 1881-1885, 8881-8887, 1700/\en{udp}). Με αυτόν τον τρόπο εκθέτουμε 
-  \en{Console}/\en{API}/\en{MQTT}/\en{LNS} κ.ά. στον \en{host}. 
-  
-  \textbf{Σημείωση}: στο οικοσύστημα \en{LNS} το 
-  \en{LoRa Basics Station} τυπικά συνδέεται πάνω από \en{WebSockets/TLS} στη θύρα 8887, κάτι που 
-  τεκμηριώνεται σε οδηγούς \en{TTI} και κατασκευαστών \en{gateways}.
+Εκτίθενται οι απαιτούμενες θύρες για \en{Console},\en{API},\en{LNS} κ.α. 
+(π.χ. 1881-1885, 8881-8887, 1700/\en{udp}). Ιδίως για \en{LNS}, η σύνδεση του \en{LoRa Basics Station} 
+γίνεται μέσω \en{wss} στη 8887, όπως προβλέπεται από την τεκμηρίωση.
 \end{itemize}
 
-Οι αλλαγές που κάναμε είναι οι ακόλουθες:
+Οι αλλαγές που κάναμε στο αρχείο αυτό είναι οι ακόλουθες:
 
 \begin{itemize}
-  \item Αφαιρέσαμε (\en{comment out}) την γραμμή \textit{image: xoseperez/the-things-stack:latest} και προσθέσαμε 
-  (\en{comment in}) το \en{build configuration}. Με αυτόν τον τρόπο αποφεύγουμε να κάνουμε \en{pull} έτοιμη την πιο
-  πρόσφατη εκάστοτε εικόνα του συντηρητή του αποθετηρίου και αντίθετα χτίζουμε (\en{build}) την εικόνα από το 
-  τοπικό \en{Dockerfile} περνώντας παραμέτρους (\en{build args}) όπως \textit{\en{REMOTE\_TAG=3.32.0}}. Ως εκ τούτου, 
-  αποφεύγουμε πιθανές ασταθείς μελλοντικές εκδόσεις και έχουμε περισσότερη ευελιξία και έλεγχο στην εικόνα που χτίζουμε παραμετροποιώντας 
-  κατάλληλα το \en{Dockerfile}.
-  \item Ορίζουμε ως \textit{\en{TTS\_DOMAIN}} την στατική \en{IP} 192.168.0.100 που έχουμε θέσει μέσω \en{DHCP reservation} 
-  (βλπ σημείωση στο βήμα 7 της Υποενότητας \ref{install:rspos}).
+  \item Αφαιρέσαμε (\en{comment out}) το \en{image configuration} και ενεργοποιήσαμε 
+  (\en{comment in}) το \en{build} \en{configuration}. Έτσι, αντί να κάνουμε \en{pull} 
+  την εκάστοτε «τελευταία» εικόνα από το \en{registry}, παράγουμε το \en{container image} 
+  τοπικά από το \en{Dockerfile}, περνώντας ρητά \en{build args} (π.χ. 
+  \textit{\en{REMOTE\_TAG=3.32.0}}, \textit{\en{ARCH=amd64}}). Η προσέγγιση αυτή προσφέρει 
+  \textit{ακινητοποίηση έκδοσης} (\en{pinning}), καλύτερο έλεγχο και αναπαραγωγιμότητα του 
+  \en{build}, καθώς και ευελιξία για μελλοντικές τροποποιήσεις στο \en{Dockerfile} 
+  (π.χ. \en{patches}, προσαρμοσμένα \en{certs}, επιπλέον \en{tools}).
+  \item Ορίσαμε το \textit{\en{TTS\_DOMAIN}} στη στατική \en{IP} 192.168.0.100 
+  που δεσμεύσαμε μέσω \en{DHCP reservation} (βλ. σημείωση στο βήμα 7 της Υποενότητας 
+  \ref{install:rspos}). Με αυτόν τον τρόπο, όλες οι δημόσιες διευθύνσεις της στοίβας 
+  (\en{Console}, \en{OAuth} \en{redirects}, \en{LNS} \en{wss}:8887, \en{MQTT}/\en{HTTP} 
+  \en{endpoints}, \en{webhooks}) «δένουν» σε ένα σταθερό \en{host}. Το σταθερό 
+  \en{endpoint} απλοποιεί τις ρυθμίσεις σε \en{gateways}/εφαρμογές, διευκολύνει τη 
+  διάγνωση/ασφάλεια και προετοιμάζει τη μελλοντική μετάβαση σε \en{DNS} όνομα και 
+  \en{TLS} πιστοποιητικά χωρίς αλλαγές στις εσωτερικές ροές.
 \end{itemize}
 
-
+Συνεπώς, η τελική μορφή του αρχείου φαίνεται παρακάτω:
 
 \begin{otherlanguage*}{english}
 \begin{lstlisting}[style=dockercomposestyle]
@@ -418,14 +427,13 @@ volumes:
   stack-data:
 
 services:
-
   postgres:
     image: postgres:14.3-alpine3.15
     container_name: postgres
     restart: unless-stopped
     environment:
-      - POSTGRES_PASSWORD=root
-      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=your_postgres_password_here 
+      - POSTGRES_USER=your_postgres_user_name_here 
       - POSTGRES_DB=ttn_lorawan
     volumes:
       - 'postgres:/var/lib/postgresql/data'
@@ -467,39 +475,22 @@ services:
     labels:
       io.balena.features.balena-api: '1'
 
-   # secrets:
-   #   - ca.pem
-   #   - cert.pem
-   #   - key.pem
-
     ports:
-
       - "80:1885"
       - "443:8885"
-
       - "1881:1881"
       - "1882:1882"
       - "1883:1883"
       - "1884:1884"
       - "1885:1885"
       - "1887:1887"
-
       - "8881:8881"
       - "8882:8882"
       - "8883:8883"
       - "8884:8884"
       - "8885:8885"
       - "8887:8887"
-
       - "1700:1700/udp"
-
-#secrets:
-#  ca.pem:
-#    file: ./ca.pem
-#  cert.pem:
-#    file: ./cert.pem
-#  key.pem:
-#    file: ./key.pem
-
 \end{lstlisting}
 \end{otherlanguage*}
+

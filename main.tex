@@ -40,6 +40,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
+
 \documentclass[modern,hyperref,watermark,histinit,noindex,plain,newlogo]{ntua-thesis}
 \usepackage{booktabs}
 \usepackage{listings}
@@ -143,7 +144,7 @@
 \lstdefinestyle{dockercomposestyle}{
   language=dockercompose,
   backgroundcolor=\color{codebg},
-  basicstyle=\linespread{1.05}\ttfamily\normalsize\color{codetext},
+  basicstyle=\linespread{1.05}\ttfamily\small\color{codetext},
   keywordstyle=\bfseries\color{codekw},      % keys
   keywordstyle={[2]\bfseries\color{codekw}}, % literals (true/false/null)
   stringstyle=\color{codestr},
@@ -219,6 +220,11 @@
   \textbf{\textcolor{term.path}{\textasciitilde}}%
   \textcolor{term.symbol}{/TheThingsStack \$}\,%
 }
+\newcommand{\assets}{\textcolor{term.symbol}{assets}\,}
+\newcommand{\runner}{\textcolor{term.symbol}{runner}\,}
+\newcommand{\build}{\textcolor{term.user}{build.sh}\,}
+\newcommand{\balena}{\textcolor{term.fg}{balena.yml}\,}
+
 
 % Listings style (no frame/bg here; the box will paint them)
 \lstdefinestyle{terminalstyle}{
@@ -249,7 +255,6 @@
   left=10pt, right=10pt, top=8pt, bottom=8pt,
   listing options={style=terminalstyle},
 }
-
 
 % \usepackage{tabularx}
 % \usepackage[LGR,T1]{fontenc}   % enable Greek (LGR) and Latin (T1) encodings

@@ -1,4 +1,4 @@
 §\promptintts§ ls
-assets      CHANGELOG.md        Dockerfile       LICENSE.md
-balena.yml  docker-bake.hcl     Dockerfile.lite  README.md
-build.sh    docker-compose.yml  runner
+§\assets§      CHANGELOG.md        Dockerfile       LICENSE.md
+§\balena§  docker-bake.hcl     Dockerfile.lite  README.md
+§\build§    docker-compose.yml  §\runner§
