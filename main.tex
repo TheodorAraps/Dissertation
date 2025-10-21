@@ -179,37 +179,46 @@
 \definecolor{cpp-bg}{HTML}{FFFFFF}   % paper white
 \definecolor{cpp-fg}{HTML}{222222}   % main text (near-black)
 \definecolor{cpp-kw1}{HTML}{0066CC}  % general keywords (blue)
-\definecolor{cpp-kw2}{HTML}{D35400}  % control-flow (orange)
+\definecolor{cpp-kw2}{HTML}{C678DD}  % control-flow (magenta)
 \definecolor{cpp-kw3}{HTML}{8E44AD}  % decl/modifiers (purple)
 \definecolor{cpp-kw4}{HTML}{0B6E99}  % types (teal-blue)
 \definecolor{cpp-kw5}{HTML}{2E7D32}  % std/STL (green)
+\definecolor{cpp-kw6}{HTML}{D35400}  % functions (orange)
 \definecolor{cpp-str}{HTML}{B9770E}  % strings (brownish amber)
 \definecolor{cpp-com}{HTML}{6C757D}  % comments (cool grey)
 \definecolor{cpp-op}{HTML}{1F6C8E}   % operators & punctuation
 \definecolor{cpp-num}{HTML}{0E7C86}  % numeric literals
-\definecolor{cpp-pre}{HTML}{B23C17}  % preprocessor (rusty orange)
+\definecolor{cpp-pre}{HTML}{C678DD}  % preprocessor (magenta)
 \definecolor{cpp-frame}{HTML}{DADDE1} % frame/line-number gutter
 
 % ========= Language: keep your TheoCXX as-is (you already had this) =========
 % (unchanged; shown here just to be complete)
 \lstdefinelanguage{TheoCXX}[]{C++}{
   sensitive=true,
-  morekeywords={override,final,noexcept,constexpr,decltype,nullptr,thread_local,
-    concept,requires,co_await,co_yield,co_return},
+  morekeywords={override,final,noexcept,constexpr,decltype,nullptr,thread_local,concept,requires,co_await,co_yield,co_return},
+  deletekeywords={for,if,else,while,switch,case,break,continue,return,try,catch,throw},
   morekeywords=[2]{if,else,for,while,do,switch,case,break,continue,return,try,catch,throw},
-  morekeywords=[3]{class,struct,enum,union,namespace,template,typename,using,
-    public,private,protected,virtual,static,inline,explicit,friend,operator},
-  morekeywords=[4]{int,long,short,float,double,char,bool,void,auto,signed,unsigned,
-    size_t,std::size_t,wchar_t,char8_t,char16_t,char32_t},
-  morekeywords=[5]{std,vector,string,unordered_map,map,set,optional,variant,span,array,
-    unique_ptr,shared_ptr,make_unique,make_shared,cout,cin,endl,move,forward,
-    chrono,thread,mutex,lock_guard,atomic},
+  morekeywords=[3]{class,struct,enum,union,namespace,template,typename,using,public,private,protected,virtual,static,inline,explicit,friend,operator},
+  morekeywords=[4]{uint8_t,uint16_t,int,long,short,float,double,char,bool,void,auto,signed,unsigned,size_t,std::size_t,wchar_t,char8_t,char16_t,char32_t},
+  morekeywords=[5]{NUM_PZEMS,freqPlan,debugSerial,loraSerial,std,vector,string,unordered_map,map,set,optional,variant,span,array,unique_ptr,shared_ptr,make_unique,make_shared,cout,cin,endl,move,forward,chrono,thread,mutex,lock_guard,atomic},
+  morekeywords=[6]{delay,begin,isnan,millis,print,println,PZEM004Tv30,SoftwareSerial,TheThingsNetwork,resetEnergy,resetEnergyCounters,loop,setup},
   morecomment=[l]//,
   morecomment=[s]{/*}{*/},
   morestring=[b]",
   morestring=[b]',
-  morecomment=[l][\color{cpp-pre}]{\#}, % color whole preprocessor line
+  % morecomment=[l][\color{cpp-pre}]{\#}, % color whole preprocessor line
 }
+
+\newcommand{\blue}[1]{\bfseries\textcolor{cpp-kw1}{#1}}
+\newcommand{\magenta}[1]{\bfseries\textcolor{cpp-kw2}{#1}}
+\newcommand{\purple}[1]{\bfseries\textcolor{cpp-kw3}{#1}}
+\newcommand{\tealblue}[1]{\bfseries\textcolor{cpp-kw4}{#1}}
+\newcommand{\green}[1]{\bfseries\textcolor{cpp-kw5}{#1}}
+\newcommand{\orange}[1]{\bfseries\textcolor{cpp-kw6}{#1}}
+\newcommand{\brownishamber}[1]{\bfseries\textcolor{cpp-str}{#1}}
+\newcommand{\cyan}[1]{\textcolor{cpp-op}{#1}}
+
+
 
 % ========= Style tuned for white pages =========
 \lstdefinestyle{theo-cpp}{
@@ -221,6 +230,7 @@
   keywordstyle=[3]\bfseries\color{cpp-kw3},
   keywordstyle=[4]\bfseries\color{cpp-kw4},
   keywordstyle=[5]\bfseries\color{cpp-kw5},
+  keywordstyle=[6]\bfseries\color{cpp-kw6},
   stringstyle=\color{cpp-str},
   commentstyle=\itshape\color{cpp-com},
   showstringspaces=false, upquote=true,
@@ -229,6 +239,7 @@
   xleftmargin=1.5em, xrightmargin=0.5em,
   columns=fullflexible, keepspaces=true,
   breaklines=true, breakatwhitespace=true, tabsize=2, captionpos=b,
+  escapechar=§,  
   % readable operators + digit tint
   literate=*
     {>>}{{{\color{cpp-op}\texttt{>>}}}}2
@@ -241,25 +252,28 @@
     {!=}{{{\color{cpp-op}\texttt{!=}}}}2
     {&&}{{{\color{cpp-op}\texttt{\&\&}}}}2
     {||}{{{\color{cpp-op}\texttt{||}}}}2
+    {.h}{{{\color{cpp-kw6}\texttt{.h}}}}2
     {*}{{{\color{cpp-op}\texttt{*}}}}1
     {&}{{{\color{cpp-op}\texttt{\&}}}}1
     {=}{{{\color{cpp-op}\texttt{=}}}}1
+    {+}{{{\color{cpp-op}\texttt{+}}}}1
+    {-}{{{\color{cpp-op}\texttt{-}}}}1
     {;}{{{\color{cpp-op}\texttt{;}}}}1
     {:}{{{\color{cpp-op}\texttt{:}}}}1
-    {(}{{{\color{cpp-op}\texttt{(}}}}1
     {)}{{{\color{cpp-op}\texttt{)}}}}1
+    {(}{{{\color{cpp-op}\texttt{(}}}}1
     {[}{{{\color{cpp-op}\texttt{[}}}}1
     {]}{{{\color{cpp-op}\texttt{]}}}}1
-    {0}{{{\color{cpp-num}0}}}1
-    {1}{{{\color{cpp-num}1}}}1
-    {2}{{{\color{cpp-num}2}}}1
-    {3}{{{\color{cpp-num}3}}}1
-    {4}{{{\color{cpp-num}4}}}1
-    {5}{{{\color{cpp-num}5}}}1
-    {6}{{{\color{cpp-num}6}}}1
-    {7}{{{\color{cpp-num}7}}}1
-    {8}{{{\color{cpp-num}8}}}1
-    {9}{{{\color{cpp-num}9}}}1,
+    % {0}{{{\color{cpp-num}0}}}1
+    % {1}{{{\color{cpp-num}1}}}1
+    % {2}{{{\color{cpp-num}2}}}1
+    % {3}{{{\color{cpp-num}3}}}1
+    % {4}{{{\color{cpp-num}4}}}1
+    % {5}{{{\color{cpp-num}5}}}1
+    % {6}{{{\color{cpp-num}6}}}1
+    % {7}{{{\color{cpp-num}7}}}1
+    % {8}{{{\color{cpp-num}8}}}1
+    % {9}{{{\color{cpp-num}9}}}1,
 }
 
 

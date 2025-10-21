@@ -871,122 +871,122 @@ docker compose up
 
 \begin{otherlanguage*}{english}
 \begin{lstlisting}[style=theo-cpp]
-#include <TheThingsNetwork.h>
-#include <PZEM004Tv30.h>
-#include <SoftwareSerial.h>
+§\magenta{\#include}§ §\brownishamber{<TheThingsNetwork.h>}§
+§\magenta{\#include}§ §\brownishamber{<PZEM004Tv30.h>}§
+§\magenta{\#include}§ §\brownishamber{<SoftwareSerial.h>}§
 
 // TTN Configuration
 const char *appEui = "0000000000000000";
 const char *appKey = "801DB5D9568291D81E92288241C681B1";
 
-#define loraSerial Serial1
-#define debugSerial Serial
-#define freqPlan TTN_FP_EU868
+§\magenta{\#define}§ loraSerial Serial1
+§\magenta{\#define}§ debugSerial Serial
+§\magenta{\#define}§ freqPlan TTN_FP_EU868
 
-TheThingsNetwork ttn(loraSerial, debugSerial, freqPlan);
+TheThingsNetwork ttn(loraSerial, debugSerial, freqPlan§\cyan{)}§;
 
 // PZEM Configuration
-#define NUM_PZEMS 3
-SoftwareSerial pzemSWSerial1(9, 2);  // RX, TX for PZEM 1
-SoftwareSerial pzemSWSerial2(10, 3); // PZEM 2
-SoftwareSerial pzemSWSerial3(11, 4); // PZEM 3
+§\magenta{\#define}§ NUM_PZEMS §\cyan{3}§
+SoftwareSerial pzemSWSerial1(§\cyan{9}§, §\cyan{2)}§;  // RX, TX for PZEM 1
+SoftwareSerial pzemSWSerial2(§\cyan{10}§, §\cyan{3)}§; // PZEM 2
+SoftwareSerial pzemSWSerial3(§\cyan{11}§, §\cyan{4)}§; // PZEM 3
 PZEM004Tv30 pzems[NUM_PZEMS];
 
 // Energy reset configuration
-unsigned long lastResetTime = 0;
-const unsigned long resetInterval = 15 * 60000; // 15 minutes in milliseconds
+unsigned long lastResetTime = §\cyan{0}§;
+const unsigned long resetInterval = §\cyan{15}§ * §\cyan{60000}§; // 15 minutes in milliseconds
 
-void setup() {
-  debugSerial.begin(9600);
-  loraSerial.begin(57600);
+void setup(§\cyan{)}§ {
+  debugSerial.begin(§\cyan{9600)}§;
+  loraSerial.begin(§\cyan{57600)}§;
 
   // TTN setup
-  debugSerial.println("-- JOIN");
-  ttn.join(appEui, appKey);
-  while (!debugSerial) {
+  debugSerial.println("-- JOIN"§\cyan{)}§;
+  ttn.§\orange{join}§(appEui, appKey§\cyan{)}§;
+  while (!debugSerial§\cyan{)}§ {
     ; // Wait for serial to be ready
   }
-  debugSerial.println("-- STATUS");
-  ttn.showStatus();
+  debugSerial.println("-- STATUS"§\cyan{)}§;
+  ttn.showStatus(§\cyan{)}§;
 
   // Initialize PZEMs
-  pzems[0] = PZEM004Tv30(pzemSWSerial1);
-  pzems[1] = PZEM004Tv30(pzemSWSerial2);
-  pzems[2] = PZEM004Tv30(pzemSWSerial3);
+  pzems[§\cyan{0}§] = PZEM004Tv30(pzemSWSerial1§\cyan{)}§;
+  pzems[§\cyan{1}§] = PZEM004Tv30(pzemSWSerial2§\cyan{)}§;
+  pzems[§\cyan{2}§] = PZEM004Tv30(pzemSWSerial3§\cyan{)}§;
 
-  lastResetTime = millis(); // Initialize reset timer
+  lastResetTime = millis(§\cyan{)}§; // Initialize reset timer
 }
 
-void loop() {
+void loop(§\cyan{)}§ {
   // If we have no measurements do not send
   bool send = true;
 
   // Check if it's time to reset energy counters
-  if (millis() - lastResetTime >= resetInterval) {
-    resetEnergyCounters();
-    lastResetTime = millis();
-    debugSerial.println("Energy counters reset");
+  if (millis(§\cyan{)}§ - lastResetTime >= resetInterval§\cyan{)}§ {
+    resetEnergyCounters(§\cyan{)}§;
+    lastResetTime = millis(§\cyan{)}§;
+    debugSerial.println("Energy counters reset"§\cyan{)}§;
   }
 
-  // Buffer for LoRaWAN payload (36 bytes total - 12 bytes per PZEM)
-  uint8_t data[NUM_PZEMS * 12];
+  // Buffer for LoRaWAN payload (36 bytes total - 12 bytes per PZEM§\cyan{)}§
+  uint8_t data[NUM_PZEMS * §\cyan{12}§];
 
   // Read and process data for each PZEM
-  for (int i = 0; i < NUM_PZEMS; i++) {
-    float voltage = pzems[i].voltage();
-    float current = pzems[i].current();
-    float power = pzems[i].power();
-    float energy = pzems[i].energy();
-    float frequency = pzems[i].frequency();
-    float pf = pzems[i].pf();
+  for (int i = §\cyan{0}§; i < NUM_PZEMS; i++§\cyan{)}§ {
+    float voltage = pzems[i].§\orange{voltage}§(§\cyan{)}§;
+    float current = pzems[i].§\orange{current}§(§\cyan{)}§;
+    float power = pzems[i].§\orange{power}§(§\cyan{)}§;
+    float energy = pzems[i].§\orange{energy}§(§\cyan{)}§;
+    float frequency = pzems[i].§\orange{frequency}§(§\cyan{)}§;
+    float pf = pzems[i].§\orange{pf}§(§\cyan{)}§;
 
     // Validate readings
-    if (isnan(voltage) || isnan(current) || isnan(power) || 
-        isnan(energy) || isnan(frequency) || isnan(pf)) {
-      debugSerial.print("Error reading data from PZEM ");
-      debugSerial.println(i + 1);
+    if (isnan(voltage§\cyan{)}§ || isnan(current§\cyan{)}§ || isnan(power§\cyan{)}§ || 
+        isnan(energy§\cyan{)}§ || isnan(frequency§\cyan{)}§ || isnan(pf§\cyan{)}§§\cyan{)}§ {
+      debugSerial.print("Error reading data from PZEM "§\cyan{)}§;
+      debugSerial.println(i + §\cyan{1)}§;
       send = false;
       continue;
     }
 
     // Debug output
-    debugSerial.print("PZEM "); debugSerial.print(i + 1); debugSerial.println(" Readings:");
-    debugSerial.print("Voltage: "); debugSerial.print(voltage); debugSerial.println(" V");
-    debugSerial.print("Current: "); debugSerial.print(current, 3); debugSerial.println(" A");
-    debugSerial.print("Power: "); debugSerial.print(power); debugSerial.println(" W");
-    debugSerial.print("Energy: "); debugSerial.print(energy, 4); debugSerial.println(" kWh");
-    debugSerial.print("Frequency: "); debugSerial.print(frequency); debugSerial.println(" Hz");
-    debugSerial.print("Power Factor: "); debugSerial.println(pf);
-    debugSerial.println();
+    debugSerial.print("PZEM "§\cyan{)}§; debugSerial.print(i + §\cyan{1)}§; debugSerial.println(" Readings:"§\cyan{)}§;
+    debugSerial.print("Voltage: "§\cyan{)}§; debugSerial.print(voltage§\cyan{)}§; debugSerial.println(" V"§\cyan{)}§;
+    debugSerial.print("Current: "§\cyan{)}§; debugSerial.print(current, §\cyan{3)}§; debugSerial.println(" A"§\cyan{)}§;
+    debugSerial.print("Power: "§\cyan{)}§; debugSerial.print(power§\cyan{)}§; debugSerial.println(" W"§\cyan{)}§;
+    debugSerial.print("Energy: "§\cyan{)}§; debugSerial.print(energy, §\cyan{4)}§; debugSerial.println(" kWh"§\cyan{)}§;
+    debugSerial.print("Frequency: "§\cyan{)}§; debugSerial.print(frequency§\cyan{)}§; debugSerial.println(" Hz"§\cyan{)}§;
+    debugSerial.print("Power Factor: "§\cyan{)}§; debugSerial.println(pf§\cyan{)}§;
+    debugSerial.println(§\cyan{)}§;
 
-    // Prepare data for LoRaWAN (each value encoded as 2 bytes)
-    int index = i * 12;
-    data[index]      = (uint16_t(voltage * 10) >> 8);
-    data[index + 1]  = uint16_t(voltage * 10) & 0xFF;
-    data[index + 2]  = (uint16_t(current * 100) >> 8);
-    data[index + 3]  = uint16_t(current * 100) & 0xFF;
-    data[index + 4]  = (uint16_t(power * 10) >> 8);
-    data[index + 5]  = uint16_t(power * 10) & 0xFF;
-    data[index + 6]  = (uint16_t(energy * 100) >> 8);  
-    data[index + 7]  = uint16_t(energy * 100) & 0xFF;
-    data[index + 8]  = (uint16_t(frequency * 10) >> 8);
-    data[index + 9]  = uint16_t(frequency * 10) & 0xFF;
-    data[index + 10] = (uint16_t(pf * 100) >> 8);
-    data[index + 11] = uint16_t(pf * 100) & 0xFF;
+    // Prepare data for LoRaWAN (each value encoded as 2 bytes§\cyan{)}§
+    int index = i * §\cyan{12}§;
+    data[index]      = (uint16_t(voltage * §\cyan{10)}§ >> §\cyan{8)}§;
+    data[index + §\cyan{1}§]  = uint16_t(voltage * §\cyan{10)}§ & 0x§\cyan{FF)}§;
+    data[index + §\cyan{2}§]  = (uint16_t(current * §\cyan{100)}§ >> §\cyan{8)}§;
+    data[index + §\cyan{3}§]  = uint16_t(current * §\cyan{100)}§ & 0x§\cyan{FF)}§;
+    data[index + §\cyan{4}§]  = (uint16_t(power * §\cyan{10)}§ >> §\cyan{8)}§;
+    data[index + §\cyan{5}§]  = uint16_t(power * §\cyan{10)}§ & 0x§\cyan{FF)}§;
+    data[index + §\cyan{6}§]  = (uint16_t(energy * §\cyan{100)}§ >> §\cyan{8)}§;  
+    data[index + §\cyan{7}§]  = uint16_t(energy * §\cyan{100)}§ & 0x§\cyan{FF)}§;
+    data[index + §\cyan{8}§]  = (uint16_t(frequency * §\cyan{10)}§ >> §\cyan{8)}§;
+    data[index + §\cyan{9}§]  = uint16_t(frequency * §\cyan{10)}§ & 0x§\cyan{FF)}§;
+    data[index + §\cyan{10}§] = (uint16_t(pf * §\cyan{100)}§ >> 8§\cyan{)}§;
+    data[index + §\cyan{11}§] = uint16_t(pf * §\cyan{100)}§ & 0x§\cyan{FF)}§;
   }
 
   // Send data to TTN
-  debugSerial.println("-- Sending data to TTN");
-  if (send) ttn.sendBytes(data, sizeof(data));
-  debugSerial.println("-- Data sent!");
+  debugSerial.println("-- Sending data to TTN"§\cyan{)}§;
+  if (send§\cyan{)}§ ttn.§\orange{sendBytes}§(data, sizeof(data§\cyan{)}§§\cyan{)}§;
+  debugSerial.println("-- Data sent!"§\cyan{)}§;
 
-  delay(5000); // 5 seconds between readings
+  delay(§\cyan{5000)}§; // 5 seconds between readings
 }
 
-void resetEnergyCounters() {
-  for (int i = 0; i < NUM_PZEMS; i++) {
-    pzems[i].resetEnergy();
-    debugSerial.print("Reset energy for PZEM "); debugSerial.println(i+1);
+void resetEnergyCounters(§\cyan{)}§ {
+  for (int i = §\cyan{0}§; i < NUM_PZEMS; i++§\cyan{)}§ {
+    pzems[i].resetEnergy(§\cyan{)}§;
+    debugSerial.print("Reset energy for PZEM "§\cyan{)}§; debugSerial.println(i + §\cyan{1)}§;
   }
 }  
 \end{lstlisting}
