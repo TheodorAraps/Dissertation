@@ -43,31 +43,44 @@
 
 \documentclass[modern,hyperref,watermark,histinit,noindex,plain,newlogo]{ntua-thesis}
 \usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{pifont} 
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage[scaled=0.92]{inconsolata}
 \usepackage{tabularx,ragged2e,makecell}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
 % --- Code listings setup ---
-\usepackage{listings}
-\usepackage{xcolor}
 \usepackage[most]{tcolorbox}
 \tcbset{listing engine=listings}
 
-% \newtcblisting{CodeBlock}{
-%   listing only,
-%   colback=codebg,           % your background
-%   colframe=codeframe,       % your frame color
-%   arc=8pt,                  % rounded corners
-%   boxrule=0.5pt,
-%   left=0.2em,right=0.5em,   % match your xleft/xright margins
-%   top=8pt,bottom=8pt,       % match framesep
-%   listing options={style=bashstyle, frame=none, numbers=none, numbersep=10pt}
-% }
-% % usage:
-% % \begin{CodeBlock}
-% %   your code...
-% % \end{CodeBlock}
+
+
+% Numbered subsubsection command that also writes to the table of contents
+\makeatletter
+\newcount\subsubsectionwc@secdepth
+\newcount\subsubsectionwc@tocdepth
+\newcommand{\subsubsectionwc}[2][]{%
+  \subsubsectionwc@secdepth=\value{secnumdepth}%
+  \subsubsectionwc@tocdepth=\value{tocdepth}%
+  \setcounter{secnumdepth}{3}% ensure numbering for the heading
+  \setcounter{tocdepth}{3}% allow the standard machinery to create ToC/bookmark entries
+  \ifnum\the\subsubsectionwc@tocdepth<3 % ensure the entry also survives table-of-contents rendering
+    \addtocontents{toc}{\protect\setcounter{tocdepth}{3}}%
+  \fi
+  \if\relax\detokenize{#1}\relax
+    \subsubsection{#2}%
+  \else
+    \subsubsection[#1]{#2}%
+  \fi
+  \ifnum\the\subsubsectionwc@tocdepth<3
+    \addtocontents{toc}{\protect\setcounter{tocdepth}{\number\subsubsectionwc@tocdepth}}%
+  \fi
+  \setcounter{secnumdepth}{\number\subsubsectionwc@secdepth}% restore previous numbering depth
+  \setcounter{tocdepth}{\number\subsubsectionwc@tocdepth}% restore previous ToC depth
+}
+\makeatother
 
 
 % Colors
@@ -79,16 +92,10 @@
 \definecolor{codenums}{HTML}{9CA3AF}   % line numbers
 \definecolor{codeframe}{HTML}{E5E7EB}  % frame border
 
-% Monospace font (optional but nice)
-% For pdfLaTeX:
-\usepackage[scaled=0.92]{inconsolata}
-% For Xe/LuaLaTeX comment the line above and use:
-% \usepackage{fontspec}
-% \setmonofont{JetBrains Mono} % or Fira Code / Inconsolata, etc.
 
 \lstdefinestyle{bashstyle}{
   language=bash,
-  deletekeywords={newgrp,enable,cd},
+  deletekeywords={newgrp,enable,cd,exec,cat,awk},
   backgroundcolor=\color{codebg},
   basicstyle=\linespread{1.05}\ttfamily\normalsize\color{codetext},
   keywordstyle=\bfseries\color{codekw},
@@ -168,16 +175,101 @@
   captionpos=b
 }
 
+% ========= Light palette for white background =========
+\definecolor{cpp-bg}{HTML}{FFFFFF}   % paper white
+\definecolor{cpp-fg}{HTML}{222222}   % main text (near-black)
+\definecolor{cpp-kw1}{HTML}{0066CC}  % general keywords (blue)
+\definecolor{cpp-kw2}{HTML}{D35400}  % control-flow (orange)
+\definecolor{cpp-kw3}{HTML}{8E44AD}  % decl/modifiers (purple)
+\definecolor{cpp-kw4}{HTML}{0B6E99}  % types (teal-blue)
+\definecolor{cpp-kw5}{HTML}{2E7D32}  % std/STL (green)
+\definecolor{cpp-str}{HTML}{B9770E}  % strings (brownish amber)
+\definecolor{cpp-com}{HTML}{6C757D}  % comments (cool grey)
+\definecolor{cpp-op}{HTML}{1F6C8E}   % operators & punctuation
+\definecolor{cpp-num}{HTML}{0E7C86}  % numeric literals
+\definecolor{cpp-pre}{HTML}{B23C17}  % preprocessor (rusty orange)
+\definecolor{cpp-frame}{HTML}{DADDE1} % frame/line-number gutter
+
+% ========= Language: keep your TheoCXX as-is (you already had this) =========
+% (unchanged; shown here just to be complete)
+\lstdefinelanguage{TheoCXX}[]{C++}{
+  sensitive=true,
+  morekeywords={override,final,noexcept,constexpr,decltype,nullptr,thread_local,
+    concept,requires,co_await,co_yield,co_return},
+  morekeywords=[2]{if,else,for,while,do,switch,case,break,continue,return,try,catch,throw},
+  morekeywords=[3]{class,struct,enum,union,namespace,template,typename,using,
+    public,private,protected,virtual,static,inline,explicit,friend,operator},
+  morekeywords=[4]{int,long,short,float,double,char,bool,void,auto,signed,unsigned,
+    size_t,std::size_t,wchar_t,char8_t,char16_t,char32_t},
+  morekeywords=[5]{std,vector,string,unordered_map,map,set,optional,variant,span,array,
+    unique_ptr,shared_ptr,make_unique,make_shared,cout,cin,endl,move,forward,
+    chrono,thread,mutex,lock_guard,atomic},
+  morecomment=[l]//,
+  morecomment=[s]{/*}{*/},
+  morestring=[b]",
+  morestring=[b]',
+  morecomment=[l][\color{cpp-pre}]{\#}, % color whole preprocessor line
+}
+
+% ========= Style tuned for white pages =========
+\lstdefinestyle{theo-cpp}{
+  language=TheoCXX,
+  backgroundcolor=\color{cpp-bg},
+  basicstyle=\linespread{1.05}\ttfamily\small\color{cpp-fg},
+  keywordstyle=\bfseries\color{cpp-kw1},
+  keywordstyle=[2]\bfseries\color{cpp-kw2},
+  keywordstyle=[3]\bfseries\color{cpp-kw3},
+  keywordstyle=[4]\bfseries\color{cpp-kw4},
+  keywordstyle=[5]\bfseries\color{cpp-kw5},
+  stringstyle=\color{cpp-str},
+  commentstyle=\itshape\color{cpp-com},
+  showstringspaces=false, upquote=true,
+  numbers=left, numberstyle=\scriptsize\color{cpp-com}, numbersep=10pt,
+  frame=single, rulecolor=\color{cpp-frame}, frameround=tttt, framesep=8pt,
+  xleftmargin=1.5em, xrightmargin=0.5em,
+  columns=fullflexible, keepspaces=true,
+  breaklines=true, breakatwhitespace=true, tabsize=2, captionpos=b,
+  % readable operators + digit tint
+  literate=*
+    {>>}{{{\color{cpp-op}\texttt{>>}}}}2
+    {<<}{{{\color{cpp-op}\texttt{<<}}}}2
+    {::}{{{\color{cpp-op}\texttt{::}}}}2
+    {->}{{{\color{cpp-op}\texttt{->}}}}2
+    {<=}{{{\color{cpp-op}\texttt{<=}}}}2
+    {>=}{{{\color{cpp-op}\texttt{>=}}}}2
+    {==}{{{\color{cpp-op}\texttt{==}}}}2
+    {!=}{{{\color{cpp-op}\texttt{!=}}}}2
+    {&&}{{{\color{cpp-op}\texttt{\&\&}}}}2
+    {||}{{{\color{cpp-op}\texttt{||}}}}2
+    {*}{{{\color{cpp-op}\texttt{*}}}}1
+    {&}{{{\color{cpp-op}\texttt{\&}}}}1
+    {=}{{{\color{cpp-op}\texttt{=}}}}1
+    {;}{{{\color{cpp-op}\texttt{;}}}}1
+    {:}{{{\color{cpp-op}\texttt{:}}}}1
+    {(}{{{\color{cpp-op}\texttt{(}}}}1
+    {)}{{{\color{cpp-op}\texttt{)}}}}1
+    {[}{{{\color{cpp-op}\texttt{[}}}}1
+    {]}{{{\color{cpp-op}\texttt{]}}}}1
+    {0}{{{\color{cpp-num}0}}}1
+    {1}{{{\color{cpp-num}1}}}1
+    {2}{{{\color{cpp-num}2}}}1
+    {3}{{{\color{cpp-num}3}}}1
+    {4}{{{\color{cpp-num}4}}}1
+    {5}{{{\color{cpp-num}5}}}1
+    {6}{{{\color{cpp-num}6}}}1
+    {7}{{{\color{cpp-num}7}}}1
+    {8}{{{\color{cpp-num}8}}}1
+    {9}{{{\color{cpp-num}9}}}1,
+}
+
+
+
+
+
+
 
 % -------- Terminal look & feel (listings + tcolorbox) --------
 
-
-
-\usepackage{xcolor}
-\usepackage{listings}
-\usepackage[most]{tcolorbox}
-
-\tcbset{listing engine=listings}
 
 % Dark palette (tweak to taste)
 \definecolor{term.bg}{HTML}{0B0E14}
@@ -191,6 +283,24 @@
 \definecolor{term.host}{HTML}{9FC5FF}
 \definecolor{term.path}{HTML}{E0A3FF}
 \definecolor{term.symbol}{HTML}{7AD9F5}
+\definecolor{term.ansi.blue}{HTML}{61AFEF}
+\definecolor{term.ansi.green}{HTML}{98C379}
+\definecolor{term.ansi.magenta}{HTML}{C678DD}
+\definecolor{termok}{HTML}{78C2A4}
+
+
+
+
+
+% color macro (optional)
+\newcommand{\cmarkheavy}{\textcolor{term.ansi.magenta}{\ding{52}}}
+
+% listings mapping: make the Unicode ✔ render as heavy + colored
+\lstdefinestyle{term}{
+  basicstyle=\ttfamily,
+  literate={✔}{{{\color{term.ansi.magenta}\ding{52}}}}1,
+  escapechar=§
+}
 
 % Shell prompt macro (user@host:~$ )
 \newcommand{\prompt}{%
@@ -220,10 +330,29 @@
   \textbf{\textcolor{term.path}{\textasciitilde}}%
   \textcolor{term.symbol}{/TheThingsStack \$}\,%
 }
+
+\newcommand{\promptinbs}{%
+  \textbf{\textcolor{term.user}{loragw}%
+  \textcolor{term.dim}{@}%
+  \textcolor{term.host}{loragateway}}%
+  \textcolor{term.dim}{:}%
+  \textbf{\textcolor{term.path}{\textasciitilde}}%
+  \textcolor{term.symbol}{/BasicStation \$}\,%
+}
+
+
 \newcommand{\assets}{\textcolor{term.symbol}{assets}\,}
 \newcommand{\runner}{\textcolor{term.symbol}{runner}\,}
+\newcommand{\builder}{\textcolor{term.symbol}{builder}\,}
 \newcommand{\build}{\textcolor{term.user}{build.sh}\,}
 \newcommand{\balena}{\textcolor{term.fg}{balena.yml}\,}
+\newcommand{\changelog}{\textcolor{term.fg}{CHANGELOG.md}\,}
+\newcommand{\readme}{\textcolor{term.fg}{README.md}\,}
+\newcommand{\logopng}{\textcolor{term.ansi.magenta}{logo.png}\,}
+\newcommand{\dockercreated}{\textcolor{term.ansi.green}{Created}\,}
+\newcommand{\dockerrunning}[1]{\textcolor{term.ansi.blue}{#1}}
+
+
 
 
 % Listings style (no frame/bg here; the box will paint them)

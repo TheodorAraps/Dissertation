@@ -456,6 +456,15 @@
   \url{https://github.com/xoseperez/the-things-stack-docker}. Accessed: Sep.
   16, 2025}.
 
+\bibitem{xoseperez_basicstation_docker}
+{{\latintext X.{ }Pérez}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em basicstation-docker:
+  Docker deployment for Basics™ Station Packet Forward}}}}.
+\newblock {{\latintext GitHub repository}}, 2025.
+\newblock \en{[Online]. Available:
+  \url{https://github.com/xoseperez/basicstation-docker}. Accessed: Sep. 16,
+  2025}.
+
 \bibitem{goossens93}
 {{\latintext M.{ }Goossens, F.{ }Mittelbach \textgreek{kai} A.{ }Samarin}}.
 \newblock {{\latintext {\color{\colouredtextcolor} {\em The LaTeX

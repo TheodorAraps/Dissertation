@@ -1,4 +1,4 @@
-\chapter{Υλικό και Σχεδιασμός Συσκευών του Συστήματος}
+\chapter{Υλικό και σχεδιασμός συσκευών του συστήματος}
 
 \InitialCharacter{Σ}ε αυτό το κεφάλαιο περιγράφεται η υλική υποδομή που 
 κατασκευάστηκε για την υλοποίηση του συστήματος, το \textbf{\en{LoRaWAN gateway}}  
@@ -12,7 +12,7 @@
 
 
 
-\section{Γενική Αρχιτεκτονική Συστήματος}
+\section{Γενική αρχιτεκτονική συστήματος}
 
 Πριν από την περιγραφή κάθε συσκευής, αξίζει να παρουσιαστεί συνοπτικά η τοπολογία: 
 οι αισθητήρες (μετρητές) επικοινωνούν ασύρματα μέσω \en{LoRaWAN} με το \en{gateway}, το 
@@ -258,6 +258,7 @@
 
 \newpage
 \section{Τριφασικοί Μετρητές}
+\label{sec:4.3}
 
 
 %%%%   Υποενότητα 4.3.1: Υλικά και αρχιτεκτονική   %%%%
@@ -384,4 +385,68 @@
 \caption{Υλοποίηση τριφασικού μετρητή - σύνδεση \en{The Things Uno} με 3 \en{PZEM-004T V3.0}}
 \label{figure4.3}
 \end{Illustration}
+
+
+\begin{table}[ht]
+\centering
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{| >{\centering\arraybackslash}m{0.26\linewidth}
+                | >{\centering\arraybackslash}m{0.26\linewidth}
+                | >{\centering\arraybackslash}m{0.35\linewidth} |}
+\hline
+\multicolumn{3}{|c|}{\textbf{\en{PZEM} 1 (\en{Phase} \en{L1})}} \\ \hline
+\textbf{\en{PZEM-004T v3.0} \en{pin}} & \textbf{\en{The Things Uno} \en{pin}} & \textbf{\en{Description}} \\ \hline
+\en{VCC} & \en{3v3V} & Τροφοδοσία \en{3.3V} \\ \hline
+\en{GND} & \en{GND} & Κοινή γείωση (\en{shared ground}) \\ \hline
+\en{TX} & \en{D9}  & \en{PZEM TX} → \en{Uno RX} (\en{SoftwareSerial RX}) \\ \hline
+\en{RX} & \en{D2}  & \en{PZEM RX} → \en{Uno TX} (\en{SoftwareSerial TX}) \\ \hline
+\end{tabular}
+\caption{Συνδεσμολογία 1\textsuperscript{ου} \en{PZEM-004T v3.0} με \en{The Things Uno} - Φάση 1}
+\label{tab:ttuno_pzem_pins_phase1}
+\end{table}
+
+\pagebreak
+
+\begin{table}[ht]
+\centering
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{| >{\centering\arraybackslash}m{0.26\linewidth}
+                | >{\centering\arraybackslash}m{0.26\linewidth}
+                | >{\centering\arraybackslash}m{0.35\linewidth} |}
+\hline
+\multicolumn{3}{|c|}{\textbf{\en{PZEM} 2 (\en{Phase} \en{L2})}} \\ \hline
+\textbf{\en{PZEM-004T v3.0} \en{pin}} & \textbf{\en{The Things Uno} \en{pin}} & \textbf{\en{Description}} \\ \hline
+\en{VCC} & \en{3v3V}  & Τροφοδοσία \en{3.3V} \\ \hline
+\en{GND} & \en{GND} & Κοινή γείωση (\en{shared ground}) \\ \hline
+\en{TX}  & \en{D10} & \en{PZEM TX} → \en{Uno RX} (\en{SoftwareSerial RX}) \\ \hline
+\en{RX}  & \en{D3}  & \en{PZEM RX} → \en{Uno TX} (\en{SoftwareSerial TX}) \\ \hline
+\end{tabular}
+\caption{Συνδεσμολογία 2\textsuperscript{ου} \en{PZEM-004T v3.0} με \en{The Things Uno} - Φάση 2}
+\label{tab:ttuno_pzem_pins_phase2}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{| >{\centering\arraybackslash}m{0.26\linewidth}
+                | >{\centering\arraybackslash}m{0.26\linewidth}
+                | >{\centering\arraybackslash}m{0.35\linewidth} |}
+\hline
+\multicolumn{3}{|c|}{\textbf{\en{PZEM} 3 (\en{Phase} \en{L3})}} \\ \hline
+\textbf{\en{PZEM-004T v3.0} \en{pin}} & \textbf{\en{The Things Uno} \en{pin}} & \textbf{\en{Description}} \\ \hline
+\en{VCC} & \en{3v3V}  & Τροφοδοσία \en{3.3V} \\ \hline
+\en{GND} & \en{GND} & Κοινή γείωση (\en{shared ground}) \\ \hline
+\en{TX}  & \en{D11} & \en{PZEM TX} → \en{Uno RX} (\en{SoftwareSerial RX}) \\ \hline
+\en{RX}  & \en{D4}  & \en{PZEM RX} → \en{Uno TX} (\en{SoftwareSerial TX}) \\ \hline
+\end{tabular}
+\caption{Συνδεσμολογία 3\textsuperscript{ου} \en{PZEM-004T v3.0} με \en{The Things Uno} - Φάση 3}
+\label{tab:ttuno_pzem_pins_phase3}
+\end{table}
+
+\newpage
+
+
 

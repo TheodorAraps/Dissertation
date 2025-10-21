@@ -1,4 +1,4 @@
-\chapter{Πρακτική Υλοποίηση του Συστήματος}
+\chapter{Πρακτική υλοποίηση του συστήματος}
 \InitialCharacter{Σ}το κεφάλαιο αυτό παρουσιάζεται βήμα προς βήμα η πρακτική υλοποίηση 
 του συστήματος, από την αρχική εγκατάσταση μέχρι την πλήρη ολοκλήρωση (\en{integration}) 
 των υποσυστημάτων. Αφετηρία αποτελεί η προετοιμασία του \en{LoRaWAN gateway}, το οποίο 
@@ -32,7 +32,7 @@
 \begin{Illustration}[!ht] 
   \centering
 	\includegraphics[width=0.85\textwidth]{figures/LoRaWAN_gateway_setup.jpg} 
-  \caption{Τελική συνδεσμολογία των εξαρτημάτων.}
+  \caption{Τελική συνδεσμολογία των εξαρτημάτων του \en{LoRaWAN gateway}.}
   \label{figure5.1}
 \end{Illustration} 
 
@@ -256,7 +256,7 @@ sudo systemctl enable containerd.service
 
 \subsubsection{(Προαιρετικό) Επαλήθευση εγκατάστασης}
 
-\noindent Ελέγχούμε ότι το \en{Docker Engine} και το \en{Compose} \en{plugin} είναι διαθέσιμα. 
+Ελέγχούμε ότι το \en{Docker Engine} και το \en{Compose} \en{plugin} είναι διαθέσιμα. 
 
 \begin{otherlanguage*}{english}
 \begin{lstlisting}[style=bashstyle]
@@ -274,7 +274,7 @@ Docker Compose version v2.40.0
 \end{Terminal}
 \end{otherlanguage*}
 
-\noindent Αν η δεύτερη εντολή δεν επιστρέψει έκδοση, εγκαθιστούμε το \en{plugin}. 
+Αν η δεύτερη εντολή δεν επιστρέψει έκδοση, εγκαθιστούμε το \en{plugin}. 
 
 \begin{otherlanguage*}{english}
 \begin{lstlisting}[style=bashstyle]
@@ -285,7 +285,7 @@ sudo apt-get install docker-compose-plugin
 
 \subsubsection{(Προαιρετικό) Δοκιμαστικό \en{run}.}
 
-\noindent Με την ακόλουθη εντολή τραβάμε και εκτελούμε ένα ελαφρύ δοκιμαστικό \en{container} για να 
+Με την ακόλουθη εντολή τραβάμε και εκτελούμε ένα ελαφρύ δοκιμαστικό \en{container} για να 
 επαληθεύσουμε ότι το \en{Docker} λειτουργεί σωστά και χωρίς \en{sudo}.
 
 \begin{otherlanguage*}{english}
@@ -311,7 +311,7 @@ This message shows that your installation appears to be working correctly.
 
 
 \subsection{Εγκατάσταση του \en{The Things Stack}}
-    
+\label{subsec:5.1.4}
 Για την εγκατάσταση του \en{The Things Stack} αξιοποιήθηκε η έτοιμη διάταξη \en{Docker} 
 από το ανοιχτού κώδικα αποθετήριο (\en{repsitory}) του \en{GitHub} \en{xoseperez/the-things-stack-docker} \cite{XosePerez_TheThingsStackDocker}, η οποία προσφέρει 
 ένα πλήρως παραμετροποιήσιμο \en{compose} περιβάλλον (υπηρεσίες \en{stack}, \en{PostgreSQL}, 
@@ -323,9 +323,9 @@ This message shows that your installation appears to be working correctly.
 
 
 
-\subsubsection{Λήψη πηγαίου κώδικα}
+\subsubsectionwc{Λήψη πηγαίου κώδικα}
  
-\noindent Εκτελούμε τις ακόλουθες εντολές στο \en{Raspberry Pi} ώστε να κλωνοποιήσουμε το αποθετήριο και να το τοποθετήσουμε σε φάκελο με 
+Εκτελούμε τις ακόλουθες εντολές στο \en{Raspberry Pi} ώστε να κλωνοποιήσουμε το αποθετήριο και να το τοποθετήσουμε σε φάκελο με 
 όνομα \en{TheThingsStack}:
 
 \begin{otherlanguage*}{english}
@@ -347,18 +347,18 @@ cd TheThingsStack/
 \end{otherlanguage*}
 
 Στον ριζικό κατάλογο (\en{directory}) του αποθετηρίου εντοπίζουμε το \en{Dockerfile}
-που καθορίζει τη βάση της εικόνας, την ενσωμάτωση των \en{scripts} του \en{runner} και τις εντολές 
+που καθορίζει τη βάση της εικόνας, την ενσωμάτωση των \en{scripts} του υποφακέλου \en{runner/} και τις εντολές 
 εκκίνησης. Το \en{docker-compose.yml} ορίζει πώς συναρμολογούνται οι υπηρεσίες \en{(TTS, Redis, Postgres)}, 
 τα \en{volumes} και οι μεταβλητές περιβάλλοντος. Το \en{docker-bake.hcl} και το \en{build.sh} υποστηρίζουν 
 τις \en{multi-platform builds} (π.χ. \en{arm}/\en{amd64}) και απλοποιούν τη διαδικασία κατασκευής της 
-εικόνας. Τα αρχεία \en{.ttn-lw-stack-docker.yml.template} και \en{.ttn-lw-cli.yml.template} (μέσα στο φάκελο 
-\en{runner}) χρησιμοποιούνται ως πρότυπα για τη διαμόρφωση του \en{TTS} και του \en{CLI}, με το \en{script} 
+εικόνας. Τα αρχεία \en{.ttn-lw-stack-docker.yml.template} και \en{.ttn-lw-cli.yml.template} (μέσα στο υποφάκελο 
+\en{runner/}) χρησιμοποιούνται ως πρότυπα για τη διαμόρφωση του \en{TTS} και του \en{CLI}, με το \en{script} 
 \en{start} να τα επεξεργάζεται. Αυτά τα στοιχεία συνεργάζονται ώστε η τελική εικόνα να «τρέχει» το 
 επίσημο \en{TTS image} με αυτόματη διαμόρφωση, ανέλιξη πιστοποιητικών, αρχικοποίηση βάσης και δημιουργία διαχειριστών 
 χωρίς να χρειάζεται χειροκίνητη παρέμβαση από τον χρήστη.
 
 
-\subsubsection{Παραμετροποίηση \en{docker-compose}} 
+\subsubsectionwc{Παραμετροποίηση \en{docker-compose}} 
 
 Επεξεργαζόμαστε το \en{docker-compose.yml} ώστε να ταιριάζει στο περιβάλλον μας. 
 
@@ -494,4 +494,612 @@ services:
 \end{lstlisting}
 \end{otherlanguage*}
 
-\subsubsection{Εκκίνηση \en{stack container}} 
+
+\subsubsection{Εκκίνηση \en{stack container} και σύνδεση στο \en{Console}}
+
+Πλέον το \en{The Things Stack} είναι έτοιμο για εκκίνηση. Εκτελούμε:
+
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+docker compose up
+\end{lstlisting}
+\end{otherlanguage*}
+
+\begin{otherlanguage*}{english}
+\begin{Terminal}
+§\promptintts§ docker compose up
+§\dockerrunning{[+] Running 4/4}§ 
+  §{\color{term.ansi.magenta}\checkmark}§ Network thethingsstack_default  §\dockercreated§        §\dockerrunning{0.1s}§
+  §{\color{term.ansi.magenta}\checkmark}§ Container redis                 §\dockercreated§        §\dockerrunning{0.5s}§
+  §{\color{term.ansi.magenta}\checkmark}§ Container postgres              §\dockercreated§        §\dockerrunning{0.5s}§
+  §{\color{term.ansi.magenta}\checkmark}§ Container stack                 §\dockercreated§        §\dockerrunning{0.2s}§
+\end{Terminal}
+\end{otherlanguage*}
+
+Μπορούμε πλέον να συνδεθούμε στο \en{Console}. Ανοίγουμε τον φυλλομετρητή \en{(browser)} 
+και μεταβαίνουμε στη διεύθυνση \textit{\en{http://192.168.0.100/console}}
+. Ο \en{OAuth client} θα μας ανακατευθύνει (\en{redirect}) στη σελίδα \en{Login} του 
+\en{The Things Stack Console}. Για την πρώτη είσοδο χρησιμοποιούμε τον προεπιλεγμένο (\en{default}) 
+λογαριασμό με \en{User ID} \textit{\en{admin}} και κωδικό \textit{\en{changeme}}. Συνιστάται άμεσα η 
+αλλαγή κωδικού από \textit{\en{Home}} $>$ \textit{\en{User Settings}} $>$ 
+\textit{\en{Change Password}}, ώστε να σκληρύνουμε την ασφάλεια της εγκατάστασης. 
+
+\newpage
+
+
+
+
+%%%%   Υποενότητα 5.1.5: Εγκατάσταση του LoRa Basics Station   %%%%
+
+
+
+\subsection{Εγκατάσταση του \en{LoRa Basics Station}}
+
+Για τη διασύνδεση του \en{gateway} με το \en{The Things Stack} σε λειτουργία 
+\en{LNS (LoRa Network Server)}, αξιοποιήθηκε το αποθετήριο \en{GitHub} 
+\en{xoseperez/basicstation-docker} \cite{xoseperez_basicstation_docker}, το οποίο προσφέρει έτοιμη διάταξη \en{Docker} και 
+\en{runner} \en{scripts} για \en{SX1301/SX1302} τύπου συγκεντρωτές. 
+Η λογική είναι παρόμοια με του \en{TTS}: ένα \en{container} τρέχει τον \en{Basics Station} 
+και διαβάζει καθορισμένες ρυθμίσεις από πρότυπα αρχεία (\en{templates}) του φακέλου \en{runner}, τα οποία 
+συμπληρώνουμε με τις παραμέτρους του δικού μας \en{gateway}. Παρακάτω παρατίθενται τα ακριβή 
+βήματα που ακολουθήθηκαν.
+
+\subsubsectionwc{Λήψη πηγαίου κώδικα}
+Κλωνοποίηση του αποθετηρίου και τοποθέτηση σε φάκελο \en{BasicStation}:
+
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+cd ~
+git clone https://github.com/xoseperez/basicstation-docker
+mv basicstation-docker BasicStation
+cd BasicStation
+\end{lstlisting}
+\end{otherlanguage*}
+
+\begin{otherlanguage*}{english}
+\begin{Terminal}
+§\promptinbs§ ls
+§\balena§    docker-bake.hcl      §\logopng§     tc_trust
+§\builder§       docker-compose.yml   §\readme§    tts-sandbox-docker-compose.yml
+§\build§      Dockerfile           §\runner§
+§\changelog§  Dockerfile.template  ser2net.yaml
+\end{Terminal}
+\end{otherlanguage*}
+
+Στον ριζικό κατάλογο θα βρούμε αρχεία όπως \en{Dockerfile}, \en{docker-compose.yml} και τον 
+υποφάκελο \en{runner/}.
+Το \en{Dockerfile} καθορίζει την εικόνα του \en{Basics Station}, το \en{docker-compose.yml} ορίζει τον 
+τρόπο εκτέλεσης/πρόσβασης σε \en{devices} (\en{SPI}, \en{GPIO}), ενώ ο υποφάκελος \en{runner} περιέχει τα 
+πρότυπα ρυθμίσεων (\en{station.conf} κ.λπ.), \en{entrypoint scripts} και τυχόν βοηθητικά 
+\en{certificates}.
+
+\subsubsectionwc{Υπολογισμός \en{Gateway EUI}}
+Ο \en{LNS} ζητά \en{Gateway EUI} σε μορφή \en{EUI-64}. Συνήθως προκύπτει από τη \en{MAC} 
+διαύθυνση του \en{eth0} με εισαγωγή \en{FFFE} στη μέση. Μπορούμε να υπολογίζουμε, λοιπόν, το \en{EUI} από \en{MAC} διαύθυνση του \en{eth0} και την εκτυπώνουμε στο \en{terminal} με την εντολή:
+
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle, basicstyle=\linespread{1.05}\ttfamily\small\color{codetext}]
+cat /sys/class/net/eth0/address | awk -F\: '{print toupper($1$2$3"FFFE"$4$5$6)}'
+\end{lstlisting}
+\end{otherlanguage*}
+
+\subsubsectionwc{Καταχώριση του \en{gateway} στο \en{The Things Stack}}
+\label{sybsybsecwc:5.1.5.2}
+
+Πριν συνδεθεί το \en{LoRa Basics Station} απαιτείται η δημιουργία εγγραφής \en{gateway} στο 
+\en{The Things Stack} και η έκδοση κατάλληλου \en{API key}. Μέσα από το \en{Console} ορίζουμε 
+\en{Gateway ID}, \en{frequency plan} και \en{LNS} \en{server}/\en{route}, και στη συνέχεια 
+δημιουργούμε ένα \en{API key} με τα ελάχιστα απαραίτητα δικαιώματα για \en{LNS} σύνδεση. Το 
+\en{Gateway ID} και το \en{API key} θα χρησιμοποιηθούν στην παραμετροποίηση του \en{Basic Station} 
+ώστε να επιτευχθεί η ασφαλής σύνδεση (\en{wss}) και η ανταλλαγή \en{uplinks/downlinks} με τον 
+\en{Network Server}.
+
+\begin{enumerate}
+  \item Από τις επιλογές αριστερά, διαλέγουμε \textit{\en{Gateways}} και στη συνέχεια πατάμε το κουμπί \textit{\en{+ Register gateway}} για να καταχωρίσουμε νέα συσκευή \en{gateway}:   \begin{Illustration}[!ht] \centering      \includegraphics[width=1\textwidth]{figures/Register_Gateway.png}       \caption{Επιλογή καταχώρησης νέου \en{Gateway}.}      \label{figure5.8}    \end{Illustration}  % \item Είσάγουμε  
+  \item Συμπληρώνουμε το \en{EUI} που βρήκαμε προηγουμένως (βλ. Υπο-υποενότητα \ref{sybsybsecwc:5.1.5.2}) και πατάμε \en{confirm}:\begin{Illustration}[!ht]     \centering    \includegraphics[width=0.6\textwidth]{figures/Register_gateway_set_eui.png}     \caption{Εισαγωγή \en{EUI}.}    \label{figure5.9}  \end{Illustration} 
+  \item Θέτουμε τα \en{Gateway ID} και \en{name} καθώς και το \en{Frequency plan} που επιθυμούμε. Επιπλέον ενεργοποιούμε την επιλογή \textit{\en{Require authenticated connection}} και επιλέγουμε \textit{\en{Generate API key for LNS}}. Τέλος πατάμε \textit{\en{Register Gateway}}: 
+  \begin{Illustration}[!ht]     
+    \centering    
+    \includegraphics[width=0.6\textwidth]{figures/Register_gateway_final_options.png}     
+    \caption{Δημιουργία \en{Gateway ID} και \en{name}, επιλογή \en{Frequency plan} και 
+    δημιουργία κλειδιού \en{LNS}.}    
+    \label{figure5.10}  
+  \end{Illustration} 
+  \item Στο αναδυόμενο παράθυρο που μας προτρέπει να αποθηκεύσουμε το \en{gateway API key} (\en{LNS Authentication Key}) επιλέγουμε \en{Download LNS keys} για να κατεβάσουμε το αρχείο με το κλειδί.
+  \begin{Illustration}[!ht]     
+    \centering    
+    \includegraphics[width=0.6\textwidth]{figures/Download_API_keys.png}     
+    \caption{Αποθήκευση \en{API} κλειδιού.}    
+    \label{figure5.11}  
+  \end{Illustration}
+  \item Τέλος, ενω έχουμε εκκινήσει το \en{TTS container}, τρέχουμε την ακόλουθη εντολή για να εκτυπώσουμε το \en{TLS certificate} του \en{TTS server}, το οποιο θα χρειαστεί για την παραμετροποίηση του \en{Basics Station}:
+  \begin{otherlanguage*}{english}
+  \begin{lstlisting}[style=bashstyle]
+  docker exec stack get_trust_certificate  \end{lstlisting}
+  \end{otherlanguage*}
+\end{enumerate}
+
+\subsubsectionwc{Παραμετροποίηση \en{docker-compose}}
+Επεξεργαζόμαστε το \en{docker-compose.yml} του \en{Basic Station} ώστε να προσαρμοστεί στο δικό μας 
+\en{gateway} και στον \en{LNS} του \en{The Things Stack}. Το αρχείο ορίζει ένα μόνο \en{service} 
+(το \en{basicstation}) και παραμετροποιείται μέσω \en{environment variables} για το μοντέλο 
+συγκεντρωτή, τη διεπαφή \en{SPI}, τη σύνδεση \en{LNS} (\textit{\en{TC\_URI}}, \textit{\en{TC\_TRUST}}, \textit{\en{TC\_KEY}}) κ.ά.
+
+Μόλις ανοίξουμε το αρχείο βλέπουμε τις παρακάτω ρυθμίσεις για το \en{basicstation container}:
+\begin{itemize}
+\item \textbf{\en{image}}: Επιλέγουμε την έτοιμη εικόνα \en{aarch64} (κατάλληλη για \en{Raspberry Pi 4}). Εναλλακτικά μπορούμε να αφαιρέσουμε (\en{comment out}) την γραμμή \en{image} και να ενεργοποιήσουμε το \en{build} για να «κλειδώσουμε» \en{REMOTE\_TAG} ή να κάνουμε προσαρμογές.
+\item \textbf{\en{container\_name}}: Ορίζει το σταθερό όνομα του \en{container}.
+\item \textbf{\en{restart: unless-stopped}}: Αυτόματη επανεκκίνηση μετά από σφάλμα ή \en{reboot}. Απαραίτητο για \en{gateway} που λειτουργεί αδιάκοπα, μειώνει τις χειροκίνητες παρεμβάσεις και το χρόνο μη διαθεσιμότητας.
+\item \textbf{\en{privileged: true}}: Επιτρέπει πρόσβαση σε \en{SPI}/\en{GPIO} χωρίς να ορίσουμε μεμονωμένες συσκευές. Αν προτιμάμε αυστηρότερη ασφάλεια, μπορούμε να αφαιρέσουμε το \en{privileged} και να μοιραστούμε ρητά τις συσκευές (\en{/dev/spidev0.0}, \en{/dev/gpiochip0}).
+\item \textbf{\en{network\_mode: host}}: Το \en{container} «βλέπει» το \en{host} \en{network stack}, ώστε ο \en{Gateway EUI} (που παράγεται από \en{MAC}) να είναι σταθερός ανάμεσα σε επανεκκινήσεις. Είναι η ασφαλέστερη επιλογή για αποφυγή αλλαγών \en{EUI}.
+\end{itemize}
+
+Επεξεργαζόμαστε στη συνέχεια τις ακόλουθες μεταβλητές περιβάλλοντος ώστε το \en{basicstation} να λειτουργήσει κατάλληλα με βάση την δική μας υλοποίηση:
+
+\paragraph{Ρυθμίσεις συγκεντρωτή (\en{concentrator}):}
+\begin{itemize}
+\item \textbf{\en{MODEL: "IC880A"}}: Δηλώνουμε ρητά το \en{iC880A-SPI}, ώστε ο \en{Basics Station} να εφαρμόσει το σωστό \en{design}/\en{pinout}.
+\item \textbf{\en{GPIO\_CHIP}}: Ορίζει τον \en{GPIO} \en{chip} που θα χρησιμοποιηθεί (στο \en{Raspberry Pi 4} τυπικά έχουμε \en{gpiochip0}).
+\item \textbf{\en{RESET\_GPIO}}: Η γραμμή \en{GPIO} που οδηγεί το \en{reset} του \en{concentrator}. Πρέπει να ταιριάζει με τη φυσική συνδεσμολογία (στην περίπτωσή μας 25).
+\item \textbf{\en{POWER\_EN\_GPIO}}: \en{GPIO} γραμμή (αν υπάρχει) που τροφοδοτεί/ενεργοποιεί το \en{concentrator} μέσω \en{power enable pin}. Αν το \en{board} δεν διαθέτει τέτοιο έλεγχο, το αφήνουμε 0 (μη χρήση).
+\item \textbf{\en{POWER\_EN\_LOGIC}}: Λογικό επίπεδο που «ανάβει» την τροφοδοσία στο \en{power enable} (\en{1} για \en{active-high}, \en{0} για \en{active-low}). Για \en{iC880A} συνήθως δεν απαιτείται, αλλά το κρατάμε \en{1} ώστε, αν υπάρχει \en{power gate}, να ενεργοποιείται.
+\item \textbf{\en{SPI\_SPEED}}: Ταχύτητα \en{SPI} διαύλου. Θέτουμε 2000000 (2$MHz$) που είναι συχνά σταθερή επιλογή για \en{iC880A}. Αν δούμε \en{SPI} σφάλματα, μπορούμε να τη χαμηλώσουμε.
+\end{itemize}
+
+\paragraph{Σύνδεση με \en{LNS}:}
+\begin{itemize}
+\item \textbf{\en{TC\_URI}}: \en{WebSocket Secure} διεύθυνση προς τον \en{LNS} του \en{TTS}. Ορίζουμε την διεύθυνση \en{wss://192.168.0.100:8887}. Η θύρα 8887 αντιστοιχεί στο \en{LNS}/\en{Basic Station protocol}.
+\item \textbf{\en{TC\_TRUST}}: \en{PEM} του \en{CA}/\en{server} που εμπιστευόμαστε για την \en{TLS} σύνδεση. Τοποθετούμε εδώ το \en{trust bundle} του \en{TTS} που βρήκαμε στο βήμα 5 της Υπο-υποενότητας \ref{sybsybsecwc:5.1.5.2} ώστε να ολοκληρώνεται το \en{TLS handshake}.
+\item \textbf{\en{TLS\_SNI: false}}: Απενεργοποίηση \en{SNI} ελέγχου, χρήσιμη όταν χρησιμοποιούμε \en{self-signed} \en{certs} ή \en{IP} αντί για \en{FQDN}.
+\item \textbf{\en{SERVER}}: Βοηθητική μεταβλητή για \en{runner scripts} του \en{image}, ίση με τη διεύθυνση του \en{TTS} (δεν αντικαθιστά το \en{\en{TC\_URI}}).
+\item \textbf{\en{TC\_KEY}}: \textbf{\en{Gateway LNS API key}} από το \en{TTS} (δικαίωμα \en{Link as Gateway}). Πρέπει να ανήκει στο συγκεκριμένο \en{gateway} που καταχωρίσαμε και να είναι ενεργό/μη ανακλημένο. Θέτουμε εδώ το κλειδί που πήραμε στο βήμα 4 της Υπο-υποενότητας \ref{sybsybsecwc:5.1.5.2}.
+\end{itemize}
+
+Επομένως η τελική μορφή του \en{docker-compose.yml} είναι:
+
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=dockercomposestyle]
+services:
+  basicstation:
+
+    image: xoseperez/basicstation:aarch64-latest
+    #build:
+    #  context: .
+    #  args:
+    #    ARCH: aarch64
+    #    REMOTE_TAG: v2.0.6
+    #    VARIANT: std
+
+    container_name: basicstation
+    restart: unless-stopped
+    privileged: true         # set this to true or define the required devices to share with the container under the `devices` tag below
+    network_mode: host       # required to read host interface MAC instead of virtual one, you don't need this if you set the GATEWAY_EUI manually
+
+    environment:
+
+      # To select your concentrator you have 3 options:
+      # Option 1: set the MODEL to the device model number (i.e. RAK7371)
+      # Option 2: set the MODEL to the concentrator model number (i.e. RAK5146, WM1302, R11E-LR8...)
+      # Option 2: set the MODEL to the concentrator chip (i.e. SX1303)
+      MODEL: "IC880A"
+
+      # GPIO to reset SPI concentrators (these are the defaults)
+      GPIO_CHIP: "gpiochip0" # set to "gpiochip4" by default for Raspberry Pi 5
+      RESET_GPIO: 25
+      POWER_EN_GPIO: 0
+      POWER_EN_LOGIC: 1
+
+      # Problems with an SPI concentrator are sometimes related to the bus speed,
+      # you can set a different one this way
+      SPI_SPEED: 2000000
+
+      # Server name indication (SNI) check, defaults to true.
+      # Use it only to connect to private LNS/CUPS servers with self-signed certificates
+      TLS_SNI: false
+
+      # ------------------------------------------------
+      # LNS Protocol
+      # ------------------------------------------------
+
+      # Using LNS protocol: define a custom LNS server
+      TC_URI: "wss://192.168.0.100:8887"
+
+      # Using LNS protocol: if you use a server other than TTN, you will have to provide the certificate for that server.
+      TC_TRUST: "-----BEGIN CERTIFICATE-----MIID9TCCAt2gAwIBAgIUf4lfFXcGDe13+lCrpAfqb8WP
+      FW4wDQYJKoZIhvcNAQELBQAwZTELMAkGA1UEBhMCRVMxEjAQBgNVBAgTCUNhdGFsdW55YTESMBAGA1UEBx
+      MJQmFyY2Vsb25hMRYwFAYDVQQKEw1UVE4gQ2F0YWx1bnlhMRYwFAYDVQQDEw0xOTIuMTY4LjAuMTAwMB4X
+      DTI0MTEwODAwNDkwMFoXDTI1MTEwODAwNDkwMFowZTELMAkGA1UEBhMCRVMxEjAQBgNVBAgTCUNhdGFsdW
+      55YTESMBAGA1UEBxMJQmFyY2Vsb25hMRYwFAYDVQQKEw1UVE4gQ2F0YWx1bnlhMRYwFAYDVQQDEw0xOTIu
+      MTY4LjAuMTAwMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsNgToNXbBk5WYvCTz0Vy8NZnFJ
+      eFIyON8TU9O0dMQ50AY1nNSVsAW0ijuUft9tVnmJ1fdpu2oo3dOnQ/wdzwlOEFwLulh5XI9c3MEr49Tngr
+      N83kp/4xkpsNt+52hiS78OQgwBqNd9yg5hL9GAgIxet6UAzIQvcuLFFdifLvoOTcC6HNf1+YHR/Yk4AHn9
+      Rs7FtF0HDVigkPXGo6X6HzjS7uPDGSxik3h0qaNxi9+Ly4Nn7RDzHdeEJ9ptOJxEi8z3atNqQJ2zhZWpYy
+      L9eL/u5JMyUUfXjdootqQONAPfepsBLS3RZMNiwcvnmtUhJm/OM2V4TtnVNPPFBphzt9uwIDAQABo4GcMI
+      GZMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIw
+      ADAdBgNVHQ4EFgQUnwmGZcu73IElpxpxMNgQ/+9w0u4wHwYDVR0jBBgwFoAUhxUDzmo70OiHwReNRshBjX
+      zuZRYwGgYDVR0RBBMwEYIJbG9jYWxob3N0hwTAqABkMA0GCSqGSIb3DQEBCwUAA4IBAQC7DJVThScd5FkL
+      5k4xEsTwOKeuSoVyxmpuYUn5KKQBSiOYvlm8VSA+O3uXknIKvel17JIsKQIkoXxXxoAMxbKYhZ1oFhdKTM
+      apVu8Bn1GPRKM+X89eBsODXZLWxVEZQorfQvP5zOgXrL9AV3t6qb1UMKC4VZgk6AQzZzgRkvIk57HcaQ80
+      qF7K7A8fH4YXH+s/bw++9hkdmPxsJJYxvWJGWgujX7BnNujYt670aPCx+uBqYQU6L/bJtEpALZsIWSG1+5
+      sMgM7fZC+yzKUSw65K3w8ge+ZbO4sjQP1T4YtMbqZdm9njOoVBKA50p6UZViuXygum2fSVaGCgiZtNZhrZ
+      -----END CERTIFICATE-----"
+
+      # Finally, you need to provide the key for the gateway, 
+      # this can either be the client key for the client certificate above or
+      # the API key provided by the LNS (if no client certificate)
+      SERVER: "192.168.0.100"
+      TC_KEY: "NNSXS.O7YTVAWDVAO275AHJZYNGFSEPAATRW4D6K72PSI.FM6CU4E7Y2ERZI7U4QTGRL6WG4Q
+      5O2TDQA7MOOUA55ZK5NYD3KRA" 
+\end{lstlisting}
+\end{otherlanguage*}
+
+
+\subsubsection{Εκκίνηση \en{Basic Station} και έλεγχος λειτουργίας}
+
+Μετά τις ρυθμίσεις, εκκινούμε το \en{container} (έχοντας ήδη εκκινήσει το \en{container} του \en{TTS}):
+
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+docker compose up
+\end{lstlisting}
+\end{otherlanguage*}
+
+\begin{otherlanguage*}{english}
+\begin{Terminal}
+§\promptinbs§ docker compose up
+§\dockerrunning{[+] Running 4/4}§ 
+  §{\color{term.ansi.magenta}\checkmark}§ Container basicstation  §\dockercreated§        §\dockerrunning{0.3s}§
+\end{Terminal}
+\end{otherlanguage*}
+
+Στα \en{logs} του \en{container} αναμένουμε επιτυχές \en{LNS connect} και αποδοχή από τον \en{Gateway Server}:
+
+\begin{otherlanguage*}{english}
+\begin{Terminal}
+§\promptinbs§ docker logs basicstation
+  ...
+2025-10-19 14:44:00.891 [TCE:INFO] Infos: d83a:ddff:fea4:81a7 muxs-::0 wss://192.168.0.100:8887/traffic/eui-D83ADDFFFEA481A7
+2025-09-19 14:44:01.028 [TCE:VERB] Connected to MUXS.
+  ...
+\end{Terminal}
+\end{otherlanguage*}
+
+Στο \en{TTS Console} το \en{gateway} θα εμφανιστεί \textbf{\en{connected}}. Από εδώ και πέρα, τα \en{uplinks} των μετρητών θα δρομολογούνται στον \en{Network Server}.
+
+\begin{Illustration}[!ht]     
+  \centering    
+  \includegraphics[width=1\textwidth]{figures/Console_connected_GW.png}     
+  \caption{\en{Gateway Overview and status} στο \en{TTS Console}.}    
+  \label{figure5.12}  
+\end{Illustration}
+
+Με τα παραπάνω, ο \en{LoRa Basics Station} τρέχει ως \en{container} στο \en{Raspberry Pi} και 
+συνδέεται επιτυχώς στον \en{Gateway Server} του \en{The Things Stack}, ολοκληρώνοντας το σκέλος 
+του \en{gateway}. Στα επόμενα βήματα, οι τριφασικοί μετρητές θα αρχίσουν να στέλνουν \en{uplinks} 
+μέσω του \en{gateway} προς το \en{TTS}.
+\en{gateway}, ολοκληρώνοντας μια ενιαία υποδομή από το πεδίο μέχρι το περιβάλλον χρήστη.
+
+
+
+
+% --------------------------------------------
+% Ενότητα 5.2 Προετοιμασία Τριφασικού μετρητή
+% --------------------------------------------
+
+
+
+
+\section{Προετοιμασία Τριφασικού μετρητή}
+
+%%%%   Υποενότητα 5.2.1: Διασύνδεση Hardware   %%%%
+
+\subsection{Διασύνδεση \en{Hardware}}
+Όπως αναλύθηκε στην Ενότητα \ref{sec:4.3}, συνδέουμε την πλακέτα \en{The Things Uno} με τα τρία \en{PZEM-004T}
+σύμφωνα με την Εικόνα \ref{figure4.3} και τους Πίνακες \ref{tab:ttuno_pzem_pins_phase1}, \ref{tab:ttuno_pzem_pins_phase2} και \ref{tab:ttuno_pzem_pins_phase3}:
+
+\begin{Illustration}[!ht] 
+  \centering
+	\includegraphics[width=0.85\textwidth]{figures/LoRaWAN_gateway_setup.jpg} 
+  \caption{Τελική συνδεσμολογία των εξαρτημάτων του τριφασικού μετρητή.}
+  \label{figure5.13}
+\end{Illustration} 
+
+% %%%%   Υποενότητα 5.2.2: Τροφοδοσία και επίπεδα λογικής   %%%%
+
+% \subsection{Τροφοδοσία και επίπεδα λογικής}
+% \label{subsec:power_logic}
+
+% Στην πράξη διαπιστώθηκε ότι με τροφοδοσία \en{5V} οι μετρήσεις δεν ήταν σταθερές, ενώ με \en{3.3V} λειτουργούσαν αξιόπιστα. Η αιτία είναι συνήθως ασυμβατότητα επιπέδων \en{UART} (\en{5V} \en{TX} από \en{PZEM} προς \en{3.3V} \en{RX} μικροελεγκτή) και πιθανός \en{noise} στη γραμμή.
+
+% \begin{itemize}
+%   \item \textbf{Ασφαλής επιλογή: \en{3.3V} τροφοδοσία.} Όταν τροφοδοτούμε \en{PZEM-004T} στα \en{3.3V} (εντός προδιαγραφών της έκδοσης \en{v3}), τα επίπεδα \en{UART} έρχονται εγγύτερα στο \en{3.3V} και αποφεύγονται \en{overvoltage} στο \en{RX} της \en{The Things Uno}. 
+%   \item \textbf{Εναλλακτικά: \en{5V} με μετατροπή επιπέδων.} Αν επιθυμούμε \en{5V} στα \en{PZEM}, τότε:
+%   \begin{enumerate}
+%     \item \en{PZEM TX (5V)} $\rightarrow$ \en{Uno RX (3.3V)} μέσω \en{level shifting} (π.χ. \en{resistive divider} 10\texttt{k}/20\texttt{k} ή \en{MOSFET bidirectional shifter}).
+%     \item \en{Uno TX (3.3V)} $\rightarrow$ \en{PZEM RX (5V)}: συνήθως αποδεκτό ως \en{logic-high}; αν όχι, χρησιμοποιείται \en{buffer} ή \en{transistor level shift}.
+%   \end{enumerate}
+% \end{itemize}
+
+% Στη δική μας υλοποίηση επιλέχθηκε \textbf{\en{3.3V}} (απλούστερη, σταθερή λειτουργία). Για μετάβαση σε \en{5V}, αρκεί η προσθήκη \en{level shifter} από \en{TX} κάθε \en{PZEM} προς το \en{RX} του \en{Uno}.
+
+
+
+%%%%   Υποενότητα 5.2.2: Βιβλιοθήκες και ρυθμίσεις IDE   %%%%
+
+\subsection{Προγραμματισμός του \en{The Things Uno}}
+
+\subsubsectionwc{Εγκατάσταση και ρύθμιση \en{Arduino IDE}}
+
+Προκειμένου να προγραμματίσουμε την πλακέτα \en{The Things Uno} του τριφασικού μετρητή θα χρειαστεί να κατεβάσουμε αρχικά το λογισμικό 
+\en{Arduino IDE} στον προσωπικό μας υπολογιστή. Περιλαμβάνει έναν επεξεργαστή κειμένου, έναν μεταγλωττιστή (\en{compiler}) και ένα σειριακό τερματικό, καθιστώντας εύκολη 
+τη σύνταξη, τη μεταγλώττιση και τη φόρτωση προγραμμάτων στον μικροελεγκτή πλακετών \en{Arduino}. Μόλις εγκαταστήσουμε το \en{Arduino IDE} το εκκινούμε και 
+αυτόματα ανοίγει ένα καινούριο \en{sketch}:
+
+\begin{Illustration}[!ht] 
+  \centering
+	\includegraphics[width=0.80\textwidth]{figures/Arduino_IDE_start.png} 
+  \caption{Λογισμικό \en{Arduino IDE}.}
+  \label{figure5.14}
+\end{Illustration} 
+
+Στη συνέχεια πατάμε \textit{\en{Select Board}} και στην αναζήτηση που εμφανίζει συμπληρώνουμε \textit{\en{Arduino Leonardo}}, το επιλέγουμε 
+και πατάμε \textit{\en{ok}} για να καταχωρίσουμε την επιλογή μας. 
+
+\begin{Illustration}[!ht] 
+  \centering
+	\includegraphics[width=0.70\textwidth]{figures/Arduino_IDE_search.png} 
+  \caption{Αναζήτηση και επιλογή πλακέτας \en{Arduino Leonardo}.}
+  \label{figure5.15}
+\end{Illustration} 
+
+Τέλος συνδέουμε το \en{The Things Uno} στον υπολογιστή μας και αυτόματα εμφανίζεται η επιλογή της θύρας \en{COM\#} που έγινε η σύνδεση. Την διαλέγουμε 
+και επιβεβαιώνουμε ότι κάτω δεξία αναγράφεται \textit{\en{Arduino Leonardo on COM\#}}. 
+
+\begin{Illustration}[!ht] 
+  \centering
+	\includegraphics[width=0.80\textwidth]{figures/Arduino_IDE_COM_select.png} 
+  \caption{Επιλογή \en{Arduino Leonardo} στη θύρα \en{COM3} όπου έχει συνδεθεί το \en{The Things Uno}.}
+  \label{figure5.16}
+\end{Illustration} 
+
+Μπορούμε τώρα να ξεκινήσουμε να γράφουμε τον κώδικα (σε γλώσσα προγραμματισμού \en{C++}) για τον προγραμματισμό 
+του \en{The Things Uno} και να τον «ανεβάσουμε» (\en{upload}) στην πλακέτα.
+
+\subsubsectionwc{Δομή κώδικα και ροή λειτουργίας}
+
+Ακολουθεί ο κώδικας που χρησιμοποιήσαμε και στη συνέχεια η επεξήγησή του:
+
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=theo-cpp]
+#include <TheThingsNetwork.h>
+#include <PZEM004Tv30.h>
+#include <SoftwareSerial.h>
+
+// TTN Configuration
+const char *appEui = "0000000000000000";
+const char *appKey = "801DB5D9568291D81E92288241C681B1";
+
+#define loraSerial Serial1
+#define debugSerial Serial
+#define freqPlan TTN_FP_EU868
+
+TheThingsNetwork ttn(loraSerial, debugSerial, freqPlan);
+
+// PZEM Configuration
+#define NUM_PZEMS 3
+SoftwareSerial pzemSWSerial1(9, 2);  // RX, TX for PZEM 1
+SoftwareSerial pzemSWSerial2(10, 3); // PZEM 2
+SoftwareSerial pzemSWSerial3(11, 4); // PZEM 3
+PZEM004Tv30 pzems[NUM_PZEMS];
+
+// Energy reset configuration
+unsigned long lastResetTime = 0;
+const unsigned long resetInterval = 15 * 60000; // 15 minutes in milliseconds
+
+void setup() {
+  debugSerial.begin(9600);
+  loraSerial.begin(57600);
+
+  // TTN setup
+  debugSerial.println("-- JOIN");
+  ttn.join(appEui, appKey);
+  while (!debugSerial) {
+    ; // Wait for serial to be ready
+  }
+  debugSerial.println("-- STATUS");
+  ttn.showStatus();
+
+  // Initialize PZEMs
+  pzems[0] = PZEM004Tv30(pzemSWSerial1);
+  pzems[1] = PZEM004Tv30(pzemSWSerial2);
+  pzems[2] = PZEM004Tv30(pzemSWSerial3);
+
+  lastResetTime = millis(); // Initialize reset timer
+}
+
+void loop() {
+  // If we have no measurements do not send
+  bool send = true;
+
+  // Check if it's time to reset energy counters
+  if (millis() - lastResetTime >= resetInterval) {
+    resetEnergyCounters();
+    lastResetTime = millis();
+    debugSerial.println("Energy counters reset");
+  }
+
+  // Buffer for LoRaWAN payload (36 bytes total - 12 bytes per PZEM)
+  uint8_t data[NUM_PZEMS * 12];
+
+  // Read and process data for each PZEM
+  for (int i = 0; i < NUM_PZEMS; i++) {
+    float voltage = pzems[i].voltage();
+    float current = pzems[i].current();
+    float power = pzems[i].power();
+    float energy = pzems[i].energy();
+    float frequency = pzems[i].frequency();
+    float pf = pzems[i].pf();
+
+    // Validate readings
+    if (isnan(voltage) || isnan(current) || isnan(power) || 
+        isnan(energy) || isnan(frequency) || isnan(pf)) {
+      debugSerial.print("Error reading data from PZEM ");
+      debugSerial.println(i + 1);
+      send = false;
+      continue;
+    }
+
+    // Debug output
+    debugSerial.print("PZEM "); debugSerial.print(i + 1); debugSerial.println(" Readings:");
+    debugSerial.print("Voltage: "); debugSerial.print(voltage); debugSerial.println(" V");
+    debugSerial.print("Current: "); debugSerial.print(current, 3); debugSerial.println(" A");
+    debugSerial.print("Power: "); debugSerial.print(power); debugSerial.println(" W");
+    debugSerial.print("Energy: "); debugSerial.print(energy, 4); debugSerial.println(" kWh");
+    debugSerial.print("Frequency: "); debugSerial.print(frequency); debugSerial.println(" Hz");
+    debugSerial.print("Power Factor: "); debugSerial.println(pf);
+    debugSerial.println();
+
+    // Prepare data for LoRaWAN (each value encoded as 2 bytes)
+    int index = i * 12;
+    data[index]      = (uint16_t(voltage * 10) >> 8);
+    data[index + 1]  = uint16_t(voltage * 10) & 0xFF;
+    data[index + 2]  = (uint16_t(current * 100) >> 8);
+    data[index + 3]  = uint16_t(current * 100) & 0xFF;
+    data[index + 4]  = (uint16_t(power * 10) >> 8);
+    data[index + 5]  = uint16_t(power * 10) & 0xFF;
+    data[index + 6]  = (uint16_t(energy * 100) >> 8);  
+    data[index + 7]  = uint16_t(energy * 100) & 0xFF;
+    data[index + 8]  = (uint16_t(frequency * 10) >> 8);
+    data[index + 9]  = uint16_t(frequency * 10) & 0xFF;
+    data[index + 10] = (uint16_t(pf * 100) >> 8);
+    data[index + 11] = uint16_t(pf * 100) & 0xFF;
+  }
+
+  // Send data to TTN
+  debugSerial.println("-- Sending data to TTN");
+  if (send) ttn.sendBytes(data, sizeof(data));
+  debugSerial.println("-- Data sent!");
+
+  delay(5000); // 5 seconds between readings
+}
+
+void resetEnergyCounters() {
+  for (int i = 0; i < NUM_PZEMS; i++) {
+    pzems[i].resetEnergy();
+    debugSerial.print("Reset energy for PZEM "); debugSerial.println(i+1);
+  }
+}  
+\end{lstlisting}
+\end{otherlanguage*}
+
+\begin{itemize}
+  \item \textbf{Βιβλιοθήκες:} \en{TheThingsNetwork}, \en{PZEM004Tv30}, \en{SoftwareSerial}.
+  \item \textbf{\en{Board}:} Η αντίστοιχη επιλογή της πλακέτας \en{The Things Uno} (ή \en{Arduino Uno}/\en{Leonardo}, ανάλογα με την υλοποίηση).
+  \item \textbf{\en{Port}/\en{Programmer}:} Σύμφωνα με το \en{USB} \en{serial} της πλακέτας.
+  \item \textbf{\en{FreqPlan}:} \en{EU868}.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+% --------------------------------------------
+% 5.2.4 Firmware της συσκευής
+% --------------------------------------------
+
+
+
+Το \en{firmware} αρχικοποιεί τη στοίβα \en{LoRaWAN}, δημιουργεί τρεις \en{SoftwareSerial} θύρες (μία για κάθε \en{PZEM}), αναγιγνώσκει περιοδικά μεγέθη και τα πακετάρει σε \en{payload} 36 \en{bytes} (12 \en{bytes}/\en{phase}):
+
+\begin{itemize}
+  \item \textbf{Μεγέθη ανά \en{phase}:} \en{Voltage (V)}, \en{Current (A)}, \en{Power (W)}, \en{Energy (kWh)}, \en{Frequency (Hz)}, \en{Power Factor}.
+  \item \textbf{Κωδικοποίηση (ενδεικτική):} 6 $\times$ \en{uint16} ανά \en{phase} με κλίμακες: \en{V} $\times$ 100, \en{A} $\times$ 100, \en{W} $\times$ 10, \en{kWh} $\times$ 100, \en{Hz} $\times$ 100, \en{PF} $\times$ 1000. Σύνολο 12 \en{bytes}/\en{phase}.
+  \item \textbf{\en{Uplink interval}:} π.χ. κάθε 30-60 \en{s} (ρυθμιζόμενο).
+\end{itemize}
+
+\paragraph{Σημεία προς συμπλήρωση κώδικα (placeholders):}
+\begin{itemize}
+  \item \textbf{\en{Credentials}:} \en{AppEUI}/\en{AppKey} (ή \en{ABP} κλειδιά).
+  \item \textbf{\en{SoftwareSerial} αντιστοιχίσεις:} \en{Phase A}: \en{D10}/\en{D11}, \en{Phase B}: \en{D8}/\en{D9}, \en{Phase C}: \en{D4}/\en{D5}.
+  \item \textbf{\en{PZEM} \en{init}} \& \en{read loop}.
+  \item \textbf{\en{Pack}} των 36 \en{bytes} (σύμφωνα με τις κλίμακες).
+\end{itemize}
+
+\noindent\textit{[\textbf{PLACEHOLDER:} Εισαγωγή πλήρους \en{Arduino} \en{sketch} εδώ (π.χ. ως \texttt{\textbackslash lstinputlisting\{\}}).]}
+
+% --------------------------------------------
+% 5.2.5 Payload Formatter στην εφαρμογή TTS
+% --------------------------------------------
+
+\subsection{\en{Payload Formatter} στο \en{TTS Console}}
+
+Στο \en{Console} της εφαρμογής ορίζουμε \en{Uplink Payload Formatter} σε \en{JavaScript} ώστε να αποκωδικοποιούμε τα 36 \en{bytes} σε δομή \en{JSON} με τρεις φάσεις:
+
+\noindent\textit{[\textbf{PLACEHOLDER:} Εισαγωγή \en{formatter} \en{JavaScript} εδώ. Παρακάτω ενδεικτικός σκελετός που ταιριάζει στις κλίμακες των 12 \en{bytes}/\en{phase}.]}
+
+% \begin{otherlanguage*}{english}
+% \begin{lstlisting}[style=bashstyle]
+% function decodeUplink(input) {
+%   const dv = new DataView(Uint8Array.from(input.bytes).buffer);
+%   const scale = { V:100, A:100, W:10, kWh:100, Hz:100, PF:1000 };
+%   const phase = idx => {
+%     const off = idx*12;
+%     const V   = dv.getUint16(off+0 , false)/scale.V;
+%     const A   = dv.getUint16(off+2 , false)/scale.A;
+%     const W   = dv.getUint16(off+4 , false)/scale.W;
+%     const kWh = dv.getUint16(off+6 , false)/scale.kWh;
+%     const Hz  = dv.getUint16(off+8 , false)/scale.Hz;
+%     const PF  = dv.getUint16(off+10, false)/scale.PF;
+%     return { V,A,W,kWh,Hz,PF };
+%   };
+%   return { data: { phaseA: phase(0), phaseB: phase(1), phaseC: phase(2) } };
+% }
+% \end{lstlisting}
+% \end{otherlanguage*}
+
+\paragraph{Σημείωση.} Αν στο τελικό \en{firmware} χρησιμοποιηθούν διαφορετικές κλίμακες/σειρά πεδίων, ενημερώνουμε ανάλογα τον \en{formatter}.
+
+% --------------------------------------------
+% 5.2.6 Ένταξη στο TTS, δοκιμές και επιβεβαίωση
+% --------------------------------------------
+
+\subsection{Ένταξη στο \en{TTS}, δοκιμές και επιβεβαίωση}
+
+\begin{enumerate}
+  \item \textbf{Καταχώριση \en{end device}:} \en{OTAA} με \en{AppEUI}/\en{AppKey} (ή \en{ABP}). Ρύθμιση \en{EU868}, \en{FPort} (π.χ. \en{10}).
+  \item \textbf{\en{Join}/\en{Uplink}:} Παρακολουθούμε \en{Live Data} της συσκευής για \en{Join-Accept} και πρώτα \en{uplinks}.
+  \item \textbf{Επαλήθευση \en{payload}:} Επιβεβαιώνουμε ότι ο \en{formatter} επιστρέφει τα πεδία \en{phaseA}/\en{B}/\en{C}.
+  \item \textbf{Διασταύρωση με όργανα:} Προαιρετικά, με πρότυπο \en{meter}, για σφάλμα και \en{PF}/\en{Hz}.
+\end{enumerate}
+
+% --------------------------------------------
+% 5.2.7 Downlink: επαναφορά μετρητών ενέργειας
+% --------------------------------------------
+
+\subsection{\en{Downlink}: επαναφορά \en{energy counters}}
+
+Υλοποιείται απλή εντολή \en{downlink} για \en{reset} των \en{energy counters} όλων των \en{PZEM}. Η συσκευή ακούει σε συγκεκριμένο \en{FPort} (π.χ. \en{10}) και \en{opcode} (π.χ. \en{0xA5}).
+
+\begin{itemize}
+  \item \textbf{Στο \en{firmware}:} Έλεγχος \en{downlink}, αναγνώριση \en{opcode}, κλήση \en{pzems[i].resetEnergy()}.
+  \item \textbf{Στο \en{Console}:} \en{Downlink} $\rightarrow$ \en{Send}, \en{FPort}: \texttt{10}, \en{Payload}: \texttt{A5} (\en{HEX}).
+\end{itemize}
+
+\noindent\textit{[\textbf{PLACEHOLDER:} Απόσπασμα \en{firmware} που δέχεται \en{downlink} και εκτελεί \en{reset}.]}
+
+% --------------------------------------------
+% 5.2.8 Αντιμετώπιση προβλημάτων
+% --------------------------------------------
+
+\subsection{Αντιμετώπιση προβλημάτων}
+
+\begin{itemize}
+  \item \textbf{Ασταθείς μετρήσεις στα \en{5V}:} Δοκίμασε \en{3.3V} ή πρόσθεσε \en{level shifter} στο \en{UART}.
+  \item \textbf{Καθόλου μετρήσεις:} Έλεγξε \en{RX/TX} αντιστροφή (\en{PZEM TX} $\rightarrow$ \en{Uno RX}), κοινή \en{GND}, \en{baud} \en{9600}, \en{SoftwareSerial} \en{pins}.
+  \item \textbf{\en{LoRaWAN} χωρίς \en{uplinks}:} Έλεγξε \en{AppEUI}/\en{AppKey}, \en{freq plan}, \en{ADR}/\en{DR}, και την κάλυψη από το \en{gateway}.
+  \item \textbf{Λανθασμένος \en{PF}/\en{Hz}:} Επιβεβαίωση κλίμακας/σειράς στο \en{payload} ή \en{formatter}.
+\end{itemize}

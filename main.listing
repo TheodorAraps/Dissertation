@@ -1,4 +1,5 @@
-§\promptintts§ ls
-§\assets§      CHANGELOG.md        Dockerfile       LICENSE.md
-§\balena§  docker-bake.hcl     Dockerfile.lite  README.md
-§\build§    docker-compose.yml  §\runner§
+§\promptinbs§ docker logs basicstation
+  ...
+2025-10-19 14:44:00.891 [TCE:INFO] Infos: d83a:ddff:fea4:81a7 muxs-::0 wss://192.168.0.100:8887/traffic/eui-D83ADDFFFEA481A7
+2025-09-19 14:44:01.028 [TCE:VERB] Connected to MUXS.
+  ...

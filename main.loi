@@ -30,13 +30,22 @@
 \contentsline {illustration}{\numberline {4.2}{\ignorespaces Υλοποίηση \foreignlanguage {english}{LoRaWAN Gateway} και σύνδεσμολογία εξαρτημάτων.}}{86}{illustration.caption.46}%
 \contentsline {illustration}{\numberline {4.3}{\ignorespaces Υλοποίηση τριφασικού μετρητή - σύνδεση \foreignlanguage {english}{The Things Uno} με 3 \foreignlanguage {english}{PZEM-004T V3.0}}}{89}{illustration.caption.51}%
 \addvspace {10\p@ }
-\contentsline {illustration}{\numberline {5.1}{\ignorespaces Τελική συνδεσμολογία των εξαρτημάτων.}}{93}{illustration.caption.53}%
-\contentsline {illustration}{\numberline {5.2}{\ignorespaces \foreignlanguage {english}{Raspberry Pi Imager.}}}{94}{illustration.caption.54}%
-\contentsline {illustration}{\numberline {5.3}{\ignorespaces \foreignlanguage {english}{Apply OS Customisation settings Option}.}}{94}{illustration.caption.55}%
-\contentsline {illustration}{\numberline {5.4}{\ignorespaces \foreignlanguage {english}{General OS Customisation settings}.}}{95}{illustration.caption.56}%
-\contentsline {illustration}{\numberline {5.5}{\ignorespaces \foreignlanguage {english}{Services OS Customisation settings}.}}{96}{illustration.caption.57}%
-\contentsline {illustration}{\numberline {5.6}{\ignorespaces Εργαλείο παραµετροποίησης λογισµικού του \foreignlanguage {english}{Raspberry Pi}}}{97}{illustration.caption.58}%
-\contentsline {illustration}{\numberline {5.7}{\ignorespaces Επιλογή ενεργοποιήσης διεπαφής \foreignlanguage {english}{SPI}}}{97}{illustration.caption.59}%
+\contentsline {illustration}{\numberline {5.1}{\ignorespaces Τελική συνδεσμολογία των εξαρτημάτων του \foreignlanguage {english}{LoRaWAN gateway}.}}{93}{illustration.caption.56}%
+\contentsline {illustration}{\numberline {5.2}{\ignorespaces \foreignlanguage {english}{Raspberry Pi Imager.}}}{94}{illustration.caption.57}%
+\contentsline {illustration}{\numberline {5.3}{\ignorespaces \foreignlanguage {english}{Apply OS Customisation settings Option}.}}{94}{illustration.caption.58}%
+\contentsline {illustration}{\numberline {5.4}{\ignorespaces \foreignlanguage {english}{General OS Customisation settings}.}}{95}{illustration.caption.59}%
+\contentsline {illustration}{\numberline {5.5}{\ignorespaces \foreignlanguage {english}{Services OS Customisation settings}.}}{96}{illustration.caption.60}%
+\contentsline {illustration}{\numberline {5.6}{\ignorespaces Εργαλείο παραµετροποίησης λογισµικού του \foreignlanguage {english}{Raspberry Pi}}}{97}{illustration.caption.61}%
+\contentsline {illustration}{\numberline {5.7}{\ignorespaces Επιλογή ενεργοποιήσης διεπαφής \foreignlanguage {english}{SPI}}}{97}{illustration.caption.62}%
+\contentsline {illustration}{\numberline {5.8}{\ignorespaces Επιλογή καταχώρησης νέου \foreignlanguage {english}{Gateway}.}}{105}{illustration.caption.63}%
+\contentsline {illustration}{\numberline {5.9}{\ignorespaces Εισαγωγή \foreignlanguage {english}{EUI}.}}{105}{illustration.caption.64}%
+\contentsline {illustration}{\numberline {5.10}{\ignorespaces Δημιουργία \foreignlanguage {english}{Gateway ID} και \foreignlanguage {english}{name}, επιλογή \foreignlanguage {english}{Frequency plan} και δημιουργία κλειδιού \foreignlanguage {english}{LNS}.}}{105}{illustration.caption.65}%
+\contentsline {illustration}{\numberline {5.11}{\ignorespaces Αποθήκευση \foreignlanguage {english}{API} κλειδιού.}}{106}{illustration.caption.66}%
+\contentsline {illustration}{\numberline {5.12}{\ignorespaces \foreignlanguage {english}{Gateway Overview and status} στο \foreignlanguage {english}{TTS Console}.}}{110}{illustration.caption.67}%
+\contentsline {illustration}{\numberline {5.13}{\ignorespaces Τελική συνδεσμολογία των εξαρτημάτων του τριφασικού μετρητή.}}{110}{illustration.caption.68}%
+\contentsline {illustration}{\numberline {5.14}{\ignorespaces Λογισμικό \foreignlanguage {english}{Arduino IDE}.}}{111}{illustration.caption.69}%
+\contentsline {illustration}{\numberline {5.15}{\ignorespaces Αναζήτηση και επιλογή πλακέτας \foreignlanguage {english}{Arduino Leonardo}.}}{111}{illustration.caption.70}%
+\contentsline {illustration}{\numberline {5.16}{\ignorespaces Επιλογή \foreignlanguage {english}{Arduino Leonardo} στη θύρα \foreignlanguage {english}{COM3} όπου έχει συνδεθεί το \foreignlanguage {english}{The Things Uno}.}}{112}{illustration.caption.71}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -46,4 +55,4 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{127}{illustration.caption.65}%
+\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{139}{illustration.caption.77}%
