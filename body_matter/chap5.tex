@@ -773,11 +773,10 @@ docker compose up
   \label{figure5.12}  
 \end{Illustration}
 
-Με τα παραπάνω, ο \en{LoRa Basics Station} τρέχει ως \en{container} στο \en{Raspberry Pi} και 
+Με τα παραπάνω, το \en{LoRa Basics Station} τρέχει ως \en{container} στο \en{Raspberry Pi} και 
 συνδέεται επιτυχώς στον \en{Gateway Server} του \en{The Things Stack}, ολοκληρώνοντας το σκέλος 
 του \en{gateway}. Στα επόμενα βήματα, οι τριφασικοί μετρητές θα αρχίσουν να στέλνουν \en{uplinks} 
 μέσω του \en{gateway} προς το \en{TTS}.
-\en{gateway}, ολοκληρώνοντας μια ενιαία υποδομή από το πεδίο μέχρι το περιβάλλον χρήστη.
 
 
 
@@ -799,14 +798,12 @@ docker compose up
 
 \begin{Illustration}[!ht] 
   \centering
-	\includegraphics[width=0.85\textwidth]{figures/LoRaWAN_gateway_setup.jpg} 
+	\includegraphics[width=0.75\textwidth]{figures/3_phase_meter.jpg} 
   \caption{Τελική συνδεσμολογία των εξαρτημάτων του τριφασικού μετρητή.}
   \label{figure5.13}
 \end{Illustration} 
 
-% %%%%   Υποενότητα 5.2.2: Τροφοδοσία και επίπεδα λογικής   %%%%
 
-% \subsection{Τροφοδοσία και επίπεδα λογικής}
 % \label{subsec:power_logic}
 
 % Στην πράξη διαπιστώθηκε ότι με τροφοδοσία \en{5V} οι μετρήσεις δεν ήταν σταθερές, ενώ με \en{3.3V} λειτουργούσαν αξιόπιστα. Η αιτία είναι συνήθως ασυμβατότητα επιπέδων \en{UART} (\en{5V} \en{TX} από \en{PZEM} προς \en{3.3V} \en{RX} μικροελεγκτή) και πιθανός \en{noise} στη γραμμή.
@@ -824,9 +821,10 @@ docker compose up
 
 
 
-%%%%   Υποενότητα 5.2.2: Βιβλιοθήκες και ρυθμίσεις IDE   %%%%
+%%%%   Υποενότητα 5.2.2: Προγραμματισμός του The Things Uno   %%%%
 
 \subsection{Προγραμματισμός του \en{The Things Uno}}
+Ακολουθούμε τις επίσημες οδηγίες της \en{The Things Industries} για τη σύνδεση της πλακέτας \en{The Things Uno} \cite{TTI_TheThingsStackDocs}:
 
 \subsubsectionwc{Εγκατάσταση και ρύθμιση \en{Arduino IDE}}
 
@@ -852,7 +850,7 @@ docker compose up
   \label{figure5.15}
 \end{Illustration} 
 
-Τέλος συνδέουμε το \en{The Things Uno} στον υπολογιστή μας και αυτόματα εμφανίζεται η επιλογή της θύρας \en{COM\#} που έγινε η σύνδεση. Την διαλέγουμε 
+Τέλος, συνδέουμε το \en{The Things Uno} στον υπολογιστή μας και αυτόματα εμφανίζεται η επιλογή της θύρας \en{COM\#} που έγινε η σύνδεση. Την διαλέγουμε 
 και επιβεβαιώνουμε ότι κάτω δεξία αναγράφεται \textit{\en{Arduino Leonardo on COM\#}}. 
 
 \begin{Illustration}[!ht] 
@@ -863,7 +861,7 @@ docker compose up
 \end{Illustration} 
 
 Μπορούμε τώρα να ξεκινήσουμε να γράφουμε τον κώδικα (σε γλώσσα προγραμματισμού \en{C++}) για τον προγραμματισμό 
-του \en{The Things Uno} και να τον «ανεβάσουμε» (\en{upload}) στην πλακέτα.
+του \en{The Things Uno} και να τον «ανεβάσουμε» (\en{upload}) στην πλακέτα. 
 
 \subsubsectionwc{Δομή κώδικα και ροή λειτουργίας}
 
@@ -971,7 +969,7 @@ void loop(§\cyan{)}§ {
     data[index + §\cyan{7}§]  = uint16_t(energy * §\cyan{100)}§ & 0x§\cyan{FF)}§;
     data[index + §\cyan{8}§]  = (uint16_t(frequency * §\cyan{10)}§ >> §\cyan{8)}§;
     data[index + §\cyan{9}§]  = uint16_t(frequency * §\cyan{10)}§ & 0x§\cyan{FF)}§;
-    data[index + §\cyan{10}§] = (uint16_t(pf * §\cyan{100)}§ >> 8§\cyan{)}§;
+    data[index + §\cyan{10}§] = (uint16_t(pf * §\cyan{100)}§ >> §\cyan{8)}§;
     data[index + §\cyan{11}§] = uint16_t(pf * §\cyan{100)}§ & 0x§\cyan{FF)}§;
   }
 
@@ -992,12 +990,171 @@ void resetEnergyCounters(§\cyan{)}§ {
 \end{lstlisting}
 \end{otherlanguage*}
 
+
+\subsubsection{Αναλυτικός σχολιασμός κώδικα και ροής λειτουργίας}
+
+
+\paragraph{Σύνδεση με το \en{The Things Network}:}
+
 \begin{itemize}
-  \item \textbf{Βιβλιοθήκες:} \en{TheThingsNetwork}, \en{PZEM004Tv30}, \en{SoftwareSerial}.
-  \item \textbf{\en{Board}:} Η αντίστοιχη επιλογή της πλακέτας \en{The Things Uno} (ή \en{Arduino Uno}/\en{Leonardo}, ανάλογα με την υλοποίηση).
-  \item \textbf{\en{Port}/\en{Programmer}:} Σύμφωνα με το \en{USB} \en{serial} της πλακέτας.
-  \item \textbf{\en{FreqPlan}:} \en{EU868}.
+  \item Συμπεριλαμβάνουμε τη βιβλιοθήκη \textbf{\en{TheThingsNetwork.h}} της \en{The Things Network} για ενεργοποίηση \en{OTAA}, αποστολή \en{uplinks} κ.λπ. Για να αναγνωρίσει ο \en{compiler} την βιβλιοθήκη, την εγκαθιστούμε ακολουθώντας την διαδρομή \textit{\en{Sketch > Include Library > Manage Libraries}}, αναζητώντας το όνομα της και πατώντας \textit{\en{install}}.
+  \item Δημιουργούμε τις σταθερές \textbf{\en{appEui}} και \textbf{\en{appKey}}, οι οποίες αποτελούν τα \en{OTAA credentials} της συσκευής. Η τιμή της \textbf{\en{appEUI}} προκύπτει τρέχοντας το \en{sketch} που βρίσκεται στην διαδρομή \textit{\en{File > Examples > TheThingsNetwork > Deviceinfo}}. Αφού το επιλέξουμε, θέτουμε στην μεταβλητή \textbf{\en{freqPlan}} την τιμή \textit{\en{TTN\_FP\_EU868}} πατάμε το κουμπί του \en{Upload}:
+  \begin{Illustration}[!ht]     
+    \centering    
+    \includegraphics[width=0.7\textwidth]{figures/Device_info_sketch.png}     
+    \caption{Κάνουμε \en{upload} το \en{sketch} στο \en{TTU}.}    
+    \label{figure5.17}  
+  \end{Illustration} 
+
+  Από την διαδρομή \textit{\en{Tools > Serial Monitor}} ανοίγουμε το \en{Serial Monitor} και βλέπουμε την έξοδο του \en{TTU} με τις πληροφορίες της συσκευής:
+  \begin{Illustration}[!ht]     
+    \centering    
+    \includegraphics[width=0.7\textwidth]{figures/Serial_Monitor_Output_1.png}     
+    \caption{Έξοδος του \en{Serial Monitor} με τις πληρφορίες της συσκευής.}    
+    \label{figure5.18}  
+  \end{Illustration} 
+  
+  % \item \en{\#define loraSerial Serial1}: Η \en{The Things Uno} (βασισμένη σε \en{ATmega32u4}/\en{Leonardo}) χρησιμοποιεί τη \en{Serial1} για σύνδεση με το \en{LoRa} \en{module} (π.χ. \en{RN2483}/\en{RN2903}), αφήνοντας την \en{Serial} για \en{debug} προς τον \en{USB}.
+  % \item \en{\#define debugSerial Serial}: \en{USB CDC} για μηνύματα κατάστασης/εντοπισμό σφαλμάτων.
+  % \item \en{\#define freqPlan TTN\_FP\_EU868}: Επιλογή \en{frequency plan} \en{EU868} (ταιριάζει με τη ρύθμιση της εφαρμογής στο \en{TTS}).
+  % \item \en{TheThingsNetwork ttn(loraSerial, debugSerial, freqPlan)}: Δημιουργεί \en{TTN} \en{stack} αντικείμενο με \en{hardware UART} για \en{LoRa} και \en{USB} \en{UART} για \en{logs}.
 \end{itemize}
+
+% \paragraph{Διαμόρφωση \en{PZEM-004T} και \en{SoftwareSerial}.}
+% \begin{itemize}
+%   \item \texttt{\#include <PZEM004Tv30.h>}, \texttt{\#include <SoftwareSerial.h>}: Βιβλιοθήκες για \en{UART} επικοινωνία με \en{PZEM} (\en{v3.0}) μέσω \en{software} \en{serial}.
+%   \item \texttt{\#define NUM\_PZEMS 3}: Τρεις μετρητές (μία φάση ανά \en{PZEM}).
+%   \item \texttt{SoftwareSerial pzemSWSerial1(9, 2)}, \texttt{pzemSWSerial2(10, 3)}, \texttt{pzemSWSerial3(11, 4)}: Δηλώνονται τρεις \en{software} \en{UART} (ο πρώτος αριθμός είναι \en{RX}, ο δεύτερος \en{TX} προς τον \en{PZEM}). Προσοχή: σε \en{Leonardo}/\en{ATmega32u4} ο \en{SoftwareSerial} έχει περιορισμούς σε \en{RX} \en{pins}/χρονισμό· οι συγκεκριμένοι συνδυασμοί λειτουργούν πρακτικά, αλλά σε υψηλό \en{CPU load} μπορεί να προκύπτουν \en{framing errors}. 
+%   \item \texttt{PZEM004Tv30 pzems[NUM\_PZEMS]}: Πίνακας \en{driver} για τα τρία \en{PZEM}.
+% \end{itemize}
+
+% \paragraph{Επαναφορά μετρητών ενέργειας.}
+% \begin{itemize}
+%   \item \texttt{resetInterval = 15 * 60000}: Ορίζει \en{auto-reset} ενέργειας ανά 15 λεπτά μέσω \texttt{resetEnergyCounters()}. 
+%   \item \textbf{Παρατήρηση:} Συνήθως η ενέργεια (\en{kWh}) είναι αθροιστική και δεν επαναφέρεται περιοδικά. Αν θες «βάρδιες»/«παράθυρα» μέτρησης, προτίμησε \textbf{λογικό μηδενισμό στην εφαρμογή} (π.χ. αφαιρώντας το baseline) ή \textbf{σπάνιο \en{downlink}-triggered reset} (βλ. \S5.2.7), όχι ανά 15' — ειδάλλως χάνεις ιστορικό.
+% \end{itemize}
+
+% \paragraph{\en{setup()}: αρχικοποίηση.}
+% \begin{itemize}
+%   \item \texttt{debugSerial.begin(9600)}, \texttt{loraSerial.begin(57600)}: Θέτει \en{baud} \en{rates}.
+%   \item \texttt{ttn.join(appEui, appKey)}: \en{OTAA join}. Ο κώδικας μπλοκάρει μέχρι να ολοκληρωθεί ο \en{join}; σε περιβάλλον με πιθανές διακοπές δικτύου, σκέψου \textbf{προθεσμία/επανάληψη} ή \textbf{αποθήκευση \en{session}} σε \en{EEPROM} για \en{quick rejoin}.
+%   \item \texttt{pzems[i] = PZEM004Tv30(pzemSWSerialX)}: \en{Binding} κάθε \en{driver} με το αντίστοιχο \en{SoftwareSerial}.
+% \end{itemize}
+
+% \paragraph{\en{loop()}: ανάγνωση, κωδικοποίηση και αποστολή.}
+% \begin{enumerate}
+%   \item \textbf{Έλεγχος \en{auto-reset}:} Αν πέρασαν 15', καλεί \texttt{resetEnergyCounters()} για όλους τους \en{PZEM}.
+%   \item \textbf{Ανάγνωση μεγεθών:} \texttt{voltage()}, \texttt{current()}, \texttt{power()}, \texttt{energy()}, \texttt{frequency()}, \texttt{pf()}. Η βιβλιοθήκη επιστρέφει \en{float} και \texttt{NaN} σε αποτυχία.
+%   \item \textbf{Έλεγχος εγκυρότητας:} Αν οποιοδήποτε μέγεθος είναι \texttt{NaN}, θέτει \texttt{send=false} και \texttt{continue}. \textit{Βελτίωση:} Αντί να «ρίχνουμε» όλο το \en{uplink}, μπορείς να κωδικοποιείς «\en{invalid}» \en{sentinel} (\texttt{0xFFFF}) για τη συγκεκριμένη φάση και να στέλνεις κανονικά τα υπόλοιπα.
+%   \item \textbf{Κωδικοποίηση \en{payload}:} Για κάθε \en{PZEM} πακετάρει \textbf{12 \en{bytes}} (\textbf{σύνολο 36 \en{bytes}}) ως \textbf{16-bit} τιμές \textbf{big-endian} (\en{high byte} πρώτα), με \textbf{κλίμακες}:
+%   \[
+%     \begin{aligned}
+%       V &: \times 10 \quad (\text{δεκάτα Volt}) \\
+%       I &: \times 100 \quad (\text{εκατομμυριοστά Ampere}) \\
+%       P &: \times 10 \quad (\text{δεκά Watt}) \\
+%       E &: \times 100 \quad (\text{εκατοστά kWh}) \\
+%       f &: \times 10 \quad (\text{δεκάτα Hz}) \\
+%       PF&: \times 100 \quad (\text{εκατοστά})
+%     \end{aligned}
+%   \]
+%   \item \textbf{\en{Uplink}:} \texttt{ttn.sendBytes(data, sizeof(data))}. \textbf{Προσοχή στο \en{duty cycle}/\en{fair use} \en{EU868}}: \texttt{delay(5000)} είναι πολύ επιθετικό· προτίμησε 30-300~\en{s}, ανάλογα με \en{SF}/\en{DR} και απαιτήσεις.
+% \end{enumerate}
+
+% \paragraph{Συμβατότητα \en{payload} με \en{formatter}.}
+% Στην §5.2.4 είχαμε δώσει ενδεικτική κωδικοποίηση (6 \en{uint16}/\en{phase}) αλλά με \textit{άλλες} κλίμακες (\emph{π.χ.} \en{Voltage} $\times 100$, \en{Frequency} $\times 100$, \en{PF} $\times 1000$}). 
+% \textbf{Το παρόν \en{sketch} χρησιμοποιεί} $V\times 10$, $f\times 10$, $PF\times 100$. 
+% Για να είναι 1:1, πρέπει να \textbf{εναρμονίσεις} είτε \underline{τον κώδικα} είτε \underline{τον \en{formatter}}.
+
+% \medskip
+% \noindent \textit{Αν επιλέξεις να κρατήσεις τις κλίμακες του κώδικα}, ο \en{formatter} \textbf{προσαρμόζεται} ως εξής:
+% \begin{otherlanguage*}{english}
+% \begin{lstlisting}[style=bashstyle]
+% function decodeUplink(input) {
+%   const dv = new DataView(Uint8Array.from(input.bytes).buffer);
+%   const scale = { V:10, A:100, W:10, kWh:100, Hz:10, PF:100 };
+%   const phase = idx => {
+%     const off = idx * 12;
+%     const r = (o) => dv.getUint16(off+o, false); // big-endian
+%     return {
+%       V:   r(0)  / scale.V,
+%       A:   r(2)  / scale.A,
+%       W:   r(4)  / scale.W,
+%       kWh: r(6)  / scale.kWh,
+%       Hz:  r(8)  / scale.Hz,
+%       PF:  r(10) / scale.PF
+%     };
+%   };
+%   return { data: { phaseA: phase(0), phaseB: phase(1), phaseC: phase(2) } };
+% }
+% \end{lstlisting}
+% \end{otherlanguage*}
+
+% \paragraph{Εύρος/κορεσμός (\en{overflow}).}
+% Με \texttt{uint16\_t} (0-65535) και τις παραπάνω κλίμακες:
+% \begin{itemize}
+%   \item \en{Voltage}: $6553.5$~\en{V} μέγιστο (\en{ok}).
+%   \item \en{Current}: $655.35$~\en{A} (\en{ok} για οικιακά/τυπικά φορτία).
+%   \item \en{Power}: $6553.5$~\en{W} (\en{ok} ανά φάση).
+%   \item \en{Energy}: $655.35$~\en{kWh} (αν γεμίζει γρήγορα, προτίμησε $\times 10$ ή 32-\en{bit}).
+%   \item \en{Frequency}: $6553.5$~\en{Hz} (\en{ok}).
+%   \item \en{PF}: $655.35$ (\en{ok}, αφού $0.00\!\le\!\text{\en{PF}}\!\le\!1.00$).
+% \end{itemize}
+
+% \paragraph{Βελτιώσεις αξιοπιστίας (προαιρετικά).}
+% \begin{itemize}
+%   \item \textbf{\en{NaN handling} ανά φάση:} Αντί για \texttt{send=false}, γράψε \texttt{0xFFFF} στα 12 \en{bytes} της φάσης και πρόσθεσε \en{bitmask} εγκυρότητας στο \en{payload} (π.χ. 1 \en{byte} στο τέλος).
+%   \item \textbf{Ρυθμός \en{uplinks}:} Σε \en{EU868}, τήρησε duty-cycle. Για \en{SF7/DR5} συνήθως 60-120~\en{s} είναι ασφαλές.
+%   \item \textbf{\en{Join} ανθεκτικότητας:} Πρόσθεσε \en{timeout}/\en{backoff} και αποθήκευση \en{session} σε \en{EEPROM} για γρήγορη επανεκκίνηση.
+%   \item \textbf{Σταθερά \en{SoftwareSerial}:} Αν δεις \en{UART} σφάλματα, μείωσε \en{baud} των \en{PZEM} (αν υποστηρίζεται) ή μετέφερε μία φάση σε \en{HardwareSerial} (όπου υπάρχει) ή χρησιμοποίησε \en{AltSoftSerial}.
+% \end{itemize}
+
+% \paragraph{Συνάρτηση \texttt{resetEnergyCounters()}.}
+% Καλεί \texttt{pzems[i].resetEnergy()} για κάθε μετρητή, τυπώνει στο \en{debug}. 
+% \textbf{Σύσταση:} Απενεργοποίησέ την από το \en{loop} και ενεργοποίησέ την \textbf{μόνο} κατόπιν \en{downlink} (βλ. §5.2.7) ή σε \en{maintenance mode}, ώστε να μη χάνεις σωρευτικά \en{kWh}.
+
+% \paragraph{Σύνοψη ροής.}
+% \begin{enumerate}
+%   \item \textbf{\en{setup}:} \en{Serials} $\rightarrow$ \en{join} $\rightarrow$ \en{PZEM init}.
+%   \item \textbf{\en{loop}:} (α) Προαιρετικός \en{auto-reset} $\rightarrow$ (β) Αναγνώσεις 3×\en{PZEM} $\rightarrow$ (γ) Επικύρωση $\rightarrow$ (δ) Κωδικοποίηση 36~\en{bytes} \textit{(big-endian)} $\rightarrow$ (ε) \en{uplink} προς \en{TTS}.
+%   \item \textbf{\en{TTS Formatter}:} Αποκωδικοποιεί σύμφωνα με τις \textbf{τρέχουσες κλίμακες} του \en{sketch}.
+% \end{enumerate}
+
+
+
+%%%%   Υποενότητα 5.2.2: Δημιουργία Application στο The Things Stack   %%%%
+
+\subsection{Καταχώριση του \en{The Things Uno} στο \en{The Things Stack}}
+
+Για να συνδεθεί το \en{The Things Uno} στο \en{The Things Stack}, πρέπει πρώτα να το καταχωρίσουμε σε ένα \en{Application} στο \en{The Things Stack Console}:
+
+
+\begin{enumerate}
+  \item Από τις επιλογές αριστερά, διαλέγουμε \textit{\en{Applications}} και στη συνέχεια πατάμε το κουμπί \textit{\en{+ Add application}} ώστε να προσθέσουμε νέο \en{Application}:   \begin{Illustration}[!ht] \centering      \includegraphics[width=1\textwidth]{figures/Console_Create_Application.png}       \caption{Επιλογή προσθήκης νέου \en{Application}.}      \label{figure5.30}    \end{Illustration}  
+  \item Συμπληρώνουμε τα \en{Application ID} και \en{Application name} που επιθυμούμε και πατάμε \textit{\en{Create application}}. Στη συνέχεια δημιουργείται το \en{Application} και ανακατευθυνόμαστε στο \en{Application Overview} αυτουνού: \begin{Illustration}[!ht] \centering      \includegraphics[width=0.65\textwidth]{figures/Console_Create_Application_Final_Stage.png}       \caption{Ορισμός \en{Application ID} και \en{Application name}.}      \label{figure5.31}    \end{Illustration}
+  % \item Από το μενού αριστερά επιλέγουμε \textit{\en{API keys}} και μετά πατάμε \textit{\en{+ Add API key}} προκειμένου να δημιουργήσουμε ένα κλειδί για την εφαρμογή για να το χρησιμοποιήσει το \en{TTU} κατά τη σύνδεσή του στι \en{TTS}: 
+  % \begin{Illustration}[!ht]     
+  %   \centering    
+  %   \includegraphics[width=0.8\textwidth]{figures/Console_Application_Add_APIkey.png}     
+  %   \caption{Επιλογή Δημιουργίας \en{API} κλειδιού για το \en{Application}.}    
+  %   \label{figure5.16}  
+  % \end{Illustration} 
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

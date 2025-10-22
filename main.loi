@@ -1,58 +1,62 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {illustration}{\numberline {2.1}{\ignorespaces Σύγκριση τεχνολογιών ασύρματης επικοινωνίας (\foreignlanguage {english}{LPWAN}) ως προς τον ρυθμό μετάδοσης, την κατανάλωση ενέργειας, την εμβέλεια και το κόστος.}}{26}{illustration.caption.9}%
-\contentsline {illustration}{\numberline {2.2}{\ignorespaces Μοντέλο \foreignlanguage {english}{OSI} σε αντιστοίχιση με τα \foreignlanguage {english}{LoRa} και \foreignlanguage {english}{LoRaWAN} επίπεδα.}}{29}{illustration.caption.11}%
-\contentsline {illustration}{\numberline {2.3}{\ignorespaces Ζώνη \foreignlanguage {english}{Fresnel} με 40\% της κάλυψης από εμπόδια.}}{31}{illustration.caption.12}%
-\contentsline {illustration}{\numberline {2.4}{\ignorespaces Σύγκριση ευαισθησίας \foreignlanguage {english}{LoRa} και \foreignlanguage {english}{FSK}, υπογραμμίζοντας την υπεροχή της τεχνολογίας \foreignlanguage {english}{LoRa} σε συνθήκες χαμηλού λόγου σήματος προς θόρυβο (\foreignlanguage {english}{SNR}).}}{34}{illustration.caption.13}%
-\contentsline {illustration}{\numberline {2.5}{\ignorespaces Παράλληλη σύγκριση ενός \foreignlanguage {english}{down-chirp} (αριστερά) και ενός \foreignlanguage {english}{up-chirp} (δεξιά), που δείχνει τη γραμμική μείωση/αύξηση της στιγμιαίας συχνότητας (πάνω) συνοδευόμενη από το αντίστοιχο σήμα στο πεδίο του χρόνου, όπου η απόσταση των κυμάτων εκτείνεται/συμπιέζεται καθ’ όλη τη διάρκεια του συμβόλου.}}{38}{illustration.caption.14}%
-\contentsline {illustration}{\numberline {2.6}{\ignorespaces Φασματογράφημα σήματος \foreignlanguage {english}{LoRa} που παρουσιάζει 8 αρχικά \foreignlanguage {english}{up-chirps} προοιμίου, 2 \foreignlanguage {english}{down-chirps} συγχρονισμού και ακολουθία 5 \foreignlanguage {english}{chirp} με κωδικοποιημένα δεδομένα (διαφορετική κυκλική μετατόπιση σε κάθε σύμβολο). Το σήμα σαρώνει πλήρως ένα εύρος ζώνης 125$kHz$ με γραμμικά αυξανόμενη ή μει\-ού\-μενη συχνότητα σε κάθε \foreignlanguage {english}{chirp}.}}{38}{illustration.caption.15}%
-\contentsline {illustration}{\numberline {2.7}{\ignorespaces Σχηματική απεικόνιση της κυματομορφής \foreignlanguage {english}{Chirp Spread Spectrum} στο \foreignlanguage {english}{LoRa} για \foreignlanguage {english}{Spreading Factor} (4 \foreignlanguage {english}{bits}). Το διάγραμμα δείχνει πώς κάθε σύμβολο σαρώνει γραμμικά το εύρος ζώνης από $f_{\mathrm {low}}$ σε $f_{\mathrm {high}}$, καθώς και την αντιστοίχιση των \foreignlanguage {english}{chips} σε διακριτές τιμές (0-15) μέσα σε ένα σύμβολο.}}{39}{illustration.caption.16}%
-\contentsline {illustration}{\numberline {2.8}{\ignorespaces Απεικόνιση κυματομορφών \foreignlanguage {english}{Chirp Spread Spectrum} στο \foreignlanguage {english}{LoRa} για \foreignlanguage {english}{Spreading Factor} 4, με ένδειξη των διακριτών τιμών (0, 4, 8, 12) στην αντίστοιχη χρονική θέση μέσα στο σύμβολο $T_s$. Τα μπλε σημάδια δείχνουν το κλάσμα της περιόδου συμβόλου στο οποίο εκπέμπεται κάθε τιμή, ενώ η πράσινη σήμανση αντιστοιχεί στον αριθμό του \foreignlanguage {english}{chip}.}}{42}{illustration.caption.19}%
-\contentsline {illustration}{\numberline {2.9}{\ignorespaces Τεχνολογική στοίβα των \foreignlanguage {english}{LoRa} και \foreignlanguage {english}{LoRaWAN}.}}{48}{illustration.caption.21}%
-\contentsline {illustration}{\numberline {2.10}{\ignorespaces Τυπική αρχιτεκτονική \foreignlanguage {english}{LoRaWAN} δικτύου.}}{49}{illustration.caption.22}%
-\contentsline {illustration}{\numberline {2.11}{\ignorespaces Αρχιτεκτονική \foreignlanguage {english}{LoRaWAN Network Server}.}}{50}{illustration.caption.23}%
-\contentsline {illustration}{\numberline {2.12}{\ignorespaces Ροή \foreignlanguage {english}{Uplink} και \foreignlanguage {english}{Downlink} μηνυμάτων στο Πρωτόκολλο \foreignlanguage {english}{LoRaWAN}.}}{52}{illustration.caption.24}%
-\contentsline {illustration}{\numberline {2.13}{\ignorespaces Ροή επικοινωνίας κλάσης \foreignlanguage {english}{A}.}}{53}{illustration.caption.25}%
-\contentsline {illustration}{\numberline {2.14}{\ignorespaces Ροή επικοινωνίας κλάσης \foreignlanguage {english}{B}.}}{53}{illustration.caption.26}%
-\contentsline {illustration}{\numberline {2.15}{\ignorespaces Ροή επικοινωνίας κλάσης \foreignlanguage {english}{C}.}}{54}{illustration.caption.27}%
-\contentsline {illustration}{\numberline {2.16}{\ignorespaces Δομή πακέτου \foreignlanguage {english}{LoRaWAN}.}}{55}{illustration.caption.28}%
-\contentsline {illustration}{\numberline {2.17}{\ignorespaces Ροή μηνυμάτων για ενεργοποίηση \foreignlanguage {english}{OTAA} στο \foreignlanguage {english}{LoRaWAN 1.0}.}}{60}{illustration.caption.34}%
-\contentsline {illustration}{\numberline {2.18}{\ignorespaces Ροή μηνυμάτων για ενεργοποίηση \foreignlanguage {english}{OTAA} στο \foreignlanguage {english}{LoRaWAN 1.1}.}}{61}{illustration.caption.35}%
-\contentsline {illustration}{\numberline {2.19}{\ignorespaces Προ-διαμοιρασμός του \foreignlanguage {english}{DevAddr} και των \foreignlanguage {english}{session keys} για ενεργοποίηση \foreignlanguage {english}{ABP} στο \foreignlanguage {english}{LoRaWAN 1.0}.}}{63}{illustration.caption.36}%
-\contentsline {illustration}{\numberline {2.20}{\ignorespaces Προ-διαμοιρασμός του \foreignlanguage {english}{DevAddr} και των \foreignlanguage {english}{session keys} για ενεργοποίηση \foreignlanguage {english}{ABP} στο \foreignlanguage {english}{LoRaWAN 1.1}.}}{63}{illustration.caption.37}%
+\contentsline {illustration}{\numberline {2.1}{\ignorespaces Σύγκριση τεχνολογιών ασύρματης επικοινωνίας (\foreignlanguage {english}{LPWAN}) ως προς τον ρυθμό μετάδοσης, την κατανάλωση ενέργειας, την εμβέλεια και το κόστος.}}{28}{illustration.caption.9}%
+\contentsline {illustration}{\numberline {2.2}{\ignorespaces Μοντέλο \foreignlanguage {english}{OSI} σε αντιστοίχιση με τα \foreignlanguage {english}{LoRa} και \foreignlanguage {english}{LoRaWAN} επίπεδα.}}{31}{illustration.caption.11}%
+\contentsline {illustration}{\numberline {2.3}{\ignorespaces Ζώνη \foreignlanguage {english}{Fresnel} με 40\% της κάλυψης από εμπόδια.}}{33}{illustration.caption.12}%
+\contentsline {illustration}{\numberline {2.4}{\ignorespaces Σύγκριση ευαισθησίας \foreignlanguage {english}{LoRa} και \foreignlanguage {english}{FSK}, υπογραμμίζοντας την υπεροχή της τεχνολογίας \foreignlanguage {english}{LoRa} σε συνθήκες χαμηλού λόγου σήματος προς θόρυβο (\foreignlanguage {english}{SNR}).}}{36}{illustration.caption.13}%
+\contentsline {illustration}{\numberline {2.5}{\ignorespaces Παράλληλη σύγκριση ενός \foreignlanguage {english}{down-chirp} (αριστερά) και ενός \foreignlanguage {english}{up-chirp} (δεξιά), που δείχνει τη γραμμική μείωση/αύξηση της στιγμιαίας συχνότητας (πάνω) συνοδευόμενη από το αντίστοιχο σήμα στο πεδίο του χρόνου, όπου η απόσταση των κυμάτων εκτείνεται/συμπιέζεται καθ’ όλη τη διάρκεια του συμβόλου.}}{40}{illustration.caption.14}%
+\contentsline {illustration}{\numberline {2.6}{\ignorespaces Φασματογράφημα σήματος \foreignlanguage {english}{LoRa} που παρουσιάζει 8 αρχικά \foreignlanguage {english}{up-chirps} προοιμίου, 2 \foreignlanguage {english}{down-chirps} συγχρονισμού και ακολουθία 5 \foreignlanguage {english}{chirp} με κωδικοποιημένα δεδομένα (διαφορετική κυκλική μετατόπιση σε κάθε σύμβολο). Το σήμα σαρώνει πλήρως ένα εύρος ζώνης 125$kHz$ με γραμμικά αυξανόμενη ή μει\-ού\-μενη συχνότητα σε κάθε \foreignlanguage {english}{chirp}.}}{40}{illustration.caption.15}%
+\contentsline {illustration}{\numberline {2.7}{\ignorespaces Σχηματική απεικόνιση της κυματομορφής \foreignlanguage {english}{Chirp Spread Spectrum} στο \foreignlanguage {english}{LoRa} για \foreignlanguage {english}{Spreading Factor} (4 \foreignlanguage {english}{bits}). Το διάγραμμα δείχνει πώς κάθε σύμβολο σαρώνει γραμμικά το εύρος ζώνης από $f_{\mathrm {low}}$ σε $f_{\mathrm {high}}$, καθώς και την αντιστοίχιση των \foreignlanguage {english}{chips} σε διακριτές τιμές (0-15) μέσα σε ένα σύμβολο.}}{41}{illustration.caption.16}%
+\contentsline {illustration}{\numberline {2.8}{\ignorespaces Απεικόνιση κυματομορφών \foreignlanguage {english}{Chirp Spread Spectrum} στο \foreignlanguage {english}{LoRa} για \foreignlanguage {english}{Spreading Factor} 4, με ένδειξη των διακριτών τιμών (0, 4, 8, 12) στην αντίστοιχη χρονική θέση μέσα στο σύμβολο $T_s$. Τα μπλε σημάδια δείχνουν το κλάσμα της περιόδου συμβόλου στο οποίο εκπέμπεται κάθε τιμή, ενώ η πράσινη σήμανση αντιστοιχεί στον αριθμό του \foreignlanguage {english}{chip}.}}{44}{illustration.caption.19}%
+\contentsline {illustration}{\numberline {2.9}{\ignorespaces Τεχνολογική στοίβα των \foreignlanguage {english}{LoRa} και \foreignlanguage {english}{LoRaWAN}.}}{50}{illustration.caption.21}%
+\contentsline {illustration}{\numberline {2.10}{\ignorespaces Τυπική αρχιτεκτονική \foreignlanguage {english}{LoRaWAN} δικτύου.}}{51}{illustration.caption.22}%
+\contentsline {illustration}{\numberline {2.11}{\ignorespaces Αρχιτεκτονική \foreignlanguage {english}{LoRaWAN Network Server}.}}{52}{illustration.caption.23}%
+\contentsline {illustration}{\numberline {2.12}{\ignorespaces Ροή \foreignlanguage {english}{Uplink} και \foreignlanguage {english}{Downlink} μηνυμάτων στο Πρωτόκολλο \foreignlanguage {english}{LoRaWAN}.}}{54}{illustration.caption.24}%
+\contentsline {illustration}{\numberline {2.13}{\ignorespaces Ροή επικοινωνίας κλάσης \foreignlanguage {english}{A}.}}{55}{illustration.caption.25}%
+\contentsline {illustration}{\numberline {2.14}{\ignorespaces Ροή επικοινωνίας κλάσης \foreignlanguage {english}{B}.}}{55}{illustration.caption.26}%
+\contentsline {illustration}{\numberline {2.15}{\ignorespaces Ροή επικοινωνίας κλάσης \foreignlanguage {english}{C}.}}{56}{illustration.caption.27}%
+\contentsline {illustration}{\numberline {2.16}{\ignorespaces Δομή πακέτου \foreignlanguage {english}{LoRaWAN}.}}{57}{illustration.caption.28}%
+\contentsline {illustration}{\numberline {2.17}{\ignorespaces Ροή μηνυμάτων για ενεργοποίηση \foreignlanguage {english}{OTAA} στο \foreignlanguage {english}{LoRaWAN 1.0}.}}{62}{illustration.caption.34}%
+\contentsline {illustration}{\numberline {2.18}{\ignorespaces Ροή μηνυμάτων για ενεργοποίηση \foreignlanguage {english}{OTAA} στο \foreignlanguage {english}{LoRaWAN 1.1}.}}{63}{illustration.caption.35}%
+\contentsline {illustration}{\numberline {2.19}{\ignorespaces Προ-διαμοιρασμός του \foreignlanguage {english}{DevAddr} και των \foreignlanguage {english}{session keys} για ενεργοποίηση \foreignlanguage {english}{ABP} στο \foreignlanguage {english}{LoRaWAN 1.0}.}}{65}{illustration.caption.36}%
+\contentsline {illustration}{\numberline {2.20}{\ignorespaces Προ-διαμοιρασμός του \foreignlanguage {english}{DevAddr} και των \foreignlanguage {english}{session keys} για ενεργοποίηση \foreignlanguage {english}{ABP} στο \foreignlanguage {english}{LoRaWAN 1.1}.}}{65}{illustration.caption.37}%
 \addvspace {10\p@ }
-\contentsline {illustration}{\numberline {3.1}{\ignorespaces Αρχιτεκτονική του \foreignlanguage {english}{The Things Stack} με τα βασικά του δομικά στοιχεία.}}{68}{illustration.caption.38}%
-\contentsline {illustration}{\numberline {3.2}{\ignorespaces Αρχιτεκτονική του \foreignlanguage {english}{LoRa Basics\textsuperscript {TM} Station}.}}{72}{illustration.caption.39}%
-\contentsline {illustration}{\numberline {3.3}{\ignorespaces Αρχιτεκτονική \foreignlanguage {english}{Docker}: ο \foreignlanguage {english}{Docker Client} εκτελεί εντολές \foreignlanguage {english}{(build, pull, run)} προς τον \foreignlanguage {english}{Docker daemon}, που δημιουργεί/χειρίζεται \foreignlanguage {english}{images} και \foreignlanguage {english}{containers} και επικοινωνεί με τον \foreignlanguage {english}{Docker Registry}.}}{76}{illustration.caption.40}%
-\contentsline {illustration}{\numberline {3.4}{\ignorespaces Αρχιτεκτονική ενός \foreignlanguage {english}{Web Application}, αποτελούμενο από ένα \foreignlanguage {english}{React Frontend App} που επικοινωνεί μέσω \foreignlanguage {english}{Axios/REST APIs} με ένα \foreignlanguage {english}{Spring Boot Backend App}, μετατρέπει δεδομένα \foreignlanguage {english}{DTOs (Data Transfer Objects)} σε οντότητες \foreignlanguage {english}{(Entities)} και εκτελεί διεργασίες αποθήκευσης/ανάκτησης αυτών των δεδομένων από μία \foreignlanguage {english}{PostgreSQL} βάση δεδομένων.}}{80}{illustration.caption.41}%
+\contentsline {illustration}{\numberline {3.1}{\ignorespaces Αρχιτεκτονική του \foreignlanguage {english}{The Things Stack} με τα βασικά του δομικά στοιχεία.}}{70}{illustration.caption.38}%
+\contentsline {illustration}{\numberline {3.2}{\ignorespaces Αρχιτεκτονική του \foreignlanguage {english}{LoRa Basics\textsuperscript {TM} Station}.}}{74}{illustration.caption.39}%
+\contentsline {illustration}{\numberline {3.3}{\ignorespaces Αρχιτεκτονική \foreignlanguage {english}{Docker}: ο \foreignlanguage {english}{Docker Client} εκτελεί εντολές \foreignlanguage {english}{(build, pull, run)} προς τον \foreignlanguage {english}{Docker daemon}, που δημιουργεί/χειρίζεται \foreignlanguage {english}{images} και \foreignlanguage {english}{containers} και επικοινωνεί με τον \foreignlanguage {english}{Docker Registry}.}}{78}{illustration.caption.40}%
+\contentsline {illustration}{\numberline {3.4}{\ignorespaces Αρχιτεκτονική ενός \foreignlanguage {english}{Web Application}, αποτελούμενο από ένα \foreignlanguage {english}{React Frontend App} που επικοινωνεί μέσω \foreignlanguage {english}{Axios/REST APIs} με ένα \foreignlanguage {english}{Spring Boot Backend App}, μετατρέπει δεδομένα \foreignlanguage {english}{DTOs (Data Transfer Objects)} σε οντότητες \foreignlanguage {english}{(Entities)} και εκτελεί διεργασίες αποθήκευσης/ανάκτησης αυτών των δεδομένων από μία \foreignlanguage {english}{PostgreSQL} βάση δεδομένων.}}{82}{illustration.caption.41}%
 \addvspace {10\p@ }
-\contentsline {illustration}{\numberline {4.1}{\ignorespaces Τοπολογία του συστήματος.}}{83}{illustration.caption.42}%
-\contentsline {illustration}{\numberline {4.2}{\ignorespaces Υλοποίηση \foreignlanguage {english}{LoRaWAN Gateway} και σύνδεσμολογία εξαρτημάτων.}}{86}{illustration.caption.46}%
-\contentsline {illustration}{\numberline {4.3}{\ignorespaces Υλοποίηση τριφασικού μετρητή - σύνδεση \foreignlanguage {english}{The Things Uno} με 3 \foreignlanguage {english}{PZEM-004T V3.0}}}{89}{illustration.caption.51}%
+\contentsline {illustration}{\numberline {4.1}{\ignorespaces Τοπολογία του συστήματος.}}{85}{illustration.caption.42}%
+\contentsline {illustration}{\numberline {4.2}{\ignorespaces Υλοποίηση \foreignlanguage {english}{LoRaWAN Gateway} και σύνδεσμολογία εξαρτημάτων.}}{88}{illustration.caption.46}%
+\contentsline {illustration}{\numberline {4.3}{\ignorespaces Υλοποίηση τριφασικού μετρητή - σύνδεση \foreignlanguage {english}{The Things Uno} με 3 \foreignlanguage {english}{PZEM-004T V3.0}}}{91}{illustration.caption.51}%
 \addvspace {10\p@ }
-\contentsline {illustration}{\numberline {5.1}{\ignorespaces Τελική συνδεσμολογία των εξαρτημάτων του \foreignlanguage {english}{LoRaWAN gateway}.}}{93}{illustration.caption.56}%
-\contentsline {illustration}{\numberline {5.2}{\ignorespaces \foreignlanguage {english}{Raspberry Pi Imager.}}}{94}{illustration.caption.57}%
-\contentsline {illustration}{\numberline {5.3}{\ignorespaces \foreignlanguage {english}{Apply OS Customisation settings Option}.}}{94}{illustration.caption.58}%
-\contentsline {illustration}{\numberline {5.4}{\ignorespaces \foreignlanguage {english}{General OS Customisation settings}.}}{95}{illustration.caption.59}%
-\contentsline {illustration}{\numberline {5.5}{\ignorespaces \foreignlanguage {english}{Services OS Customisation settings}.}}{96}{illustration.caption.60}%
-\contentsline {illustration}{\numberline {5.6}{\ignorespaces Εργαλείο παραµετροποίησης λογισµικού του \foreignlanguage {english}{Raspberry Pi}}}{97}{illustration.caption.61}%
-\contentsline {illustration}{\numberline {5.7}{\ignorespaces Επιλογή ενεργοποιήσης διεπαφής \foreignlanguage {english}{SPI}}}{97}{illustration.caption.62}%
-\contentsline {illustration}{\numberline {5.8}{\ignorespaces Επιλογή καταχώρησης νέου \foreignlanguage {english}{Gateway}.}}{105}{illustration.caption.63}%
-\contentsline {illustration}{\numberline {5.9}{\ignorespaces Εισαγωγή \foreignlanguage {english}{EUI}.}}{105}{illustration.caption.64}%
-\contentsline {illustration}{\numberline {5.10}{\ignorespaces Δημιουργία \foreignlanguage {english}{Gateway ID} και \foreignlanguage {english}{name}, επιλογή \foreignlanguage {english}{Frequency plan} και δημιουργία κλειδιού \foreignlanguage {english}{LNS}.}}{105}{illustration.caption.65}%
-\contentsline {illustration}{\numberline {5.11}{\ignorespaces Αποθήκευση \foreignlanguage {english}{API} κλειδιού.}}{106}{illustration.caption.66}%
-\contentsline {illustration}{\numberline {5.12}{\ignorespaces \foreignlanguage {english}{Gateway Overview and status} στο \foreignlanguage {english}{TTS Console}.}}{110}{illustration.caption.67}%
-\contentsline {illustration}{\numberline {5.13}{\ignorespaces Τελική συνδεσμολογία των εξαρτημάτων του τριφασικού μετρητή.}}{110}{illustration.caption.68}%
-\contentsline {illustration}{\numberline {5.14}{\ignorespaces Λογισμικό \foreignlanguage {english}{Arduino IDE}.}}{111}{illustration.caption.69}%
-\contentsline {illustration}{\numberline {5.15}{\ignorespaces Αναζήτηση και επιλογή πλακέτας \foreignlanguage {english}{Arduino Leonardo}.}}{111}{illustration.caption.70}%
-\contentsline {illustration}{\numberline {5.16}{\ignorespaces Επιλογή \foreignlanguage {english}{Arduino Leonardo} στη θύρα \foreignlanguage {english}{COM3} όπου έχει συνδεθεί το \foreignlanguage {english}{The Things Uno}.}}{112}{illustration.caption.71}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {illustration}{\numberline {5.1}{\ignorespaces Τελική συνδεσμολογία των εξαρτημάτων του \foreignlanguage {english}{LoRaWAN gateway}.}}{95}{illustration.caption.56}%
+\contentsline {illustration}{\numberline {5.2}{\ignorespaces \foreignlanguage {english}{Raspberry Pi Imager.}}}{96}{illustration.caption.57}%
+\contentsline {illustration}{\numberline {5.3}{\ignorespaces \foreignlanguage {english}{Apply OS Customisation settings Option}.}}{96}{illustration.caption.58}%
+\contentsline {illustration}{\numberline {5.4}{\ignorespaces \foreignlanguage {english}{General OS Customisation settings}.}}{97}{illustration.caption.59}%
+\contentsline {illustration}{\numberline {5.5}{\ignorespaces \foreignlanguage {english}{Services OS Customisation settings}.}}{98}{illustration.caption.60}%
+\contentsline {illustration}{\numberline {5.6}{\ignorespaces Εργαλείο παραµετροποίησης λογισµικού του \foreignlanguage {english}{Raspberry Pi}}}{99}{illustration.caption.61}%
+\contentsline {illustration}{\numberline {5.7}{\ignorespaces Επιλογή ενεργοποιήσης διεπαφής \foreignlanguage {english}{SPI}}}{99}{illustration.caption.62}%
+\contentsline {illustration}{\numberline {5.8}{\ignorespaces Επιλογή καταχώρησης νέου \foreignlanguage {english}{Gateway}.}}{107}{illustration.caption.63}%
+\contentsline {illustration}{\numberline {5.9}{\ignorespaces Εισαγωγή \foreignlanguage {english}{EUI}.}}{107}{illustration.caption.64}%
+\contentsline {illustration}{\numberline {5.10}{\ignorespaces Δημιουργία \foreignlanguage {english}{Gateway ID} και \foreignlanguage {english}{name}, επιλογή \foreignlanguage {english}{Frequency plan} και δημιουργία κλειδιού \foreignlanguage {english}{LNS}.}}{107}{illustration.caption.65}%
+\contentsline {illustration}{\numberline {5.11}{\ignorespaces Αποθήκευση \foreignlanguage {english}{API} κλειδιού.}}{108}{illustration.caption.66}%
+\contentsline {illustration}{\numberline {5.12}{\ignorespaces \foreignlanguage {english}{Gateway Overview and status} στο \foreignlanguage {english}{TTS Console}.}}{112}{illustration.caption.67}%
+\contentsline {illustration}{\numberline {5.13}{\ignorespaces Τελική συνδεσμολογία των εξαρτημάτων του τριφασικού μετρητή.}}{112}{illustration.caption.68}%
+\contentsline {illustration}{\numberline {5.14}{\ignorespaces Λογισμικό \foreignlanguage {english}{Arduino IDE}.}}{113}{illustration.caption.69}%
+\contentsline {illustration}{\numberline {5.15}{\ignorespaces Αναζήτηση και επιλογή πλακέτας \foreignlanguage {english}{Arduino Leonardo}.}}{113}{illustration.caption.70}%
+\contentsline {illustration}{\numberline {5.16}{\ignorespaces Επιλογή \foreignlanguage {english}{Arduino Leonardo} στη θύρα \foreignlanguage {english}{COM3} όπου έχει συνδεθεί το \foreignlanguage {english}{The Things Uno}.}}{114}{illustration.caption.71}%
+\contentsline {illustration}{\numberline {5.17}{\ignorespaces Κάνουμε \foreignlanguage {english}{upload} το \foreignlanguage {english}{sketch} στο \foreignlanguage {english}{TTU}.}}{117}{illustration.caption.72}%
+\contentsline {illustration}{\numberline {5.18}{\ignorespaces Έξοδος του \foreignlanguage {english}{Serial Monitor} με τις πληρφορίες της συσκευής.}}{117}{illustration.caption.73}%
+\contentsline {illustration}{\numberline {5.19}{\ignorespaces Επιλογή προσθήκης νέου \foreignlanguage {english}{Application}.}}{118}{illustration.caption.74}%
+\contentsline {illustration}{\numberline {5.20}{\ignorespaces Ορισμός \foreignlanguage {english}{Application ID} και \foreignlanguage {english}{Application name}.}}{118}{illustration.caption.75}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{139}{illustration.caption.77}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{143}{illustration.caption.81}%

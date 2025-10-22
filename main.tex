@@ -54,6 +54,12 @@
 % --- Code listings setup ---
 \usepackage[most]{tcolorbox}
 \tcbset{listing engine=listings}
+\usepackage{accsupp}
+\newcommand{\noncopynumber}[1]{%
+  \BeginAccSupp{method=escape,ActualText={}}%
+  #1%
+  \EndAccSupp{}%
+}
 
 
 
@@ -100,7 +106,7 @@
   basicstyle=\linespread{1.05}\ttfamily\normalsize\color{codetext},
   keywordstyle=\bfseries\color{codekw},
   stringstyle=\color{codestr},
-  commentstyle=\itshape\color{codecm},
+  commentstyle=\itshape\color{codecm}\noncopynumber,
   numberstyle=\scriptsize\color{codenums},
   numbers=none,
   numbersep=10pt,
@@ -156,7 +162,7 @@
   keywordstyle={[2]\bfseries\color{codekw}}, % literals (true/false/null)
   stringstyle=\color{codestr},
   commentstyle=\itshape\color{codecm},
-  numberstyle=\scriptsize\color{codenums},
+  numberstyle=\scriptsize\color{codenums}\noncopynumber,
   numbers=left,
   numbersep=10pt,
   frame=single,
@@ -234,7 +240,7 @@
   stringstyle=\color{cpp-str},
   commentstyle=\itshape\color{cpp-com},
   showstringspaces=false, upquote=true,
-  numbers=left, numberstyle=\scriptsize\color{cpp-com}, numbersep=10pt,
+  numbers=left, numberstyle=\scriptsize\color{cpp-com}\noncopynumber, numbersep=10pt,
   frame=single, rulecolor=\color{cpp-frame}, frameround=tttt, framesep=8pt,
   xleftmargin=1.5em, xrightmargin=0.5em,
   columns=fullflexible, keepspaces=true,
