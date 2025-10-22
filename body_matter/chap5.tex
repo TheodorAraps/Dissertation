@@ -860,9 +860,33 @@ docker compose up
   \label{figure5.16}
 \end{Illustration} 
 
+
 Μπορούμε τώρα να ξεκινήσουμε να γράφουμε τον κώδικα (σε γλώσσα προγραμματισμού \en{C++}) για τον προγραμματισμό 
 του \en{The Things Uno} και να τον «ανεβάσουμε» (\en{upload}) στην πλακέτα. 
 
+\subsubsection{Σημείωση} 
+\label{subsubsec:note}
+
+Σε αυτό το σημείο, προκειμένου να βρούμε ορισμένες σημαντικές πληροφορίες για την συσκευή \en{TTU} μπορούμε 
+να τρέξουμε το \en{sketch} που βρίσκεται στην διαδρομή \textit{\en{File > Examples > TheThingsNetwork > Deviceinfo}}. 
+Αφού το επιλέξουμε, θέτουμε στην μεταβλητή \textbf{\en{freqPlan}} την τιμή \textit{\en{TTN\_FP\_EU868}} πατάμε το κουμπί του \en{Upload}:
+\begin{Illustration}[!ht]     
+  \centering    
+  \includegraphics[width=0.7\textwidth]{figures/Device_info_sketch.png}     
+  \caption{Κάνουμε \en{upload} το \en{sketch} στο \en{TTU}.}    
+  \label{figure5.17}  
+\end{Illustration}
+
+Από την διαδρομή \textit{\en{Tools > Serial Monitor}} ανοίγουμε το \en{Serial Monitor} και βλέπουμε την έξοδο του \en{TTU} με τις πληροφορίες της συσκευής:
+\begin{Illustration}[!ht]     
+  \centering    
+  \includegraphics[width=0.7\textwidth]{figures/Serial_Monitor_Output_1.png}     
+  \caption{Έξοδος του \en{Serial Monitor} με τις πληρφορίες της συσκευής.}    
+  \label{figure5.18}  
+\end{Illustration} 
+
+
+\newpage
 \subsubsectionwc{Δομή κώδικα και ροή λειτουργίας}
 
 Ακολουθεί ο κώδικας που χρησιμοποιήσαμε και στη συνέχεια η επεξήγησή του:
@@ -998,26 +1022,11 @@ void resetEnergyCounters(§\cyan{)}§ {
 
 \begin{itemize}
   \item Συμπεριλαμβάνουμε τη βιβλιοθήκη \textbf{\en{TheThingsNetwork.h}} της \en{The Things Network} για ενεργοποίηση \en{OTAA}, αποστολή \en{uplinks} κ.λπ. Για να αναγνωρίσει ο \en{compiler} την βιβλιοθήκη, την εγκαθιστούμε ακολουθώντας την διαδρομή \textit{\en{Sketch > Include Library > Manage Libraries}}, αναζητώντας το όνομα της και πατώντας \textit{\en{install}}.
-  \item Δημιουργούμε τις σταθερές \textbf{\en{appEui}} και \textbf{\en{appKey}}, οι οποίες αποτελούν τα \en{OTAA credentials} της συσκευής. Η τιμή της \textbf{\en{appEUI}} προκύπτει τρέχοντας το \en{sketch} που βρίσκεται στην διαδρομή \textit{\en{File > Examples > TheThingsNetwork > Deviceinfo}}. Αφού το επιλέξουμε, θέτουμε στην μεταβλητή \textbf{\en{freqPlan}} την τιμή \textit{\en{TTN\_FP\_EU868}} πατάμε το κουμπί του \en{Upload}:
-  \begin{Illustration}[!ht]     
-    \centering    
-    \includegraphics[width=0.7\textwidth]{figures/Device_info_sketch.png}     
-    \caption{Κάνουμε \en{upload} το \en{sketch} στο \en{TTU}.}    
-    \label{figure5.17}  
-  \end{Illustration} 
-
-  Από την διαδρομή \textit{\en{Tools > Serial Monitor}} ανοίγουμε το \en{Serial Monitor} και βλέπουμε την έξοδο του \en{TTU} με τις πληροφορίες της συσκευής:
-  \begin{Illustration}[!ht]     
-    \centering    
-    \includegraphics[width=0.7\textwidth]{figures/Serial_Monitor_Output_1.png}     
-    \caption{Έξοδος του \en{Serial Monitor} με τις πληρφορίες της συσκευής.}    
-    \label{figure5.18}  
-  \end{Illustration} 
-  
-  % \item \en{\#define loraSerial Serial1}: Η \en{The Things Uno} (βασισμένη σε \en{ATmega32u4}/\en{Leonardo}) χρησιμοποιεί τη \en{Serial1} για σύνδεση με το \en{LoRa} \en{module} (π.χ. \en{RN2483}/\en{RN2903}), αφήνοντας την \en{Serial} για \en{debug} προς τον \en{USB}.
-  % \item \en{\#define debugSerial Serial}: \en{USB CDC} για μηνύματα κατάστασης/εντοπισμό σφαλμάτων.
-  % \item \en{\#define freqPlan TTN\_FP\_EU868}: Επιλογή \en{frequency plan} \en{EU868} (ταιριάζει με τη ρύθμιση της εφαρμογής στο \en{TTS}).
-  % \item \en{TheThingsNetwork ttn(loraSerial, debugSerial, freqPlan)}: Δημιουργεί \en{TTN} \en{stack} αντικείμενο με \en{hardware UART} για \en{LoRa} και \en{USB} \en{UART} για \en{logs}.
+  \item Δημιουργούμε τις σταθερές \textbf{\en{appEui}} και \textbf{\en{appKey}}, οι οποίες αποτελούν τα \en{OTAA credentials} της συσκευής. Η τιμή της \textbf{\en{appEUI}} προκύπτει από την διαδικασία που περιγράφηκε στην σημείωση στο τέλος της Υπο-υποενότητας \ref{subsubsec:note}, ενώ η τιμή της \textbf{\en{appKey}} προκύπτει από τις οδηγίες στην Υποενότητα ............\dots
+  \item \textbf{\en{\#define loraSerial Serial1}}: Η \en{The Things Uno} (βασισμένη σε \en{ATmega32u4}/\en{Leonardo}) χρησιμοποιεί τη \textbf{\en{Serial1}} για σύνδεση με το \en{LoRa} \en{module} (π.χ. \en{RN2483}/\en{RN2903}), αφήνοντας την \textbf{\en{Serial}} για \en{debug} προς τον \en{USB}.
+  \item \textbf{\en{\#define debugSerial Serial}}: \en{USB CDC} για μηνύματα κατάστασης/εντοπισμό σφαλμάτων.
+  \item \textbf{\en{\#define freqPlan TTN\_FP\_EU868}}: Επιλογή \en{frequency plan} \en{EU868} (ταιριάζει με τη ρύθμιση της εφαρμογής στο \en{TTS}).
+  \item \textbf{\en{TheThingsNetwork ttn(loraSerial, debugSerial, freqPlan)}}: Δημιουργεί \en{TTN} \en{stack} αντικείμενο με \en{hardware UART} για \en{LoRa} και \en{USB} \en{UART} για \en{logs}.
 \end{itemize}
 
 % \paragraph{Διαμόρφωση \en{PZEM-004T} και \en{SoftwareSerial}.}
@@ -1121,8 +1130,8 @@ void resetEnergyCounters(§\cyan{)}§ {
 
 
 
-%%%%   Υποενότητα 5.2.2: Δημιουργία Application στο The Things Stack   %%%%
-
+%%%%   Υποενότητα 5.2.3: Καταχώριση του The Things Uno στο The Things Stack   %%%%
+\newpage
 \subsection{Καταχώριση του \en{The Things Uno} στο \en{The Things Stack}}
 
 Για να συνδεθεί το \en{The Things Uno} στο \en{The Things Stack}, πρέπει πρώτα να το καταχωρίσουμε σε ένα \en{Application} στο \en{The Things Stack Console}:

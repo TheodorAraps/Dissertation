@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.10)  22 OCT 2025 04:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.10)  22 OCT 2025 17:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1769,106 +1769,106 @@ Overfull \hbox (3.055pt too wide) detected at line 402
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 409
- []\LGR/mak/m/n/10.95 114
+Overfull \hbox (3.055pt too wide) detected at line 412
+ []\LGR/mak/m/n/10.95 115
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 421
- []\LGR/mak/m/n/10.95 117
- []
-
-
-Overfull \hbox (3.055pt too wide) detected at line 429
+Overfull \hbox (3.055pt too wide) detected at line 428
  []\LGR/mak/m/n/10.95 119
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 431
- []\LGR/mak/m/n/10.95 119
+Overfull \hbox (3.055pt too wide) detected at line 434
+ []\LGR/mak/m/n/10.95 120
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 432
- []\LGR/mak/m/n/10.95 119
- []
-
-
-Overfull \hbox (3.055pt too wide) detected at line 433
- []\LGR/mak/m/n/10.95 119
+Overfull \hbox (3.055pt too wide) detected at line 436
+ []\LGR/mak/m/n/10.95 120
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 437
+ []\LGR/mak/m/n/10.95 120
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 440
  []\LGR/mak/m/n/10.95 121
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 438
- []\LGR/mak/m/n/10.95 121
- []
-
-
-Overfull \hbox (3.055pt too wide) detected at line 442
+Overfull \hbox (3.055pt too wide) detected at line 444
  []\LGR/mak/m/n/10.95 123
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 445
+ []\LGR/mak/m/n/10.95 123
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 449
+ []\LGR/mak/m/n/10.95 125
  []
 
 
 
 LaTeX Font Info:    Font shape `LGR/mak/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 443.
+(Font)              scaled to size 8.09995pt on input line 450.
 LaTeX Font Info:    Font shape `T1/mak/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 443.
+(Font)              scaled to size 8.09995pt on input line 450.
 Package babel Info: 'greek' activates 'greek' shorthands.
-(babel)             Reported  on input line 443.
+(babel)             Reported  on input line 450.
 [10]
-Overfull \hbox (3.055pt too wide) detected at line 443
- []\LGR/mak/m/n/10.95 123
- []
-
-
-Overfull \hbox (3.055pt too wide) detected at line 451
+Overfull \hbox (3.055pt too wide) detected at line 450
  []\LGR/mak/m/n/10.95 125
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 456
- []\LGR/mak/m/n/10.95 126
+Overfull \hbox (3.055pt too wide) detected at line 458
+ []\LGR/mak/m/n/10.95 127
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 469
- []\LGR/mak/m/n/10.95 131
+Overfull \hbox (3.055pt too wide) detected at line 463
+ []\LGR/mak/m/n/10.95 128
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 474
- []\LGR/mak/m/n/10.95 132
+Overfull \hbox (3.055pt too wide) detected at line 476
+ []\LGR/mak/m/n/10.95 133
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 481
- []\LGR/mak/m/n/10.95 135
+ []\LGR/mak/m/n/10.95 134
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 482
- []\LGR/mak/m/n/10.95 135
- []
-
-
-Overfull \hbox (3.055pt too wide) detected at line 490
+Overfull \hbox (3.055pt too wide) detected at line 488
  []\LGR/mak/m/n/10.95 137
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 491
+Overfull \hbox (3.055pt too wide) detected at line 489
  []\LGR/mak/m/n/10.95 137
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 496
- []\LGR/mak/m/n/10.95 138
+Overfull \hbox (3.055pt too wide) detected at line 497
+ []\LGR/mak/m/n/10.95 139
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 498
+ []\LGR/mak/m/n/10.95 139
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 503
+ []\LGR/mak/m/n/10.95 140
  []
 
 )
@@ -1882,8 +1882,8 @@ Overfull \hbox (3.055pt too wide) detected at line 496
 [12
 
 ] (main.lof
-Overfull \hbox (3.055pt too wide) detected at line 357
- []\LGR/mak/m/n/10.95 137
+Overfull \hbox (3.055pt too wide) detected at line 363
+ []\LGR/mak/m/n/10.95 139
  []
 
 )
@@ -1949,27 +1949,27 @@ Overfull \hbox (3.055pt too wide) detected at line 48
 
 
 Overfull \hbox (3.055pt too wide) detected at line 49
- []\LGR/mak/m/n/10.95 117
+ []\LGR/mak/m/n/10.95 114
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 50
- []\LGR/mak/m/n/10.95 117
+ []\LGR/mak/m/n/10.95 115
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 51
- []\LGR/mak/m/n/10.95 118
+ []\LGR/mak/m/n/10.95 119
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 52
- []\LGR/mak/m/n/10.95 118
+ []\LGR/mak/m/n/10.95 119
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 62
- []\LGR/mak/m/n/10.95 143
+ []\LGR/mak/m/n/10.95 145
  []
 
 )
@@ -1985,13 +1985,13 @@ Overfull \hbox (3.055pt too wide) detected at line 62
 [18
 
 ] (main.lot
-Overfull \hbox (3.055pt too wide) detected at line 342
- []\LGR/mak/m/n/10.95 124
+Overfull \hbox (3.055pt too wide) detected at line 348
+ []\LGR/mak/m/n/10.95 126
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 374
- []\LGR/mak/m/n/10.95 136
+Overfull \hbox (3.055pt too wide) detected at line 380
+ []\LGR/mak/m/n/10.95 138
  []
 
 )
@@ -2766,7 +2766,19 @@ File: figures/Arduino_IDE_COM_select.png Graphic file (type png)
 <use figures/Arduino_IDE_COM_select.png>
 Package pdftex.def Info: figures/Arduino_IDE_COM_select.png  used on input line 858.
 (pdftex.def)             Requested size: 341.43436pt x 199.05623pt.
- (D:\Programs\tex/latex/listings\lstlang1.sty
+<figures/Device_info_sketch.png, id=1500, 857.45343pt x 469.755pt>
+File: figures/Device_info_sketch.png Graphic file (type png)
+<use figures/Device_info_sketch.png>
+Package pdftex.def Info: figures/Device_info_sketch.png  used on input line 875.
+(pdftex.def)             Requested size: 298.75262pt x 163.67125pt.
+<figures/Serial_Monitor_Output_1.png, id=1501, 456.20438pt x 232.61906pt>
+File: figures/Serial_Monitor_Output_1.png Graphic file (type png)
+<use figures/Serial_Monitor_Output_1.png>
+Package pdftex.def Info: figures/Serial_Monitor_Output_1.png  used on input line 883.
+(pdftex.def)             Requested size: 298.75262pt x 152.33643pt.
+
+
+[114 <./figures/Arduino_IDE_COM_select.png> <./figures/Device_info_sketch.png>] (D:\Programs\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 ) (D:\Programs\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
@@ -2774,86 +2786,83 @@ File: lstlang1.sty 2024/09/23 1.10c listings language file
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 )
 
-[114 <./figures/Arduino_IDE_COM_select.png>]
+[115 <./figures/Serial_Monitor_Output_1.png>]
 LaTeX Font Info:    Font shape `TS1/zi4/m/it' will be
-(Font)              scaled to size 9.19998pt on input line 922.
+(Font)              scaled to size 9.19998pt on input line 946.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[115]
-
 [116]
-<figures/Device_info_sketch.png, id=1633, 857.45343pt x 469.755pt>
-File: figures/Device_info_sketch.png Graphic file (type png)
-<use figures/Device_info_sketch.png>
-Package pdftex.def Info: figures/Device_info_sketch.png  used on input line 1004.
-(pdftex.def)             Requested size: 298.75262pt x 163.67125pt.
-<figures/Serial_Monitor_Output_1.png, id=1634, 456.20438pt x 232.61906pt>
-File: figures/Serial_Monitor_Output_1.png Graphic file (type png)
-<use figures/Serial_Monitor_Output_1.png>
-Package pdftex.def Info: figures/Serial_Monitor_Output_1.png  used on input line 1012.
-(pdftex.def)             Requested size: 298.75262pt x 152.33643pt.
-<figures/Console_Create_Application.png, id=1635, 867.24pt x 80.55093pt>
+Overfull \hbox (4.65369pt too wide) in paragraph at lines 1026--1027
+[][]\T1/mak/b/n/10.95 #define lo-raSe-rial Se-rial1[]\LGR/mak/m/n/10.95 : H []\T1/mak/m/n/10.95 The Things Uno []\LGR/mak/m/n/10.95 (ba-si-smènh se []\T1/mak/m/n/10.95 AT-mega32u4[]\LGR/mak/m/n/10.95 /[]\T1/mak/m/n/10.95 Leonardo[]\LGR/mak/m/n/10.95 )
+ []
+
+
+
+[117]
+
+[118]
+<figures/Console_Create_Application.png, id=1646, 867.24pt x 80.55093pt>
 File: figures/Console_Create_Application.png Graphic file (type png)
 <use figures/Console_Create_Application.png>
-Package pdftex.def Info: figures/Console_Create_Application.png  used on input line 1132.
+Package pdftex.def Info: figures/Console_Create_Application.png  used on input line 1141.
 (pdftex.def)             Requested size: 426.79134pt x 39.64114pt.
-<figures/Console_Create_Application_Final_Stage.png, id=1636, 381.67593pt x 258.9675pt>
+<figures/Console_Create_Application_Final_Stage.png, id=1647, 381.67593pt x 258.9675pt>
 File: figures/Console_Create_Application_Final_Stage.png Graphic file (type png)
 <use figures/Console_Create_Application_Final_Stage.png>
-Package pdftex.def Info: figures/Console_Create_Application_Final_Stage.png  used on input line 1133.
+Package pdftex.def Info: figures/Console_Create_Application_Final_Stage.png  used on input line 1142.
 (pdftex.def)             Requested size: 277.41176pt x 188.23067pt.
 
 
-[117 <./figures/Device_info_sketch.png> <./figures/Serial_Monitor_Output_1.png>]
+[119 <./figures/Console_Create_Application.png> <./figures/Console_Create_Application_Final_Stage.png>]
 LaTeX Font Info:    Font shape `LGR/mak/b/it' will be
-(Font)              scaled to size 9.85492pt on input line 1189.
-LaTeX Font Info:    Trying to load font information for LGR+zi4 on input line 1189.
-LaTeX Font Info:    No file LGRzi4.fd. on input line 1189.
+(Font)              scaled to size 9.85492pt on input line 1198.
+LaTeX Font Info:    Trying to load font information for LGR+zi4 on input line 1198.
+LaTeX Font Info:    No file LGRzi4.fd. on input line 1198.
 
 
 LaTeX Font Warning: Font shape `LGR/zi4/m/it' undefined
-(Font)              using `LGR/cmr/m/n' instead on input line 1189.
+(Font)              using `LGR/cmr/m/n' instead on input line 1198.
 
-LaTeX Font Info:    Trying to load font information for OT1+zi4 on input line 1189.
+LaTeX Font Info:    Trying to load font information for OT1+zi4 on input line 1198.
 (D:\Programs\tex/latex/inconsolata\ot1zi4.fd
 File: ot1zi4.fd 2018/01/14 OT1/zi4 (Inconsolata)
 )
 
 LaTeX Font Warning: Font shape `OT1/zi4/m/it' undefined
 (Font)              using `OT1/zi4/m/n' instead
-(Font)              for symbol `textbackslash' on input line 1189.
+(Font)              for symbol `textbackslash' on input line 1198.
 
 LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 1189.
+(Font)              scaled to size 10.07397pt on input line 1198.
 LaTeX Font Info:    Font shape `OT1/zi4/m/it' will be
-(Font)              scaled to size 10.07397pt on input line 1189.
+(Font)              scaled to size 10.07397pt on input line 1198.
 
-
-[118{D:/Programs/fonts/enc/dvips/inconsolata/i4-ot1-0.enc} <./figures/Console_Create_Application.png> <./figures/Console_Create_Application_Final_Stage.png>]
-Overfull \hbox (16.52975pt too wide) in paragraph at lines 1232--1233
+Overfull \hbox (16.52975pt too wide) in paragraph at lines 1241--1242
 []\LGR/mak/b/n/10.95 Epal jeush []\T1/mak/b/n/10.95 pay-load[]\LGR/mak/b/n/10.95 : \LGR/mak/m/n/10.95 E-pi-be-bai-¸nou-me ìti o []\T1/mak/m/n/10.95 for-mat-ter []\LGR/mak/m/n/10.95 e-pi-strèfei ta pe-dÐa []\T1/mak/m/n/10.95 phaseA[]\LGR/mak/m/n/10.95 /[]\T1/mak/m/n/10.95 B[]\LGR/mak/m/n/10.95 /[]\T1/mak/m/n/10.95 C[]\LGR/mak/m/n/10.95 . 
  []
 
 
-Overfull \hbox (1.42221pt too wide) in paragraph at lines 1245--1246
+Overfull \hbox (1.42221pt too wide) in paragraph at lines 1254--1255
 []\LGR/mak/b/n/10.95 Sto []\T1/mak/b/n/10.95 firmware[]\LGR/mak/b/n/10.95 : \LGR/mak/m/n/10.95 'E-leg-qoc []\T1/mak/m/n/10.95 down-link[]\LGR/mak/m/n/10.95 , a-na-gn¸ri-sh []\T1/mak/m/n/10.95 op-code[]\LGR/mak/m/n/10.95 , kl sh []\T1/mak/m/n/10.95 pzems[i].resetEnergy()[]\LGR/mak/m/n/10.95 . 
  []
 
 
 LaTeX Font Warning: Font shape `LGR/zi4/m/n' undefined
-(Font)              using `LGR/cmr/m/n' instead on input line 1246.
+(Font)              using `LGR/cmr/m/n' instead on input line 1255.
 
-)
 
-[119]
+
+[120{D:/Programs/fonts/enc/dvips/inconsolata/i4-ot1-0.enc}])
+
+[121]
 \openout2 = `body_matter/chap6.aux'.
 
  (body_matter/chap6.tex
 
-[120
+[122
 
 
 
@@ -2866,12 +2875,12 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 (lettrine.sty)             reported on input line 2.
 )
 
-[121]
+[123]
 \openout2 = `body_matter/chap7.aux'.
 
  (body_matter/chap7.tex
 
-[122
+[124
 
 
 
@@ -2880,16 +2889,16 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \textiota \textomicron  7.
 )
 
-[123]
+[125]
 
-[124]
+[126]
 \openout2 = `body_matter/chap8.aux'.
 
  (body_matter/chap8.tex
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \textiota \textomicron  8.
 
 
-[125
+[127
 
 
 
@@ -2921,77 +2930,77 @@ Overfull \hbox (2.0pt too wide) in paragraph at lines 106--106
 
 )
 
-[126]
+[128]
 
-[127]
+[129]
 
-[128
+[130
 
 
 
 ]
 
-[129]
+[131]
 
-[130]
+[132]
 \openout2 = `body_matter/chap9.aux'.
 
  (body_matter/chap9.tex
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \textiota \textomicron  9.
 
 
-[131
+[133
 
 
 ])
 
-[132]
+[134]
 
-[133
+[135
 
 
 
 ]
 
-[134]
+[136]
 \openout2 = `back_matter/appA.aux'.
 
  (back_matter/appA.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textAlpha \textnumeralsigngreek }.
 )
 
-[135
+[137
 
 
 ]
 
-[136]
+[138]
 \openout2 = `back_matter/appB.aux'.
 
  (back_matter/appB.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textBeta \textnumeralsigngreek }.
-<figures/2.png, id=1759, 187.70125pt x 119.44624pt>
+<figures/2.png, id=1768, 187.70125pt x 119.44624pt>
 File: figures/2.png Graphic file (type png)
 <use figures/2.png>
 Package pdftex.def Info: figures/2.png  used on input line 25.
 (pdftex.def)             Requested size: 187.70079pt x 119.44594pt.
 
 
-[137
+[139
 
 
 
 
  <./figures/2.png>])
 
-[138]
+[140]
 \openout2 = `back_matter/appC.aux'.
 
  (back_matter/appC.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textGamma \textnumeralsigngreek }.
 )
 
-[139
+[141
 
 
 
@@ -3001,7 +3010,7 @@ Package pdftex.def Info: figures/2.png  used on input line 25.
 
  (back_matter/appD.tex
 
-[140
+[142
 
 
 
@@ -3010,28 +3019,28 @@ Package pdftex.def Info: figures/2.png  used on input line 25.
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textDelta \textnumeralsigngreek }.
 )
 
-[141]
+[143]
 \openout2 = `back_matter/appE.aux'.
 
  (back_matter/appE.tex
 
-[142
+[144
 
 
 
 
 ]
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textEpsilon \textnumeralsigngreek }.
-<figures/frog.jpg, id=1803, 748.7975pt x 741.77126pt>
+<figures/frog.jpg, id=1812, 748.7975pt x 741.77126pt>
 File: figures/frog.jpg Graphic file (type jpg)
 <use figures/frog.jpg>
 Package pdftex.def Info: figures/frog.jpg  used on input line 6.
 (pdftex.def)             Requested size: 213.39566pt x 211.39569pt.
 )
 
-[143 <./figures/frog.jpg>]
+[145 <./figures/frog.jpg>]
 
-[144
+[146
 
 
 
@@ -3042,7 +3051,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--78
 
 
 
-[145
+[147
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 103--110
@@ -3061,11 +3070,11 @@ Underfull \hbox (badness 1297) in paragraph at lines 121--129
 
 
 
-[146]
-
-[147]
-
 [148]
+
+[149]
+
+[150]
 Underfull \hbox (badness 3579) in paragraph at lines 403--410
 []\T1/mak/m/n/10.95 The Th-ings In-du-stries\LGR/mak/m/n/10.95 .  []\T1/mak/m/it/10.95 Ra-sp-berry Pi Lo-Ra-W-AN Ga-te-w-ay Do-cu-me-nta-tion[]\LGR/mak/m/n/10.95 .
  []
@@ -3082,25 +3091,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 403--410
 
 
 
-[149])
+[151])
 
-[150] (back_matter/abbreviations.tex)
+[152] (back_matter/abbreviations.tex)
 
-[151
+[153
 
 ]
 
-[152
+[154
 
 ] (back_matter/glossary.tex)
 
-[153] LaTeX Warning: (ntua_thesis.cls): The "plain" option has been selected. CD label generation has been disabled.
+[155] LaTeX Warning: (ntua_thesis.cls): The "plain" option has been selected. CD label generation has been disabled.
  
 LaTeX Warning: (ntua_thesis.cls): The "plain" option has been selected. CD cover generation has been disabled.
  
 
 
-[154
+[156
 
 ] (main.aux (front_matter/abstract.aux) (front_matter/acknowledgements.aux) (body_matter/intro.aux) (body_matter/chap2.aux) (body_matter/chap3.aux) (body_matter/chap4.aux) (body_matter/chap5.aux) (body_matter/chap6.aux) (body_matter/chap7.aux) (body_matter/chap8.aux) (body_matter/chap9.aux) (back_matter/appA.aux) (back_matter/appB.aux) (back_matter/appC.aux) (back_matter/appD.aux) (back_matter/appE.aux))
  ***********
@@ -3116,10 +3125,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 39880 strings out of 469941
- 762279 string characters out of 5485294
- 1662380 words of memory out of 5000000
- 64945 multiletter control sequences out of 15000+600000
+ 39884 strings out of 469941
+ 762327 string characters out of 5485294
+ 1661769 words of memory out of 5000000
+ 64947 multiletter control sequences out of 15000+600000
  735385 words of font info for 265 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  99i,18n,152p,2161b,2950s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3133,9 +3142,9 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
  <C:\Users\Theodore\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\Theodore\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcit1000.pk> <C:\Users\Theodore\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><D:/Programs/fonts/type1/public/inconsolata/Inconsolata-zi4b.pfb><D:/Programs/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis-Bold.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis-BoldItalic.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis-Italic.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis-SmallCaps.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis.pfb><D:/Programs/fonts/type1/public/cbgreek/grmn1095.pfb><D:/Programs/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb><D:/Programs/fonts/type1/public/txfonts/rtxr.pfb><D:/Programs/fonts/type1/public/txfonts/txex.pfb><D:/Programs/fonts/type1/public/txfonts/txsy.pfb><D:/Programs/fonts/type1/public/txfonts/txsya.pfb><D:/Programs/fonts/type1/public/txfonts/txsyb.pfb><D:/Programs/fonts/type1/public/txfonts/txsyc.pfb><D:/Programs/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (160 pages, 11976303 bytes).
+Output written on main.pdf (162 pages, 11979127 bytes).
 PDF statistics:
- 2467 PDF objects out of 2487 (max. 8388607)
- 802 named destinations out of 1000 (max. 500000)
+ 2476 PDF objects out of 2487 (max. 8388607)
+ 804 named destinations out of 1000 (max. 500000)
  1127 words of extra memory for PDF output out of 10000 (max. 10000000)
 
