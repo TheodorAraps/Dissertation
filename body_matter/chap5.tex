@@ -55,7 +55,7 @@
   \label{figure5.2}
 \end{Illustration} 
 
-\item Επιλέγουμε \textbf{\en{Choose Device}} και από τη λίστα διαλέγουμε \textbf{\en{Raspberry Pi 4}}, που είναι το μοντέλο της συσκευής Raspberry Pi που χρησιμοποιύμε.
+\item Επιλέγουμε \textbf{\en{Choose Device}} και από τη λίστα διαλέγουμε \textbf{\en{Raspberry Pi 4}}, που είναι το μοντέλο της συσκευής \en{Raspberry Pi} που χρησιμοποιύμε.
 \item Επιλέγουμε \textbf{\en{Choose OS}} και από τη λίστα διαλέγουμε \textbf{\en{Raspberry Pi OS Lite (64-bit)}}, που είναι η έκδοση χωρίς γραφικό περιβάλλον και ενδείκνυται για \en{servers}.
 \item Πατάμε \textbf{\en{Choose Storage}} και επιλέγουμε τη σωστή \en{microSD}.
 \item Πατάμε \textbf{\en{Next}} και στο αναδυόμενο παράθυρο επιλέγουμε \textbf{\en{Edit Settings}} και ρυθμίζουμε:
@@ -1021,7 +1021,7 @@ void resetEnergyCounters(§\cyan{)}§ {
 \paragraph{Σύνδεση με το \en{The Things Network}:}
 
 \begin{itemize}
-  \item Συμπεριλαμβάνουμε τη βιβλιοθήκη \textbf{\en{TheThingsNetwork.h}} της \en{The Things Network} για ενεργοποίηση \en{OTAA}, αποστολή \en{uplinks} κ.λπ. Για να αναγνωρίσει ο \en{compiler} την βιβλιοθήκη, την εγκαθιστούμε ακολουθώντας την διαδρομή \textit{\en{Sketch > Include Library > Manage Libraries}}, αναζητώντας το όνομα της και πατώντας \textit{\en{install}}.
+  \item Συμπεριλαμβάνουμε τη βιβλιοθήκη \textbf{\en{TheThingsNetwork.h}} της \en{The Things Network} για ενεργοποίηση \en{OTAA}, αποστολή \en{uplinks} κ.λπ. Προκειμένου να αναγνωρίσει ο \en{compiler} την βιβλιοθήκη, την εγκαθιστούμε ακολουθώντας την διαδρομή \textit{\en{Sketch > Include Library > Manage Libraries}}, αναζητώντας το όνομα της και πατώντας \textit{\en{install}}.
   \item Δημιουργούμε τις σταθερές \textbf{\en{appEui}} και \textbf{\en{appKey}}, οι οποίες αποτελούν τα \en{OTAA credentials} της συσκευής. Η τιμή της \textbf{\en{appEUI}} προκύπτει από την διαδικασία που περιγράφηκε στην σημείωση στο τέλος της Υπο-υποενότητας \ref{subsubsec:note}, ενώ η τιμή της \textbf{\en{appKey}} προκύπτει από τις οδηγίες στην Υποενότητα ............\dots
   \item \textbf{\en{\#define loraSerial Serial1}}: Η \en{The Things Uno} (βασισμένη σε \en{ATmega32u4}/\en{Leonardo}) χρησιμοποιεί τη \textbf{\en{Serial1}} για σύνδεση με το \en{LoRa} \en{module} (π.χ. \en{RN2483}/\en{RN2903}), αφήνοντας την \textbf{\en{Serial}} για \en{debug} προς τον \en{USB}.
   \item \textbf{\en{\#define debugSerial Serial}}: \en{USB CDC} για μηνύματα κατάστασης/εντοπισμό σφαλμάτων.
@@ -1029,13 +1029,13 @@ void resetEnergyCounters(§\cyan{)}§ {
   \item \textbf{\en{TheThingsNetwork ttn(loraSerial, debugSerial, freqPlan)}}: Δημιουργεί \en{TTN} \en{stack} αντικείμενο με \en{hardware UART} για \en{LoRa} και \en{USB} \en{UART} για \en{logs}.
 \end{itemize}
 
-% \paragraph{Διαμόρφωση \en{PZEM-004T} και \en{SoftwareSerial}.}
-% \begin{itemize}
-%   \item \texttt{\#include <PZEM004Tv30.h>}, \texttt{\#include <SoftwareSerial.h>}: Βιβλιοθήκες για \en{UART} επικοινωνία με \en{PZEM} (\en{v3.0}) μέσω \en{software} \en{serial}.
-%   \item \texttt{\#define NUM\_PZEMS 3}: Τρεις μετρητές (μία φάση ανά \en{PZEM}).
-%   \item \texttt{SoftwareSerial pzemSWSerial1(9, 2)}, \texttt{pzemSWSerial2(10, 3)}, \texttt{pzemSWSerial3(11, 4)}: Δηλώνονται τρεις \en{software} \en{UART} (ο πρώτος αριθμός είναι \en{RX}, ο δεύτερος \en{TX} προς τον \en{PZEM}). Προσοχή: σε \en{Leonardo}/\en{ATmega32u4} ο \en{SoftwareSerial} έχει περιορισμούς σε \en{RX} \en{pins}/χρονισμό· οι συγκεκριμένοι συνδυασμοί λειτουργούν πρακτικά, αλλά σε υψηλό \en{CPU load} μπορεί να προκύπτουν \en{framing errors}. 
-%   \item \texttt{PZEM004Tv30 pzems[NUM\_PZEMS]}: Πίνακας \en{driver} για τα τρία \en{PZEM}.
-% \end{itemize}
+\subsubsection{Διαμόρφωση \en{PZEM-004T} και \en{SoftwareSerial}}
+\begin{itemize}
+  \item Συμπεριλαμβάνουμε τις βιβλιοθήκες \textbf{\en{SoftwareSerial.h}} και \textbf{\en{PZEM004Tv30.h}} (την κατεβάζουμε και αυτή απο το μενού \textit{\en{Manage Libraries}}) για \en{UART} επικοινωνία με τα \en{PZEM} (\en{v3.0}) μέσω \en{software} \en{serial}.
+  \item \textbf{\en{\#define NUM\_PZEMS 3}}: Τρεις μετρητές (μία φάση ανά \en{PZEM}).
+  \item \textbf{\en{SoftwareSerial pzemSWSerial1(9, 2)}, \en{pzemSWSerial2(10, 3)}, \en{pzemSWSerial3(11, 4)}}: Δηλώνονται τρεις \en{software} \en{UART} (ο πρώτος αριθμός είναι \en{RX}, ο δεύτερος \en{TX} προς τον \en{PZEM}). 
+  \item \textbf{\en{PZEM004Tv30 pzems[NUM\_PZEMS]}}: Πίνακας \en{driver} για τα τρία \en{PZEM}.
+\end{itemize}
 
 % \paragraph{Επαναφορά μετρητών ενέργειας.}
 % \begin{itemize}

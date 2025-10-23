@@ -385,7 +385,7 @@
 
 \bibitem{ReactDocs}
 {{\latintext { }{Meta / React Team}}}.
-\newblock {{\latintext {\color{\colouredtextcolor} {\em React Documentation —
+\newblock {{\latintext {\color{\colouredtextcolor} {\em React Documentation -
   Learn React}}}}.
 \newblock {{\latintext Online documentation}}, 2025.
 \newblock \en{[Online]. Available: \url{https://react.dev/learn}. Accessed:
@@ -445,6 +445,21 @@
 \newblock \en{[Online]. Available:
   \url{https://www.thethingsnetwork.org/docs/devices/uno/}. Accessed: Sep. 16,
   2025}.
+
+\bibitem{swserial_leo_pins}
+{{\latintext Arduino Forum{ }community}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em Which pins can be used
+  for SoftwareSerial on Micro/Leonardo}}}}, 2018.
+\newblock [Online]. Available:
+  \url{https://forum.arduino.cc/t/which-pins-can-be-used-for-software-serial-on-micro/518642}.
+  RX pins on ATmega32U4 boards: 8,9,10,11,14(MISO),15(SCK),16(MOSI).
+
+\bibitem{arduino_swserial}
+{{\latintext Arduino{ }Documentation}}.
+\newblock {{\latintext {\color{\colouredtextcolor} {\em SoftwareSerial Library
+  | Arduino Reference}}}}, 2022.
+\newblock [Online]. Available:
+  \url{https://www.arduino.cc/en/Reference/softwareSerial}.
 
 \bibitem{XosePerez_TheThingsStackDocker}
 {{\latintext X.{ }Pérez}}.

@@ -420,8 +420,8 @@
 \textbf{\en{PZEM-004T v3.0} \en{pin}} & \textbf{\en{The Things Uno} \en{pin}} & \textbf{\en{Description}} \\ \hline
 \en{VCC} & \en{3v3V}  & Τροφοδοσία \en{3.3V} \\ \hline
 \en{GND} & \en{GND} & Κοινή γείωση (\en{shared ground}) \\ \hline
-\en{TX}  & \en{D10} & \en{PZEM TX} → \en{Uno RX} (\en{SoftwareSerial RX}) \\ \hline
-\en{RX}  & \en{D3}  & \en{PZEM RX} → \en{Uno TX} (\en{SoftwareSerial TX}) \\ \hline
+\en{TX}  & \en{D10} & \en{PZEM TX} → \en{TTU RX} (\en{SoftwareSerial RX}) \\ \hline
+\en{RX}  & \en{D3}  & \en{PZEM RX} → \en{TTU TX} (\en{SoftwareSerial TX}) \\ \hline
 \end{tabular}
 \caption{Συνδεσμολογία 2\textsuperscript{ου} \en{PZEM-004T v3.0} με \en{The Things Uno} - Φάση 2}
 \label{tab:ttuno_pzem_pins_phase2}
@@ -439,12 +439,27 @@
 \textbf{\en{PZEM-004T v3.0} \en{pin}} & \textbf{\en{The Things Uno} \en{pin}} & \textbf{\en{Description}} \\ \hline
 \en{VCC} & \en{3v3V}  & Τροφοδοσία \en{3.3V} \\ \hline
 \en{GND} & \en{GND} & Κοινή γείωση (\en{shared ground}) \\ \hline
-\en{TX}  & \en{D11} & \en{PZEM TX} → \en{Uno RX} (\en{SoftwareSerial RX}) \\ \hline
-\en{RX}  & \en{D4}  & \en{PZEM RX} → \en{Uno TX} (\en{SoftwareSerial TX}) \\ \hline
+\en{TX}  & \en{D11} & \en{PZEM TX} → \en{TTU RX} (\en{SoftwareSerial RX}) \\ \hline
+\en{RX}  & \en{D4}  & \en{PZEM RX} → \en{TTU TX} (\en{SoftwareSerial TX}) \\ \hline
 \end{tabular}
 \caption{Συνδεσμολογία 3\textsuperscript{ου} \en{PZEM-004T v3.0} με \en{The Things Uno} - Φάση 3}
 \label{tab:ttuno_pzem_pins_phase3}
 \end{table}
+
+\medskip
+\noindent\textbf{Σημείωση για την επιλογή θυρών \en{(RX)}:}\\
+Στο \en{The Things Uno} \en{(Leonardo/ATmega32U4)} η βιβλιοθήκη \en{SoftwareSerial}
+μπορεί να λάβει (\en{RX}) μόνο από συγκεκριμένα ψηφιακά \en{pins} που υποστηρίζουν
+\en{pin-change interrupts}. Σύμφωνα με την τεκμηρίωση για \en{Leonardo/Micro}, τα
+έγκυρα \en{RX pins} είναι τα \textbf{8, 9, 10, 11, \en{14(MISO), 15(SCK), 16(MOSI)}}.
+Γι’ αυτό επιλέξαμε τις \textbf{\en{D9, D10, D11}} για τη σύνδεση \en{PZEM TX} - \en{Uno RX}, ενώ τα
+\en{TX} της \en{SoftwareSerial} τοποθετήθηκαν στις \textbf{\en{D2, D3, D4}}. Έτσι
+αποφεύγουμε διενέξεις με το υλικό \en{UART} (\textbf{\en{Serial1}} στους \textbf{\en{D0/D1}}),
+το οποίο κρατάμε διαθέσιμο για τη \en{LoRa}/\en{TTS} επικοινωνία και ταυτόχρονα
+εξασφαλίζουμε αξιόπιστο χρονισμό σε τυπικές \en{baud rates} (π.χ. 9600-38400).
+Βλ. και τις οδηγίες \en{Arduino} για \en{SoftwareSerial} και \en{The Things Uno}
+(προφίλ \en{Leonardo}) \cite{TTI_TheThingsStackDocs,swserial_leo_pins,arduino_swserial}.
+\medskip
 
 \newpage
 

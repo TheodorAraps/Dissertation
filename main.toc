@@ -423,6 +423,7 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
+\contentsline {subsubsection}{Διαμόρφωση \foreignlanguage {english}{PZEM-004T} και \foreignlanguage {english}{SoftwareSerial}}{118}{lstnumber.-31.118}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \contentsline {subsection}{\numberline {5.2.3}Καταχώριση του \foreignlanguage {english}{The Things Uno} στο \foreignlanguage {english}{The Things Stack}}{119}{subsection.5.2.3}%
