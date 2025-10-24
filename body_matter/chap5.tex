@@ -864,29 +864,28 @@ docker compose up
 Μπορούμε τώρα να ξεκινήσουμε να γράφουμε τον κώδικα (σε γλώσσα προγραμματισμού \en{C++}) για τον προγραμματισμό 
 του \en{The Things Uno} και να τον «ανεβάσουμε» (\en{upload}) στην πλακέτα. 
 
-\subsubsection{Σημείωση} 
-\label{subsubsec:note}
+% \subsubsection{Σημείωση} 
+% \label{subsubsec:note}
 
-Σε αυτό το σημείο, προκειμένου να βρούμε ορισμένες σημαντικές πληροφορίες για την συσκευή \en{TTU} μπορούμε 
-να τρέξουμε το \en{sketch} που βρίσκεται στην διαδρομή \textit{\en{File > Examples > TheThingsNetwork > Deviceinfo}}. 
-Αφού το επιλέξουμε, θέτουμε στην μεταβλητή \textbf{\en{freqPlan}} την τιμή \textit{\en{TTN\_FP\_EU868}} πατάμε το κουμπί του \en{Upload}:
-\begin{Illustration}[!ht]     
-  \centering    
-  \includegraphics[width=0.7\textwidth]{figures/Device_info_sketch.png}     
-  \caption{Κάνουμε \en{upload} το \en{sketch} στο \en{TTU}.}    
-  \label{figure5.17}  
-\end{Illustration}
+% Σε αυτό το σημείο, προκειμένου να βρούμε ορισμένες σημαντικές πληροφορίες για την συσκευή \en{TTU} μπορούμε 
+% να τρέξουμε το \en{sketch} που βρίσκεται στην διαδρομή \textit{\en{File > Examples > TheThingsNetwork > Deviceinfo}}. 
+% Αφού το επιλέξουμε, θέτουμε στην μεταβλητή \textbf{\en{freqPlan}} την τιμή \textit{\en{TTN\_FP\_EU868}} πατάμε το κουμπί του \en{Upload}:
+% \begin{Illustration}[!ht]     
+%   \centering    
+%   \includegraphics[width=0.7\textwidth]{figures/Device_info_sketch.png}     
+%   \caption{Κάνουμε \en{upload} το \en{sketch} στο \en{TTU}.}    
+%   \label{figure5.17}  
+% \end{Illustration}
 
-Από την διαδρομή \textit{\en{Tools > Serial Monitor}} ανοίγουμε το \en{Serial Monitor} και βλέπουμε την έξοδο του \en{TTU} με τις πληροφορίες της συσκευής:
-\begin{Illustration}[!ht]     
-  \centering    
-  \includegraphics[width=0.7\textwidth]{figures/Serial_Monitor_Output_1.png}     
-  \caption{Έξοδος του \en{Serial Monitor} με τις πληρφορίες της συσκευής.}    
-  \label{figure5.18}  
-\end{Illustration} 
+% Από την διαδρομή \textit{\en{Tools > Serial Monitor}} ανοίγουμε το \en{Serial Monitor} και βλέπουμε την έξοδο του \en{TTU} με τις πληροφορίες της συσκευής:
+% \begin{Illustration}[!ht]     
+%   \centering    
+%   \includegraphics[width=0.7\textwidth]{figures/Serial_Monitor_Output_1.png}     
+%   \caption{Έξοδος του \en{Serial Monitor} με τις πληρφορίες της συσκευής.}    
+%   \label{figure5.18}  
+% \end{Illustration} 
 
 
-\newpage
 \subsubsectionwc{Δομή κώδικα και ροή λειτουργίας}
 
 Ακολουθεί ο κώδικας που χρησιμοποιήσαμε και στη συνέχεια η επεξήγησή του:
@@ -897,61 +896,87 @@ docker compose up
 §\magenta{\#include}§ §\brownishamber{<PZEM004Tv30.h>}§
 §\magenta{\#include}§ §\brownishamber{<SoftwareSerial.h>}§
 
-// TTN Configuration
-const char *appEui = "0000000000000000";
-const char *appKey = "801DB5D9568291D81E92288241C681B1";
-
-§\magenta{\#define}§ loraSerial Serial1
-§\magenta{\#define}§ debugSerial Serial
+§\magenta{\#define}§ loraS Serial1
+§\magenta{\#define}§ debugS Serial
 §\magenta{\#define}§ freqPlan TTN_FP_EU868
-
-TheThingsNetwork ttn(loraSerial, debugSerial, freqPlan§\cyan{)}§;
-
-// PZEM Configuration
 §\magenta{\#define}§ NUM_PZEMS §\cyan{3}§
+
+TheThingsNetwork ttn(loraS, debugS, freqPlan§\cyan{)}§;
 SoftwareSerial pzemSWSerial1(§\cyan{9}§, §\cyan{2)}§;  // RX, TX for PZEM 1
 SoftwareSerial pzemSWSerial2(§\cyan{10}§, §\cyan{3)}§; // PZEM 2
 SoftwareSerial pzemSWSerial3(§\cyan{11}§, §\cyan{4)}§; // PZEM 3
 PZEM004Tv30 pzems[NUM_PZEMS];
 
+// TTN Configuration
+const char *appEui = "0000000000000000";
+const char *appKey = "801DB5D9568291D81E92288241C681B1";
 // Energy reset configuration
 unsigned long lastResetTime = §\cyan{0}§;
 const unsigned long resetInterval = §\cyan{15}§ * §\cyan{60000}§; // 15 minutes in milliseconds
+// Sentinel for "invalid" fields
+static const uint16_t INVALID16 = 0x§\cyan{FFFF}§;
+static const uint32_t INVALID32 = 0x§\cyan{FFFFFFFF}§;
+
+// Helper: encoding with scale into uint16_t (with check if NaN/Inf)
+inline uint16_t encodeScaled(float v, float scale§\cyan{)}§ {
+  if (!isfinite(v§\cyan{)}§ || isnan(v§\cyan{))}§ return INVALID16;   // NaN or Inf -> invalid
+  long val = lroundf(v * scale§\cyan{)}§;                    // rounding
+  if (val > 0x§\cyan{FFFF)}§ return INVALID16;               // out of range -> invalid
+  return (uint16_t§\cyan{)}§val;
+}
+
+// Helper: write big-endian 16-bit
+inline void putBE(uint8_t *buf, int idx, uint16_t u§\cyan{)}§ {
+  buf[idx] = (uint8_t§\cyan{)}§(u §\cyan{>}§§\cyan{>}§ §\cyan{8)}§;
+  buf[idx + §\cyan{1}§] = (uint8_t§\cyan{)}§(u & 0x§\cyan{FF)}§;
+}
+
+// Helper: write big-endian 32-bit
+inline void putBE32(uint8_t *buf, int idx, uint32_t u§\cyan{)}§ {
+  buf[idx + §\cyan{0}§] = (uint8_t§\cyan{)}§((u §\cyan{>}§§\cyan{>}§ §\cyan{24)}§ & 0x§\cyan{FF)}§;
+  buf[idx + §\cyan{1}§] = (uint8_t§\cyan{)}§((u §\cyan{>}§§\cyan{>}§ §\cyan{16)}§ & 0x§\cyan{FF)}§;
+  buf[idx + §\cyan{2}§] = (uint8_t§\cyan{)}§((u §\cyan{>}§§\cyan{>}§  §\cyan{8)}§ & 0x§\cyan{FF)}§;
+  buf[idx + §\cyan{3}§] = (uint8_t§\cyan{)}§((u §\cyan{>}§§\cyan{>}§  §\cyan{0)}§ & 0x§\cyan{FF)}§;
+}
+
+// Helper: Send raw IEEE-754 float in big-endian
+inline void putFloatBE(uint8_t *buf, int idx, float energy§\cyan{)}§ {
+  if (!isfinite(energy§\cyan{)}§ || isnan(energy§\cyan{))}§ {    // NaN or Inf -> sentinel
+    putBE32(buf, idx, INVALID32);
+    return;
+  }
+  union { float f; uint32_t u; } v;
+  v.f = energy;                          // raw IEEE-754 bits
+  putBE32(buf, idx, v.u§\cyan{)}§;
+}
 
 void setup(§\cyan{)}§ {
-  debugSerial.begin(§\cyan{9600)}§;
-  loraSerial.begin(§\cyan{57600)}§;
-
+  debugS.begin(§\cyan{9600)}§;
+  loraS.begin(§\cyan{57600)}§;
   // TTN setup
-  debugSerial.println("-- JOIN"§\cyan{)}§;
+  debugS.println("-- JOIN"§\cyan{)}§;
   ttn.§\orange{join}§(appEui, appKey§\cyan{)}§;
-  while (!debugSerial§\cyan{)}§ {
-    ; // Wait for serial to be ready
-  }
-  debugSerial.println("-- STATUS"§\cyan{)}§;
+  while (!debugS§\cyan{)}§ { ; }     // Wait for serial to be ready
+  debugS.println("-- STATUS"§\cyan{)}§;
   ttn.showStatus(§\cyan{)}§;
-
   // Initialize PZEMs
   pzems[§\cyan{0}§] = PZEM004Tv30(pzemSWSerial1§\cyan{)}§;
   pzems[§\cyan{1}§] = PZEM004Tv30(pzemSWSerial2§\cyan{)}§;
   pzems[§\cyan{2}§] = PZEM004Tv30(pzemSWSerial3§\cyan{)}§;
-
-  lastResetTime = millis(§\cyan{)}§; // Initialize reset timer
+  // Initialize reset timer
+  lastResetTime = millis(§\cyan{)}§; 
 }
 
 void loop(§\cyan{)}§ {
-  // If we have no measurements do not send
-  bool send = true;
-
   // Check if it's time to reset energy counters
   if (millis(§\cyan{)}§ - lastResetTime >= resetInterval§\cyan{)}§ {
     resetEnergyCounters(§\cyan{)}§;
     lastResetTime = millis(§\cyan{)}§;
-    debugSerial.println("Energy counters reset"§\cyan{)}§;
+    debugS.println("Energy counters reset"§\cyan{)}§;
   }
 
-  // Buffer for LoRaWAN payload (36 bytes total - 12 bytes per PZEM§\cyan{)}§
-  uint8_t data[NUM_PZEMS * §\cyan{12}§];
+  // Buffer for LoRaWAN payload 14 bytes per PZEM (V,C,P,f,PF = 2 each, E = 4, 42 total)
+  uint8_t data[NUM_PZEMS * §\cyan{14}§];
 
   // Read and process data for each PZEM
   for (int i = §\cyan{0}§; i < NUM_PZEMS; i++§\cyan{)}§ {
@@ -961,54 +986,42 @@ void loop(§\cyan{)}§ {
     float energy = pzems[i].§\orange{energy}§(§\cyan{)}§;
     float frequency = pzems[i].§\orange{frequency}§(§\cyan{)}§;
     float pf = pzems[i].§\orange{pf}§(§\cyan{)}§;
+    // Validate and encode readings
+    int index = i * §\cyan{14}§;
+    uint16_t vEnc = encodeScaled(voltage, §\cyan{10)}§;
+    uint16_t cEnc = encodeScaled(current, §\cyan{100)}§;
+    uint16_t pEnc = encodeScaled(power, §\cyan{10)}§;
+    uint16_t fEnc = encodeScaled(frequency, §\cyan{10)}§;
+    uint16_t pfEnc = encodeScaled(pf, §\cyan{100)}§;
 
-    // Validate readings
-    if (isnan(voltage§\cyan{)}§ || isnan(current§\cyan{)}§ || isnan(power§\cyan{)}§ || 
-        isnan(energy§\cyan{)}§ || isnan(frequency§\cyan{)}§ || isnan(pf§\cyan{)}§§\cyan{)}§ {
-      debugSerial.print("Error reading data from PZEM "§\cyan{)}§;
-      debugSerial.println(i + §\cyan{1)}§;
-      send = false;
-      continue;
-    }
+    debugS.print("PZEM "§\cyan{)}§;debugS.print(i + §\cyan{1)}§;debugS.println(" Readings:"§\cyan{)}§;
+    debugS.print("Voltage: "§\cyan{)}§;debugS.print(voltage§\cyan{)}§;debugS.println(" V"§\cyan{)}§;
+    debugS.print("Current: "§\cyan{)}§;debugS.print(current,§\cyan{3)}§;debugS.println(" A"§\cyan{)}§;
+    debugS.print("Power: "§\cyan{)}§;debugS.print(power§\cyan{)}§;debugS.println(" W"§\cyan{)}§;
+    debugS.print("Energy: "§\cyan{)}§;debugS.print(energy,§\cyan{4)}§;debugS.println(" kWh"§\cyan{)}§;
+    debugS.print("Frequency: "§\cyan{)}§;debugS.print(frequency§\cyan{)}§;debugS.println(" Hz"§\cyan{)}§;
+    debugS.print("Power Factor: "§\cyan{)}§;debugS.println(pf§\cyan{)}§;debugS.println(§\cyan{)}§;
 
-    // Debug output
-    debugSerial.print("PZEM "§\cyan{)}§; debugSerial.print(i + §\cyan{1)}§; debugSerial.println(" Readings:"§\cyan{)}§;
-    debugSerial.print("Voltage: "§\cyan{)}§; debugSerial.print(voltage§\cyan{)}§; debugSerial.println(" V"§\cyan{)}§;
-    debugSerial.print("Current: "§\cyan{)}§; debugSerial.print(current, §\cyan{3)}§; debugSerial.println(" A"§\cyan{)}§;
-    debugSerial.print("Power: "§\cyan{)}§; debugSerial.print(power§\cyan{)}§; debugSerial.println(" W"§\cyan{)}§;
-    debugSerial.print("Energy: "§\cyan{)}§; debugSerial.print(energy, §\cyan{4)}§; debugSerial.println(" kWh"§\cyan{)}§;
-    debugSerial.print("Frequency: "§\cyan{)}§; debugSerial.print(frequency§\cyan{)}§; debugSerial.println(" Hz"§\cyan{)}§;
-    debugSerial.print("Power Factor: "§\cyan{)}§; debugSerial.println(pf§\cyan{)}§;
-    debugSerial.println(§\cyan{)}§;
-
-    // Prepare data for LoRaWAN (each value encoded as 2 bytes§\cyan{)}§
-    int index = i * §\cyan{12}§;
-    data[index]      = (uint16_t(voltage * §\cyan{10)}§ >> §\cyan{8)}§;
-    data[index + §\cyan{1}§]  = uint16_t(voltage * §\cyan{10)}§ & 0x§\cyan{FF)}§;
-    data[index + §\cyan{2}§]  = (uint16_t(current * §\cyan{100)}§ >> §\cyan{8)}§;
-    data[index + §\cyan{3}§]  = uint16_t(current * §\cyan{100)}§ & 0x§\cyan{FF)}§;
-    data[index + §\cyan{4}§]  = (uint16_t(power * §\cyan{10)}§ >> §\cyan{8)}§;
-    data[index + §\cyan{5}§]  = uint16_t(power * §\cyan{10)}§ & 0x§\cyan{FF)}§;
-    data[index + §\cyan{6}§]  = (uint16_t(energy * §\cyan{100)}§ >> §\cyan{8)}§;  
-    data[index + §\cyan{7}§]  = uint16_t(energy * §\cyan{100)}§ & 0x§\cyan{FF)}§;
-    data[index + §\cyan{8}§]  = (uint16_t(frequency * §\cyan{10)}§ >> §\cyan{8)}§;
-    data[index + §\cyan{9}§]  = uint16_t(frequency * §\cyan{10)}§ & 0x§\cyan{FF)}§;
-    data[index + §\cyan{10}§] = (uint16_t(pf * §\cyan{100)}§ >> §\cyan{8)}§;
-    data[index + §\cyan{11}§] = uint16_t(pf * §\cyan{100)}§ & 0x§\cyan{FF)}§;
+    // Prepare data for LoRaWAN: V(2),I(2),P(2),E(4 float),f(2),PF(2)->14 bytes/phase
+    putBE(data, index + §\cyan{0}§, vEnc§\cyan{)}§;
+    putBE(data, index + §\cyan{2}§, cEnc§\cyan{)}§;
+    putBE(data, index + §\cyan{4}§, pEnc§\cyan{)}§;
+    putFloatBE(data, index + §\cyan{6}§, energy§\cyan{)}§;  // <-- 4 bytes raw float (big-endian)
+    putBE32(data, index + §\cyan{10}§, fEnc§\cyan{)}§;
+    putBE32(data, index + §\cyan{1}§2, pfEnc§\cyan{)}§;
   }
 
   // Send data to TTN
-  debugSerial.println("-- Sending data to TTN"§\cyan{)}§;
-  if (send§\cyan{)}§ ttn.§\orange{sendBytes}§(data, sizeof(data§\cyan{)}§§\cyan{)}§;
-  debugSerial.println("-- Data sent!"§\cyan{)}§;
-
-  delay(§\cyan{5000)}§; // 5 seconds between readings
+  debugS.println("-- Sending data to TTN"§\cyan{)}§;
+  ttn.§\orange{sendBytes}§(data, sizeof(data§\cyan{))}§;
+  debugS.println("-- Data sent!"§\cyan{)}§;
+  delay(§\cyan{5*60000)}§; // 5 minutes between readings
 }
 
 void resetEnergyCounters(§\cyan{)}§ {
   for (int i = §\cyan{0}§; i < NUM_PZEMS; i++§\cyan{)}§ {
     pzems[i].resetEnergy(§\cyan{)}§;
-    debugSerial.print("Reset energy for PZEM "§\cyan{)}§; debugSerial.println(i + §\cyan{1)}§;
+    debugS.print("Reset energy for PZEM "§\cyan{)}§; debugS.println(i + §\cyan{1)}§;
   }
 }  
 \end{lstlisting}
@@ -1022,11 +1035,11 @@ void resetEnergyCounters(§\cyan{)}§ {
 
 \begin{itemize}
   \item Συμπεριλαμβάνουμε τη βιβλιοθήκη \textbf{\en{TheThingsNetwork.h}} της \en{The Things Network} για ενεργοποίηση \en{OTAA}, αποστολή \en{uplinks} κ.λπ. Προκειμένου να αναγνωρίσει ο \en{compiler} την βιβλιοθήκη, την εγκαθιστούμε ακολουθώντας την διαδρομή \textit{\en{Sketch > Include Library > Manage Libraries}}, αναζητώντας το όνομα της και πατώντας \textit{\en{install}}.
-  \item Δημιουργούμε τις σταθερές \textbf{\en{appEui}} και \textbf{\en{appKey}}, οι οποίες αποτελούν τα \en{OTAA credentials} της συσκευής. Η τιμή της \textbf{\en{appEUI}} προκύπτει από την διαδικασία που περιγράφηκε στην σημείωση στο τέλος της Υπο-υποενότητας \ref{subsubsec:note}, ενώ η τιμή της \textbf{\en{appKey}} προκύπτει από τις οδηγίες στην Υποενότητα ............\dots
-  \item \textbf{\en{\#define loraSerial Serial1}}: Η \en{The Things Uno} (βασισμένη σε \en{ATmega32u4}/\en{Leonardo}) χρησιμοποιεί τη \textbf{\en{Serial1}} για σύνδεση με το \en{LoRa} \en{module} (π.χ. \en{RN2483}/\en{RN2903}), αφήνοντας την \textbf{\en{Serial}} για \en{debug} προς τον \en{USB}.
-  \item \textbf{\en{\#define debugSerial Serial}}: \en{USB CDC} για μηνύματα κατάστασης/εντοπισμό σφαλμάτων.
+  \item Δημιουργούμε τις σταθερές \textbf{\en{appEui}} και \textbf{\en{appKey}}, οι οποίες αποτελούν τα \en{OTAA credentials} της συσκευής. Η τιμή της \textbf{\en{appEUI}} προκύπτει από την διαδικασία που περιγράφηκε στην σημείωση στο τέλος της Υπο-υποενότητας ............, ενώ η τιμή της \textbf{\en{appKey}} προκύπτει από τις οδηγίες στην Υποενότητα ............\dots
+  \item \textbf{\en{\#define loraS Serial1}}: Η \en{The Things Uno} (βασισμένη σε \en{ATmega32u4}/\en{Leonardo}) χρησιμοποιεί τη \textbf{\en{Serial1}} για σύνδεση με το \en{LoRa} \en{module} (π.χ. \en{RN2483}/\en{RN2903}), αφήνοντας την \textbf{\en{Serial}} για \en{debug} προς τον \en{USB}.
+  \item \textbf{\en{\#define debugS Serial}}: \en{USB CDC} για μηνύματα κατάστασης/εντοπισμό σφαλμάτων.
   \item \textbf{\en{\#define freqPlan TTN\_FP\_EU868}}: Επιλέγουμε \en{frequency plan} \en{EU868} (ταιριάζει με τη ρύθμιση της εφαρμογής στο \en{TTS}).
-  \item \textbf{\en{TheThingsNetwork ttn(loraSerial, debugSerial, freqPlan)}}: Δημιουργούμε \en{TTN} \en{stack} αντικείμενο με \en{hardware UART} για \en{LoRa} και \en{USB} \en{UART} για \en{logs}.
+  \item \textbf{\en{TheThingsNetwork ttn(loraS, debugS, freqPlan)}}: Δημιουργούμε \en{TTN} \en{stack} αντικείμενο με \en{hardware UART} για \en{LoRa} και \en{USB} \en{UART} για \en{logs}.
 \end{itemize}
 
 \paragraph{Διαμόρφωση \en{PZEM-004T} και \en{SoftwareSerial}:}
@@ -1050,7 +1063,7 @@ void resetEnergyCounters(§\cyan{)}§ {
 
 \paragraph{Συνάρτηση \en{setup()} - Αρχικοποίηση:}
 \begin{itemize}
-  \item \textbf{\en{debugSerial.begin(9600)}, \en{loraSerial.begin(57600)}}: Θέτουμε τα \en{baud} \en{rates}.
+  \item \textbf{\en{debugS.begin(9600)}, \en{loraS.begin(57600)}}: Θέτουμε τα \en{baud} \en{rates}.
   \item \textbf{\en{ttn.join(appEui, appKey)}}: \en{OTAA join}. Ο κώδικας μπλοκάρει μέχρι να ολοκληρωθεί το \en{join}. 
   \item \textbf{\en{pzems[i] = PZEM004Tv30(pzemSWSerialX)}}: \en{Binding} κάθε \en{driver} με το αντίστοιχο \en{SoftwareSerial}.
 \end{itemize}
