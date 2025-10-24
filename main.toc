@@ -423,22 +423,29 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {subsubsection}{Διαμόρφωση \foreignlanguage {english}{PZEM-004T} και \foreignlanguage {english}{SoftwareSerial}}{118}{lstnumber.-31.118}%
+\contentsline {paragraph}{Διαμόρφωση \foreignlanguage {english}{PZEM-004T} και \foreignlanguage {english}{SoftwareSerial}:}{118}{lstnumber.-31.118}%
+\contentsline {paragraph}{Επαναφορά μετρητών ενέργειας:}{118}{lstnumber.-31.118}%
+\contentsline {paragraph}{Συνάρτηση \foreignlanguage {english}{setup()} - Αρχικοποίηση:}{118}{lstnumber.-31.118}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {subsection}{\numberline {5.2.3}Καταχώριση του \foreignlanguage {english}{The Things Uno} στο \foreignlanguage {english}{The Things Stack}}{119}{subsection.5.2.3}%
+\contentsline {paragraph}{Συνάρτηση \foreignlanguage {english}{loop()} - Ανάγνωση, κωδικοποίηση και αποστολή:}{119}{lstnumber.-31.118}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {paragraph}{Σημεία προς συμπλήρωση κώδικα (placeholders):}{120}{illustration.caption.75}%
-\contentsline {subsection}{\numberline {5.2.4}\foreignlanguage {english}{Payload Formatter} στο \foreignlanguage {english}{TTS Console}}{120}{subsection.5.2.4}%
-\contentsline {paragraph}{Σημείωση.}{120}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}Ένταξη στο \foreignlanguage {english}{TTS}, δοκιμές και επιβεβαίωση}{120}{subsection.5.2.5}%
-\contentsline {subsection}{\numberline {5.2.6}\foreignlanguage {english}{Downlink}: επαναφορά \foreignlanguage {english}{energy counters}}{120}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.3}Καταχώριση του \foreignlanguage {english}{The Things Uno} στο \foreignlanguage {english}{The Things Stack}}{120}{subsection.5.2.3}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {subsection}{\numberline {5.2.7}Αντιμετώπιση προβλημάτων}{121}{subsection.5.2.7}%
+\contentsline {paragraph}{Σημεία προς συμπλήρωση κώδικα (placeholders):}{121}{illustration.caption.76}%
+\contentsline {subsection}{\numberline {5.2.4}\foreignlanguage {english}{Payload Formatter} στο \foreignlanguage {english}{TTS Console}}{121}{subsection.5.2.4}%
+\contentsline {paragraph}{Σημείωση.}{121}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Ένταξη στο \foreignlanguage {english}{TTS}, δοκιμές και επιβεβαίωση}{121}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}\foreignlanguage {english}{Downlink}: επαναφορά \foreignlanguage {english}{energy counters}}{121}{subsection.5.2.6}%
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\contentsline {subsection}{\numberline {5.2.7}Αντιμετώπιση προβλημάτων}{122}{subsection.5.2.7}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \contentsline {chapter}{\numberline {6}Έλεγχος}{123}{chapter.6}%
@@ -470,7 +477,7 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {part}{\EnsureStandardFontEncoding {III}\hspace {1em}Επίλογος}{131}{section*.77}%
+\contentsline {part}{\EnsureStandardFontEncoding {III}\hspace {1em}Επίλογος}{131}{section*.78}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \contentsline {chapter}{\numberline {9}Επίλογος}{133}{chapter.9}%
@@ -482,7 +489,7 @@
 \contentsline {section}{\numberline {9.2}Μελλοντικές Επεκτάσεις}{134}{section.9.2}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {part}{Παραρτήματα}{135}{section*.78}%
+\contentsline {part}{Παραρτήματα}{135}{section*.79}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \contentsline {chapter}{\numberline {{\greekscript \textAlpha \textnumeralsigngreek }}Παράδειγμα Παραρτήματος}{137}{appendix.Alph1}%
@@ -525,13 +532,13 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \vspace \bigskipamount 
-\contentsline {chapter}{Βιβλιογραφία}{152}{appendix*.82}%
+\contentsline {chapter}{Βιβλιογραφία}{152}{appendix*.83}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {chapter}{Συντομογραφίες - Αρκτικόλεξα - Ακρωνύμια}{153}{appendix*.83}%
+\contentsline {chapter}{Συντομογραφίες - Αρκτικόλεξα - Ακρωνύμια}{153}{appendix*.84}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {chapter}{Απόδοση ξενόγλωσσων όρων}{155}{appendix*.84}%
+\contentsline {chapter}{Απόδοση ξενόγλωσσων όρων}{155}{appendix*.85}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {subparagraph}{}{156}{appendix*.84}%
+\contentsline {subparagraph}{}{156}{appendix*.85}%

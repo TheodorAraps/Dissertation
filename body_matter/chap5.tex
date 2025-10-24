@@ -812,7 +812,7 @@ docker compose up
 %   \item \textbf{Ασφαλής επιλογή: \en{3.3V} τροφοδοσία.} Όταν τροφοδοτούμε \en{PZEM-004T} στα \en{3.3V} (εντός προδιαγραφών της έκδοσης \en{v3}), τα επίπεδα \en{UART} έρχονται εγγύτερα στο \en{3.3V} και αποφεύγονται \en{overvoltage} στο \en{RX} της \en{The Things Uno}. 
 %   \item \textbf{Εναλλακτικά: \en{5V} με μετατροπή επιπέδων.} Αν επιθυμούμε \en{5V} στα \en{PZEM}, τότε:
 %   \begin{enumerate}
-%     \item \en{PZEM TX (5V)} $\rightarrow$ \en{Uno RX (3.3V)} μέσω \en{level shifting} (π.χ. \en{resistive divider} 10\texttt{k}/20\texttt{k} ή \en{MOSFET bidirectional shifter}).
+%     \item \en{PZEM TX (5V)} $\rightarrow$ \en{Uno RX (3.3V)} μέσω \en{level shifting} (π.χ. \en{resistive divider} 10\en{k}/20\en{k} ή \en{MOSFET bidirectional shifter}).
 %     \item \en{Uno TX (3.3V)} $\rightarrow$ \en{PZEM RX (5V)}: συνήθως αποδεκτό ως \en{logic-high}; αν όχι, χρησιμοποιείται \en{buffer} ή \en{transistor level shift}.
 %   \end{enumerate}
 % \end{itemize}
@@ -1025,49 +1025,82 @@ void resetEnergyCounters(§\cyan{)}§ {
   \item Δημιουργούμε τις σταθερές \textbf{\en{appEui}} και \textbf{\en{appKey}}, οι οποίες αποτελούν τα \en{OTAA credentials} της συσκευής. Η τιμή της \textbf{\en{appEUI}} προκύπτει από την διαδικασία που περιγράφηκε στην σημείωση στο τέλος της Υπο-υποενότητας \ref{subsubsec:note}, ενώ η τιμή της \textbf{\en{appKey}} προκύπτει από τις οδηγίες στην Υποενότητα ............\dots
   \item \textbf{\en{\#define loraSerial Serial1}}: Η \en{The Things Uno} (βασισμένη σε \en{ATmega32u4}/\en{Leonardo}) χρησιμοποιεί τη \textbf{\en{Serial1}} για σύνδεση με το \en{LoRa} \en{module} (π.χ. \en{RN2483}/\en{RN2903}), αφήνοντας την \textbf{\en{Serial}} για \en{debug} προς τον \en{USB}.
   \item \textbf{\en{\#define debugSerial Serial}}: \en{USB CDC} για μηνύματα κατάστασης/εντοπισμό σφαλμάτων.
-  \item \textbf{\en{\#define freqPlan TTN\_FP\_EU868}}: Επιλογή \en{frequency plan} \en{EU868} (ταιριάζει με τη ρύθμιση της εφαρμογής στο \en{TTS}).
-  \item \textbf{\en{TheThingsNetwork ttn(loraSerial, debugSerial, freqPlan)}}: Δημιουργεί \en{TTN} \en{stack} αντικείμενο με \en{hardware UART} για \en{LoRa} και \en{USB} \en{UART} για \en{logs}.
+  \item \textbf{\en{\#define freqPlan TTN\_FP\_EU868}}: Επιλέγουμε \en{frequency plan} \en{EU868} (ταιριάζει με τη ρύθμιση της εφαρμογής στο \en{TTS}).
+  \item \textbf{\en{TheThingsNetwork ttn(loraSerial, debugSerial, freqPlan)}}: Δημιουργούμε \en{TTN} \en{stack} αντικείμενο με \en{hardware UART} για \en{LoRa} και \en{USB} \en{UART} για \en{logs}.
 \end{itemize}
 
-\subsubsection{Διαμόρφωση \en{PZEM-004T} και \en{SoftwareSerial}}
+\paragraph{Διαμόρφωση \en{PZEM-004T} και \en{SoftwareSerial}:}
 \begin{itemize}
   \item Συμπεριλαμβάνουμε τις βιβλιοθήκες \textbf{\en{SoftwareSerial.h}} και \textbf{\en{PZEM004Tv30.h}} (την κατεβάζουμε και αυτή απο το μενού \textit{\en{Manage Libraries}}) για \en{UART} επικοινωνία με τα \en{PZEM} (\en{v3.0}) μέσω \en{software} \en{serial}.
   \item \textbf{\en{\#define NUM\_PZEMS 3}}: Τρεις μετρητές (μία φάση ανά \en{PZEM}).
-  \item \textbf{\en{SoftwareSerial pzemSWSerial1(9, 2)}, \en{pzemSWSerial2(10, 3)}, \en{pzemSWSerial3(11, 4)}}: Δηλώνονται τρεις \en{software} \en{UART} (ο πρώτος αριθμός είναι \en{RX}, ο δεύτερος \en{TX} προς τον \en{PZEM}). 
+  \item \textbf{\en{SoftwareSerial pzemSWSerial1(9, 2)}, \en{pzemSWSerial2(10, 3)}, \en{pzemSWSerial3(11, 4)}}: Δηλώνοουμε τρεις \en{software} \en{UART} (ο πρώτος αριθμός είναι \en{RX}, ο δεύτερος \en{TX} προς τον \en{PZEM}). 
   \item \textbf{\en{PZEM004Tv30 pzems[NUM\_PZEMS]}}: Πίνακας \en{driver} για τα τρία \en{PZEM}.
 \end{itemize}
 
-% \paragraph{Επαναφορά μετρητών ενέργειας.}
-% \begin{itemize}
-%   \item \texttt{resetInterval = 15 * 60000}: Ορίζει \en{auto-reset} ενέργειας ανά 15 λεπτά μέσω \texttt{resetEnergyCounters()}. 
-%   \item \textbf{Παρατήρηση:} Συνήθως η ενέργεια (\en{kWh}) είναι αθροιστική και δεν επαναφέρεται περιοδικά. Αν θες «βάρδιες»/«παράθυρα» μέτρησης, προτίμησε \textbf{λογικό μηδενισμό στην εφαρμογή} (π.χ. αφαιρώντας το baseline) ή \textbf{σπάνιο \en{downlink}-triggered reset} (βλ. \S5.2.7), όχι ανά 15' — ειδάλλως χάνεις ιστορικό.
-% \end{itemize}
+\paragraph{Επαναφορά μετρητών ενέργειας:}
+\begin{itemize}
+  \item \textbf{\en{resetInterval = 15 * 60000}}: Ορίζουμε \en{auto-reset} ενέργειας ανά 15 λεπτά μέσω \en{resetEnergyCounters()}.\\ 
+\textbf{Παρατήρηση:} Η ενέργεια (\en{kWh}) που δίνουν τα \en{PZEM} είναι \textbf{αθροιστική} και
+κανονικά δεν μηδενίζεται περιοδικά. Το \textbf{Αυτόματο \en{reset} ανά 15'} διακόπτει τη συνέχεια των
+μετρήσεων και δυσκολεύει τον υπολογισμό των ημερήσιων/μηνιαίων αθροισμάτων. Για «βάρδιες» ή χρονικά παράθυρα, θα προτιμούσαμε
+\textbf{λογικό μηδενισμό στην εφαρμογή}, δηλαδή να κρατάμε μία βάση (\en{baseline}) στην αρχή του παραθύρου και να υπολογίζουμε
+τη διαφορά $E_{now}-E_{baseline}$. Πραγματικό \en{reset} στη συσκευή έχουμε μόνο κατ’ εξαίρεση,
+π.χ. με σπάνιο \en{downlink-trigger} όταν το απαιτεί η λειτουργία.
+\end{itemize}
 
-% \paragraph{\en{setup()}: αρχικοποίηση.}
-% \begin{itemize}
-%   \item \texttt{debugSerial.begin(9600)}, \texttt{loraSerial.begin(57600)}: Θέτει \en{baud} \en{rates}.
-%   \item \texttt{ttn.join(appEui, appKey)}: \en{OTAA join}. Ο κώδικας μπλοκάρει μέχρι να ολοκληρωθεί ο \en{join}; σε περιβάλλον με πιθανές διακοπές δικτύου, σκέψου \textbf{προθεσμία/επανάληψη} ή \textbf{αποθήκευση \en{session}} σε \en{EEPROM} για \en{quick rejoin}.
-%   \item \texttt{pzems[i] = PZEM004Tv30(pzemSWSerialX)}: \en{Binding} κάθε \en{driver} με το αντίστοιχο \en{SoftwareSerial}.
-% \end{itemize}
+\paragraph{Συνάρτηση \en{setup()} - Αρχικοποίηση:}
+\begin{itemize}
+  \item \textbf{\en{debugSerial.begin(9600)}, \en{loraSerial.begin(57600)}}: Θέτουμε τα \en{baud} \en{rates}.
+  \item \textbf{\en{ttn.join(appEui, appKey)}}: \en{OTAA join}. Ο κώδικας μπλοκάρει μέχρι να ολοκληρωθεί το \en{join}. 
+  \item \textbf{\en{pzems[i] = PZEM004Tv30(pzemSWSerialX)}}: \en{Binding} κάθε \en{driver} με το αντίστοιχο \en{SoftwareSerial}.
+\end{itemize}
 
-% \paragraph{\en{loop()}: ανάγνωση, κωδικοποίηση και αποστολή.}
-% \begin{enumerate}
-%   \item \textbf{Έλεγχος \en{auto-reset}:} Αν πέρασαν 15', καλεί \texttt{resetEnergyCounters()} για όλους τους \en{PZEM}.
-%   \item \textbf{Ανάγνωση μεγεθών:} \texttt{voltage()}, \texttt{current()}, \texttt{power()}, \texttt{energy()}, \texttt{frequency()}, \texttt{pf()}. Η βιβλιοθήκη επιστρέφει \en{float} και \texttt{NaN} σε αποτυχία.
-%   \item \textbf{Έλεγχος εγκυρότητας:} Αν οποιοδήποτε μέγεθος είναι \texttt{NaN}, θέτει \texttt{send=false} και \texttt{continue}. \textit{Βελτίωση:} Αντί να «ρίχνουμε» όλο το \en{uplink}, μπορείς να κωδικοποιείς «\en{invalid}» \en{sentinel} (\texttt{0xFFFF}) για τη συγκεκριμένη φάση και να στέλνεις κανονικά τα υπόλοιπα.
-%   \item \textbf{Κωδικοποίηση \en{payload}:} Για κάθε \en{PZEM} πακετάρει \textbf{12 \en{bytes}} (\textbf{σύνολο 36 \en{bytes}}) ως \textbf{16-bit} τιμές \textbf{big-endian} (\en{high byte} πρώτα), με \textbf{κλίμακες}:
-%   \[
-%     \begin{aligned}
-%       V &: \times 10 \quad (\text{δεκάτα Volt}) \\
-%       I &: \times 100 \quad (\text{εκατομμυριοστά Ampere}) \\
-%       P &: \times 10 \quad (\text{δεκά Watt}) \\
-%       E &: \times 100 \quad (\text{εκατοστά kWh}) \\
-%       f &: \times 10 \quad (\text{δεκάτα Hz}) \\
-%       PF&: \times 100 \quad (\text{εκατοστά})
-%     \end{aligned}
-%   \]
-%   \item \textbf{\en{Uplink}:} \texttt{ttn.sendBytes(data, sizeof(data))}. \textbf{Προσοχή στο \en{duty cycle}/\en{fair use} \en{EU868}}: \texttt{delay(5000)} είναι πολύ επιθετικό· προτίμησε 30-300~\en{s}, ανάλογα με \en{SF}/\en{DR} και απαιτήσεις.
-% \end{enumerate}
+\paragraph{Συνάρτηση \en{loop()} - Ανάγνωση, κωδικοποίηση και αποστολή:}
+Ορίζουμε τα \en{PZEM} να εκτελούν επναληπτικά τα ακόλουθα βήματα:
+\begin{enumerate}
+  \item \textbf{Έλεγχος \en{auto-reset}:} Αν πέρασουν 15', καλείται η \en{resetEnergyCounters()} για όλους τους \en{PZEM}.
+  \item \textbf{Ανάγνωση μεγεθών:} Με τις μεθόδους \en{voltage()}, \en{current()}, \en{power()}, \en{energy()}, \en{frequency()} και \en{pf()} λαμβάνονται οι αντίστοιχες μετρήσεις για κάθε \en{PZEM}. Η βιβλιοθήκη επιστρέφει \en{float} και \en{NaN} σε αποτυχία.
+  \item \textbf{Έλεγχος εγκυρότητας:} Αν οποιοδήποτε μέγεθος είναι \en{NaN}, τότε ορίζεται \en{send=false} και συνεχίζει η επανάληψη \en{continue} (δεν στέλνεται δηλαδή \en{uplink} μήνυμα)..............
+  \item \textbf{Κωδικοποίηση \en{payload}:} Για κάθε \en{PZEM} πακετάρονται 6 τιμές με μέγεθος 2 \en{bytes} η κάθε μία, οπότε \textbf{12 \en{bytes}} ανά \en{PZEM} (\textbf{σύνολο 36 \en{bytes}}). Αποθηκεύονται ως \textbf{\en{16-bit}} τιμές \textbf{\en{big-endian}} (\en{high byte} πρώτα), με κλίμακες:
+\begin{table}[ht]
+\centering
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Μέγεθος} & \textbf{Κλίμακα} & \textbf{Εύρος τιμών} \\
+\hline
+Τάση & 
+$\times 10 (0.1 V/LSB)$ &
+$0 \ldots 6553.5 V$ \\
+\hline
+Ρεύμα &
+$\times 100 (0.01 A/LSB)$ &
+$0 \ldots 655.35 A$ \\
+\hline
+Ισχύς &
+$\times 10 (0.1 W/LSB)$ &
+$0 \ldots 6553.5 W$ \\
+\hline
+Ενέργεια &
+$\times 100 (0.01 kWh/LSB)$ &
+$0 \ldots 655.35 kWh$ \\
+\hline
+Συχνότητα &
+$\times 10 (0.1 Hz/LSB)$ &
+$0 \ldots 6553.5 Hz$ \\
+\hline
+Συν. Ισχύος &
+$\times 100 (0.01/LSB$) &
+$0.00 \ldots 655.35$ \\
+\hline
+\end{tabular}
+\caption{Κλίμακες κωδικοποίησης και εύρη τιμών ανά μέγεθος.}
+\label{tab:enc_scales_ranges}
+\end{table}
+
+  \item \textbf{\en{Uplink}:} Στέλενται το μήνυμα \en{uplink} στο \en{TTS} με την μέθοδο \en{ttn.sendBytes(data, sizeof(data))}.
+\end{enumerate}
 
 % \paragraph{Συμβατότητα \en{payload} με \en{formatter}.}
 % Στην §5.2.4 είχαμε δώσει ενδεικτική κωδικοποίηση (6 \en{uint16}/\en{phase}) αλλά με \textit{άλλες} κλίμακες (\emph{π.χ.} \en{Voltage} $\times 100$, \en{Frequency} $\times 100$, \en{PF} $\times 1000$}). 
@@ -1099,7 +1132,7 @@ void resetEnergyCounters(§\cyan{)}§ {
 % \end{otherlanguage*}
 
 % \paragraph{Εύρος/κορεσμός (\en{overflow}).}
-% Με \texttt{uint16\_t} (0-65535) και τις παραπάνω κλίμακες:
+% Με \en{uint16\_t} (0-65535) και τις παραπάνω κλίμακες:
 % \begin{itemize}
 %   \item \en{Voltage}: $6553.5$~\en{V} μέγιστο (\en{ok}).
 %   \item \en{Current}: $655.35$~\en{A} (\en{ok} για οικιακά/τυπικά φορτία).
@@ -1111,14 +1144,14 @@ void resetEnergyCounters(§\cyan{)}§ {
 
 % \paragraph{Βελτιώσεις αξιοπιστίας (προαιρετικά).}
 % \begin{itemize}
-%   \item \textbf{\en{NaN handling} ανά φάση:} Αντί για \texttt{send=false}, γράψε \texttt{0xFFFF} στα 12 \en{bytes} της φάσης και πρόσθεσε \en{bitmask} εγκυρότητας στο \en{payload} (π.χ. 1 \en{byte} στο τέλος).
+%   \item \textbf{\en{NaN handling} ανά φάση:} Αντί για \en{send=false}, γράψε \en{0xFFFF} στα 12 \en{bytes} της φάσης και πρόσθεσε \en{bitmask} εγκυρότητας στο \en{payload} (π.χ. 1 \en{byte} στο τέλος).
 %   \item \textbf{Ρυθμός \en{uplinks}:} Σε \en{EU868}, τήρησε duty-cycle. Για \en{SF7/DR5} συνήθως 60-120~\en{s} είναι ασφαλές.
 %   \item \textbf{\en{Join} ανθεκτικότητας:} Πρόσθεσε \en{timeout}/\en{backoff} και αποθήκευση \en{session} σε \en{EEPROM} για γρήγορη επανεκκίνηση.
 %   \item \textbf{Σταθερά \en{SoftwareSerial}:} Αν δεις \en{UART} σφάλματα, μείωσε \en{baud} των \en{PZEM} (αν υποστηρίζεται) ή μετέφερε μία φάση σε \en{HardwareSerial} (όπου υπάρχει) ή χρησιμοποίησε \en{AltSoftSerial}.
 % \end{itemize}
 
-% \paragraph{Συνάρτηση \texttt{resetEnergyCounters()}.}
-% Καλεί \texttt{pzems[i].resetEnergy()} για κάθε μετρητή, τυπώνει στο \en{debug}. 
+% \paragraph{Συνάρτηση \en{resetEnergyCounters()}.}
+% Καλεί \en{pzems[i].resetEnergy()} για κάθε μετρητή, τυπώνει στο \en{debug}. 
 % \textbf{Σύσταση:} Απενεργοποίησέ την από το \en{loop} και ενεργοποίησέ την \textbf{μόνο} κατόπιν \en{downlink} (βλ. §5.2.7) ή σε \en{maintenance mode}, ώστε να μη χάνεις σωρευτικά \en{kWh}.
 
 % \paragraph{Σύνοψη ροής.}
@@ -1195,7 +1228,7 @@ void resetEnergyCounters(§\cyan{)}§ {
   \item \textbf{\en{Pack}} των 36 \en{bytes} (σύμφωνα με τις κλίμακες).
 \end{itemize}
 
-\noindent\textit{[\textbf{PLACEHOLDER:} Εισαγωγή πλήρους \en{Arduino} \en{sketch} εδώ (π.χ. ως \texttt{\textbackslash lstinputlisting\{\}}).]}
+\noindent\textit{[\textbf{PLACEHOLDER:} Εισαγωγή πλήρους \en{Arduino} \en{sketch} εδώ (π.χ. ως \en{\textbackslash lstinputlisting\{\}}).]}
 
 % --------------------------------------------
 % 5.2.5 Payload Formatter στην εφαρμογή TTS
@@ -1252,7 +1285,7 @@ void resetEnergyCounters(§\cyan{)}§ {
 
 \begin{itemize}
   \item \textbf{Στο \en{firmware}:} Έλεγχος \en{downlink}, αναγνώριση \en{opcode}, κλήση \en{pzems[i].resetEnergy()}.
-  \item \textbf{Στο \en{Console}:} \en{Downlink} $\rightarrow$ \en{Send}, \en{FPort}: \texttt{10}, \en{Payload}: \texttt{A5} (\en{HEX}).
+  \item \textbf{Στο \en{Console}:} \en{Downlink} $\rightarrow$ \en{Send}, \en{FPort}: \en{10}, \en{Payload}: \en{A5} (\en{HEX}).
 \end{itemize}
 
 \noindent\textit{[\textbf{PLACEHOLDER:} Απόσπασμα \en{firmware} που δέχεται \en{downlink} και εκτελεί \en{reset}.]}
