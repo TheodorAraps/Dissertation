@@ -99,6 +99,9 @@
 \definecolor{codeframe}{HTML}{E5E7EB}  % frame border
 
 
+% --- Bash style ---
+
+
 \lstdefinestyle{bashstyle}{
   language=bash,
   deletekeywords={newgrp,enable,cd,exec,cat,awk},
@@ -180,6 +183,10 @@
   breakatwhitespace=true,
   captionpos=b
 }
+
+
+% --- C++ language + style ---
+
 
 % ========= Light palette for white background =========
 \definecolor{cpp-bg}{HTML}{FFFFFF}   % paper white
@@ -284,6 +291,99 @@
 
 
 
+% ---------- JavaScript language + style ----------
+
+
+
+\lstdefinelanguage{TheoJS}{
+  sensitive=true,
+  % --- core JS/ES keywords
+  morekeywords={
+    import,from,export,default,async,await,yield,return,
+    if,else,switch,case,break,continue,try,catch,finally,throw,
+    for,while,do,in,of,new,delete,typeof,instanceof,void,
+    this,super,with,debugger
+  },
+  % --- declarations / modifiers
+  morekeywords=[2]{var,let,const,function,class,extends,constructor,get,set,static},
+  % --- literals & special identifiers
+  morekeywords=[3]{true,false,null,undefined,NaN,Infinity},
+  % --- built-ins / standard objects
+  morekeywords=[4]{Array,Object,Number,String,Boolean,Math,Date,JSON,RegExp,Error,TypeError,RangeError,EvalError,URIError,Promise,Map,Set,WeakMap,WeakSet,Symbol,BigInt,Reflect,Proxy,Intl},
+  % --- host / Node / DOM globals
+  morekeywords=[5]{decodeUplink,readBE16,readBEu32,readBEfloat32,Uint8Array,DataView,decodePhase,push,min,floor,values,some},
+  % comments & strings
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]",
+  morestring=[b]',
+  morestring=[b]`, % template strings
+}
+
+% ---------- JavaScript style ----------
+% optional: extra colors dedicated to JS groups (reuse your palette where possible)
+\definecolor{js-op}{HTML}{1F6C8E} % operators (matches your cpp-op vibe)
+\definecolor{js-kw2}{HTML}{ED2939} % decl/modifiers (imperial red)
+\definecolor{js-kw3}{HTML}{8E44AD} % literals/special (purple)
+\definecolor{js-kw4}{HTML}{0066CC} % builtins (blue)
+\definecolor{js-kw5}{HTML}{2E7D32} % functions (green)
+
+\lstdefinestyle{theo-js}{
+  language=TheoJS,
+  backgroundcolor=\color{codebg},
+  basicstyle=\linespread{1.05}\ttfamily\small\color{codetext},
+  keywordstyle=\bfseries\color{codekw},           % core keywords
+  keywordstyle=[2]\bfseries\color{js-kw2},        % var/let/const/class/...
+  keywordstyle=[3]\bfseries\color{js-kw3},        % true/false/null/undefined/NaN/Infinity
+  keywordstyle=[4]\bfseries\color{js-kw4},        % Array/Promise/Map/...
+  keywordstyle=[5]\bfseries\color{js-kw5},        % console/window/require/...
+  stringstyle=\color{codestr},
+  commentstyle=\itshape\color{codecm},
+  numberstyle=\scriptsize\color{codenums}\noncopynumber,
+  numbers=left,
+  numbersep=10pt,
+  frame=single,
+  rulecolor=\color{codeframe},
+  frameround=tttt,
+  framesep=8pt,
+  xleftmargin=1.5em,
+  xrightmargin=0.5em,
+  showstringspaces=false,
+  upquote=true,
+  columns=fullflexible,
+  keepspaces=true,
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=2,
+  captionpos=b,
+  escapechar=§,
+  % make operators pop and support ES features
+  literate=*
+    {=>}{{{\color{js-op}\texttt{=>}}}}2
+    {===}{{{\color{js-op}\texttt{===}}}}3
+    {!==}{{{\color{js-op}\texttt{!==}}}}3
+    {==}{{{\color{js-op}\texttt{==}}}}2
+    {!=}{{{\color{js-op}\texttt{!=}}}}2
+    {&&}{{{\color{js-op}\texttt{\&\&}}}}2
+    {||}{{{\color{js-op}\texttt{||}}}}2
+    {?}{{{\color{js-op}\texttt{?}}}}1
+    {?.}{{{\color{js-op}\texttt{?.}}}}2
+    {??}{{{\color{js-op}\texttt{??}}}}2
+    {=>}{{{\color{js-op}\texttt{=>}}}}2
+    {:}{{{\color{js-op}\texttt{:}}}}1
+    {;}{{{\color{js-op}\texttt{;}}}}1
+    {(}{{{\color{js-op}\texttt{(}}}}1
+    {)}{{{\color{js-op}\texttt{)}}}}1
+    {[}{{{\color{js-op}\texttt{[}}}}1
+    {]}{{{\color{js-op}\texttt{]}}}}1
+    {.}{{{\color{js-op}\texttt{.}}}}1,
+  % optional: highlight ${ ... } inside template strings
+  % moredelim=[is][\bfseries\color{js-kw4}]{\$\{}{\}}
+}
+
+
+
+
 
 
 
@@ -307,9 +407,6 @@
 \definecolor{term.ansi.green}{HTML}{98C379}
 \definecolor{term.ansi.magenta}{HTML}{C678DD}
 \definecolor{termok}{HTML}{78C2A4}
-
-
-
 
 
 % color macro (optional)

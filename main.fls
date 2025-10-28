@@ -1264,6 +1264,12 @@ INPUT .\figures\Provisioning_info.png
 INPUT .\figures\Provisioning_info.png
 INPUT .\figures\Provisioning_info.png
 INPUT .\figures\Provisioning_info.png
+INPUT D:\Programs\fonts\tfm\public\kerkis\gkbi7t.tfm
+INPUT D:\Programs\fonts\tfm\public\kerkis\ekbi8a.tfm
+INPUT D:\Programs\fonts\vf\public\kerkis\ekbi8a.vf
+INPUT D:\Programs\fonts\tfm\public\kerkis\ekbi8r.tfm
+INPUT D:\Programs\fonts\tfm\jknappen\ec\ectt1000.tfm
+INPUT D:\Programs\fonts\tfm\jknappen\ec\tctt1000.tfm
 INPUT .\body_matter\chap6.tex
 INPUT .\body_matter\chap6.tex
 OUTPUT body_matter\chap6.aux
@@ -1405,6 +1411,8 @@ INPUT .\back_matter\appE.aux
 INPUT back_matter\appE.aux
 INPUT C:\Users\Theodore\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm0800.pk
 INPUT C:\Users\Theodore\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm0800.pk
+INPUT C:\Users\Theodore\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tctt1000.pk
+INPUT C:\Users\Theodore\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tctt1000.pk
 INPUT C:\Users\Theodore\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcit1000.pk
 INPUT C:\Users\Theodore\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcit1000.pk
 INPUT C:\Users\Theodore\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
@@ -1415,6 +1423,8 @@ INPUT D:\Programs\fonts\type1\public\inconsolata\Inconsolata-zi4r.pfb
 INPUT D:\Programs\fonts\type1\public\inconsolata\Inconsolata-zi4r.pfb
 INPUT D:\Programs\fonts\type1\public\kerkis\Kerkis-Bold.pfb
 INPUT D:\Programs\fonts\type1\public\kerkis\Kerkis-Bold.pfb
+INPUT D:\Programs\fonts\type1\public\kerkis\Kerkis-BoldItalic.pfb
+INPUT D:\Programs\fonts\type1\public\kerkis\Kerkis-BoldItalic.pfb
 INPUT D:\Programs\fonts\type1\public\kerkis\Kerkis-Italic.pfb
 INPUT D:\Programs\fonts\type1\public\kerkis\Kerkis-Italic.pfb
 INPUT D:\Programs\fonts\type1\public\kerkis\Kerkis-SmallCaps.pfb

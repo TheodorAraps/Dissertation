@@ -470,29 +470,36 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
+\contentsline {subsection}{\numberline {5.2.4}Κωδικοποίηση \foreignlanguage {english}{Payload Formatter} στο \foreignlanguage {english}{TTS}}{125}{subsection.5.2.4}%
 \babel@toc {greek}{}\relax 
-\babel@toc {greek}{}\relax 
-\contentsline {chapter}{\numberline {6}Έλεγχος}{127}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Μεθοδολογία Ελέγχου}{127}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Αναλυτική παρουσίαση ελέγχου}{127}{section.6.2}%
-\babel@toc {greek}{}\relax 
-\babel@toc {greek}{}\relax 
-\contentsline {chapter}{\numberline {7}Παράδειγμα Πίνακα}{129}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Συμπεράσματα}{129}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Μελλοντικές Επεκτάσεις}{129}{section.7.2}%
+\babel@toc {english}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\contentsline {chapter}{\numberline {6}Έλεγχος}{129}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Μεθοδολογία Ελέγχου}{129}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Αναλυτική παρουσίαση ελέγχου}{129}{section.6.2}%
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\contentsline {chapter}{\numberline {7}Παράδειγμα Πίνακα}{131}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Συμπεράσματα}{131}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Μελλοντικές Επεκτάσεις}{131}{section.7.2}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {chapter}{\numberline {8}Παράδειγμα Μαθηματικών Σχέσεων -- Εκφράσεων και Αλγορίθμων}{131}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Συμπεράσματα}{131}{section.8.1}%
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\contentsline {chapter}{\numberline {8}Παράδειγμα Μαθηματικών Σχέσεων -- Εκφράσεων και Αλγορίθμων}{133}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Συμπεράσματα}{133}{section.8.1}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {section}{\numberline {8.2}Μελλοντικές Επεκτάσεις}{132}{section.8.2}%
+\contentsline {section}{\numberline {8.2}Μελλοντικές Επεκτάσεις}{134}{section.8.2}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {english}{}\relax 
@@ -501,48 +508,48 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {part}{\EnsureStandardFontEncoding {III}\hspace {1em}Επίλογος}{135}{section*.82}%
+\contentsline {part}{\EnsureStandardFontEncoding {III}\hspace {1em}Επίλογος}{137}{section*.82}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {chapter}{\numberline {9}Επίλογος}{137}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Συμπεράσματα}{137}{section.9.1}%
-\babel@toc {greek}{}\relax 
-\babel@toc {greek}{}\relax 
-\babel@toc {greek}{}\relax 
-\babel@toc {greek}{}\relax 
-\contentsline {section}{\numberline {9.2}Μελλοντικές Επεκτάσεις}{138}{section.9.2}%
-\babel@toc {greek}{}\relax 
-\babel@toc {greek}{}\relax 
-\contentsline {part}{Παραρτήματα}{139}{section*.83}%
-\babel@toc {greek}{}\relax 
-\babel@toc {greek}{}\relax 
-\contentsline {chapter}{\numberline {{\greekscript \textAlpha \textnumeralsigngreek }}Παράδειγμα Παραρτήματος}{141}{appendix.Alph1}%
-\contentsline {section}{\numberline {{\greekscript \textAlpha \textnumeralsigngreek }.1}Πρώτη ενότητα}{141}{section.Alph1.1}%
-\contentsline {section}{\numberline {{\greekscript \textAlpha \textnumeralsigngreek }.2}Μελλοντικές Επεκτάσεις}{141}{section.Alph1.2}%
+\contentsline {chapter}{\numberline {9}Επίλογος}{139}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Συμπεράσματα}{139}{section.9.1}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
+\contentsline {section}{\numberline {9.2}Μελλοντικές Επεκτάσεις}{140}{section.9.2}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {chapter}{\numberline {{\greekscript \textBeta \textnumeralsigngreek }}Απόδειξη της σχέσης (8.1)}{143}{appendix.Alph2}%
-\contentsline {section}{\numberline {{\greekscript \textBeta \textnumeralsigngreek }.1}Ανάλυση - περιγραφή αρχιτεκτονικής}{143}{section.Alph2.1}%
-\contentsline {subsection}{\numberline {{\greekscript \textBeta \textnumeralsigngreek }.1.1}Διαχωρισμός υποσυστημάτων}{143}{subsection.Alph2.1.1}%
+\contentsline {part}{Παραρτήματα}{141}{section*.83}%
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\contentsline {chapter}{\numberline {{\greekscript \textAlpha \textnumeralsigngreek }}Παράδειγμα Παραρτήματος}{143}{appendix.Alph1}%
+\contentsline {section}{\numberline {{\greekscript \textAlpha \textnumeralsigngreek }.1}Πρώτη ενότητα}{143}{section.Alph1.1}%
+\contentsline {section}{\numberline {{\greekscript \textAlpha \textnumeralsigngreek }.2}Μελλοντικές Επεκτάσεις}{143}{section.Alph1.2}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {subsection}{\numberline {{\greekscript \textBeta \textnumeralsigngreek }.1.2}Περιγραφή υποσυστημάτων}{144}{subsection.Alph2.1.2}%
-\contentsline {subsubsection}{Υποσύστημα δημιουργίας σχήματος}{144}{subsection.Alph2.1.2}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {chapter}{\numberline {{\greekscript \textGamma \textnumeralsigngreek }}Παραδείγματα Βιβλιογραφικών Αναφορών}{145}{appendix.Alph3}%
+\contentsline {chapter}{\numberline {{\greekscript \textBeta \textnumeralsigngreek }}Απόδειξη της σχέσης (8.1)}{145}{appendix.Alph2}%
+\contentsline {section}{\numberline {{\greekscript \textBeta \textnumeralsigngreek }.1}Ανάλυση - περιγραφή αρχιτεκτονικής}{145}{section.Alph2.1}%
+\contentsline {subsection}{\numberline {{\greekscript \textBeta \textnumeralsigngreek }.1.1}Διαχωρισμός υποσυστημάτων}{145}{subsection.Alph2.1.1}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {chapter}{\numberline {{\greekscript \textDelta \textnumeralsigngreek }}Δημιουργία Ευρετηρίου}{147}{appendix.Alph4}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {chapter}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }}Εισαγωγή Εικόνων}{149}{appendix.Alph5}%
+\contentsline {subsection}{\numberline {{\greekscript \textBeta \textnumeralsigngreek }.1.2}Περιγραφή υποσυστημάτων}{146}{subsection.Alph2.1.2}%
+\contentsline {subsubsection}{Υποσύστημα δημιουργίας σχήματος}{146}{subsection.Alph2.1.2}%
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\contentsline {chapter}{\numberline {{\greekscript \textGamma \textnumeralsigngreek }}Παραδείγματα Βιβλιογραφικών Αναφορών}{147}{appendix.Alph3}%
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\contentsline {chapter}{\numberline {{\greekscript \textDelta \textnumeralsigngreek }}Δημιουργία Ευρετηρίου}{149}{appendix.Alph4}%
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\contentsline {chapter}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }}Εισαγωγή Εικόνων}{151}{appendix.Alph5}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
@@ -556,13 +563,13 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \vspace \bigskipamount 
-\contentsline {chapter}{Βιβλιογραφία}{156}{appendix*.87}%
+\contentsline {chapter}{Βιβλιογραφία}{158}{appendix*.87}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {chapter}{Συντομογραφίες - Αρκτικόλεξα - Ακρωνύμια}{157}{appendix*.88}%
+\contentsline {chapter}{Συντομογραφίες - Αρκτικόλεξα - Ακρωνύμια}{159}{appendix*.88}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {chapter}{Απόδοση ξενόγλωσσων όρων}{159}{appendix*.89}%
+\contentsline {chapter}{Απόδοση ξενόγλωσσων όρων}{161}{appendix*.89}%
 \babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {subparagraph}{}{160}{appendix*.89}%
+\contentsline {subparagraph}{}{162}{appendix*.89}%

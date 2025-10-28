@@ -1017,7 +1017,8 @@ void resetEnergyCounters(§\cyan{)}§ {
 
 \begin{itemize}
   \item Συμπεριλαμβάνουμε τη βιβλιοθήκη \textbf{\en{TheThingsNetwork.h}} της \en{The Things Network} για ενεργοποίηση \en{OTAA}, αποστολή \en{uplinks} κ.λπ. Προκειμένου να αναγνωρίσει ο \en{compiler} την βιβλιοθήκη, την εγκαθιστούμε ακολουθώντας την διαδρομή \textit{\en{Sketch > Include Library > Manage Libraries}}, αναζητώντας το όνομα της και πατώντας \textit{\en{install}}.
-  \item Δημιουργούμε τις σταθερές \textbf{\en{appEui}} και \textbf{\en{appKey}}, οι οποίες αποτελούν τα \en{OTAA credentials} της συσκευής. Η τιμές τους προκύπτουν κατά την καταχώριση του \en{TTU} στο \en{TTS} με την διαδικασία που περιγράφεται στην Υπο-υποενότητα \ref{subsubsec:5.2.3.2}, στο βήμα 4, 
+  \item Δημιουργούμε τις σταθερές \textbf{\en{appEui}} και \textbf{\en{appKey}}, οι οποίες αποτελούν τα \en{OTAA credentials} της συσκευής. Η τιμές τους προκύπτουν κατά την καταχώριση του \en{TTU} στο \en{TTS} με την διαδικασία που περιγράφεται στην Υπο-υποενότητα \ref{subsubsec:5.2.3.2}, στο βήμα \ref{subsubsec:5.2.3.2:step3}, 
+  \label{point1} 
   \item \textbf{\en{\#define loraS Serial1}}: Η \en{The Things Uno} (βασισμένη σε \en{ATmega32u4}/\en{Leonardo}) χρησιμοποιεί τη \textbf{\en{Serial1}} για σύνδεση με το \en{LoRa} \en{module} (π.χ. \en{RN2483}/\en{RN2903}), αφήνοντας την \textbf{\en{Serial}} για \en{debug} προς τον \en{USB}.
   \item \textbf{\en{\#define debugS Serial}}: \en{USB CDC} για μηνύματα κατάστασης/εντοπισμό σφαλμάτων.
   \item \textbf{\en{\#define freqPlan TTN\_FP\_EU868}}: Επιλέγουμε \en{frequency plan} \en{EU868}.
@@ -1128,7 +1129,7 @@ void resetEnergyCounters(§\cyan{)}§ {
 
 \subsubsectionwc{Εγγραφή \en{TTU} στο \en{Application}}
 \label{subsubsec:5.2.3.2}
-Έχοντας δημιουργήσει την εφαρμογή, προχωράμε στην καταχώριση του \en{The Things Uno} ως \en{end device} προκειμένουν να μπορεί να το αναγνωρίσει ο \en{The Things Stack Network server}:
+Έχοντας δημιουργήσει την εφαρμογή, προχωράμε στην καταχώριση του \en{The Things Uno} ως \en{end device} προκειμένου να μπορεί να το αναγνωρίσει ο \en{The Things Stack Network server}:
 \begin{enumerate}
   \item Ξεκινώντας από το \textit{\en{Application Overview}} της εφαρμογής που δημιουργήσαμε, επιλέγουμε από το μενού αριστερά \textit{\en{end devices}} και πατάμε \textit{+ \en{Register end device}}:   
   \begin{Illustration}[!ht] 
@@ -1148,16 +1149,17 @@ void resetEnergyCounters(§\cyan{)}§ {
   \end{itemize}
   \begin{Illustration}[!ht] 
     \centering      
-    \includegraphics[width=0.8\textwidth]{figures/Choose_end_device_type.png}       
+    \includegraphics[width=0.9\textwidth]{figures/Choose_end_device_type.png}       
     \caption{Επιλογή \en{The Things Uno} μοντέλου από \en{Device registry} του \en{The Things Stack}.}      
     \label{figure5.22}    
   \end{Illustration}  
-  \item Έπειτα, από κάτω, μας ανοίγονται ορισμένα πεδία προς συμπλήρωση (\en{Provisioning information}):
+  \item Έπειτα, ακριβώς από κάτω, μας ανοίγονται ορισμένα πεδία προς συμπλήρωση που αποτελούν τις πληροφορίες παροχής (\en{provisioning information}):
+  \label{subsubsec:5.2.3.2:step3}
   \begin{itemize}
-    \item \textbf{\en{JoinEUI} (Πρώην \en{AppEUI}):} την τιμή \en{AppEUI} που βρήκαμε στην Εικόνα \ref{figure5.18}.
-    \item \textbf{\en{DevEUI:}} την τιμή \en{DevEUI} που βρήκαμε στην Εικόνα \ref{figure5.18}.
-    \item \textbf{\en{AppKey:}} πατάμε το κουμπί \textit{\en{Generate}} για να δημιουργήσουμε κλειδί κρυπτογράφησης για το \en{OTAA}.
-    \item \textbf{\en{End Device ID:}} βάζουμε ένα μοναδικό αναγνωριστικό της επιλογής μας.
+    \item \textbf{\en{JoinEUI} (Πρώην \en{AppEUI}):} την τιμή \en{AppEUI} που βρήκαμε τρέχοντας το \en{sketch Deviceinfo} (Εικόνα \ref{figure5.18}). Την ίδια τιμή χρησιμοποιούμε και στο \en{Arduino sketch} μας.
+    \item \textbf{\en{DevEUI:}} την τιμή \en{DevEUI} που βρήκαμε τρέχοντας το \en{sketch Deviceinfo} (Εικόνα \ref{figure5.18}).
+    \item \textbf{\en{AppKey:}} πατάμε το κουμπί \textit{\en{Generate}} για να δημιουργήσουμε κλειδί κρυπτογράφησης για το \en{OTAA}. Αποθηκεύουμε το κλειδί που παράγεται προκειμένου να το χρησιμοποιήσουμε στο \en{Arduino sketch} μας.
+    \item \textbf{\en{End Device ID:}} βάζουμε ένα μοναδικό αναγνωριστικό για την τερματική συσκευή μας.
   \end{itemize}
   \begin{Illustration}[!ht] 
     \centering      
@@ -1165,13 +1167,122 @@ void resetEnergyCounters(§\cyan{)}§ {
     \caption{Συμπλήρωση \en{Provisioning information} για το νέο \en{end device}.}      
     \label{figure5.23}    
   \end{Illustration} 
-  \item Τέλος, πατάμε \textit{\en{Register end device}} και ολοκληρώνουμε την διαδικασία.
+  \item Τέλος, πατάμε \textit{\en{Register end device}} και ολοκληρώνουμε την διαδικασία:
+  % \begin{Illustration}[!ht] 
+  %   \centering      
+  %   \includegraphics[width=0.8\textwidth]{figures/End_device_selection.png}       
+  %   \caption{Η καταχωρημένη τερματική συσκευή στο μενού της εφαρμογής.}      
+  %   \label{figure5.24}    
+  % \end{Illustration} 
 \end{enumerate}
 
+\newpage
+
+\subsection{Κωδικοποίηση \en{Payload Formatter} στο \en{TTS}}
+
+Για να μετατραπούν τα ακατέργαστα \en{bytes} του \en{uplink} σε δομημένα μεγέθη (τάση, ρεύμα, ισχύς κ.λπ.), 
+υλοποιείται ένας \en{Payload Formatter} σε \en{JavaScript} 
+μέσα στο \en{Console} του \en{The Things Stack}. Ο \en{formatter} είναι πλήρως συγχρονισμένος 
+με τον \en{encoder} του \en{Arduino sketch} μας (14 \en{bytes}/φάση: \en{uint16} κλιμακωμένα σε \en{big-endian} 
+για όλα τα μεγέθη εκτός της ενέργειας που αποστέλλεται ως \en{float32} \en{big-endian}). Υποστηρίζει 
+από 1 έως 3 φάσεις, κάνει ανάγνωση με σταθερά \en{offsets}, μετατρέπει τις τιμές στις αρχικές μονάδες 
+(π.χ. $V$, $A$, $Hz$) και χειρίζεται \en{sentinel} τιμές (\en{0xFFFF}/\en{0xFFFFFFFF}) 
+ε\-πι\-στρέ\-φο\-ντας \en{null} όταν κάποια μέτρηση είναι άκυρη (\en{NaN}/\en{Inf}/εκτός εύρους). Επιπλέον, 
+εκδίδει προειδοποιήσεις για μη αναμενόμενα μήκη \en{payload} ή πεδία που κατέληξαν \en{null}, 
+διευκολύνοντας τη διάγνωση. Το αποτέλεσμα είναι σε \en{JSON} μορφή και είναι έτοιμο να οδηγηθεί απευθείας 
+σε \en{webhooks}, όπως θα δουμε αργότερα. 
+
+Από το μενού αριστερά της εφαρμογής διαλέγουμε \textit{\en{Payload Formatters} $>$ \en{Uplink}}. 
+Εδώ ορίζουμε τον βασικό (\en{default}) \en{payload formatter} που θα χρησιμοποιούν όλες οι 
+εγγεγραμμένες τερματικές συσκευές στην εφαρμογή (μπορούμε να θέσουμε και αποκλειστικό 
+\en{payload formatter} για κάθε συσκευή). Επιλέγουμε αρχικά \textit{\textbf{\en{Formatter type:}}} 
+\textit{\en{Custom Javascript formatter}} και συμπληρώνουμε τον ακόλουθο κώδικα:
 
 
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=theo-js]
+function decodeUplink(input§\cyan{)}§ {
+  const bytes = input.bytes || [];
+  const warnings = [];
+  const errors = [];
 
+  // ---- Helpers ----
+  const READS_PER_PHASE = 14;
 
+  function readBE16(b, i§\cyan{)}§ {
+    return (b[i] << 8§\cyan{)}§ | b[i + 1];
+  }
+
+  function readBEu32(b, i§\cyan{)}§ {
+    return ((b[i] << 24§\cyan{)}§ >>> 0§\cyan{)}§ | (b[i + 1] << 16§\cyan{)}§ | (b[i + 2] << 8§\cyan{)}§ | (b[i + 3] << 0§\cyan{)}§;
+  }
+
+  function readBEfloat32(b, i§\cyan{)}§ {
+    // Build a big-endian float32 from 4 bytes
+    const u8 = new Uint8Array(4§\cyan{)}§;
+    u8[0] = b[i];
+    u8[1] = b[i + 1];
+    u8[2] = b[i + 2];
+    u8[3] = b[i + 3];
+    const dv = new DataView(u8.buffer§\cyan{)}§;
+    return dv.getFloat32(0, false§\cyan{)}§; // big-endian
+  }
+
+  function decodePhase(b, base§\cyan{)}§ {
+    // Offsets per Arduino encoder
+    const vRaw  = readBE16(b, base + 0§\cyan{)}§;   // V * 10
+    const iRaw  = readBE16(b, base + 2§\cyan{)}§;   // A * 100
+    const pRaw  = readBE16(b, base + 4§\cyan{)}§;   // W * 10
+    const eU32  = readBEu32(b, base + 6§\cyan{)}§;  // float32 (raw, BE§\cyan{)}§ sentinel check
+    const fRaw  = readBE16(b, base + 10§\cyan{)}§;  // Hz * 10
+    const pfRaw = readBE16(b, base + 12§\cyan{)}§;  // * 100
+    const INVALID16 = 0xFFFF >>> 0;
+    const INVALID32 = 0xFFFFFFFF >>> 0;
+
+    return {
+      voltage:      vRaw  === INVALID16 ? null : vRaw / 10,      // V
+      current:      iRaw  === INVALID16 ? null : iRaw / 100,     // A
+      power:        pRaw  === INVALID16 ? null : pRaw / 10,      // W
+      energy:       eU32  === INVALID32 ? null : readBEfloat32(b, base + 6§\cyan{)}§, // kWh (raw float§\cyan{)}§
+      frequency:    fRaw  === INVALID16 ? null : fRaw / 10,      // Hz
+      powerFactor:  pfRaw === INVALID16 ? null : pfRaw / 100     // unitless
+    };
+  }
+
+  // ---- Decode ----
+  const phases = Math.min(3, Math.floor(bytes.length / READS_PER_PHASE§\cyan{)}§§\cyan{)}§;
+  if (phases === 0§\cyan{)}§ {
+    errors.push("Not enough bytes: expected at least 14."§\cyan{)}§;
+    return { data: {}, warnings, errors };
+  }
+
+  const decoded = {};
+  for (let i = 0; i < phases; i++§\cyan{)}§ {
+    const base = i * READS_PER_PHASE;
+    const sensor = decodePhase(bytes, base§\cyan{)}§;
+    decoded["sensor" + (i + 1§\cyan{)}§] = sensor;
+  }
+
+  if (bytes.length !== phases * READS_PER_PHASE§\cyan{)}§ {
+    warnings.push(
+      `Unexpected length: got ${bytes.length} bytes; decoded ${phases} phase(s§\cyan{)}§ = ${phases * READS_PER_PHASE} bytes.`
+    §\cyan{)}§;
+  }
+
+  // Warn if any sentinel (null§\cyan{)}§ is present
+  const anyNull =
+    Object.values(decoded§\cyan{)}§.some(s =>
+      Object.values(s§\cyan{)}§.some(v => v === null§\cyan{)}§
+    §\cyan{)}§;
+  if (anyNull§\cyan{)}§ {
+    warnings.push("One or more fields are invalid/null (sentinel received§\cyan{)}§."§\cyan{)}§;
+  }
+
+  return { data: decoded, warnings, errors };
+}
+
+\end{lstlisting}
+\end{otherlanguage*}
 
 
 
