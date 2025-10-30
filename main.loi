@@ -53,7 +53,7 @@
 \contentsline {illustration}{\numberline {5.21}{\ignorespaces Επιλογή εγγραφής \foreignlanguage {english}{end device}.}}{125}{illustration.caption.78}%
 \contentsline {illustration}{\numberline {5.22}{\ignorespaces Επιλογή \foreignlanguage {english}{The Things Uno} μοντέλου από \foreignlanguage {english}{Device registry} του \foreignlanguage {english}{The Things Stack}.}}{126}{illustration.caption.79}%
 \contentsline {illustration}{\numberline {5.23}{\ignorespaces Συμπλήρωση \foreignlanguage {english}{Provisioning information} για το νέο \foreignlanguage {english}{end device}.}}{127}{illustration.caption.80}%
-\contentsline {illustration}{\numberline {5.24}{\ignorespaces Δοκιμαστικό κύκλωμα.}}{130}{illustration.caption.81}%
+\contentsline {illustration}{\numberline {5.24}{\ignorespaces Δοκιμαστικό κύκλωμα τριφασικού μετρητή με τρεις λαμπτήρες ως φορτία (φάσεις \foreignlanguage {english}{L1-L3}). Το καλώδιο φάσης του ρευματολήπτη (μάυρο) χωρίζεται σε 3 καλώδια (κόκκινο, καφέ, μαύρο), τα οποία συνδέονται με ένα \foreignlanguage {english}{PZEM} και ένα λαμπτήρα, αντιπροσωπεύοντας μία «υπο-φάση» το καθένα. Το καλώδιο ουδετέρου του ρευματολήπτη (μπλε) συνδέεται σε όλα τα \foreignlanguage {english}{PZEM} και τους λαμπτήρες.}}{131}{illustration.caption.81}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -63,4 +63,4 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{153}{illustration.caption.87}%
+\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{155}{illustration.caption.87}%
