@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.10)  28 OCT 2025 05:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.10)  30 OCT 2025 02:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1705,166 +1705,176 @@ LaTeX Font Info:    Font shape `T1/mak/b/n' will be
 LaTeX Font Info:    Font shape `LGR/mak/m/n' will be
 (Font)              scaled to size 7.19995pt on input line 237.
 
-Overfull \hbox (3.055pt too wide) detected at line 353
- []\LGR/mak/m/n/10.95 102
+Overfull \hbox (3.055pt too wide) detected at line 342
+ []\LGR/mak/m/n/10.95 100
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 362
+Overfull \hbox (3.055pt too wide) detected at line 355
  []\LGR/mak/m/n/10.95 104
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 364
- []\LGR/mak/m/n/10.95 104
+ []\LGR/mak/m/n/10.95 106
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 367
- []\LGR/mak/m/n/10.95 104
+Overfull \hbox (3.055pt too wide) detected at line 366
+ []\LGR/mak/m/n/10.95 106
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 382
- []\LGR/mak/m/n/10.95 108
+Overfull \hbox (3.055pt too wide) detected at line 369
+ []\LGR/mak/m/n/10.95 106
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 384
- []\LGR/mak/m/n/10.95 108
- []
-
-
-Overfull \hbox (3.055pt too wide) detected at line 387
- []\LGR/mak/m/n/10.95 108
- []
-
-
-Overfull \hbox (3.055pt too wide) detected at line 390
- []\LGR/mak/m/n/10.95 108
- []
-
-
-Overfull \hbox (3.055pt too wide) detected at line 399
  []\LGR/mak/m/n/10.95 110
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 416
- []\LGR/mak/m/n/10.95 114
+Overfull \hbox (3.055pt too wide) detected at line 386
+ []\LGR/mak/m/n/10.95 110
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 417
- []\LGR/mak/m/n/10.95 114
+Overfull \hbox (3.055pt too wide) detected at line 389
+ []\LGR/mak/m/n/10.95 110
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 420
- []\LGR/mak/m/n/10.95 115
+Overfull \hbox (3.055pt too wide) detected at line 392
+ []\LGR/mak/m/n/10.95 110
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 401
+ []\LGR/mak/m/n/10.95 112
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 418
+ []\LGR/mak/m/n/10.95 116
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 419
+ []\LGR/mak/m/n/10.95 116
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 422
- []\LGR/mak/m/n/10.95 115
- []
-
-
-Overfull \hbox (3.055pt too wide) detected at line 432
  []\LGR/mak/m/n/10.95 117
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 458
- []\LGR/mak/m/n/10.95 122
+Overfull \hbox (3.055pt too wide) detected at line 424
+ []\LGR/mak/m/n/10.95 117
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 434
+ []\LGR/mak/m/n/10.95 119
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 460
+ []\LGR/mak/m/n/10.95 124
  []
 
 
 
 LaTeX Font Info:    Font shape `LGR/mak/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 460.
+(Font)              scaled to size 8.09995pt on input line 462.
 LaTeX Font Info:    Font shape `T1/mak/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 460.
+(Font)              scaled to size 8.09995pt on input line 462.
 Package babel Info: 'greek' activates 'greek' shorthands.
-(babel)             Reported  on input line 460.
+(babel)             Reported  on input line 462.
 [10]
-Overfull \hbox (3.055pt too wide) detected at line 460
- []\LGR/mak/m/n/10.95 122
+Overfull \hbox (3.055pt too wide) detected at line 462
+ []\LGR/mak/m/n/10.95 124
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 465
- []\LGR/mak/m/n/10.95 123
- []
-
-
-Overfull \hbox (3.055pt too wide) detected at line 473
+Overfull \hbox (3.055pt too wide) detected at line 467
  []\LGR/mak/m/n/10.95 125
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 483
- []\LGR/mak/m/n/10.95 129
+Overfull \hbox (3.055pt too wide) detected at line 475
+ []\LGR/mak/m/n/10.95 127
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 484
- []\LGR/mak/m/n/10.95 129
+Overfull \hbox (3.055pt too wide) detected at line 486
+ []\LGR/mak/m/n/10.95 130
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 488
+Overfull \hbox (3.055pt too wide) detected at line 490
  []\LGR/mak/m/n/10.95 131
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 489
+Overfull \hbox (3.055pt too wide) detected at line 491
  []\LGR/mak/m/n/10.95 131
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 497
+Overfull \hbox (3.055pt too wide) detected at line 495
  []\LGR/mak/m/n/10.95 133
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 502
- []\LGR/mak/m/n/10.95 134
+Overfull \hbox (3.055pt too wide) detected at line 496
+ []\LGR/mak/m/n/10.95 133
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 515
- []\LGR/mak/m/n/10.95 139
+Overfull \hbox (3.055pt too wide) detected at line 504
+ []\LGR/mak/m/n/10.95 135
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 520
- []\LGR/mak/m/n/10.95 140
+Overfull \hbox (3.055pt too wide) detected at line 509
+ []\LGR/mak/m/n/10.95 136
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 522
+ []\LGR/mak/m/n/10.95 141
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 527
- []\LGR/mak/m/n/10.95 143
+ []\LGR/mak/m/n/10.95 142
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 528
- []\LGR/mak/m/n/10.95 143
- []
-
-
-Overfull \hbox (3.055pt too wide) detected at line 536
+Overfull \hbox (3.055pt too wide) detected at line 534
  []\LGR/mak/m/n/10.95 145
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 537
+Overfull \hbox (3.055pt too wide) detected at line 535
  []\LGR/mak/m/n/10.95 145
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 542
- []\LGR/mak/m/n/10.95 146
+Overfull \hbox (3.055pt too wide) detected at line 543
+ []\LGR/mak/m/n/10.95 147
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 544
+ []\LGR/mak/m/n/10.95 147
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 549
+ []\LGR/mak/m/n/10.95 148
  []
 
 )
@@ -1878,8 +1888,8 @@ Overfull \hbox (3.055pt too wide) detected at line 542
 [12
 
 ] (main.lof
-Overfull \hbox (3.055pt too wide) detected at line 377
- []\LGR/mak/m/n/10.95 145
+Overfull \hbox (3.055pt too wide) detected at line 383
+ []\LGR/mak/m/n/10.95 147
  []
 
 )
@@ -1899,105 +1909,125 @@ File: t1txr.fd 2000/12/15 v3.1
 )
 
 [15{D:/Programs/fonts/enc/dvips/kerkis/kmath.enc}{D:/Programs/fonts/enc/dvips/base/8r.enc}]
-Overfull \hbox (3.055pt too wide) detected at line 37
+Overfull \hbox (3.055pt too wide) detected at line 34
  []\LGR/mak/m/n/10.95 100
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 38
+Overfull \hbox (3.055pt too wide) detected at line 35
+ []\LGR/mak/m/n/10.95 100
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 36
  []\LGR/mak/m/n/10.95 101
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 37
+ []\LGR/mak/m/n/10.95 102
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 38
+ []\LGR/mak/m/n/10.95 103
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 39
- []\LGR/mak/m/n/10.95 101
+ []\LGR/mak/m/n/10.95 103
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 40
- []\LGR/mak/m/n/10.95 109
+ []\LGR/mak/m/n/10.95 111
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 41
- []\LGR/mak/m/n/10.95 109
+ []\LGR/mak/m/n/10.95 111
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 42
- []\LGR/mak/m/n/10.95 109
+ []\LGR/mak/m/n/10.95 111
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 43
- []\LGR/mak/m/n/10.95 110
+ []\LGR/mak/m/n/10.95 112
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 44
- []\LGR/mak/m/n/10.95 114
+ []\LGR/mak/m/n/10.95 116
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 45
- []\LGR/mak/m/n/10.95 114
+ []\LGR/mak/m/n/10.95 116
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 46
- []\LGR/mak/m/n/10.95 115
- []
-
-
-Overfull \hbox (3.055pt too wide) detected at line 47
- []\LGR/mak/m/n/10.95 115
- []
-
-
-Overfull \hbox (3.055pt too wide) detected at line 48
- []\LGR/mak/m/n/10.95 116
- []
-
-
-Overfull \hbox (3.055pt too wide) detected at line 49
- []\LGR/mak/m/n/10.95 116
- []
-
-
-Overfull \hbox (3.055pt too wide) detected at line 50
  []\LGR/mak/m/n/10.95 117
  []
 
 
+Overfull \hbox (3.055pt too wide) detected at line 47
+ []\LGR/mak/m/n/10.95 117
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 48
+ []\LGR/mak/m/n/10.95 118
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 49
+ []\LGR/mak/m/n/10.95 118
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 50
+ []\LGR/mak/m/n/10.95 119
+ []
+
+
 Overfull \hbox (3.055pt too wide) detected at line 51
- []\LGR/mak/m/n/10.95 122
+ []\LGR/mak/m/n/10.95 124
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 52
- []\LGR/mak/m/n/10.95 123
+ []\LGR/mak/m/n/10.95 125
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 53
- []\LGR/mak/m/n/10.95 123
+ []\LGR/mak/m/n/10.95 125
  []
 
 
 
 [16]
 Overfull \hbox (3.055pt too wide) detected at line 54
- []\LGR/mak/m/n/10.95 124
+ []\LGR/mak/m/n/10.95 126
  []
 
 
 Overfull \hbox (3.055pt too wide) detected at line 55
- []\LGR/mak/m/n/10.95 125
+ []\LGR/mak/m/n/10.95 127
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 65
- []\LGR/mak/m/n/10.95 151
+Overfull \hbox (3.055pt too wide) detected at line 56
+ []\LGR/mak/m/n/10.95 130
+ []
+
+
+Overfull \hbox (3.055pt too wide) detected at line 66
+ []\LGR/mak/m/n/10.95 153
  []
 
 )
@@ -2011,18 +2041,18 @@ Overfull \hbox (3.055pt too wide) detected at line 65
 [18
 
 ] (main.lot
-Overfull \hbox (3.055pt too wide) detected at line 339
- []\LGR/mak/m/n/10.95 122
+Overfull \hbox (3.055pt too wide) detected at line 341
+ []\LGR/mak/m/n/10.95 124
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 364
- []\LGR/mak/m/n/10.95 132
+Overfull \hbox (3.055pt too wide) detected at line 370
+ []\LGR/mak/m/n/10.95 134
  []
 
 
-Overfull \hbox (3.055pt too wide) detected at line 396
- []\LGR/mak/m/n/10.95 144
+Overfull \hbox (3.055pt too wide) detected at line 402
+ []\LGR/mak/m/n/10.95 146
  []
 
 )
@@ -2096,7 +2126,7 @@ LaTeX Font Info:    Font shape `T1/mak/m/n' will be
 (Font)              scaled to size 4.49997pt on input line 64.
 LaTeX Font Info:    Font shape `LGR/mak/b/n' will be
 (Font)              scaled to size 8.09995pt on input line 64.
-<figures/IoT_techs.png, id=586, 1202.99437pt x 704.6325pt>
+<figures/IoT_techs.png, id=590, 1202.99437pt x 704.6325pt>
 File: figures/IoT_techs.png Graphic file (type png)
 <use figures/IoT_techs.png>
 Package pdftex.def Info: figures/IoT_techs.png  used on input line 77.
@@ -2111,7 +2141,7 @@ LaTeX Font Info:    Font shape `T1/mak/m/it' will be
 [29]
 
 [30]
-<figures/OSI_LoRa.png, id=626, 599.23875pt x 442.65375pt>
+<figures/OSI_LoRa.png, id=630, 599.23875pt x 442.65375pt>
 File: figures/OSI_LoRa.png Graphic file (type png)
 <use figures/OSI_LoRa.png>
 Package pdftex.def Info: figures/OSI_LoRa.png  used on input line 253.
@@ -2124,7 +2154,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [31 <./figures/OSI_LoRa.png>]
 
 [32]
-<figures/Fresnel_zone.png, id=646, 495.0495pt x 161.403pt>
+<figures/Fresnel_zone.png, id=650, 495.0495pt x 161.403pt>
 File: figures/Fresnel_zone.png Graphic file (type png)
 <use figures/Fresnel_zone.png>
 Package pdftex.def Info: figures/Fresnel_zone.png  used on input line 326.
@@ -2134,7 +2164,7 @@ Package pdftex.def Info: figures/Fresnel_zone.png  used on input line 326.
 [33 <./figures/Fresnel_zone.png>]
 
 [34]
-<figures/LoRa_vs_FSK.png, id=669, 924.45375pt x 651.18282pt>
+<figures/LoRa_vs_FSK.png, id=673, 924.45375pt x 651.18282pt>
 File: figures/LoRa_vs_FSK.png Graphic file (type png)
 <use figures/LoRa_vs_FSK.png>
 Package pdftex.def Info: figures/LoRa_vs_FSK.png  used on input line 426.
@@ -2151,7 +2181,7 @@ Underfull \vbox (badness 3942) has occurred while \output is active []
 [37]
 
 [38]
-<figures/CSS_up_chrip_down_chirp.png, id=705, 516.12825pt x 271.0125pt>
+<figures/CSS_up_chrip_down_chirp.png, id=709, 516.12825pt x 271.0125pt>
 File: figures/CSS_up_chrip_down_chirp.png Graphic file (type png)
 <use figures/CSS_up_chrip_down_chirp.png>
 Package pdftex.def Info: figures/CSS_up_chrip_down_chirp.png  used on input line 589.
@@ -2159,7 +2189,7 @@ Package pdftex.def Info: figures/CSS_up_chrip_down_chirp.png  used on input line
 
 
 [39]
-<figures/LoRa_Symbols_chirps.png, id=714, 1305.87875pt x 691.58376pt>
+<figures/LoRa_Symbols_chirps.png, id=718, 1305.87875pt x 691.58376pt>
 File: figures/LoRa_Symbols_chirps.png Graphic file (type png)
 <use figures/LoRa_Symbols_chirps.png>
 Package pdftex.def Info: figures/LoRa_Symbols_chirps.png  used on input line 608.
@@ -2167,7 +2197,7 @@ Package pdftex.def Info: figures/LoRa_Symbols_chirps.png  used on input line 608
 
 
 [40 <./figures/CSS_up_chrip_down_chirp.png> <./figures/LoRa_Symbols_chirps.png>]
-<figures/LoRa_waveform_parameters.png, id=723, 1142.2675pt x 921.4425pt>
+<figures/LoRa_waveform_parameters.png, id=727, 1142.2675pt x 921.4425pt>
 File: figures/LoRa_waveform_parameters.png Graphic file (type png)
 <use figures/LoRa_waveform_parameters.png>
 Package pdftex.def Info: figures/LoRa_waveform_parameters.png  used on input line 630.
@@ -2180,7 +2210,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [42]
-<figures/LoRa_waveform_values.png, id=744, 1143.27126pt x 906.38625pt>
+<figures/LoRa_waveform_values.png, id=748, 1143.27126pt x 906.38625pt>
 File: figures/LoRa_waveform_values.png Graphic file (type png)
 <use figures/LoRa_waveform_values.png>
 Package pdftex.def Info: figures/LoRa_waveform_values.png  used on input line 749.
@@ -2205,12 +2235,12 @@ Overfull \hbox (2.62611pt too wide) in paragraph at lines 911--912
 [48]
 
 [49]
-<figures/LoRa-LoRaWAN_layers.png, id=812, 1143.52219pt x 365.86688pt>
+<figures/LoRa-LoRaWAN_layers.png, id=816, 1143.52219pt x 365.86688pt>
 File: figures/LoRa-LoRaWAN_layers.png Graphic file (type png)
 <use figures/LoRa-LoRaWAN_layers.png>
 Package pdftex.def Info: figures/LoRa-LoRaWAN_layers.png  used on input line 1049.
 (pdftex.def)             Requested size: 341.43436pt x 109.24171pt.
-<figures/LoRaWAN_architecture.png, id=817, 3306.3525pt x 2095.83pt>
+<figures/LoRaWAN_architecture.png, id=821, 3306.3525pt x 2095.83pt>
 File: figures/LoRaWAN_architecture.png Graphic file (type png)
 <use figures/LoRaWAN_architecture.png>
 Package pdftex.def Info: figures/LoRaWAN_architecture.png  used on input line 1076.
@@ -2220,7 +2250,7 @@ Package pdftex.def Info: figures/LoRaWAN_architecture.png  used on input line 10
 [50 <./figures/LoRa-LoRaWAN_layers.png>]
 
 [51 <./figures/LoRaWAN_architecture.png>]
-<figures/LoRaWAN_Network_Server_architecture.png, id=834, 1012.78375pt x 581.17125pt>
+<figures/LoRaWAN_Network_Server_architecture.png, id=838, 1012.78375pt x 581.17125pt>
 File: figures/LoRaWAN_Network_Server_architecture.png Graphic file (type png)
 <use figures/LoRaWAN_Network_Server_architecture.png>
 Package pdftex.def Info: figures/LoRaWAN_Network_Server_architecture.png  used on input line 1132.
@@ -2228,7 +2258,7 @@ Package pdftex.def Info: figures/LoRaWAN_Network_Server_architecture.png  used o
 
 
 [52 <./figures/LoRaWAN_Network_Server_architecture.png (PNG copy)>]
-<figures/LoRaWan_Uplink_Downlink.png, id=846, 643.203pt x 434.22224pt>
+<figures/LoRaWan_Uplink_Downlink.png, id=850, 643.203pt x 434.22224pt>
 File: figures/LoRaWan_Uplink_Downlink.png Graphic file (type png)
 <use figures/LoRaWan_Uplink_Downlink.png>
 Package pdftex.def Info: figures/LoRaWan_Uplink_Downlink.png  used on input line 1195.
@@ -2238,7 +2268,7 @@ LaTeX Font Info:    Font shape `T1/mak/b/n' will be
 
 
 [53]
-<figures/LoRaWAN_Class_A_Flow.png, id=857, 516.7305pt x 172.84575pt>
+<figures/LoRaWAN_Class_A_Flow.png, id=861, 516.7305pt x 172.84575pt>
 File: figures/LoRaWAN_Class_A_Flow.png Graphic file (type png)
 <use figures/LoRaWAN_Class_A_Flow.png>
 Package pdftex.def Info: figures/LoRaWAN_Class_A_Flow.png  used on input line 1237.
@@ -2246,7 +2276,7 @@ Package pdftex.def Info: figures/LoRaWAN_Class_A_Flow.png  used on input line 12
 
 
 [54 <./figures/LoRaWan_Uplink_Downlink.png>]
-<figures/LoRaWAN_Class_B_Flow.png, id=864, 687.7695pt x 181.27725pt>
+<figures/LoRaWAN_Class_B_Flow.png, id=868, 687.7695pt x 181.27725pt>
 File: figures/LoRaWAN_Class_B_Flow.png Graphic file (type png)
 <use figures/LoRaWAN_Class_B_Flow.png>
 Package pdftex.def Info: figures/LoRaWAN_Class_B_Flow.png  used on input line 1278.
@@ -2254,7 +2284,7 @@ Package pdftex.def Info: figures/LoRaWAN_Class_B_Flow.png  used on input line 12
 
 
 [55 <./figures/LoRaWAN_Class_A_Flow.png> <./figures/LoRaWAN_Class_B_Flow.png>]
-<figures/LoRaWAN_Class_C_Flow.png, id=871, 602.25pt x 201.1515pt>
+<figures/LoRaWAN_Class_C_Flow.png, id=875, 602.25pt x 201.1515pt>
 File: figures/LoRaWAN_Class_C_Flow.png Graphic file (type png)
 <use figures/LoRaWAN_Class_C_Flow.png>
 Package pdftex.def Info: figures/LoRaWAN_Class_C_Flow.png  used on input line 1315.
@@ -2262,7 +2292,7 @@ Package pdftex.def Info: figures/LoRaWAN_Class_C_Flow.png  used on input line 13
 
 
 [56 <./figures/LoRaWAN_Class_C_Flow.png>]
-<figures/LoRaWAN_Packet_structure.png, id=879, 1085.26462pt x 581.19655pt>
+<figures/LoRaWAN_Packet_structure.png, id=883, 1085.26462pt x 581.19655pt>
 File: figures/LoRaWAN_Packet_structure.png Graphic file (type png)
 <use figures/LoRaWAN_Packet_structure.png>
 Package pdftex.def Info: figures/LoRaWAN_Packet_structure.png  used on input line 1351.
@@ -2348,12 +2378,12 @@ LaTeX Font Info:    Font shape `T1/mak/b/n' will be
 
 
 [61]
-<figures/LoRaWAN_OTAA_v1_0.png, id=911, 720.44156pt x 449.42906pt>
+<figures/LoRaWAN_OTAA_v1_0.png, id=915, 720.44156pt x 449.42906pt>
 File: figures/LoRaWAN_OTAA_v1_0.png Graphic file (type png)
 <use figures/LoRaWAN_OTAA_v1_0.png>
 Package pdftex.def Info: figures/LoRaWAN_OTAA_v1_0.png  used on input line 1694.
 (pdftex.def)             Requested size: 362.77524pt x 226.30496pt.
-<figures/LoRaWAN_OTAA_v1_1.png, id=913, 713.66624pt x 404.26031pt>
+<figures/LoRaWAN_OTAA_v1_1.png, id=917, 713.66624pt x 404.26031pt>
 File: figures/LoRaWAN_OTAA_v1_1.png Graphic file (type png)
 <use figures/LoRaWAN_OTAA_v1_1.png>
 Package pdftex.def Info: figures/LoRaWAN_OTAA_v1_1.png  used on input line 1702.
@@ -2368,12 +2398,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [63 <./figures/LoRaWAN_OTAA_v1_1.png>]
 
 [64]
-<figures/LoRaWAN_ABP_v1_0.png, id=931, 701.62125pt x 252.19218pt>
+<figures/LoRaWAN_ABP_v1_0.png, id=935, 701.62125pt x 252.19218pt>
 File: figures/LoRaWAN_ABP_v1_0.png Graphic file (type png)
 <use figures/LoRaWAN_ABP_v1_0.png>
 Package pdftex.def Info: figures/LoRaWAN_ABP_v1_0.png  used on input line 1794.
 (pdftex.def)             Requested size: 362.77524pt x 130.398pt.
-<figures/LoRaWAN_ABP_v1_1.png, id=933, 702.37407pt x 472.76625pt>
+<figures/LoRaWAN_ABP_v1_1.png, id=937, 702.37407pt x 472.76625pt>
 File: figures/LoRaWAN_ABP_v1_1.png Graphic file (type png)
 <use figures/LoRaWAN_ABP_v1_1.png>
 Package pdftex.def Info: figures/LoRaWAN_ABP_v1_1.png  used on input line 1802.
@@ -2418,7 +2448,7 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 
 
 [71]
-<figures/tts-architecture.jpeg, id=978, 1927.2pt x 1084.05pt>
+<figures/tts-architecture.jpeg, id=982, 1927.2pt x 1084.05pt>
 File: figures/tts-architecture.jpeg Graphic file (type jpg)
 <use figures/tts-architecture.jpeg>
 Package pdftex.def Info: figures/tts-architecture.jpeg  used on input line 37.
@@ -2447,7 +2477,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `superscript' on input line 199.
 
-<figures/LoRa_BasicsStation.png, id=1006, 552.26324pt x 219.82124pt>
+<figures/LoRa_BasicsStation.png, id=1010, 552.26324pt x 219.82124pt>
 File: figures/LoRa_BasicsStation.png Graphic file (type png)
 <use figures/LoRa_BasicsStation.png>
 Package pdftex.def Info: figures/LoRa_BasicsStation.png  used on input line 216.
@@ -2469,7 +2499,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [77]
 
 [78]
-<figures/Docker.png, id=1037, 2258.4375pt x 1917.41344pt>
+<figures/Docker.png, id=1041, 2258.4375pt x 1917.41344pt>
 File: figures/Docker.png Graphic file (type png)
 <use figures/Docker.png>
 Package pdftex.def Info: figures/Docker.png  used on input line 372.
@@ -2485,7 +2515,7 @@ Package pdftex.def Info: figures/Docker.png  used on input line 372.
 [82]
 
 [83]
-<figures/Spring-React-Architecture.png, id=1078, 2569.6pt x 1445.4pt>
+<figures/Spring-React-Architecture.png, id=1082, 2569.6pt x 1445.4pt>
 File: figures/Spring-React-Architecture.png Graphic file (type png)
 <use figures/Spring-React-Architecture.png>
 Package pdftex.def Info: figures/Spring-React-Architecture.png  used on input line 560.
@@ -2505,7 +2535,7 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 (lettrine.sty)             (for loversize=0, accent excluded),
 (lettrine.sty)             Lettrine height = 27.65382pt (\color {gray!80!green!70!black}\scalebox {1.3}{Σ});
 (lettrine.sty)             reported on input line 3.
-<figures/My-System-Arcitecture.png, id=1095, 1820.8025pt x 514.92375pt>
+<figures/My-System-Arcitecture.png, id=1099, 1820.8025pt x 514.92375pt>
 File: figures/My-System-Arcitecture.png Graphic file (type png)
 <use figures/My-System-Arcitecture.png>
 Package pdftex.def Info: figures/My-System-Arcitecture.png  used on input line 25.
@@ -2539,7 +2569,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 206--212
 
  []
 
-<figures/1st_Implementation_gateway.png, id=1122, 1755.55875pt x 1458.44875pt>
+<figures/1st_Implementation_gateway.png, id=1126, 1755.55875pt x 1458.44875pt>
 File: figures/1st_Implementation_gateway.png Graphic file (type png)
 <use figures/1st_Implementation_gateway.png>
 Package pdftex.def Info: figures/1st_Implementation_gateway.png  used on input line 216.
@@ -2551,7 +2581,7 @@ Package pdftex.def Info: figures/1st_Implementation_gateway.png  used on input l
 [91]
 
 [92]
-<figures/1st_implementation_el_meter.png, id=1144, 1877.0125pt x 948.54375pt>
+<figures/1st_implementation_el_meter.png, id=1148, 1877.0125pt x 948.54375pt>
 File: figures/1st_implementation_el_meter.png Graphic file (type png)
 <use figures/1st_implementation_el_meter.png>
 Package pdftex.def Info: figures/1st_implementation_el_meter.png  used on input line 392.
@@ -2586,13 +2616,17 @@ LaTeX Info: Symbol \textrightarrow not provided by
 
 [94])
 
-[95
+[95]
+
+[96
 
 
 
 ]
 
-[96]
+[97]
+
+[98]
 \openout2 = `body_matter/chap5.aux'.
 
  (body_matter/chap5.tex
@@ -2601,43 +2635,43 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 (lettrine.sty)             (for loversize=0, accent excluded),
 (lettrine.sty)             Lettrine height = 27.65382pt (\color {gray!80!green!70!black}\scalebox {1.3}{Σ});
 (lettrine.sty)             reported on input line 2.
-<figures/LoRaWAN_gateway_setup.jpg, id=1173, 2607.7425pt x 1529.715pt>
+<figures/LoRaWAN_gateway_setup.jpg, id=1187, 2607.7425pt x 1529.715pt>
 File: figures/LoRaWAN_gateway_setup.jpg Graphic file (type jpg)
 <use figures/LoRaWAN_gateway_setup.jpg>
 Package pdftex.def Info: figures/LoRaWAN_gateway_setup.jpg  used on input line 34.
 (pdftex.def)             Requested size: 362.77524pt x 212.80482pt.
 
 
-[97
+[99
 
 
  <./figures/LoRaWAN_gateway_setup.jpg>]
-<figures/Raspberry_Pi_imager_1.png, id=1179, 510.708pt x 361.35pt>
+<figures/Raspberry_Pi_imager_1.png, id=1192, 510.708pt x 361.35pt>
 File: figures/Raspberry_Pi_imager_1.png Graphic file (type png)
 <use figures/Raspberry_Pi_imager_1.png>
 Package pdftex.def Info: figures/Raspberry_Pi_imager_1.png  used on input line 53.
 (pdftex.def)             Requested size: 298.75262pt x 211.38614pt.
-<figures/Raspberry_Pi_imager_2.png, id=1180, 422.7795pt x 144.54pt>
+<figures/Raspberry_Pi_imager_2.png, id=1193, 422.7795pt x 144.54pt>
 File: figures/Raspberry_Pi_imager_2.png Graphic file (type png)
 <use figures/Raspberry_Pi_imager_2.png>
 Package pdftex.def Info: figures/Raspberry_Pi_imager_2.png  used on input line 65.
 (pdftex.def)             Requested size: 298.75262pt x 102.1433pt.
 
 
-[98 <./figures/Raspberry_Pi_imager_1.png> <./figures/Raspberry_Pi_imager_2.png>]
-<figures/Raspberry_Pi_imager_3.png, id=1192, 413.74574pt x 504.6855pt>
+[100 <./figures/Raspberry_Pi_imager_1.png> <./figures/Raspberry_Pi_imager_2.png>]
+<figures/Raspberry_Pi_imager_3.png, id=1205, 413.74574pt x 504.6855pt>
 File: figures/Raspberry_Pi_imager_3.png Graphic file (type png)
 <use figures/Raspberry_Pi_imager_3.png>
 Package pdftex.def Info: figures/Raspberry_Pi_imager_3.png  used on input line 78.
 (pdftex.def)             Requested size: 298.75262pt x 364.436pt.
-<figures/Raspberry_Pi_imager_4.png, id=1193, 415.5525pt x 225.84375pt>
+<figures/Raspberry_Pi_imager_4.png, id=1206, 415.5525pt x 225.84375pt>
 File: figures/Raspberry_Pi_imager_4.png Graphic file (type png)
 <use figures/Raspberry_Pi_imager_4.png>
 Package pdftex.def Info: figures/Raspberry_Pi_imager_4.png  used on input line 89.
 (pdftex.def)             Requested size: 298.75262pt x 162.37303pt.
 
 
-[99 <./figures/Raspberry_Pi_imager_3.png>] (D:\Programs\tex/latex/listings\lstlang1.sty
+[101 <./figures/Raspberry_Pi_imager_3.png>] (D:\Programs\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 ) (D:\Programs\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
@@ -2650,22 +2684,22 @@ LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 10.07397pt on input line 105.
 
 
-[100{D:/Programs/fonts/enc/dvips/inconsolata/i4-t1-0.enc} <./figures/Raspberry_Pi_imager_4.png>]
-<figures/Raspi_config.jpg, id=1215, 1084.05pt x 707.64375pt>
+[102{D:/Programs/fonts/enc/dvips/inconsolata/i4-t1-0.enc} <./figures/Raspberry_Pi_imager_4.png>]
+<figures/Raspi_config.jpg, id=1228, 1084.05pt x 707.64375pt>
 File: figures/Raspi_config.jpg Graphic file (type jpg)
 <use figures/Raspi_config.jpg>
 Package pdftex.def Info: figures/Raspi_config.jpg  used on input line 148.
 (pdftex.def)             Requested size: 384.10959pt x 250.73479pt.
-<figures/Raspi_config_2.jpg, id=1216, 1084.05pt x 663.47874pt>
+<figures/Raspi_config_2.jpg, id=1229, 1084.05pt x 663.47874pt>
 File: figures/Raspi_config_2.jpg Graphic file (type jpg)
 <use figures/Raspi_config_2.jpg>
 Package pdftex.def Info: figures/Raspi_config_2.jpg  used on input line 159.
 (pdftex.def)             Requested size: 384.10959pt x 235.08609pt.
 
 
-[101 <./figures/Raspi_config.jpg> <./figures/Raspi_config_2.jpg>]
+[103 <./figures/Raspi_config.jpg> <./figures/Raspi_config_2.jpg>]
 
-[102]
+[104]
 \g__tcobox_out_iow=\write8
 \openout8 = `main.listing'.
 
@@ -2677,19 +2711,19 @@ LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
 
  (main.listing)
 
-[103]
+[105]
 \openout8 = `main.listing'.
 
  (main.listing)
 
-[104]
+[106]
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 9.19998pt on input line 422.
 LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
 (Font)              scaled to size 9.19998pt on input line 423.
 
 
-[105]
+[107]
 LaTeX Font Info:    Trying to load font information for TS1+zi4 on input line 439.
  (D:\Programs\tex/latex/inconsolata\ts1zi4.fd
 File: ts1zi4.fd 2018/01/14 TS1/zi4 (Inconsolata)
@@ -2708,44 +2742,44 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[106{D:/Programs/fonts/enc/dvips/inconsolata/i4-ts1.enc}]
+[108{D:/Programs/fonts/enc/dvips/inconsolata/i4-ts1.enc}]
 \openout8 = `main.listing'.
 
  (main.listing)
 
-[107]
+[109]
 \openout8 = `main.listing'.
 
  (main.listing)
 
-[108]
-<figures/Register_Gateway.png, id=1399, 1005.7575pt x 98.61844pt>
+[110]
+<figures/Register_Gateway.png, id=1413, 1005.7575pt x 98.61844pt>
 File: figures/Register_Gateway.png Graphic file (type png)
 <use figures/Register_Gateway.png>
 Package pdftex.def Info: figures/Register_Gateway.png  used on input line 598.
 (pdftex.def)             Requested size: 426.79134pt x 41.84831pt.
-<figures/Register_gateway_set_eui.png, id=1401, 435.87843pt x 207.02344pt>
+<figures/Register_gateway_set_eui.png, id=1415, 435.87843pt x 207.02344pt>
 File: figures/Register_gateway_set_eui.png Graphic file (type png)
 <use figures/Register_gateway_set_eui.png>
 Package pdftex.def Info: figures/Register_gateway_set_eui.png  used on input line 599.
 (pdftex.def)             Requested size: 256.0774pt x 121.6247pt.
-<figures/Register_gateway_final_options.png, id=1402, 664.73344pt x 472.76625pt>
+<figures/Register_gateway_final_options.png, id=1416, 664.73344pt x 472.76625pt>
 File: figures/Register_gateway_final_options.png Graphic file (type png)
 <use figures/Register_gateway_final_options.png>
 Package pdftex.def Info: figures/Register_gateway_final_options.png  used on input line 603.
 (pdftex.def)             Requested size: 256.0774pt x 182.12738pt.
-<figures/Download_API_keys.png, id=1403, 609.77812pt x 301.8778pt>
+<figures/Download_API_keys.png, id=1417, 609.77812pt x 301.8778pt>
 File: figures/Download_API_keys.png Graphic file (type png)
 <use figures/Download_API_keys.png>
 Package pdftex.def Info: figures/Download_API_keys.png  used on input line 611.
 (pdftex.def)             Requested size: 256.0774pt x 126.7786pt.
 
 
-[109 <./figures/Register_Gateway.png> <./figures/Register_gateway_set_eui.png> <./figures/Register_gateway_final_options.png>]
+[111 <./figures/Register_Gateway.png> <./figures/Register_gateway_set_eui.png> <./figures/Register_gateway_final_options.png>]
 
-[110 <./figures/Download_API_keys.png>]
+[112 <./figures/Download_API_keys.png>]
 
-[111]
+[113]
 LaTeX Info: Symbol \textasciigrave not provided by
             font family zi4 in TS1 encoding.
             Default family used instead on input line 675.
@@ -2763,60 +2797,60 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[112]
+[114]
 \openout8 = `main.listing'.
 
  (main.listing)
 \openout8 = `main.listing'.
 
  (main.listing)
-<figures/Console_connected_GW.png, id=1486, 1069.74657pt x 529.98pt>
+<figures/Console_connected_GW.png, id=1499, 1069.74657pt x 529.98pt>
 File: figures/Console_connected_GW.png Graphic file (type png)
 <use figures/Console_connected_GW.png>
 Package pdftex.def Info: figures/Console_connected_GW.png  used on input line 771.
 (pdftex.def)             Requested size: 426.79134pt x 211.44641pt.
 
 
-[113]
-<figures/3_phase_meter.jpg, id=1529, 2269.47874pt x 1503.6175pt>
+[115]
+<figures/3_phase_meter.jpg, id=1543, 2638.85875pt x 1603.9925pt>
 File: figures/3_phase_meter.jpg Graphic file (type jpg)
 <use figures/3_phase_meter.jpg>
 Package pdftex.def Info: figures/3_phase_meter.jpg  used on input line 801.
-(pdftex.def)             Requested size: 320.09349pt x 212.06516pt.
+(pdftex.def)             Requested size: 341.43436pt x 207.52287pt.
 
 
-[114 <./figures/Console_connected_GW.png> <./figures/3_phase_meter.jpg>]
-<figures/Arduino_IDE_start.png, id=1536, 765.45975pt x 443.85825pt>
+[116 <./figures/Console_connected_GW.png> <./figures/3_phase_meter.jpg>]
+<figures/Arduino_IDE_start.png, id=1550, 765.45975pt x 443.85825pt>
 File: figures/Arduino_IDE_start.png Graphic file (type png)
 <use figures/Arduino_IDE_start.png>
 Package pdftex.def Info: figures/Arduino_IDE_start.png  used on input line 822.
 (pdftex.def)             Requested size: 341.43436pt x 197.98698pt.
-<figures/Arduino_IDE_search.png, id=1537, 675.27281pt x 421.575pt>
+<figures/Arduino_IDE_search.png, id=1551, 675.27281pt x 421.575pt>
 File: figures/Arduino_IDE_search.png Graphic file (type png)
 <use figures/Arduino_IDE_search.png>
 Package pdftex.def Info: figures/Arduino_IDE_search.png  used on input line 832.
 (pdftex.def)             Requested size: 298.75262pt x 186.51636pt.
 
 
-[115 <./figures/Arduino_IDE_start.png> <./figures/Arduino_IDE_search.png>]
-<figures/Arduino_IDE_COM_select.png, id=1545, 758.23276pt x 442.0515pt>
+[117 <./figures/Arduino_IDE_start.png> <./figures/Arduino_IDE_search.png>]
+<figures/Arduino_IDE_COM_select.png, id=1558, 758.23276pt x 442.0515pt>
 File: figures/Arduino_IDE_COM_select.png Graphic file (type png)
 <use figures/Arduino_IDE_COM_select.png>
 Package pdftex.def Info: figures/Arduino_IDE_COM_select.png  used on input line 842.
 (pdftex.def)             Requested size: 341.43436pt x 199.05623pt.
-<figures/Device_info_sketch.png, id=1546, 857.45343pt x 469.755pt>
+<figures/Device_info_sketch.png, id=1559, 857.45343pt x 469.755pt>
 File: figures/Device_info_sketch.png Graphic file (type png)
 <use figures/Device_info_sketch.png>
 Package pdftex.def Info: figures/Device_info_sketch.png  used on input line 859.
 (pdftex.def)             Requested size: 298.75262pt x 163.67125pt.
-<figures/Serial_Monitor_Output_1.png, id=1547, 456.20438pt x 232.61906pt>
+<figures/Serial_Monitor_Output_1.png, id=1560, 456.20438pt x 232.61906pt>
 File: figures/Serial_Monitor_Output_1.png Graphic file (type png)
 <use figures/Serial_Monitor_Output_1.png>
 Package pdftex.def Info: figures/Serial_Monitor_Output_1.png  used on input line 867.
 (pdftex.def)             Requested size: 298.75262pt x 152.33643pt.
 
 
-[116 <./figures/Arduino_IDE_COM_select.png> <./figures/Device_info_sketch.png>] (D:\Programs\tex/latex/listings\lstlang1.sty
+[118 <./figures/Arduino_IDE_COM_select.png> <./figures/Device_info_sketch.png>] (D:\Programs\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 ) (D:\Programs\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
@@ -2824,7 +2858,7 @@ File: lstlang1.sty 2024/09/23 1.10c listings language file
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 )
 
-[117 <./figures/Serial_Monitor_Output_1.png>]
+[119 <./figures/Serial_Monitor_Output_1.png>]
 LaTeX Font Info:    Font shape `TS1/zi4/m/it' will be
 (Font)              scaled to size 9.19998pt on input line 956.
 
@@ -2832,83 +2866,86 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[118]
+[120]
 
-[119]
+[121]
 Overfull \hbox (2.46683pt too wide) in paragraph at lines 1033--1034
 [][]\T1/mak/b/n/10.95 SoftwareSerial pzem-SWSe-rial1(9, 2)[]\LGR/mak/b/n/10.95 , []\T1/mak/b/n/10.95 pzem-SWSe-rial2(10, 3)[]\LGR/mak/b/n/10.95 , []\T1/mak/b/n/10.95 pzem-SWSe-rial3(11,
  []
 
 
 
-[120]
+[122]
 
-[121]
-<figures/Console_Create_Application.png, id=1720, 867.24pt x 80.55093pt>
+[123]
+<figures/Console_Create_Application.png, id=1733, 867.24pt x 80.55093pt>
 File: figures/Console_Create_Application.png Graphic file (type png)
 <use figures/Console_Create_Application.png>
 Package pdftex.def Info: figures/Console_Create_Application.png  used on input line 1119.
 (pdftex.def)             Requested size: 426.79134pt x 39.64114pt.
-<figures/Console_Create_Application_Final_Stage.png, id=1721, 381.67593pt x 258.9675pt>
+<figures/Console_Create_Application_Final_Stage.png, id=1734, 381.67593pt x 258.9675pt>
 File: figures/Console_Create_Application_Final_Stage.png Graphic file (type png)
 <use figures/Console_Create_Application_Final_Stage.png>
 Package pdftex.def Info: figures/Console_Create_Application_Final_Stage.png  used on input line 1120.
 (pdftex.def)             Requested size: 277.41176pt x 188.23067pt.
 
 
-[122 <./figures/Console_Create_Application.png>]
-<figures/Register_end_device_in_App.png, id=1729, 960.58875pt x 246.1697pt>
+[124 <./figures/Console_Create_Application.png>]
+<figures/Register_end_device_in_App.png, id=1742, 960.58875pt x 246.1697pt>
 File: figures/Register_end_device_in_App.png Graphic file (type png)
 <use figures/Register_end_device_in_App.png>
 Package pdftex.def Info: figures/Register_end_device_in_App.png  used on input line 1137.
 (pdftex.def)             Requested size: 426.79134pt x 109.37425pt.
 
 
-[123 <./figures/Console_Create_Application_Final_Stage.png> <./figures/Register_end_device_in_App.png (PNG copy)>]
-<figures/Choose_end_device_type.png, id=1738, 542.77782pt x 441.90094pt>
+[125 <./figures/Console_Create_Application_Final_Stage.png> <./figures/Register_end_device_in_App.png (PNG copy)>]
+<figures/Choose_end_device_type.png, id=1751, 542.77782pt x 441.90094pt>
 File: figures/Choose_end_device_type.png Graphic file (type png)
 <use figures/Choose_end_device_type.png>
 Package pdftex.def Info: figures/Choose_end_device_type.png  used on input line 1152.
 (pdftex.def)             Requested size: 384.10959pt x 312.73369pt.
-<figures/Provisioning_info.png, id=1741, 660.96938pt x 660.21657pt>
+<figures/Provisioning_info.png, id=1754, 660.96938pt x 660.21657pt>
 File: figures/Provisioning_info.png Graphic file (type png)
 <use figures/Provisioning_info.png>
 Package pdftex.def Info: figures/Provisioning_info.png  used on input line 1166.
 (pdftex.def)             Requested size: 273.1462pt x 272.84639pt.
 
 
-[124 <./figures/Choose_end_device_type.png>]
+[126 <./figures/Choose_end_device_type.png>]
 LaTeX Font Info:    Font shape `LGR/mak/b/it' will be
 (Font)              scaled to size 9.85492pt on input line 1198.
 LaTeX Font Info:    Font shape `T1/mak/b/it' will be
 (Font)              scaled to size 9.85492pt on input line 1198.
 
 
-[125 <./figures/Provisioning_info.png (PNG copy)>]
+[127 <./figures/Provisioning_info.png (PNG copy)>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[126]
+[128]
 LaTeX Info: Symbol \textasciigrave not provided by
             font family zi4 in TS1 encoding.
             Default family used instead on input line 1268.
 LaTeX Info: Symbol \textasciigrave not provided by
             font family zi4 in TS1 encoding.
             Default family used instead on input line 1268.
+
+
+[129]
+<figures/TEST_CIRCUIT.jpg, id=1856, 2499.3375pt x 1806.75pt>
+File: figures/TEST_CIRCUIT.jpg Graphic file (type jpg)
+<use figures/TEST_CIRCUIT.jpg>
+Package pdftex.def Info: figures/TEST_CIRCUIT.jpg  used on input line 1316.
+(pdftex.def)             Requested size: 426.79134pt x 308.52188pt.
 )
 
-[127]
+[130
+
+ <./figures/TEST_CIRCUIT.jpg>]
 \openout2 = `body_matter/chap6.aux'.
 
  (body_matter/chap6.tex
-
-[128
-
-
-
-
-]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \textiota \textomicron  6.
 Package lettrine.sty Info: Targeted height = 21.27205pt
 (lettrine.sty)             (for loversize=0, accent excluded),
@@ -2916,12 +2953,17 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 (lettrine.sty)             reported on input line 2.
 )
 
-[129]
+[131
+
+
+
+
+]
 \openout2 = `body_matter/chap7.aux'.
 
  (body_matter/chap7.tex
 
-[130
+[132
 
 
 
@@ -2930,16 +2972,16 @@ Package lettrine.sty Info: Targeted height = 21.27205pt
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \textiota \textomicron  7.
 )
 
-[131]
+[133]
 
-[132]
+[134]
 \openout2 = `body_matter/chap8.aux'.
 
  (body_matter/chap8.tex
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \textiota \textomicron  8.
 
 
-[133
+[135
 
 
 
@@ -2971,77 +3013,77 @@ Overfull \hbox (2.0pt too wide) in paragraph at lines 106--106
 
 )
 
-[134]
+[136]
 
-[135]
+[137]
 
-[136
+[138
 
 
 
 ]
 
-[137]
+[139]
 
-[138]
+[140]
 \openout2 = `body_matter/chap9.aux'.
 
  (body_matter/chap9.tex
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \textiota \textomicron  9.
 
 
-[139
+[141
 
 
 ])
 
-[140]
+[142]
 
-[141
+[143
 
 
 
 ]
 
-[142]
+[144]
 \openout2 = `back_matter/appA.aux'.
 
  (back_matter/appA.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textAlpha \textnumeralsigngreek }.
 )
 
-[143
+[145
 
 
 ]
 
-[144]
+[146]
 \openout2 = `back_matter/appB.aux'.
 
  (back_matter/appB.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textBeta \textnumeralsigngreek }.
-<figures/2.png, id=1939, 187.70125pt x 119.44624pt>
+<figures/2.png, id=1954, 187.70125pt x 119.44624pt>
 File: figures/2.png Graphic file (type png)
 <use figures/2.png>
 Package pdftex.def Info: figures/2.png  used on input line 25.
 (pdftex.def)             Requested size: 187.70079pt x 119.44594pt.
 
 
-[145
+[147
 
 
 
 
  <./figures/2.png>])
 
-[146]
+[148]
 \openout2 = `back_matter/appC.aux'.
 
  (back_matter/appC.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textGamma \textnumeralsigngreek }.
 )
 
-[147
+[149
 
 
 
@@ -3051,7 +3093,7 @@ Package pdftex.def Info: figures/2.png  used on input line 25.
 
  (back_matter/appD.tex
 
-[148
+[150
 
 
 
@@ -3060,28 +3102,28 @@ Package pdftex.def Info: figures/2.png  used on input line 25.
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textDelta \textnumeralsigngreek }.
 )
 
-[149]
+[151]
 \openout2 = `back_matter/appE.aux'.
 
  (back_matter/appE.tex
 
-[150
+[152
 
 
 
 
 ]
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \textmu \textalpha  {\greekscript \textEpsilon \textnumeralsigngreek }.
-<figures/frog.jpg, id=1983, 748.7975pt x 741.77126pt>
+<figures/frog.jpg, id=1998, 748.7975pt x 741.77126pt>
 File: figures/frog.jpg Graphic file (type jpg)
 <use figures/frog.jpg>
 Package pdftex.def Info: figures/frog.jpg  used on input line 6.
 (pdftex.def)             Requested size: 213.39566pt x 211.39569pt.
 )
 
-[151 <./figures/frog.jpg>]
+[153 <./figures/frog.jpg>]
 
-[152
+[154
 
 
 
@@ -3092,7 +3134,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--78
 
 
 
-[153
+[155
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 103--110
@@ -3111,11 +3153,11 @@ Underfull \hbox (badness 1297) in paragraph at lines 121--129
 
 
 
-[154]
-
-[155]
-
 [156]
+
+[157]
+
+[158]
 Underfull \hbox (badness 3579) in paragraph at lines 403--410
 []\T1/mak/m/n/10.95 The Th-ings In-du-stries\LGR/mak/m/n/10.95 .  []\T1/mak/m/it/10.95 Ra-sp-berry Pi Lo-Ra-W-AN Ga-te-w-ay Do-cu-me-nta-tion[]\LGR/mak/m/n/10.95 .
  []
@@ -3140,25 +3182,25 @@ LaTeX Font Warning: Font shape `LGR/zi4/m/n' undefined
 Missing character: There is no v in font gk7t!
 
 
-[157])
+[159])
 
-[158] (back_matter/abbreviations.tex)
+[160] (back_matter/abbreviations.tex)
 
-[159
+[161
 
 ]
 
-[160
+[162
 
 ] (back_matter/glossary.tex)
 
-[161] LaTeX Warning: (ntua_thesis.cls): The "plain" option has been selected. CD label generation has been disabled.
+[163] LaTeX Warning: (ntua_thesis.cls): The "plain" option has been selected. CD label generation has been disabled.
  
 LaTeX Warning: (ntua_thesis.cls): The "plain" option has been selected. CD cover generation has been disabled.
  
 
 
-[162
+[164
 
 ] (main.aux (front_matter/abstract.aux) (front_matter/acknowledgements.aux) (body_matter/intro.aux) (body_matter/chap2.aux) (body_matter/chap3.aux) (body_matter/chap4.aux) (body_matter/chap5.aux) (body_matter/chap6.aux) (body_matter/chap7.aux) (body_matter/chap8.aux) (body_matter/chap9.aux) (back_matter/appA.aux) (back_matter/appB.aux) (back_matter/appC.aux) (back_matter/appD.aux) (back_matter/appE.aux))
  ***********
@@ -3174,10 +3216,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 40200 strings out of 469941
- 766847 string characters out of 5485294
- 1718339 words of memory out of 5000000
- 65145 multiletter control sequences out of 15000+600000
+ 40213 strings out of 469941
+ 767131 string characters out of 5485294
+ 1718422 words of memory out of 5000000
+ 65154 multiletter control sequences out of 15000+600000
  736190 words of font info for 267 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  99i,18n,152p,1319b,2959s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3191,9 +3233,9 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
  <C:\Users\Theodore\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\Theodore\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1000.pk> <C:\Users\Theodore\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcit1000.pk> <C:\Users\Theodore\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><D:/Programs/fonts/type1/public/inconsolata/Inconsolata-zi4b.pfb><D:/Programs/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis-Bold.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis-BoldItalic.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis-Italic.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis-SmallCaps.pfb><D:/Programs/fonts/type1/public/kerkis/Kerkis.pfb><D:/Programs/fonts/type1/public/cbgreek/grmn1095.pfb><D:/Programs/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb><D:/Programs/fonts/type1/public/txfonts/rtxr.pfb><D:/Programs/fonts/type1/public/txfonts/txex.pfb><D:/Programs/fonts/type1/public/txfonts/txsy.pfb><D:/Programs/fonts/type1/public/txfonts/txsya.pfb><D:/Programs/fonts/type1/public/txfonts/txsyb.pfb><D:/Programs/fonts/type1/public/txfonts/txsyc.pfb><D:/Programs/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (168 pages, 12172005 bytes).
+Output written on main.pdf (170 pages, 16956088 bytes).
 PDF statistics:
- 2698 PDF objects out of 2984 (max. 8388607)
- 924 named destinations out of 1000 (max. 500000)
- 1198 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2717 PDF objects out of 2984 (max. 8388607)
+ 928 named destinations out of 1000 (max. 500000)
+ 1211 words of extra memory for PDF output out of 10000 (max. 10000000)
 

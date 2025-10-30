@@ -798,7 +798,7 @@ docker compose up
 
 \begin{Illustration}[!ht] 
   \centering
-	\includegraphics[width=0.75\textwidth]{figures/3_phase_meter.jpg} 
+	\includegraphics[width=0.8\textwidth]{figures/3_phase_meter.jpg} 
   \caption{Τελική συνδεσμολογία των εξαρτημάτων του τριφασικού μετρητή.}
   \label{figure5.13}
 \end{Illustration} 
@@ -894,7 +894,7 @@ PZEM004Tv30 pzems[NUM_PZEMS];
 
 // TTN Configuration
 const char *appEui = "0000000000000000";
-const char *appKey = "801DB5D9568291D81E92288241C681B1";
+const char *appKey = "EE5E017B3C82DEE19DDD069432C9C445";
 // Energy reset configuration
 unsigned long lastResetTime = §\cyan{0}§;
 const unsigned long resetInterval = §\cyan{15}§ * §\cyan{60000}§; // 15 minutes in milliseconds
@@ -1289,112 +1289,31 @@ function decodeUplink(input§\cyan{)}§ {
 
 
 
+% --------------------------------------------
+% Ενότητα 5.3 Πειραματική δοκιμή λειτουργείας
+% --------------------------------------------
 
 
+\clearpage
+
+\section{Πειραματική δοκιμή λειτουργείας}
+
+Έχοντας πλέον ρυθμίσει το \en{LoRaWAN gateway} και προετοιμάσει το \en{The Things Stack} για τη σύνδεση και 
+επικοινωνία με τον τριφασικό μετρητή, μπορούμε να ξεκινήσουμε την δοκιμή του συστήματος. Για αρχή ένα απλό 
+κύκλωμα με τρεις λαμπτήρες ώστε να προσομοιώσουμε μία τριφασική κατανάλωση. Συγκεκριμένα, 
+από ένα ρευματολήπτη (\en{plug}) απομονώνουμε τη φάση \textbf{\en{L}} (\en{Live}, μαύρο καλώδιο) και τον 
+ουδέτερο \textbf{\en{N}} (\en{Neutral}, μπλε). Στη συνέχεια διακλαδώνουμε την φάση σε 3 κλαδιά (κάθε κλαδί 
+αντιστοιχεί σε μία «υπο-φάση» της προσομοίωσης) και στην κάθε μία συνδέουμε τον ακροδέκτη \en{L} του αντίστοιχου \en{PZEM} 
+και εναν λαμπτήρα. Όμοια, συνδέουμε τον ουδέτερο του ρευματολήπτη με τον ακροδέκτη \en{N} όλων των \en{PZEM} 
+και με όλους τους λαμπτήρες. Τέλος, ο μετασχηματιστής ρεύματος του \en{PZEM (split CT)} συνδέται στην 
+αντίστοιχη «υπο-φάση», αμέσως μετά το σημείο που έγινε η διακλάδωση. Με αυτή τη συνδεσμολογία καταγράφονται 
+τόσο οι καταναλώσεις των λαμπτήρων όσο και οι ίδιες οι απώλειες/καταναλώσεις των \en{PZEM}, παρέχοντας 
+σαφή εικόνα συμπεριφοράς του τριφασικού μετρητή σε συνθήκες δοκιμής.
 
 
-
-
-
-
-
-
-
-
-
-% % --------------------------------------------
-% % 5.2.4 Firmware της συσκευής
-% % --------------------------------------------
-
-
-
-% Το \en{firmware} αρχικοποιεί τη στοίβα \en{LoRaWAN}, δημιουργεί τρεις \en{SoftwareSerial} θύρες (μία για κάθε \en{PZEM}), αναγιγνώσκει περιοδικά μεγέθη και τα πακετάρει σε \en{payload} 36 \en{bytes} (12 \en{bytes}/\en{phase}):
-
-% \begin{itemize}
-%   \item \textbf{Μεγέθη ανά \en{phase}:} \en{Voltage (V)}, \en{Current (A)}, \en{Power (W)}, \en{Energy (kWh)}, \en{Frequency (Hz)}, \en{Power Factor}.
-%   \item \textbf{Κωδικοποίηση (ενδεικτική):} 6 $\times$ \en{uint16} ανά \en{phase} με κλίμακες: \en{V} $\times$ 100, \en{A} $\times$ 100, \en{W} $\times$ 10, $kWh$ $\times$ 100, \en{Hz} $\times$ 100, \en{PF} $\times$ 1000. Σύνολο 12 \en{bytes}/\en{phase}.
-%   \item \textbf{\en{Uplink interval}:} π.χ. κάθε 30-60 \en{s} (ρυθμιζόμενο).
-% \end{itemize}
-
-% \paragraph{Σημεία προς συμπλήρωση κώδικα (placeholders):}
-% \begin{itemize}
-%   \item \textbf{\en{Credentials}:} \en{AppEUI}/\en{AppKey} (ή \en{ABP} κλειδιά).
-%   \item \textbf{\en{SoftwareSerial} αντιστοιχίσεις:} \en{Phase A}: \en{D10}/\en{D11}, \en{Phase B}: \en{D8}/\en{D9}, \en{Phase C}: \en{D4}/\en{D5}.
-%   \item \textbf{\en{PZEM} \en{init}} \& \en{read loop}.
-%   \item \textbf{\en{Pack}} των 36 \en{bytes} (σύμφωνα με τις κλίμακες).
-% \end{itemize}
-
-% \noindent\textit{[\textbf{PLACEHOLDER:} Εισαγωγή πλήρους \en{Arduino} \en{sketch} εδώ (π.χ. ως \en{\textbackslash lstinputlisting\{\}}).]}
-
-% % --------------------------------------------
-% % 5.2.5 Payload Formatter στην εφαρμογή TTS
-% % --------------------------------------------
-
-% \subsection{\en{Payload Formatter} στο \en{TTS Console}}
-
-% Στο \en{Console} της εφαρμογής ορίζουμε \en{Uplink Payload Formatter} σε \en{JavaScript} ώστε να αποκωδικοποιούμε τα 36 \en{bytes} σε δομή \en{JSON} με τρεις φάσεις:
-
-% \noindent\textit{[\textbf{PLACEHOLDER:} Εισαγωγή \en{formatter} \en{JavaScript} εδώ. Παρακάτω ενδεικτικός σκελετός που ταιριάζει στις κλίμακες των 12 \en{bytes}/\en{phase}.]}
-
-% % \begin{otherlanguage*}{english}
-% % \begin{lstlisting}[style=bashstyle]
-% % function decodeUplink(input) {
-% %   const dv = new DataView(Uint8Array.from(input.bytes).buffer);
-% %   const scale = { V:100, A:100, W:10, kWh:100, Hz:100, PF:1000 };
-% %   const phase = idx => {
-% %     const off = idx*12;
-% %     const V   = dv.getUint16(off+0 , false)/scale.V;
-% %     const A   = dv.getUint16(off+2 , false)/scale.A;
-% %     const W   = dv.getUint16(off+4 , false)/scale.W;
-% %     const kWh = dv.getUint16(off+6 , false)/scale.kWh;
-% %     const Hz  = dv.getUint16(off+8 , false)/scale.Hz;
-% %     const PF  = dv.getUint16(off+10, false)/scale.PF;
-% %     return { V,A,W,kWh,Hz,PF };
-% %   };
-% %   return { data: { phaseA: phase(0), phaseB: phase(1), phaseC: phase(2) } };
-% % }
-% % \end{lstlisting}
-% % \end{otherlanguage*}
-
-% \paragraph{Σημείωση.} Αν στο τελικό \en{firmware} χρησιμοποιηθούν διαφορετικές κλίμακες/σειρά πεδίων, ενημερώνουμε ανάλογα τον \en{formatter}.
-
-% % --------------------------------------------
-% % 5.2.6 Ένταξη στο TTS, δοκιμές και επιβεβαίωση
-% % --------------------------------------------
-
-% \subsection{Ένταξη στο \en{TTS}, δοκιμές και επιβεβαίωση}
-
-% \begin{enumerate}
-%   \item \textbf{Καταχώριση \en{end device}:} \en{OTAA} με \en{AppEUI}/\en{AppKey} (ή \en{ABP}). Ρύθμιση \en{EU868}, \en{FPort} (π.χ. \en{10}).
-%   \item \textbf{\en{Join}/\en{Uplink}:} Παρακολουθούμε \en{Live Data} της συσκευής για \en{Join-Accept} και πρώτα \en{uplinks}.
-%   \item \textbf{Επαλήθευση \en{payload}:} Επιβεβαιώνουμε ότι ο \en{formatter} επιστρέφει τα πεδία \en{phaseA}/\en{B}/\en{C}.
-%   \item \textbf{Διασταύρωση με όργανα:} Προαιρετικά, με πρότυπο \en{meter}, για σφάλμα και \en{PF}/\en{Hz}.
-% \end{enumerate}
-
-% % --------------------------------------------
-% % 5.2.7 Downlink: επαναφορά μετρητών ενέργειας
-% % --------------------------------------------
-
-% \subsection{\en{Downlink}: επαναφορά \en{energy counters}}
-
-% Υλοποιείται απλή εντολή \en{downlink} για \en{reset} των \en{energy counters} όλων των \en{PZEM}. Η συσκευή ακούει σε συγκεκριμένο \en{FPort} (π.χ. \en{10}) και \en{opcode} (π.χ. \en{0xA5}).
-
-% \begin{itemize}
-%   \item \textbf{Στο \en{firmware}:} Έλεγχος \en{downlink}, αναγνώριση \en{opcode}, κλήση \en{pzems[i].resetEnergy()}.
-%   \item \textbf{Στο \en{Console}:} \en{Downlink} $\rightarrow$ \en{Send}, \en{FPort}: \en{10}, \en{Payload}: \en{A5} (\en{HEX}).
-% \end{itemize}
-
-% \noindent\textit{[\textbf{PLACEHOLDER:} Απόσπασμα \en{firmware} που δέχεται \en{downlink} και εκτελεί \en{reset}.]}
-
-% % --------------------------------------------
-% % 5.2.8 Αντιμετώπιση προβλημάτων
-% % --------------------------------------------
-
-% \subsection{Αντιμετώπιση προβλημάτων}
-
-% \begin{itemize}
-%   \item \textbf{Ασταθείς μετρήσεις στα \en{5V}:} Δοκίμασε \en{3.3V} ή πρόσθεσε \en{level shifter} στο \en{UART}.
-%   \item \textbf{Καθόλου μετρήσεις:} Έλεγξε \en{RX/TX} αντιστροφή (\en{PZEM TX} $\rightarrow$ \en{Uno RX}), κοινή \en{GND}, \en{baud} \en{9600}, \en{SoftwareSerial} \en{pins}.
-%   \item \textbf{\en{LoRaWAN} χωρίς \en{uplinks}:} Έλεγξε \en{AppEUI}/\en{AppKey}, \en{freq plan}, \en{ADR}/\en{DR}, και την κάλυψη από το \en{gateway}.
-%   \item \textbf{Λανθασμένος \en{PF}/\en{Hz}:} Επιβεβαίωση κλίμακας/σειράς στο \en{payload} ή \en{formatter}.
-% \end{itemize}
+\begin{Illustration}[!ht] 
+  \centering      
+  \includegraphics[width=1\textwidth]{figures/TEST_CIRCUIT.jpg}       
+  \caption{Δοκιμαστικό κύκλωμα τριφασικού μετρητή με τρεις λαμπτήρες ως φορτία (φάσεις \en{L1-L3})}.       
+  \label{figure5.24}    
+\end{Illustration} 

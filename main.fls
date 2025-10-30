@@ -1270,6 +1270,13 @@ INPUT D:\Programs\fonts\vf\public\kerkis\ekbi8a.vf
 INPUT D:\Programs\fonts\tfm\public\kerkis\ekbi8r.tfm
 INPUT D:\Programs\fonts\tfm\jknappen\ec\ectt1000.tfm
 INPUT D:\Programs\fonts\tfm\jknappen\ec\tctt1000.tfm
+INPUT .\figures\TEST_CIRCUIT.jpg
+INPUT .\figures\TEST_CIRCUIT.jpg
+INPUT .\figures\TEST_CIRCUIT.jpg
+INPUT .\figures\TEST_CIRCUIT.jpg
+INPUT .\figures\TEST_CIRCUIT.jpg
+INPUT .\figures\TEST_CIRCUIT.jpg
+INPUT .\figures\TEST_CIRCUIT.jpg
 INPUT .\body_matter\chap6.tex
 INPUT .\body_matter\chap6.tex
 OUTPUT body_matter\chap6.aux
