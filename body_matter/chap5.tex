@@ -872,6 +872,7 @@ docker compose up
 \newpage
 
 \subsubsectionwc{Δομή κώδικα και ροή λειτουργίας}
+\label{subsubsec:5.2.2.2}
 
 Ακολουθεί ο κώδικας που χρησιμοποιήσαμε και στη συνέχεια η επεξήγησή του:
 
@@ -904,9 +905,10 @@ static const uint32_t INVALID32 = 0x§\cyan{FFFFFFFF}§;
 
 // Helper: encoding with scale into uint16_t (with check if NaN/Inf)
 inline uint16_t encodeScaled(float v, float scale§\cyan{)}§ {
-  if (!isfinite(v§\cyan{)}§ || isnan(v§\cyan{))}§ return INVALID16;   // NaN or Inf -> invalid
-  long val = lroundf(v * scale§\cyan{)}§;                    // rounding
-  if (val > 0x§\cyan{FFFF)}§ return INVALID16;               // out of range -> invalid
+  // NaN or Inf or negative -> invalid
+  if (!isfinite(v§\cyan{)}§ || isnan(v§\cyan{)}§ || v < 0.0§\cyan{f}§ || scale <= 0.0§\cyan{f)}§ return INVALID16;   
+  long val = lroundf(v * scale§\cyan{)}§;               // rounding
+  if (val > 0x§\cyan{FFFF)}§ return INVALID16;          // out of range -> invalid     
   return (uint16_t§\cyan{)}§val;
 }
 
@@ -926,7 +928,8 @@ inline void putBE32(uint8_t *buf, int idx, uint32_t u§\cyan{)}§ {
 
 // Helper: Send raw IEEE-754 float in big-endian
 inline void putFloatBE(uint8_t *buf, int idx, float energy§\cyan{)}§ {
-  if (!isfinite(energy§\cyan{)}§ || isnan(energy§\cyan{))}§ {    // NaN or Inf -> sentinel
+  // NaN or Inf or negative -> sentinel
+  if (!isfinite(energy§\cyan{)}§ || isnan(v§\cyan{)}§ || v < 0.0§\cyan{f}§ || scale <= 0.0§\cyan{f)}§ {    
     putBE32(buf, idx, INVALID32);
     return;
   }
@@ -1149,7 +1152,7 @@ void resetEnergyCounters(§\cyan{)}§ {
   \end{itemize}
   \begin{Illustration}[!ht] 
     \centering      
-    \includegraphics[width=0.9\textwidth]{figures/Choose_end_device_type.png}       
+    \includegraphics[width=1\textwidth]{figures/Choose_end_device_type.png}       
     \caption{Επιλογή \en{The Things Uno} μοντέλου από \en{Device registry} του \en{The Things Stack}.}      
     \label{figure5.22}    
   \end{Illustration}  
@@ -1167,16 +1170,14 @@ void resetEnergyCounters(§\cyan{)}§ {
     \caption{Συμπλήρωση \en{Provisioning information} για το νέο \en{end device}.}      
     \label{figure5.23}    
   \end{Illustration} 
-  \item Τέλος, πατάμε \textit{\en{Register end device}} και ολοκληρώνουμε την διαδικασία:
-  % \begin{Illustration}[!ht] 
-  %   \centering      
-  %   \includegraphics[width=0.8\textwidth]{figures/End_device_selection.png}       
-  %   \caption{Η καταχωρημένη τερματική συσκευή στο μενού της εφαρμογής.}      
-  %   \label{figure5.24}    
-  % \end{Illustration} 
+  \item Τέλος, πατάμε \textit{\en{Register end device}} και ολοκληρώνουμε την διαδικασία. Πλέον εμφανίζεται η συσκευή μας στο μενού \textit{\en{End devices}} της εφαρμογής:
+  \begin{Illustration}[!ht] 
+    \centering      
+    \includegraphics[width=0.8\textwidth]{figures/End_device_selection.png}       
+    \caption{Η καταχωρημένη τερματική συσκευή στο μενού της εφαρμογής.}      
+    \label{figure5.24}    
+  \end{Illustration} 
 \end{enumerate}
-
-\newpage
 
 \subsection{Κωδικοποίηση \en{Payload Formatter} στο \en{TTS}}
 
@@ -1196,7 +1197,18 @@ void resetEnergyCounters(§\cyan{)}§ {
 Εδώ ορίζουμε τον βασικό (\en{default}) \en{payload formatter} που θα χρησιμοποιούν όλες οι 
 εγγεγραμμένες τερματικές συσκευές στην εφαρμογή (μπορούμε να θέσουμε και αποκλειστικό 
 \en{payload formatter} για κάθε συσκευή). Επιλέγουμε αρχικά \textit{\textbf{\en{Formatter type:}}} 
-\textit{\en{Custom Javascript formatter}} και συμπληρώνουμε τον ακόλουθο κώδικα:
+\textit{\en{Custom Javascript formatter}} και συμπληρώνουμε τον κώδικα που ακολουθεί παρακάτω. 
+Στο τέλος πατάμε \textbf{\textit{\en{Save changes}}}.
+
+
+\begin{Illustration}[!ht] 
+  \centering      
+  \includegraphics[width=1\textwidth]{figures/Payload_formatter_selection.png}       
+  \caption{Κωδικοποίηση του \en{Default uplink payload formatter}.}
+  \label{figure5.26}    
+\end{Illustration} 
+
+\subsubsection{Κώδικας \en{payload formatter}}
 
 
 \begin{otherlanguage*}{english}
@@ -1287,13 +1299,12 @@ function decodeUplink(input§\cyan{)}§ {
 
 
 
-\clearpage 
 
 % --------------------------------------------
 % Ενότητα 5.3 Πειραματική δοκιμή λειτουργείας
 % --------------------------------------------
-% \FloatBarrier
-% \afterpage{\clearpage}
+
+
 
 
 \section{Πειραματική δοκιμή λειτουργείας}
@@ -1309,11 +1320,14 @@ function decodeUplink(input§\cyan{)}§ {
 αντίστοιχη «υπο-φάση», αμέσως μετά το σημείο που έγινε η διακλάδωση. Με αυτή τη συνδεσμολογία καταγράφονται 
 τόσο οι καταναλώσεις των λαμπτήρων όσο και οι ίδιες οι απώλειες/καταναλώσεις των \en{PZEM}, παρέχοντας 
 σαφή εικόνα συμπεριφοράς του τριφασικού μετρητή σε συνθήκες δοκιμής.
-\pagebreak
 
 \begin{Illustration}[!ht] 
   \centering      
   \includegraphics[width=1\textwidth]{figures/TEST_CIRCUIT.jpg}       
   \caption{Δοκιμαστικό κύκλωμα τριφασικού μετρητή με τρεις λαμπτήρες ως φορτία (φάσεις \en{L1-L3}). Το καλώδιο φάσης του ρευματολήπτη (μάυρο) χωρίζεται σε 3 καλώδια (κόκκινο, καφέ, μαύρο), τα οποία συνδέονται με ένα \en{PZEM} και ένα λαμπτήρα, αντιπροσωπεύοντας μία «υπο-φάση» το καθένα. Το καλώδιο ουδετέρου του ρευματολήπτη (μπλε) συνδέεται σε όλα τα \en{PZEM} και τους λαμπτήρες.}
-  \label{figure5.24}    
+  \label{figure5.25}    
 \end{Illustration} 
+
+Στη συνέχεια κάνουμε \en{upload} το \rn{Arduino sketch} στο \en{The Things Uno} (βλ. Υπο-υποενότητα 
+\ref{subsubsec:5.2.2.2}) και συνδέουμε τον ρευματολήπτη στην πρήζα (με προσοχή στις πολικότητες).
+
