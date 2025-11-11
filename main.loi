@@ -56,6 +56,8 @@
 \contentsline {illustration}{\numberline {5.24}{\ignorespaces Η καταχωρημένη τερματική συσκευή στο μενού της εφαρμογής.}}{127}{illustration.caption.81}%
 \contentsline {illustration}{\numberline {5.25}{\ignorespaces Κωδικοποίηση του \foreignlanguage {english}{Default uplink payload formatter}.}}{128}{illustration.caption.82}%
 \contentsline {illustration}{\numberline {5.26}{\ignorespaces Δοκιμαστικό κύκλωμα τριφασικού μετρητή με τρεις λαμπτήρες ως φορτία (φάσεις \foreignlanguage {english}{L1-L3}). Το καλώδιο φάσης του ρευματολήπτη (μάυρο) χωρίζεται σε 3 καλώδια (κόκκινο, καφέ, μαύρο), τα οποία συνδέονται με ένα \foreignlanguage {english}{PZEM} και ένα λαμπτήρα, αντιπροσωπεύοντας μία «υπο-φάση» το καθένα. Το καλώδιο ουδετέρου του ρευματολήπτη (μπλε) συνδέεται σε όλα τα \foreignlanguage {english}{PZEM} και τους λαμπτήρες.}}{130}{illustration.caption.83}%
+\contentsline {illustration}{\numberline {5.27}{\ignorespaces Ροή εντολών \foreignlanguage {english}{MAC} και επιτυχές \foreignlanguage {english}{OTAA join} της συσκευής στο \foreignlanguage {english}{EU868} (ρυθμίσεις καναλιών/ρυθμών, \foreignlanguage {english}{DevAddr}, \foreignlanguage {english}{DR5}, αποτυχημένη αλλαγή κλάσης ως αναμενόμενο).}}{131}{illustration.caption.84}%
+\contentsline {illustration}{\numberline {5.28}{\ignorespaces Ένδειξη \foreignlanguage {english}{Serial Monitor} με μετρήσεις από 3 \foreignlanguage {english}{PZEM-004T} και αποστολή \foreignlanguage {english}{uplink} (\foreignlanguage {english}{mac tx uncnf}) στο \foreignlanguage {english}{TTN}.}}{132}{illustration.caption.85}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -65,4 +67,4 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{153}{illustration.caption.89}%
+\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{157}{illustration.caption.91}%
