@@ -58,6 +58,8 @@
 \contentsline {illustration}{\numberline {5.26}{\ignorespaces Δοκιμαστικό κύκλωμα τριφασικού μετρητή με τρεις λαμπτήρες ως φορτία (φάσεις \foreignlanguage {english}{L1-L3}). Το καλώδιο φάσης του ρευματολήπτη (μάυρο) χωρίζεται σε 3 καλώδια (κόκκινο, καφέ, μαύρο), τα οποία συνδέονται με ένα \foreignlanguage {english}{PZEM} και ένα λαμπτήρα, αντιπροσωπεύοντας μία «υπο-φάση» το καθένα. Το καλώδιο ουδετέρου του ρευματολήπτη (μπλε) συνδέεται σε όλα τα \foreignlanguage {english}{PZEM} και τους λαμπτήρες.}}{130}{illustration.caption.83}%
 \contentsline {illustration}{\numberline {5.27}{\ignorespaces Ροή εντολών \foreignlanguage {english}{MAC} και επιτυχές \foreignlanguage {english}{OTAA join} της συσκευής στο \foreignlanguage {english}{EU868} (ρυθμίσεις καναλιών/ρυθμών, \foreignlanguage {english}{DevAddr}, \foreignlanguage {english}{DR5}, αποτυχημένη αλλαγή κλάσης ως αναμενόμενο).}}{131}{illustration.caption.84}%
 \contentsline {illustration}{\numberline {5.28}{\ignorespaces Ένδειξη \foreignlanguage {english}{Serial Monitor} με μετρήσεις από 3 \foreignlanguage {english}{PZEM-004T} και αποστολή \foreignlanguage {english}{uplink} (\foreignlanguage {english}{mac tx uncnf}) στο \foreignlanguage {english}{TTN}.}}{132}{illustration.caption.85}%
+\contentsline {illustration}{\numberline {5.29}{\ignorespaces Πίνακας \foreignlanguage {english}{Live data} στο \foreignlanguage {english}{TTS}: χρονολόγιο γεγονότων για \foreignlanguage {english}{join-accept} και εισερχόμενα \foreignlanguage {english}{uplinks}. Διακρίνονται τα πεδία \foreignlanguage {english}{DevAddr}, η επισήμανση \foreignlanguage {english}{Payload} με δεκαεξαδικά δεδομένα, καθώς και η προεπισκόπηση \foreignlanguage {english}{decoded\_payload} όταν είναι ενεργός ο \foreignlanguage {english}{formatter}.}}{133}{illustration.caption.86}%
+\contentsline {illustration}{\numberline {5.30}{\ignorespaces \foreignlanguage {english}{decoded\_payload} από τον \foreignlanguage {english}{formatter}: ανά \foreignlanguage {english}{sensor} προβάλλονται \foreignlanguage {english}{voltage}, \foreignlanguage {english}{current}, \foreignlanguage {english}{power}, \foreignlanguage {english}{energy}, \foreignlanguage {english}{frequency}, \foreignlanguage {english}{powerFactor}. Οι τιμές προκύπτουν από τις κλίμακες κωδικοποίησης του \foreignlanguage {english}{uplink} και είναι έτοιμες για αποθήκευση/οπτικοποίηση χωρίς περαιτέρω μετασχηματισμούς.}}{134}{illustration.caption.87}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -67,4 +69,4 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{157}{illustration.caption.91}%
+\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{157}{illustration.caption.93}%

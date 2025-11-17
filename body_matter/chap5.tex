@@ -1328,7 +1328,9 @@ function decodeUplink(input§\cyan{)}§ {
   \label{figure5.26}    
 \end{Illustration} 
 
-\noindent\textbf{Συνδεσμολογία δοκιμής (\en{PZEM}–λαμπτήρας):}
+\newpage
+
+\noindent\textbf{Συνδεσμολογία δοκιμής (\en{PZEM}-λαμπτήρας):}
 \begin{itemize}
   \item \textbf{\en{PZEM 1}} (κλάδος φάσης, κόκκινο καλώδιο): \en{OSRAM Bellalux} \textbf{75\,W}/\en{230\,V} (λευκός λαμπτήρας πυρακτώσεως). Ακροδέκτης \en{L} του \en{PZEM} στον αντίστοιχο κλάδο φάσης, ακροδέκτης \en{N} στον κοινό ουδέτερο. Ο \en{split CT} τυλίγει τον ίδιο αγωγό \en{L} με φορά «\en{source} $\rightarrow$ \en{load}».
   \item \textbf{\en{PZEM 2}} (κλάδος φάσης, καφέ καλώδιο): \en{Tungsram R63} \textbf{60\,W}/\en{240\,V} (ανακλαστήρας \en{spot}). Σύνδεση \en{L}/\en{N} όπως ανωτέρω, \en{CT} στον καφέ αγωγό προς το φορτίο.
@@ -1379,7 +1381,7 @@ function decodeUplink(input§\cyan{)}§ {
 \textbf{\en{uplink}} με την εντολή \textbf{\en{mac tx uncnf 1 <hex payload>}}, η οποία εμφανίζεται 
 στο τέλος ως δεκαεξαδική ακολουθία. 
 
-Κλείνοντας, οι ενδείξεις της Εικόνας \ref{figure5.28} είναι πλήρως συνεπείς με τη φυσική των ωμικών φορτίων 
+Οι ενδείξεις της Εικόνας \ref{figure5.28} είναι πλήρως συνεπείς με τη φυσική των ωμικών φορτίων 
 (\en{incandescent lamps}): ο συντελεστής ισχύος παραμένει ($\approx 1$) (\en{PF}=0.98-0.99), η συχνότητα 
 σταθερή κοντά στα (50$Hz$), ενώ η ενεργός ισχύς προσεγγίζει άριστα τον θεωρητικό υπολογισμό ($P\simeq V\cdot I$) 
 για κάθε κλάδο. Για τον \en{OSRAM 75 $W$/230 $V$} (\en{PZEM 1}) η μετρούμενη τιμή (77.2$W$) εξηγείται από την 
@@ -1390,3 +1392,55 @@ function decodeUplink(input§\cyan{)}§ {
 και με μικρή επίδραση της θερμοκρασίας του νήματος. Τέλος, οι σωρευτικές τιμές \en{energy} (0.001-0.002$kWh$) 
 (δηλ. (1-2$Wh$)) αντιστοιχούν σε λειτουργία λίγων λεπτών, επιβεβαιώνοντας ότι τόσο η κωδικοποίηση/αποστολή 
 του \en{uplink} όσο και η μέτρηση των τριών \en{PZEM} λειτουργούν ορθά και επαναλήψιμα στο παρόν στήσιμο.
+
+
+
+\noindent\textbf{Παραλαβή και αποκωδικοποίηση στο \en{The Things Stack}}
+
+Με το που εκπέμψει το \en{TTU} το \en{uplink}, λαμβάνεται από το \en{Basic Station}, το οποίο το προωθεί 
+(\en{forward}) μέσω \en{LNS} προς τον \en{Gateway Server} του
+\en{The Things Stack}. Εκεί, το μήνυμα ελέγχεται, αποκρυπτογραφείται από τον \en{Network Server} και αποκωδικοποιείται σε φυσικές μονάδες (\en{decoded\_payload}).
+Η όλη ροή αποτυπώνεται ζωντανά στην καρτέλα \en{Live data} της συσκευής (βλ. Εικόνα \ref{figure5.29}): πρώτα η αποδοχή ένταξης
+(\en{Accept join-request}/\en{Successfully processed join-accept}), στη συνέχεια η προώθηση και επιτυχής
+επεξεργασία των \en{uplinks} (\en{Forward uplink data message}/\en{Successfully processed data up message}),
+μαζί με προεπισκόπηση του \en{FRMPayload} (δεκαεξαδικό) και του αποτελέσματος της αποκωδικοποίησης.
+
+\begin{Illustration}[!ht]
+  \centering
+  \includegraphics[width=1.0\textwidth]{figures/TEST_TTS_CONNECT.png}
+  \caption{Πίνακας \en{Live data} στο \en{TTS}: χρονολόγιο γεγονότων για \en{join-accept} και εισερχόμενα \en{uplinks}. Διακρίνονται τα πεδία \en{DevAddr}, η επισήμανση \en{Payload} με δεκαεξαδικά δεδομένα, καθώς και η προεπισκόπηση \en{decoded\_payload} όταν είναι ενεργός ο \en{formatter}.}
+  \label{figure5.29}
+\end{Illustration}
+
+Στην Εικόνα \ref{figure5.29} φαίνεται αναλυτικά το χρονικό των μηνυμάτων. Δεξιά, στη στήλη \en{DATA PREVIEW},
+διακρίνεται το \en{DevAddr} που αποδόθηκε κατά το \en{OTAA}, ενώ για κάθε \en{uplink} εμφανίζεται το ωφέλιμο
+\en{FRMPayload} σε μορφή \en{hex}. Αν η λειτουργία \en{Verbose stream} είναι ενεργοποιημένη, προβάλλονται
+επιπλέον πληροφορίες (π.χ.\ χρόνοι, τύποι γεγονότων, κ.ά.), χρήσιμες για έλεγχο και αποσφαλμάτωση. Τα κουμπιά
+\en{Pause}/\en{Clear}/\en{Export as JSON} διευκολύνουν την παύση της ροής, την εκκαθάριση της λίστας και την
+εξαγωγή των γεγονότων αντίστοιχα.
+
+Ακολούθως, ο \en{Uplink Payload Formatter} μας εφαρμόζει τη σύμβαση
+κωδικοποίησης που ορίσαμε στο \en{TTU} (κλίμακες τιμών, \en{big-endian} πακετάρισμα, \en{sentinel} για
+\en{NaN}/\en{Inf}\\en{Neg}) και παράγει ένα δομημένο αντικείμενο \en{JSON} με τις τρεις φάσεις. Στην Εικόνα \ref{figure5.30}
+φαίνονται οι μετρήσεις ανά αισθητήρα \en{PZEM} (\en{sensor1-sensor3}) σε φυσικές μονάδες, ακριβώς όπως θα τις
+καταναλώσει λάβει η διαδικτυακή εφαρμογή που θα αναπτύξουμε στη συνέχεια (Κεφάλαιο \ref{chapter6}), μέσω \en{HTTP webhook}.
+
+\begin{Illustration}[!ht]
+  \centering
+  \includegraphics[width=0.80\textwidth]{figures/TEST_DECODED_PAYLOAD.png}
+  \caption{\en{decoded\_payload} από τον \en{formatter}: ανά \en{sensor} προβάλλονται \en{voltage}, \en{current},
+  \en{power}, \en{energy}, \en{frequency}, \en{powerFactor}. Οι τιμές προκύπτουν από τις κλίμακες κωδικοποίησης
+  του \en{uplink} και είναι έτοιμες για αποθήκευση/οπτικοποίηση χωρίς περαιτέρω μετασχηματισμούς.}
+  \label{figure5.30}
+\end{Illustration}
+
+Παρατηρούμε ότι τα πεδία του \en{decoded\_payload} (τάση γύρω στα $232$-$233\,\mathrm{V}$, ρεύμα
+$0.24$-$0.34\,\mathrm{A}$, ισχύς $49$-$77\,\mathrm{W}$, συχνότητα $\sim 50\,\mathrm{Hz}$, \en{PF} $0.98$-$0.99$,
+ενέργεια $1$-$2\,\mathrm{Wh}$ για λίγα λεπτά λειτουργίας) ταυτίζονται με τις ενδείξεις του \en{Serial Monitor}
+και επιβεβαιώνουν ότι η διαδρομή \en{Device} $\rightarrow$ \en{Basic Station} $\rightarrow$ \en{TTS} είναι
+ορθή. Το γεγονός ότι η αποκωδικοποίηση γίνεται εντός του \en{TTS} σημαίνει ότι η downstream κατανάλωση δεδομένων
+είναι απλούστερη: είτε μέσω \en{webhooks} (\en{JSON} \en{POST} στο \en{backend}) είτε μέσω \en{MQTT} οι ίδιες
+τιμές διατίθενται ήδη σε φυσικές μονάδες, μειώνοντας την πολυπλοκότητα στην εφαρμογή. Επιπλέον, η προβολή
+στο \en{Live data} επιτρέπει άμεσο εντοπισμό σφαλμάτων, όπως ασυνεπές \en{FPort}, μηδενικό \en{payload},
+λανθασμένη κλίμακα ή αποτυχία του \en{formatter}, που είναι χρήσιμο να γνωρίζουμε πριν προχωρήσουμε στην 
+ολοκλήρωση με το πληροφοριακό μας σύστημα.
