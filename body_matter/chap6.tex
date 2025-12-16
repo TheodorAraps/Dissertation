@@ -2,7 +2,7 @@
 % Κεφάλαιο 6: Web Εφαρμογή Παρακολούθησης
 % --------------------------------------------
 
-\chapter{Ανάπτυξη \en{Web} Εφαρμογής }
+\chapter{Ανάπτυξη \en{Web} Εφαρμογής για την οπτικοποίηση των δεδομένων}
 
 \InitialCharacter{Σ}το κεφάλαιο αυτό παρουσιάζεται η \en{web} εφαρμογή που αναπτύχθηκε 
 για την ε\-πο\-πτεί\-α του τριφασικού συστήματος μέτρησης, από το επίπεδο του διακομιστή 
@@ -37,10 +37,10 @@
   παραγωγή \en{JSON} δομής με τις φυσικές μετρήσεις (τάση, ρεύμα, ισχύς, ενέργεια, 
   συχνότητα, συντελεστής ισχύος ανά φάση), όπως περιγράφηκε στα προηγούμενα κεφάλαια.
 
-  \item \textbf{Επίπεδο \en{backend} (\en{Spring Boot} \en{REST API}):} Ένας \en{HTTP webhook} 
+  \item \textbf{Επίπεδο \en{backend} (\en{Spring Boot} \en{REST API}):} Ένα \en{HTTP webhook} 
   που εκτίθεται από την εφαρμογή \en{backend} (σε συγκεκριμένη \en{URL}) δέχεται τα 
-  \en{JSON} μηνύματα \en{uplink} από το \en{TTS}. Τα μηνύματα αυτά χαρτογραφούνται σε 
-  αντικείμενα \en{DTO}, μετατρέπονται σε οντότητες \en{JPA} και αποθηκεύονται στη βάση 
+  \en{JSON} μηνύματα (\en{uplink}) από το \en{TTS}. Τα μηνύματα αυτά χαρτογραφούνται σε 
+  αντικείμενα \en{DTO (Data Transfer Object)}, μετατρέπονται σε οντότητες \en{JPA} και αποθηκεύονται στη βάση 
   δεδομένων \en{PostgreSQL}. Παράλληλα, το ίδιο \en{REST API} παρέχει προστατευμένα 
   \en{endpoints} για ανάκτηση ιστορικών δεδομένων (π.χ. ανά μετρητή, ανά χρονικό διάστημα) 
   από την \en{React} εφαρμογή.
@@ -72,7 +72,7 @@
 παρεμβάλλεται στην \en{Spring Security} αλυσίδα και ελέγχει κάθε εισερχόμενο αίτημα 
 προς τα προστατευμένα \en{endpoints}.
 
-\subsection{Δομή πακέτων και βασικών κλάσεων}
+\subsection{Δομή πακέτων, βασικών κλάσεων και βάσης δεδομένων}
 
 Η εφαρμογή ακολουθεί μια κλασική στρωματοποιημένη δομή:
 
@@ -83,7 +83,7 @@
 
   \item \textbf{\en{service} πακέτα}: Υλοποιούν την επιχειρησιακή λογική (\en{business logic}), 
   όπως την επεξεργασία των \en{uplink} μηνυμάτων από το \en{TTS}, τον υπολογισμό ή την 
-  φιλτράρισή τους ανά ημερομηνία, καθώς και την διαχείριση χρηστών.
+  φιλτράρισμά τους ανά ημερομηνία, καθώς και την διαχείριση χρηστών.
 
   \item \textbf{\en{repository} πακέτα}: Ορίζουν τις διεπαφές \en{JPA repositories} που 
   διαχειρίζονται οντότητες όπως \en{SensorData}, \en{Meter} και \en{User}, χαρτογραφημένες 
@@ -91,13 +91,89 @@
 
   \item \textbf{\en{security} πακέτο}: Περιέχει τις κλάσεις \en{SecurityConfig}, \en{JWT} 
   βοηθητικές συναρτήσεις (π.χ. παραγωγή και επαλήθευση \en{tokens}) και το \en{filter} που 
-  ελέγχει την επικεφαλίδα \en{Authorization: Bearer ...} σε κάθε αίτημα.
+  ελέγχει την επικεφαλίδα "\en{Authorization: Bearer <token>}" σε κάθε αίτημα.
 \end{itemize}
 
 Το σχήμα της βάσης δεδομένων ελέγχεται από αρχεία \en{Liquibase changelog}, στα οποία 
 περιγράφονται οι πίνακες \en{users} (μοντέλο χρήστη με \en{username} και \en{password}), 
 οι πίνακες μετρητών και δεδομένων, καθώς και τυχόν περιορισμοί, \en{indexes} και σχέσεις 
-(π.χ. ένα πλήθος εγγραφών δεδομένων ανά μετρητή).:contentReference[oaicite:3]{index=3} 
+(π.χ. ένα πλήθος εγγραφών δεδομένων ανά μετρητή). Επιπλέον προστίθενται με αυτόν το τρόπο 
+τα δεδόμένα (πιστποιητικά) για τον \en{admin} χρήστη και οι βασικές πληγροφορίες για τους 2 μετρητές μας. 
+Η πίνακες της βάσης έχουν την εξής μορφή:
+
+\begin{table}[h!]
+\centering
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|l|l|p{0.45\textwidth}|}
+\hline
+\textbf{Όνομα πεδίου} & \textbf{Τύπος} & \textbf{Περιγραφή} \\
+\hline
+\en{id}         & \en{bigint (auto increment)} & Μοναδικό αναγνωριστικό εγγραφής μετρητή (πρωτεύον κλειδί). \\
+\hline
+\en{meter\_id}  & \en{varchar(50)}              & Λογικό αναγνωριστικό του μετρητή, όπως έχει δηλωθεί στο \en{The Things Stack} (\en{device\_id}). \\
+\hline
+\en{location}   & \en{varchar(100)}             & Περιγραφή θέσης εγκατάστασης του μετρητή (π.χ. «\en{MV Substation}», «\en{Lab bench}»). \\
+\hline
+\en{created\_at}& \en{timestamp}                & Ημερομηνία και ώρα δημιουργίας της εγγραφής (προεπιλογή \en{now()}). \\
+\hline
+\end{tabular}
+\caption{Πεδία του πίνακα \en{meter}.}
+\label{tab:db_meter}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|l|l|p{0.45\textwidth}|}
+\hline
+\textbf{Όνομα πεδίου} & \textbf{Τύπος} & \textbf{Περιγραφή} \\
+\hline
+\en{id}            & \en{bigint (auto increment)} & Μοναδικό αναγνωριστικό εγγραφής μέτρησης (πρωτεύον κλειδί). \\
+\hline
+\en{meter\_id}     & \en{bigint}                  & Ξένο κλειδί προς τον πίνακα \en{meter} (συσχέτιση μέτρησης με συγκεκριμένο μετρητή). \\
+\hline
+\en{sensor\_id}    & \en{varchar(50)}             & Αναγνωριστικό φάσης/καναλιού (\en{sensor1}, \en{sensor2}, \en{sensor3}). \\
+\hline
+\en{current}       & \en{double precision}        & Ρεύμα φάσης σε \en{A}. \\
+\hline
+\en{energy}        & \en{double precision}        & Ενέργεια φάσης σε \en{kWh}. \\
+\hline
+\en{frequency}     & \en{double precision}        & Συχνότητα δικτύου σε \en{Hz}. \\
+\hline
+\en{power}         & \en{double precision}        & Ενεργός ισχύς φάσης σε \en{W}. \\
+\hline
+\en{power\_factor} & \en{double precision}        & Συντελεστής ισχύος (\en{power factor}) φάσης (αδιάστατο μέγεθος). \\
+\hline
+\en{voltage}       & \en{double precision}        & Τάση φάσης σε \en{V}. \\
+\hline
+\en{timestamp}     & \en{timestamp}               & Χρονοσήμανση λήψης/αποθήκευσης της συγκεκριμένης μέτρησης. \\
+\hline
+\end{tabular}
+\caption{Πεδία του πίνακα \en{sensor\_data}.}
+\label{tab:db_sensor_data}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|l|l|p{0.45\textwidth}|}
+\hline
+\textbf{Όνομα πεδίου} & \textbf{Τύπος} & \textbf{Περιγραφή} \\
+\hline
+\en{id}        & \en{bigint (auto increment)} & Μοναδικό αναγνωριστικό χρήστη (πρωτεύον κλειδί). \\
+\hline
+\en{username}  & \en{varchar(255)}            & Όνομα χρήστη (\en{login}) του διαχειριστή της εφαρμογής. \\
+\hline
+\en{password}  & \en{varchar(255)}            & Κωδικός πρόσβασης του χρήστη, αποθηκευμένος σε μορφή \en{hash} (\en{bcrypt}). \\
+\hline
+\end{tabular}
+\caption{Πεδία του πίνακα \en{users}.}
+\label{tab:db_users}
+\end{table}
+
 
 \subsection{Διαχείριση εισερχόμενων \en{uplinks} μέσω \en{webhook}}
 
@@ -105,10 +181,24 @@
 στέλνει τα \en{uplink} μηνύματα. Η διαδικασία έχει ως εξής:
 
 \begin{enumerate}
-  \item Στο \en{The Things Stack Console} έχει δημιουργηθεί μία \en{Application} όπου έχουν 
+  \item Στο \en{The Things Stack Console} έχουμε δημιουργήσει ένα \en{Application} όπου έχουν 
   καταχωρηθεί οι τριφασικοί μετρητές ως \en{end devices}. Για την εφαρμογή αυτή 
   ενεργοποιείται ένας \en{HTTP webhook} που στο πεδίο \en{Base URL} δείχνει προς την 
-  \en{URL} του \en{backend} (π.χ. \en{http://192.168.0.100:8080/api/tts/uplink}).
+  \en{URL} του \en{backend} (\en{http://192.168.0.100:8080/lorawan-data}). Προκειμένου να δημιουργήσουμε 
+  ένα νέο \en{webhook} ακολουθούμε την εξής διαδικασία:
+
+  Στην κονσόλα του \en{TTS} ανοίγουμε την εφαρμογή μας $\rightarrow$ \en{Integrations} 
+  $\rightarrow$ \en{Webhooks} $\rightarrow$ \en{+ Add webhook}. Διαλέγουμε \en{Custom Webhook}, 
+  ορίζουμε \en{Webhook ID} και \en{Base URL} (τελικό \en{endpoint} του \en{backend}). Στο πεδίο 
+  \en{Enable event types} επιλέγουμε \en{Uplink message} και πατάμε \en{Add webhhook} για να 
+  ολοκληρώσουμε την διαδικασία.
+  
+  \begin{Illustration}[!ht]     
+    \centering    
+    \includegraphics[width=1\textwidth]{figures/WEBHOOK.png}     
+    \caption{Στην εφαρμογή \en{3-Phase Power Meters}, φαίνεται το ενεργό \en{webhook} με \en{ID power-monitoring-app-webhook} και \en{Base URL http://192.168.0.100:8080/lorawan-data}.}    
+    \label{figure6.1}  
+  \end{Illustration}
   
   \item Για κάθε \en{uplink} μήνυμα, το \en{TTS} στέλνει ένα \en{HTTP POST} προς το 
   \en{webhook} με σώμα \en{JSON}. Στο \en{body} περιλαμβάνονται μεταδεδομένα 
@@ -117,65 +207,67 @@
   \en{sensor2}, \en{sensor3} κ.ά.).
 
   \item Στον \en{backend}, ένας \en{controller} δέχεται το \en{POST}, το χαρτογραφεί σε 
-  \en{DTO} κλάσεις (π.χ. \en{UplinkMessageDto}, \en{DecodedPayloadDto}) και εξάγει τα 
-  απαραίτητα πεδία:
+  \en{DTO} κλάσεις και εξάγει τα απαραίτητα πεδία:
   \begin{itemize}
-    \item το αναγνωριστικό του μετρητή από \en{end\_device\_ids.device\_id},
+    \item το αναγνωριστικό του μετρητή (\en{device\_id}),
     \item τις τιμές ανά φάση από τα \en{sensor1}, \en{sensor2}, \en{sensor3},
     \item τη χρονοσήμανση \en{received\_at}.
   \end{itemize}
 
-  \item Οι τιμές αυτές μετατρέπονται σε οντότητες \en{SensorData} (ή αντίστοιχη ονομασία), 
+  \item Οι τιμές αυτές μετατρέπονται σε οντότητες \en{SensorData}, 
   με πεδία όπως \en{sensorId}, \en{voltage}, \en{current}, \en{power}, \en{energy}, 
   \en{frequency}, \en{powerFactor}, \en{timestamp}, και αποθηκεύονται στη βάση χωρίς 
   απώλεια ακρίβειας.
 
   \item Ο \en{controller} επιστρέφει μία απλή \en{HTTP 2xx} απόκριση στο \en{TTS}, ώστε ο 
-  \en{network server} να θεωρήσει το \en{uplink} παραδοθέν και να μην το επανεκπέμψει.
+  \en{network server} να θεωρήσει το \en{uplink} παραδόθηκε και να μην το επανεκπέμψει.
 \end{enumerate}
 
 Με αυτόν τον τρόπο, η \en{Spring Boot} εφαρμογή λειτουργεί ως «γέφυρα» ανάμεσα στο 
 \en{LoRaWAN} επίπεδο και στην επίμονη αποθήκευση (\en{PostgreSQL}), παρέχοντας μία 
 καθαρή και επεκτάσιμη διεπαφή για κατανάλωση των δεδομένων από το \en{frontend}.
 
-\subsection{REST \en{API} προς την \en{React} εφαρμογή}
+\subsection{\en{REST API} προς την \en{React} εφαρμογή}
 
-Πέρα από τον \en{webhook}, το \en{backend} εκθέτει και ένα σύνολο \en{REST endpoints} για 
+Πέρα από το \en{webhook}, το \en{backend} εκθέτει και ένα σύνολο από \en{REST endpoints} για 
 ανάγνωση δεδομένων από την \en{React} εφαρμογή. Ενδεικτικά:
 
 \begin{itemize}
-  \item \en{POST /api/auth/login}: Δέχεται \en{username}/\en{password}, τα ελέγχει 
-  έναντι του πίνακα \en{users} και, σε επιτυχία, επιστρέφει \en{JWT token} που ο 
-  φυλλομετρητής αποθηκεύει τοπικά.
+\item \textbf{\en{POST /api/auth/login}}: δέχεται \en{username}/\en{password} και, σε επιτυχία, 
+επιστρέφει \en{JWT} για χρήση στις επόμενες κλήσεις.
 
-  \item \en{GET /api/sensors?from=... \& to=... \& sensorId=...}: Επιστρέφει 
-  \en{JSON} λίστα με εγγραφές \en{SensorData} σε επιλεγμένο χρονικό διάστημα για 
-  συγκεκριμένο μετρητή (ή για όλες τις φάσεις). Οι εγγραφές αυτές τροφοδοτούν τα 
-  γραφήματα στο \en{frontend}.
+\item \textbf{\en{POST /api/auth/logout}}: προαιρετικό \en{endpoint} για συνέπεια ροής. Στην πράξη το \en{logout} γίνεται 
+\en{client-side} με διαγραφή του \en{JWT}. Επιστρέφει \en{HTTP 200 OK} με μήνυμα επιτυχίας.
 
-  \item \en{GET /api/health}: Απλό σημείο ελέγχου κατάστασης (\en{health-check}) που 
-  χρησιμοποιείται τόσο για δοκιμές, όσο και για παρακολούθηση της διαθεσιμότητας του 
-  \en{backend} από το \en{gateway}.
+\item \textbf{\en{GET /api/data/meter-data}}: επιστρέφει λίστα με όλους τους μετρητές (σύνοψη/μεταδεδομένα).
+
+\item \textbf{\en{GET /api/data/meter-data/sensor-data/\{meterId\}}}: επιστρέφει όλες τις εγγραφές μέτρησης 
+που αντιστοιχούν στον συγκεκριμένο μετρητή.
+
+\item \textbf{\en{GET /api/data/meter-data/sensor-data/\{meterId\}/\{sensorId\}}}: επιστρέφει τις εγγραφές 
+του συγκεκριμένου καναλιού/αισθητήρα του μετρητή.
+
+\item \textbf{\en{GET /api/health}}: απλό \en{health-check} για διαθεσιμότητα υπηρεσίας.
 \end{itemize}
 
-Όλα τα σημαντικά \en{endpoints} (πλην \en{login} και \en{health}) προστατεύονται από 
-\en{JWT}-βασισμένη αυθεντικοποίηση: ο \en{client} πρέπει να στείλει κεφαλίδα 
-\en{Authorization: Bearer <token>} διαφορετικά λαμβάνει \en{HTTP 401}.
+Τα ουσιώδη \en{endpoints} (πλην \en{login} και \en{health}) προστατεύονται με \en{JWT}. 
+Ο \en{client} οφείλει να στέλνει \en{Authorization: Bearer <token>}, διαφορετικά λαμβάνει 
+\en{HTTP 401}.
 
-\subsection{Ανάπτυξη του \en{backend} στο \en{LoRaWAN gateway}}
+% \subsection{Ανάπτυξη του \en{backend} στο \en{LoRaWAN gateway}}
 
-Για την παραγωγική λειτουργία, το \en{backend} πακετάρεται σε \en{fat JAR} (\en{Spring Boot 
-executable jar}) και τρέχει στο \en{Raspberry Pi} με \en{Java 17}. Η βάση δεδομένων 
-\en{PostgreSQL} μπορεί είτε να τρέχει ως \en{Docker container} στον ίδιο \en{host} (με 
-δέσμευση μόνο στη τοπική διεπαφή \en{127.0.0.1}), είτε να φιλοξενείται σε ξεχωριστό 
-\en{container} ή μηχάνημα, αρκεί να είναι προσβάσιμη από το \en{backend}. Στην εκκίνηση 
-της εφαρμογής, το \en{Liquibase} εκτελεί τα \en{changelogs} και διασφαλίζει ότι το 
-σχήμα της βάσης βρίσκεται στην κατάλληλη έκδοση.:contentReference[oaicite:4]{index=4} 
+% Για την παραγωγική λειτουργία, το \en{backend} πακετάρεται σε \en{fat JAR} (\en{Spring Boot 
+% executable jar}) και τρέχει στο \en{Raspberry Pi} με \en{Java 17}. Η βάση δεδομένων 
+% \en{PostgreSQL} μπορεί είτε να τρέχει ως \en{Docker container} στον ίδιο \en{host} (με 
+% δέσμευση μόνο στη τοπική διεπαφή \en{127.0.0.1}), είτε να φιλοξενείται σε ξεχωριστό 
+% \en{container} ή μηχάνημα, αρκεί να είναι προσβάσιμη από το \en{backend}. Στην εκκίνηση 
+% της εφαρμογής, το \en{Liquibase} εκτελεί τα \en{changelogs} και διασφαλίζει ότι το 
+% σχήμα της βάσης βρίσκεται στην κατάλληλη έκδοση.:contentReference[oaicite:4]{index=4} 
 
-Έτσι, στην ίδια συσκευή \en{gateway} συνυπάρχουν: \en{The Things Stack} (\en{Docker}), 
-\en{LoRa Basics Station} (\en{Docker}) και η \en{Spring Boot} \en{REST} υπηρεσία, 
-συγκροτώντας μία συμπαγή, αλλά ολοκληρωμένη πλατφόρμα από το επίπεδο του αισθητήρα μέχρι 
-την εφαρμογή.
+% Έτσι, στην ίδια συσκευή \en{gateway} συνυπάρχουν: \en{The Things Stack} (\en{Docker}), 
+% \en{LoRa Basics Station} (\en{Docker}) και η \en{Spring Boot} \en{REST} υπηρεσία, 
+% συγκροτώντας μία συμπαγή, αλλά ολοκληρωμένη πλατφόρμα από το επίπεδο του αισθητήρα μέχρι 
+% την εφαρμογή.
 
 
 % ------------------------------------------------------
