@@ -62,6 +62,13 @@
 \contentsline {illustration}{\numberline {5.30}{\ignorespaces \foreignlanguage {english}{decoded\_payload} από τον \foreignlanguage {english}{formatter}: ανά \foreignlanguage {english}{sensor} προβάλλονται \foreignlanguage {english}{voltage}, \foreignlanguage {english}{current}, \foreignlanguage {english}{power}, \foreignlanguage {english}{energy}, \foreignlanguage {english}{frequency}, \foreignlanguage {english}{powerFactor}. Οι τιμές προκύπτουν από τις κλίμακες κωδικοποίησης του \foreignlanguage {english}{uplink} και είναι έτοιμες για αποθήκευση/οπτικοποίηση χωρίς περαιτέρω μετασχηματισμούς.}}{134}{illustration.caption.87}%
 \addvspace {10\p@ }
 \contentsline {illustration}{\numberline {6.1}{\ignorespaces Στην εφαρμογή \foreignlanguage {english}{3-Phase Power Meters}, φαίνεται το ενεργό \foreignlanguage {english}{webhook} με \foreignlanguage {english}{ID power-monitoring-app-webhook} και \foreignlanguage {english}{Base URL http://192.168.0.100:8080/lorawan-data}.}}{138}{illustration.caption.91}%
+\contentsline {illustration}{\numberline {6.2}{\ignorespaces Σελίδα \foreignlanguage {english}{Login} της διαδικτυακής εφαρμογής.}}{142}{illustration.caption.92}%
+\contentsline {illustration}{\numberline {6.3}{\ignorespaces Επιλογή μετρητή προς απεικόνιση.}}{142}{illustration.caption.93}%
+\contentsline {illustration}{\numberline {6.4}{\ignorespaces Επιλογή μετρητή προς απεικόνιση.}}{143}{illustration.caption.94}%
+\contentsline {illustration}{\numberline {6.5}{\ignorespaces Επιλογή μορφής διαγράμματος.}}{143}{illustration.caption.95}%
+\contentsline {illustration}{\numberline {6.6}{\ignorespaces Επιλογή κάτω ορίου του χρονικού διαστήματος των δεδομένων.}}{143}{illustration.caption.96}%
+\contentsline {illustration}{\numberline {6.7}{\ignorespaces Βασική σελίδα (\foreignlanguage {english}{Dashboard}) της διαδικτυακής εφαρμογής.}}{144}{illustration.caption.97}%
+\contentsline {illustration}{\numberline {6.8}{\ignorespaces Πίνακας με την αναλυτική παρουσίαση των δεδομένων.}}{144}{illustration.caption.98}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -70,4 +77,4 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{163}{illustration.caption.97}%
+\contentsline {illustration}{\numberline {{\greekscript \textEpsilon \textnumeralsigngreek }.1}{\ignorespaces Βάτραχος}}{165}{illustration.caption.104}%

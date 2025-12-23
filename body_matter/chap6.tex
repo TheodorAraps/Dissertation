@@ -271,16 +271,16 @@
 
 
 % ------------------------------------------------------
-% Ενότητα 6.3 Frontend: React/TypeScript διεπαφή χρήστη
+% Ενότητα 6.3 Frontend: React διεπαφή χρήστη
 % ------------------------------------------------------
 
-\section{\en{Frontend}: \en{React/TypeScript} διεπαφή χρήστη}
+\section{\en{Frontend}: \en{React} διεπαφή χρήστη}
 
 Το \en{frontend} της εφαρμογής υλοποιείται με \en{React} και \en{TypeScript} και 
 οργανώνεται ως \en{SPA} με διακριτές σελίδες/οθόνες: \en{Login}, \en{Dashboard} και 
 συστατικά (\en{components}) για την αναπαράσταση των μετρήσεων. Για τη γραφική απεικόνιση 
 χρησιμοποιείται η βιβλιοθήκη \en{react-chartjs-2} μαζί με \en{Chart.js}, ενώ για την 
-επικοινωνία με το \en{backend} χρησιμοποιείται \en{Axios} για \en{HTTP} \en{JSON} κλήσεις.:contentReference[oaicite:5]{index=5} 
+επικοινωνία με το \en{backend} χρησιμοποιείται \en{Axios} για \en{HTTP} \en{JSON} κλήσεις.
 
 \subsection{Δομή και βασικά \en{components}}
 
@@ -293,7 +293,7 @@
 
   \item \textbf{\en{Login} \en{component}}: Απλή φόρμα με πεδία \en{username}/\en{password}, 
   που καλεί το \en{POST /api/auth/login}. Σε επιτυχία αποθηκεύει το \en{token} σε 
-  \en{localStorage} ή \en{sessionStorage} και ανακατευθύνει στον \en{Dashboard}.
+  \en{localStorage} ή \en{sessionStorage} και ανακατευθύνει στο \en{Dashboard}.
 
   \item \textbf{\en{Dashboard} \en{component}}: Βασική οθόνη εποπτείας. Περιλαμβάνει 
   επιλογείς χρονικού διαστήματος (π.χ. ημερομηνία από/έως), επιλογή μετρητή ή φάσης, 
@@ -324,14 +324,14 @@
 Κατά την είσοδο του χρήστη, το \en{Login component} στέλνει \en{HTTP POST} στη 
 διαδρομή \en{/api/auth/login}. Αν τα διαπιστευτήρια είναι σωστά, το \en{backend} 
 επιστρέφει ένα \en{JWT token} (τυπικά στη μορφή \en{header.payload.signature}). Το 
-\en{frontend} αποθηκεύει το \en{token} και, σε κάθε επόμενη κλήση προς προστατευμένο 
+\en{frontend} αποθηκεύει το \en{token} και σε κάθε επόμενη κλήση προς κάποιο προστατευμένο 
 \en{endpoint}, προσθέτει στην επικεφαλίδα \en{Authorization} την τιμή 
 \en{Bearer <token>}.
 
 Η βιβλιοθήκη \en{Axios} ρυθμίζεται έτσι ώστε να περιλαμβάνει αυτόματα την κεφαλίδα 
 σε όλες τις κλήσεις προς \en{/api/...}. Αν το \en{backend} επιστρέψει \en{401 Unauthorized} 
-(π.χ. λόγω ληγμένου \en{token}), η εφαρμογή μπορεί είτε να ανακατευθύνει τον χρήστη στη 
-σελίδα \en{Login}, είτε να εμφανίσει σχετικό μήνυμα λάθους.
+(π.χ. λόγω ληγμένου \en{token}), η εφαρμογή μπορεί ανακατευθύνει τον χρήστη στη 
+σελίδα \en{Login} και εμφανίζει σχετικό μήνυμα λάθους.
 
 \subsection{Γραφική αναπαράσταση και επιλογές χρήστη}
 
@@ -350,7 +350,138 @@
   πρόσφατα \en{uplinks}.
 \end{itemize}
 
-Στις επόμενες υποενότητες (που ακολουθούν στο υπόλοιπο του κεφαλαίου) παρατίθενται 
-στιγμιότυπα (\en{screenshots}) του \en{UI} της εφαρμογής (σε μορφή Εικόνων), όπου 
-επεξηγούνται αναλυτικά οι επιλογές, οι αλληλεπιδράσεις του χρήστη και παραδείγματα 
+Στην επόμενη ενότητα παρατίθενται 
+στιγμιότυπα (\en{screenshots}) του \en{UI} της εφαρμογής, όπου 
+επεξηγούνται αναλυτικά οι επιλογές, οι αλληλεπιδράσεις του χρήστη και παρα\-δείγ\-μα\-τα 
 πραγματικών δεδομένων από το σύστημα τριφασικής μέτρησης.
+
+
+\section{Εκκίνηση εφαρμογής και παρουσίαση λειτουργειών}
+
+Αρχικά, ρυθμίζουμε ένα \en{docker-compose.yml} αρχείο (και τα αντίστοιχα \en{Dockerfile} αρ\-χεί\-α) προκειμένου να τρέξουμε το \en{backend} και το \en{frontend} 
+μέρος της διαδικτυακής εφαρμογής μας μέσω \en{docker}:
+
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=dockercomposestyle]
+services:
+  postgres:
+    image: postgres:13
+    container_name: power-monitoring-postgres
+    environment:
+      POSTGRES_DB: power_monitoring
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432" 
+
+  app:
+    image: power-monitoring-app
+    container_name: power-monitoring-app
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/power_monitoring
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_PROFILES_ACTIVE: dev
+    ports:
+      - "8080:8080"
+
+  frontend:
+    image: power-monitoring-frontend
+    container_name: power-monitoring-frontend
+    depends_on:
+      - app
+    ports:
+      - "3000:80"
+
+volumes:
+  postgres-data:
+
+\end{lstlisting}
+\end{otherlanguage*}
+
+Στη συνέχεια τρέχουμε την εντολή \textit{\en{docker compose up}} για να εκκινήσουμε τα \en{container}. Αφότου ενεργοποιηθούν, 
+ανοίγουμε τον φυλλομετρητή της επιλογής μας και συνδεόμαστε στην διεύθυνση \textbf{\en{http:\///192.168.0.100:3000/}}. Η εφαρμογή μας 
+ανακατευθύνει στην σελίδα \en{login}:
+
+\begin{Illustration}[!ht]     
+  \centering    
+  \includegraphics[width=1\textwidth]{figures/APP_LOGIN.png}     
+  \caption{Σελίδα \en{Login} της διαδικτυακής εφαρμογής.}
+  \label{figure6.2}  
+\end{Illustration}
+
+Συνδεόμαστε με τα διαπιστευτήρια που έχουμε αποθηκεύσει στη βάση του \en{backend}:
+
+\en{\textbf{Username}: admin}
+
+\en{\textbf{Password}: password}
+
+Αμέσως μετά φορτώνεται η βασική σελίδα της εφαρμογής (Εικόνα \ref{figure6.7}). Στο πάνω μέρος δεξιά βλέπουμε το κόκκινο κουμπί \textit{\en{Logout}} 
+με το οποίο μπορούμε να αποσυνδεθούμε από τον λογαριασμό μας. Ακολούθως στην καρτέλα απο κάτω βλέπουμε στην κορυφή να αναγράφεται ο επιλεγμένος 
+προw επισκόπηση μετρητής και ακριβώς από κάτω τα φίλτρα για την επιλογή των δεδομένων προς αναπαράσταση. Τα φίλτρα είναι τα εξής:
+
+\begin{itemize}
+\item \textbf{\en{Select Meter:}} Επιλογή του μετρητή που θα προβληθεί.
+
+\begin{Illustration}[!ht]     
+  \centering    
+  \includegraphics[width=1\textwidth]{figures/APP_SELECT_METER.png}     
+  \caption{Επιλογή μετρητή προς απεικόνιση.}
+  \label{figure6.3}  
+\end{Illustration}
+
+\item \textbf{\en{Select Value:}} Επιλογή μετρητικής ποσότητας που θα απεικονιστεί στο γράφημα.
+
+\begin{Illustration}[!ht]     
+  \centering    
+  \includegraphics[width=1\textwidth]{figures/APP_SELECT_VALUE.png}     
+  \caption{Επιλογή μετρητή προς απεικόνιση.}
+  \label{figure6.4}  
+\end{Illustration}
+
+\item \textbf{\en{Chart Type:}} Επιλογή μορφής διαγράμματος για την απεικόνιση (\en{Line Chart}, \en{Bar Chart}, \en{Pie Chart}).
+
+\begin{Illustration}[!ht]     
+  \centering    
+  \includegraphics[width=1\textwidth]{figures/APP_SELECT_CHART.png}     
+  \caption{Επιλογή μορφής διαγράμματος.}
+  \label{figure6.5}  
+\end{Illustration}
+
+\item \textbf{\en{From} - ημερομηνία/ώρα:} Ορισμός \emph{κάτω ορίου} του χρονικού διαστήματος των δεδομένων με \en{date-time picker}.
+
+\begin{Illustration}[!ht]     
+  \centering    
+  \includegraphics[width=1\textwidth]{figures/APP_SELECT_DATE.png}     
+  \caption{Επιλογή κάτω ορίου του χρονικού διαστήματος των δεδομένων.}
+  \label{figure6.6}  
+\end{Illustration}
+
+\item \textbf{\en{To} - ημερομηνία/ώρα:} Όμοια, ορισμός \emph{άνω ορίου} του χρονικού διαστήματος των δεδομένων με \en{date-time picker}.
+
+\item \textbf{\en{Refresh:}} Εκτέλεση αναζήτησης με βάση τις τρέχουσες επιλογές (μετρητής, ποσότητα, εύρος ημερομηνιών, τύπος γραφήματος) και ανανέωση του γραφήματος.
+\end{itemize}
+
+\begin{Illustration}[!ht]     
+  \centering    
+  \includegraphics[width=1\textwidth]{figures/APP_DASBOARD.png}     
+  \caption{Βασική σελίδα (\en{Dashboard}) της διαδικτυακής εφαρμογής.}
+  \label{figure6.7}  
+\end{Illustration}
+
+Κατεβαίνοντας πιο κάτω στην σελίδα βρίσκεται επίσης ένας πίνακας που παρουσιάζει αναλυτικά 
+όλες τις μετρήσεις του συγκεκριμένου χρονικού διαστήματος που έχουμε ορίσει στα φίλτρα, για 
+τον δεδομένο μετρητή:
+
+\begin{Illustration}[!ht]     
+  \centering    
+  \includegraphics[width=1\textwidth]{figures/APP_TABLE.png}     
+  \caption{Πίνακας με την αναλυτική παρουσίαση των δεδομένων .}
+  \label{figure6.8}  
+\end{Illustration}
+
+
