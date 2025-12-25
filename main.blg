@@ -21,63 +21,47 @@ Reallocating 'name_of_file' (item size: 1) to 22 items.
 A level-1 auxiliary file: body_matter/chap6.aux
 Reallocating 'name_of_file' (item size: 1) to 22 items.
 A level-1 auxiliary file: body_matter/chap7.aux
-Reallocating 'name_of_file' (item size: 1) to 22 items.
-A level-1 auxiliary file: body_matter/chap8.aux
-Reallocating 'name_of_file' (item size: 1) to 22 items.
-A level-1 auxiliary file: body_matter/chap9.aux
-Reallocating 'name_of_file' (item size: 1) to 21 items.
-A level-1 auxiliary file: back_matter/appA.aux
-Reallocating 'name_of_file' (item size: 1) to 21 items.
-A level-1 auxiliary file: back_matter/appB.aux
-Reallocating 'name_of_file' (item size: 1) to 21 items.
-A level-1 auxiliary file: back_matter/appC.aux
-Reallocating 'name_of_file' (item size: 1) to 21 items.
-A level-1 auxiliary file: back_matter/appD.aux
-Reallocating 'name_of_file' (item size: 1) to 21 items.
-A level-1 auxiliary file: back_matter/appE.aux
 Reallocating 'name_of_file' (item size: 1) to 11 items.
 Database file #1: references.bib
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
-Warning--empty institution in viswanathan2014convenient
-You've used 65 entries,
+You've used 57 entries,
             3122 wiz_defined-function locations,
-            959 strings with 18729 characters,
-and the built_in function-call counts, 11947 in all, are:
-= -- 888
-> -- 356
-< -- 7
-+ -- 162
-- -- 97
-* -- 1007
-:= -- 1659
-add.period$ -- 232
-call.type$ -- 65
-change.case$ -- 6
+            910 strings with 17164 characters,
+and the built_in function-call counts, 10454 in all, are:
+= -- 782
+> -- 303
+< -- 6
++ -- 139
+- -- 82
+* -- 862
+:= -- 1438
+add.period$ -- 208
+call.type$ -- 57
+change.case$ -- 4
 chr.to.int$ -- 0
-cite$ -- 66
-duplicate$ -- 752
-empty$ -- 1497
-format.name$ -- 97
-if$ -- 2643
+cite$ -- 57
+duplicate$ -- 634
+empty$ -- 1326
+format.name$ -- 82
+if$ -- 2330
 int.to.chr$ -- 0
-int.to.str$ -- 65
-missing$ -- 15
-newline$ -- 365
-num.names$ -- 63
-pop$ -- 348
+int.to.str$ -- 57
+missing$ -- 10
+newline$ -- 325
+num.names$ -- 55
+pop$ -- 309
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 133
+skip$ -- 119
 stack$ -- 0
 substring$ -- 142
-swap$ -- 383
-text.length$ -- 7
+swap$ -- 335
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 71
-width$ -- 67
-write$ -- 752
-(There was 1 warning)
+warning$ -- 0
+while$ -- 63
+width$ -- 59
+write$ -- 663
