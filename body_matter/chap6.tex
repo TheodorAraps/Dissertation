@@ -409,7 +409,7 @@ volumes:
 
 \begin{Illustration}[!ht]     
   \centering    
-  \includegraphics[width=1\textwidth]{figures/APP_LOGIN.png}     
+  \includegraphics[width=0.9\textwidth]{figures/APP_LOGIN.png}     
   \caption{Σελίδα \en{Login} της διαδικτυακής εφαρμογής.}
   \label{figure6.2}  
 \end{Illustration}
@@ -433,6 +433,8 @@ volumes:
   \caption{Επιλογή μετρητή προς απεικόνιση.}
   \label{figure6.3}  
 \end{Illustration}
+
+\pagebreak
 
 \item \textbf{\en{Select Value:}} Επιλογή μετρητικής ποσότητας που θα απεικονιστεί στο γράφημα.
 
@@ -480,8 +482,351 @@ volumes:
 \begin{Illustration}[!ht]     
   \centering    
   \includegraphics[width=1\textwidth]{figures/APP_TABLE.png}     
-  \caption{Πίνακας με την αναλυτική παρουσίαση των δεδομένων .}
+  \caption{Πίνακας με την αναλυτική παρουσίαση των δεδομένων.}
   \label{figure6.8}  
 \end{Illustration}
 
+\pagebreak
 
+\subsubsection{\en{Chart Types}}
+
+\begin{Illustration}[!ht]     
+  \centering    
+  \includegraphics[width=1\textwidth]{figures/APP_GRAPH.png}     
+  \caption{\en{Line Chart}.}
+  \label{figure6.9}  
+\end{Illustration}
+
+\begin{Illustration}[!ht]     
+  \centering    
+  \includegraphics[width=1\textwidth]{figures/APP_BAR_GRAPH.png}     
+  \caption{\en{Bar Chart}.}
+  \label{figure6.10}  
+\end{Illustration}
+
+\begin{Illustration}[!ht]     
+  \centering    
+  \includegraphics[width=0.9\textwidth]{figures/APP_PIE_GRAPH.png}     
+  \caption{\en{Pie Chart (Average by phase)}.}
+  \label{figure6.11}  
+\end{Illustration}
+
+\begin{Illustration}[!ht]     
+  \centering    
+  \includegraphics[width=0.9\textwidth]{figures/APP_PIE_GRAPH_2.png}     
+  \caption{\en{Pie Chart}.}
+  \label{figure6.12}  
+\end{Illustration}
+
+
+
+
+
+
+
+
+
+% ------------------------------------------------------
+% Τελική ενότητα: Ενοποίηση στο Raspberry Pi και εκκίνηση με ένα βήμα
+% ------------------------------------------------------
+
+\section{Ολοκλήρωση εγκατάστασης στο \en{Raspberry Pi}: ενοποιημένη εκκίνηση υπηρεσιών και \en{auto-start} στο \en{boot}}
+
+Αφού ολοκληρώθηκε η ανάπτυξη (\en{deployment}) όλων των υποσυστημάτων στο \en{LoRaWAN gateway} (\en{Raspberry Pi}), 
+στόχος είναι η \textbf{εκκίνηση/τερματισμός με ένα βήμα} και η \textbf{αυτόματη εκκίνηση μετά από επανεκκίνηση} της συσκευής.  
+Στον τελικό κόμβο συνυπάρχουν τα εξής \en{Docker} σύνολα:
+
+\begin{itemize}
+  \item \textbf{\en{The Things Stack (TTS)}}: \en{Docker compose} στο \en{/home/loragw/TheThingsStack}.
+  \item \textbf{\en{LoRa Basics Station}}: \en{Docker compose} στο \en{/home/loragw/BasicStation}.
+  \item \textbf{\en{Power Monitoring Web App}}: \en{PostgreSQL + Spring Boot backend + React frontend} μέσω \en{Docker compose} στο \en{/home/loragw/power-monitoring-backend}.
+\end{itemize}
+
+\subsection{Σενάρια \en{start/stop}: εκκίνηση όλων των υπηρεσιών «με ένα κλικ»}
+
+Η τελική ιεραρχία των φακέλων στο \en{raspberry pi} είναι:
+
+\begin{otherlanguage*}{english}
+\begin{Terminal}
+§\prompt§ ls
+§\basicstation§    §\pmbackend§  §\pmfrontend§
+§\tts§ 
+\end{Terminal}
+\end{otherlanguage*}
+
+Για να αυτοματοποιηθεί η διαδικασία, υλοποιήθηκαν δύο \en{bash scripts} στον φάκελο \en{/home/loragw}:
+
+\begin{itemize}
+  \item \en{\textbf{start\_services.sh}}: εκκινεί \en{TTS} $\rightarrow$ περιμένει 5 δευτερόλεπτα $\rightarrow$ εκκινεί \en{BasicStation} $\rightarrow$ εκκινεί \en{web app}.
+  \item \en{\textbf{stop\_services.sh}}: τερματίζει σε αντίστροφη σειρά (\en{web app} $\rightarrow$ \en{BasicStation} $\rightarrow$ \en{TTS}) ώστε να ελαχιστοποιηθούν ασυνέπειες και «ορφανές» εξαρτήσεις.
+\end{itemize}
+
+\noindent Ενδεικτικά, το \en{start\_services.sh} έχει τη μορφή:
+
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle-script]
+#!/bin/bash
+# Define paths and color codes
+BASICSTATION_DIR="/home/loragw/BasicStation"
+THINGSTACK_DIR="/home/loragw/TheThingsStack"
+WEBAPP_DIR="/home/loragw/power-monitoring-backend"
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+RED='\033[0;31m'
+NC='\033[0m' # No color
+
+# Start The Things Stack services
+echo -e "${YELLOW}Starting The Things Stack Docker services...${NC}"
+if [ -d "$THINGSTACK_DIR" ]; then
+  (cd "$THINGSTACK_DIR" && sudo docker compose up -d)
+  if [ $? -eq 0 ]; then
+    echo -e "${GREEN}The Things Stack started successfully.${NC}"
+  else
+    echo -e "${RED}Failed to start The Things Stack.${NC}"
+    exit 1
+  fi
+else
+  echo -e "${RED}Directory $THINGSTACK_DIR does not exist.${NC}"
+  exit 1
+fi
+
+# Wait for 5 seconds before starting BasicStation
+echo -e "${YELLOW}Waiting 5 seconds to ensure The Things Stack is up...${NC}"
+sleep 5
+
+# Start BasicStation services
+echo -e "${YELLOW}Starting BasicStation Docker services...${NC}"
+if [ -d "$BASICSTATION_DIR" ]; then
+  (cd "$BASICSTATION_DIR" && sudo docker compose up -d)
+  if [ $? -eq 0 ]; then
+    echo -e "${GREEN}BasicStation started successfully.${NC}"
+  else
+    echo -e "${RED}Failed to start BasicStation.${NC}"
+    exit 1
+  fi
+else
+  echo -e "${RED}Directory $BASICSTATION_DIR does not exist.${NC}"
+  exit 1
+fi
+
+# --- Start Web App (backend + frontend + its postgres) ---
+echo -e "${YELLOW}Starting Power Monitoring Web App services...${NC}"
+if [ -d "$WEBAPP_DIR" ]; then
+  (cd "$WEBAPP_DIR" && sudo docker compose up -d)
+  if [ $? -eq 0 ]; then
+    echo -e "${GREEN}Power Monitoring Web App started successfully.${NC}"
+  else
+    echo -e "${RED}Failed to start Power Monitoring Web App.${NC}"
+    exit 1
+  fi
+else
+  echo -e "${RED}Directory $WEBAPP_DIR does not exist.${NC}"
+  exit 1
+fi
+
+echo -e "${GREEN}All services started successfully.${NC}"
+\end{lstlisting}
+\end{otherlanguage*}
+
+\noindent Ενώ ο τερματισμός γίνεται ως εξής:
+
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle-script]
+#!/bin/bash
+# Define paths and color codes
+BASICSTATION_DIR="/home/loragw/BasicStation"
+THINGSTACK_DIR="/home/loragw/TheThingsStack"
+WEBAPP_DIR="/home/loragw/power-monitoring-backend"
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+RED='\033[0;31m'
+NC='\033[0m' # No color
+
+# --- Stop Web App (backend + frontend + its postgres) ---
+echo -e "${YELLOW}Stopping Power Monitoring Web App services...${NC}"
+if [ -d "$WEBAPP_DIR" ]; then
+  (cd "$WEBAPP_DIR" && sudo docker compose down)
+  if [ $? -eq 0 ]; then
+    echo -e "${GREEN}Power Monitoring Web App stopped successfully.${NC}"
+  else
+    echo -e "${RED}Failed to stop Power Monitoring Web App.${NC}"
+  fi
+else
+  echo -e "${RED}Directory $WEBAPP_DIR does not exist.${NC}"
+fi
+
+# Stop BasicStation services
+echo -e "${YELLOW}Stopping BasicStation Docker services...${NC}"
+if [ -d "$BASICSTATION_DIR" ]; then
+  (cd "$BASICSTATION_DIR" && sudo docker compose down)
+  if [ $? -eq 0 ]; then
+    echo -e "${GREEN}BasicStation stopped successfully.${NC}"
+  else
+    echo -e "${RED}Failed to stop BasicStation.${NC}"
+    exit 1
+  fi
+else
+  echo -e "${RED}Directory $BASICSTATION_DIR does not exist.${NC}"
+  exit 1
+fi
+
+# Wait for 5 seconds before stopping The Things Stack
+echo -e "${YELLOW}Waiting 5 seconds before stopping The Things Stack...${NC}"
+sleep 5
+
+# Stop The Things Stack services
+echo -e "${YELLOW}Stopping The Things Stack Docker services...${NC}"
+if [ -d "$THINGSTACK_DIR" ]; then
+  (cd "$THINGSTACK_DIR" && sudo docker compose down)
+  if [ $? -eq 0 ]; then
+    echo -e "${GREEN}The Things Stack stopped successfully.${NC}"
+  else
+    echo -e "${RED}Failed to stop The Things Stack.${NC}"
+    exit 1
+  fi
+else
+  echo -e "${RED}Directory $THINGSTACK_DIR does not exist.${NC}"
+  exit 1
+fi
+
+echo -e "${GREEN}All services stopped successfully.${NC}"
+\end{lstlisting}
+\end{otherlanguage*}
+
+\noindent Για χειροκίνητη εκτέλεση, τα αρχεία γίνονται εκτελέσιμα ως εξής:
+
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+chmod +x /home/loragw/start_services.sh /home/loragw/stop_services.sh
+\end{lstlisting}
+\end{otherlanguage*}
+
+και μπορύμε να τα τρέξουμε με την εντολή:
+
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+./start_services.sh
+\end{lstlisting}
+\end{otherlanguage*}
+
+\begin{otherlanguage*}{english}
+\begin{Terminal}
+§\prompt§ chmod +x start_services.sh stop_services.sh
+§\prompt§ ./start_services.sh
+§\messageprompt{Starting The Things Stack Docker services...}§
+§\dockerrunning{[+] Running 4/4}§ 
+  §{\color{term.ansi.magenta}\checkmark}§ Network thethingsstack_default  §\dockercreated§        §\dockerrunning{0.1s}§
+  §{\color{term.ansi.magenta}\checkmark}§ Container redis                 §\dockerstarted§        §\dockerrunning{1.2s}§
+  §{\color{term.ansi.magenta}\checkmark}§ Container postgres              §\dockerstarted§        §\dockerrunning{1.1s}§
+  §{\color{term.ansi.magenta}\checkmark}§ Container stack                 §\dockerstarted§        §\dockerrunning{1.5s}§
+§\successmessageprompt{The Things Stack started successfully.}§
+§\messageprompt{Waiting 5 seconds to ensure The Things Stack is up...}§
+§\messageprompt{Starting BasicStation Docker services...}§
+§\dockerrunning{[+] Running 1/1}§
+  §{\color{term.ansi.magenta}\checkmark}§ Network thethingsstack_default  §\dockerstarted§        §\dockerrunning{0.1s}§
+§\successmessageprompt{BasicStation started successfully.}§
+§\messageprompt{Starting Power Monitoring Web App services...}§
+§\dockerrunning{[+] Running 4/4}§ 
+  §{\color{term.ansi.magenta}\checkmark}§ Network power-monitoring-backend_default  §\dockercreated§        §\dockerrunning{0.1s}§
+  §{\color{term.ansi.magenta}\checkmark}§ Container power-monitoring-postgres       §\dockerstarted§        §\dockerrunning{1.1s}§
+  §{\color{term.ansi.magenta}\checkmark}§ Container power-monitoring-app            §\dockerstarted§        §\dockerrunning{1.1s}§
+  §{\color{term.ansi.magenta}\checkmark}§ Container power-monitoring-frontend       §\dockerstarted§        §\dockerrunning{1.4s}§
+§\successmessageprompt{Power Monitoring Web App started successfully.}§
+§\successmessageprompt{All services started successfully.}§
+\end{Terminal}
+\end{otherlanguage*}
+
+\begin{otherlanguage*}{english}
+\begin{Terminal}
+§\prompt§ ./stop_services.sh
+§\messageprompt{Stopping Power Monitoring Web App services...}§
+§\dockerrunning{[+] Running 4/4}§
+  §{\color{term.ansi.magenta}\checkmark}§ Network power-monitoring-backend_default  §\dockerremoved§        §\dockerrunning{0.6s}§
+  §{\color{term.ansi.magenta}\checkmark}§ Container power-monitoring-postgres       §\dockerremoved§        §\dockerrunning{10.6s}§
+  §{\color{term.ansi.magenta}\checkmark}§ Container power-monitoring-app            §\dockerremoved§        §\dockerrunning{0.6s}§
+  §{\color{term.ansi.magenta}\checkmark}§ Container power-monitoring-frontend       §\dockerremoved§        §\dockerrunning{0.4s}§
+§\successmessageprompt{Power Monitoring Web App stopped successfully.}§
+§\messageprompt{Stopping BasicStation Docker services...}§
+§\dockerrunning{[+] Running 1/1}§
+  §{\color{term.ansi.magenta}\checkmark}§ Network thethingsstack_default  §\dockerremoved§        §\dockerrunning{10.4s}§
+§\successmessageprompt{BasicStation stopped successfully.}§
+§\messageprompt{Waiting 5 seconds before stopping The Things Stack...}§
+§\messageprompt{Stopping The Things Stack Docker services...}§
+§\dockerrunning{[+] Running 4/4}§ 
+  §{\color{term.ansi.magenta}\checkmark}§ Network thethingsstack_default  §\dockerremoved§        §\dockerrunning{11.5s}§
+  §{\color{term.ansi.magenta}\checkmark}§ Container redis                 §\dockerremoved§        §\dockerrunning{0.7s}§
+  §{\color{term.ansi.magenta}\checkmark}§ Container postgres              §\dockerremoved§        §\dockerrunning{0.9s}§
+  §{\color{term.ansi.magenta}\checkmark}§ Container stack                 §\dockerremoved§        §\dockerrunning{0.4s}§
+§\successmessageprompt{The Things Stack stopped successfully.}§
+§\successmessageprompt{All services stopped successfully.}§
+\end{Terminal}
+\end{otherlanguage*}
+
+\subsection{Αυτόματη εκκίνηση στο \en{boot} με \en{systemd}}
+
+Για να εκκινούν \textbf{αυτόματα} οι υπηρεσίες σε κάθε επανεκκίνηση του \en{Raspberry Pi}, δημιουργείται μία \en{systemd unit} η οποία:
+(α) περιμένει να είναι διαθέσιμο το δίκτυο και ο \en{Docker daemon}, και (β) καλεί τα \en{start/stop scripts}.  
+Το αρχείο \en{/etc/systemd/system/power-stack.service} δημιουργείται ως εξής:
+
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+sudo nano /etc/systemd/system/power-stack.service
+\end{lstlisting}
+\end{otherlanguage*}
+
+\noindent και το περιεχόμενό του είναι:
+
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle-script]
+[Unit]
+§\redcolor{Description}§=Start LoRaWAN services (TTS, BasicStation, Power Monitoring app)
+§\redcolor{After}§=network-online.target docker.service
+§\redcolor{Wants}§=network-online.target docker.service
+
+[Service]
+§\redcolor{Type}§=oneshot
+§\redcolor{WorkingDirectory}§=/home/loragw
+§\redcolor{ExecStart}§=/home/loragw/start_services.sh
+§\redcolor{ExecStop}§=/home/loragw/stop_services.sh
+§\redcolor{RemainAfterExit}§=yes
+§\redcolor{StandardOutput}§=journal
+§\redcolor{StandardError}§=journal
+
+[Install]
+§\redcolor{WantedBy}§=multi-user.target
+\end{lstlisting}
+\end{otherlanguage*}
+
+\noindent Έπειτα ενεργοποιείται στο \en{boot} και εκκινεί άμεσα με τις εντολές:
+
+\begin{itemize}
+\item Επαναφορτώνει τις μονάδες του \en{systemd} ώστε να αναγνωριστούν τυχόν αλλαγές/νέες υπηρεσίες (\en{.service} files).
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+sudo systemctl daemon-reload
+\end{lstlisting}
+\end{otherlanguage*}
+\item Ενεργοποιεί την υπηρεσία για αυτόματη εκκίνηση στο \en{boot} (δημιουργεί τα απαραίτητα \en{symlinks}).
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+sudo systemctl enable power-stack.service
+\end{lstlisting}
+\end{otherlanguage*}
+\item Εκκινεί άμεσα την υπηρεσία χωρίς να απαιτείται επανεκκίνηση του συστήματος.
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+sudo systemctl start power-stack.service
+\end{lstlisting}
+\end{otherlanguage*}
+\end{itemize}
+
+\noindent Για έλεγχο κατάστασης και ανάγνωση καταγραφών:
+
+\begin{otherlanguage*}{english}
+\begin{lstlisting}[style=bashstyle]
+sudo systemctl status power-stack.service
+sudo journalctl -u power-stack.service -e
+\end{lstlisting}
+\end{otherlanguage*}
+
+Με τη συγκεκριμένη ρύθμιση, το \en{Raspberry Pi} λειτουργεί ως πλήρως αυτόνομος \en{gateway/server} κόμβος: μετά από \en{reboot} εκκινούν αυτόματα το \en{The Things Stack}, το \en{LoRa Basics Station} και η διαδικτυακή εφαρμογή εποπτείας, χωρίς να απαιτείται χειροκίνητη παρέμβαση.

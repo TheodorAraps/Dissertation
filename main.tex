@@ -99,6 +99,10 @@
 \definecolor{codecm}{HTML}{6B7280}     % comments
 \definecolor{codenums}{HTML}{9CA3AF}   % line numbers
 \definecolor{codeframe}{HTML}{E5E7EB}  % frame border
+\definecolor{term.ansi.red}{HTML}{E06C75}
+
+\newcommand{\redcolor}[1]{\textcolor{term.ansi.red}{\textbf{#1}}}
+
 
 
 % --- Bash style ---
@@ -129,6 +133,34 @@
   breaklines=true,
   breakatwhitespace=true,
   captionpos=b
+}
+
+\lstdefinestyle{bashstyle-script}{
+  language=bash,
+  deletekeywords={newgrp,enable,cd,exec,cat,awk},
+  backgroundcolor=\color{codebg},
+  basicstyle=\linespread{1.05}\ttfamily\normalsize\color{codetext},
+  keywordstyle=\bfseries\color{codekw},
+  stringstyle=\color{codestr},
+  commentstyle=\itshape\color{codecm}\noncopynumber,
+  numberstyle=\scriptsize\color{codenums},
+  numbers=left,
+  numbersep=10pt,
+  frame=single,
+  rulecolor=\color{codeframe},
+  frameround=tttt,
+  framesep=8pt,
+  xleftmargin=1.5em,
+  xrightmargin=1.5em,
+  showstringspaces=false,
+  tabsize=2,
+  upquote=true,
+  columns=fullflexible,
+  keepspaces=true,
+  breaklines=true,
+  breakatwhitespace=true,
+  captionpos=b,
+  escapechar=§
 }
 
 
@@ -408,6 +440,8 @@
 \definecolor{term.ansi.blue}{HTML}{61AFEF}
 \definecolor{term.ansi.green}{HTML}{98C379}
 \definecolor{term.ansi.magenta}{HTML}{C678DD}
+\definecolor{term.ansi.yellow}{HTML}{E5C07B}
+\definecolor{term.ansi.amber}{HTML}{D7A866}
 \definecolor{termok}{HTML}{78C2A4}
 
 
@@ -463,13 +497,22 @@
 \newcommand{\assets}{\textcolor{term.symbol}{assets}\,}
 \newcommand{\runner}{\textcolor{term.symbol}{runner}\,}
 \newcommand{\builder}{\textcolor{term.symbol}{builder}\,}
+\newcommand{\basicstation}{\textcolor{term.symbol}{BasicStation}\,}
+\newcommand{\tts}{\textcolor{term.symbol}{TheThingsStack}\,}
+\newcommand{\pmbackend}{\textcolor{term.symbol}{power-monitoring-backend}\,}
+\newcommand{\pmfrontend}{\textcolor{term.symbol}{power-monitoring-frontend}\,}
 \newcommand{\build}{\textcolor{term.user}{build.sh}\,}
 \newcommand{\balena}{\textcolor{term.fg}{balena.yml}\,}
 \newcommand{\changelog}{\textcolor{term.fg}{CHANGELOG.md}\,}
 \newcommand{\readme}{\textcolor{term.fg}{README.md}\,}
 \newcommand{\logopng}{\textcolor{term.ansi.magenta}{logo.png}\,}
 \newcommand{\dockercreated}{\textcolor{term.ansi.green}{Created}\,}
+\newcommand{\dockerstarted}{\textcolor{term.ansi.green}{Started}\,}
+\newcommand{\dockerremoved}{\textcolor{term.ansi.green}{Removed}\,}
 \newcommand{\dockerrunning}[1]{\textcolor{term.ansi.blue}{#1}}
+\newcommand{\messageprompt}[1]{\textcolor{term.ansi.yellow}{#1}}
+\newcommand{\successmessageprompt}[1]{\textcolor{term.ansi.green}{#1}}
+% \newcommand{\magentacolor}[1]{\textcolor{term.ansi.magenta}{#1}}
 
 
 
